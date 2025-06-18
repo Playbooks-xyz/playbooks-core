@@ -1,10 +1,10 @@
 import * as HTML from '@ehubbell/html';
+import { computeTailwind } from '@ehubbell/html';
 import { useInterface } from 'contexts';
 import { BtnWrapper } from 'interface/buttons';
 import { Div, Span } from 'interface/html';
 import { FadIcon } from 'interface/icons';
 import * as types from 'types';
-import { computeTailwind } from 'utils';
 
 export const SwitchGroup = ({
 	name = 'SwitchGroup',

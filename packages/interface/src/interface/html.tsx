@@ -1,8 +1,8 @@
 import * as HTML from '@ehubbell/html';
+import { computeProps } from '@ehubbell/html';
 import { useInterface } from 'contexts';
 import { HtmlProps } from 'types';
 import * as types from 'types/html-types';
-import { computeProps } from 'utils';
 
 export const Article = ({ name = 'Article', tailwind, className, children, ...props }: HtmlProps) => {
 	const { theme } = useInterface();

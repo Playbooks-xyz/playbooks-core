@@ -1,7 +1,7 @@
 import dynamic from 'next/dynamic';
 
+import { computeTailwind } from '@ehubbell/html';
 import { IconProps } from 'types';
-import { computeTailwind } from 'utils';
 
 const FontAwesome = dynamic(() => import('@fortawesome/react-fontawesome').then(v => v.FontAwesomeIcon), {
 	ssr: false,

@@ -29,7 +29,6 @@ export default defineConfig(({ mode }) => {
 			lib: {
 				entry: [
 					path.resolve(__dirname, 'src/index.tsx'),
-					path.resolve(__dirname, 'src/components/components.tsx'),
 					path.resolve(__dirname, 'src/contexts/contexts.tsx'),
 					path.resolve(__dirname, 'src/hooks/hooks.tsx'),
 					path.resolve(__dirname, 'src/interface/accordions.tsx'),

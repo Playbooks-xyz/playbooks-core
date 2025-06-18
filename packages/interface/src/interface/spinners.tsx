@@ -1,7 +1,7 @@
+import { computeTailwind } from '@ehubbell/html';
 import * as Loaders from 'assets/loaders';
 import { useInterface } from 'contexts';
 import * as types from 'types/spinner-types';
-import { computeTailwind } from 'utils';
 
 export const Oval = ({ name = 'Oval', tailwind, className, ...props }: types.SpinnerProps) => {
 	const { theme } = useInterface();

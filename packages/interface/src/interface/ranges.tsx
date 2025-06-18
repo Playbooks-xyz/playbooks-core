@@ -1,9 +1,9 @@
 import { Range } from 'react-range';
 
 import * as HTML from '@ehubbell/html';
+import { computeTailwind } from '@ehubbell/html';
 import { useInterface } from 'contexts';
 import * as types from 'types';
-import { computeTailwind } from 'utils';
 
 export const RangeSlider = ({
 	ref,

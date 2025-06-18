@@ -87,10 +87,6 @@
 		"vite-plugin-dts": "^4.5.0"
 	},
 	"exports": {
-		"./components": {
-			"import": "./dist/components.cjs",
-			"types": "./dist/components.d.ts"
-		},
 		"./contexts": {
 			"import": "./dist/contexts.cjs",
 			"types": "./dist/contexts.d.ts"

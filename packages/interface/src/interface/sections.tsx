@@ -1,9 +1,9 @@
 import * as HTML from '@ehubbell/html';
+import { computeProps } from '@ehubbell/html';
 import { useInterface } from 'contexts';
 import { Font, P, Small } from 'interface/fonts';
 import { Div, Hr } from 'interface/html';
 import * as types from 'types/section-types';
-import { computeProps } from 'utils';
 
 export const Section = ({ name = 'Section', tailwind, className, children, ...props }: types.SectionProps) => {
 	const { theme } = useInterface();

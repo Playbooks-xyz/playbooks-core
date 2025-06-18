@@ -1,10 +1,10 @@
 import * as HTML from '@ehubbell/html';
+import { computeProps } from '@ehubbell/html';
 import { useInterface } from 'contexts';
 import { Font, P, Small } from 'interface/fonts';
 import { Div, Img } from 'interface/html';
 import { FadIcon } from 'interface/icons';
 import * as types from 'types/hero-types';
-import { computeProps } from 'utils';
 
 export const Hero = ({ name = 'Hero', size = '', tailwind, className, children, ...props }: types.HeroProps) => {
 	const { theme } = useInterface();

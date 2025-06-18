@@ -1,9 +1,9 @@
 import * as HTML from '@ehubbell/html';
+import { computeTailwind } from '@ehubbell/html';
 import { useInterface } from 'contexts';
 import { P, Small } from 'interface/fonts';
 import { Div } from 'interface/html';
 import * as types from 'types';
-import { computeTailwind } from 'utils';
 
 export const RadioWrapper = ({
 	id,

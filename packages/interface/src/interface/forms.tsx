@@ -1,11 +1,11 @@
 import { useRef } from 'react';
 
 import * as HTML from '@ehubbell/html';
+import { computeTailwind } from '@ehubbell/html';
 import { useInterface } from 'contexts';
 import { useElementKeyPress } from 'hooks';
 import { Div, Span } from 'interface/html';
 import * as types from 'types/form-types';
-import { computeTailwind } from 'utils';
 import { CurrencyInputWrapper, GoogleAutocompleteWrapper, MaskedInputWrapper, PhoneInputWrapper } from 'wrappers';
 
 export const Form = ({ id, name = 'Form', onSubmit, tailwind, className, children, ...props }: types.FormProps) => {

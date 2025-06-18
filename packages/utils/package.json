@@ -7,7 +7,7 @@
 	"type": "module",
 	"repository": {
 		"type": "git",
-		"url": "git+https://github.com/playbooks-xyz/playbooks-kit/packages/utils.git"
+		"url": "https://github.com/playbooks-xyz/playbooks-kit/packages/utils.git"
 	},
 	"files": [
 		"dist"

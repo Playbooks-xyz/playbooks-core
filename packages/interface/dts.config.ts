@@ -56,23 +56,9 @@ const config = {
 				noCheck: true,
 			};
 		}
-		if (fileName === 'components') {
-			return {
-				filePath: `./src/components/${fileName}.tsx`,
-				outFile: `./dist/${fileName}.d.ts`,
-				noCheck: true,
-			};
-		}
 		if (fileName === 'contexts') {
 			return {
 				filePath: `./src/contexts/${fileName}.tsx`,
-				outFile: `./dist/${fileName}.d.ts`,
-				noCheck: true,
-			};
-		}
-		if (fileName === 'hooks') {
-			return {
-				filePath: `./src/hooks/${fileName}.tsx`,
 				outFile: `./dist/${fileName}.d.ts`,
 				noCheck: true,
 			};
