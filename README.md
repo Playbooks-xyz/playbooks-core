@@ -1,7 +1,7 @@
 # Overview
 This repo offers an opionionated collection of resources for Playbooks projects.
-Collectively, these resources offer a modern and extensible framework for building web applications with blazing speed.
-Feel free to clone or fork this repo to create your own framework or use it as is with a few modifications.
+Collectively, they offer a modern and extensible framework for building web applications with blazing speed.
+Feel free to clone or fork this repo, to create your own framework, or use it as is.
 
 ## Prerequisites
 - Font Awesome

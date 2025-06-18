@@ -1,7 +1,7 @@
 {
 	"name": "@playbooks/theme",
 	"version": "0.1.16",
-	"description": "The default theme for Playbooks projects.",
+	"description": "The default theme for Playbooks.",
 	"author": "Eric Hubbell<eric@erichubbell.com>",
 	"license": "ISC",
 	"main": "dist/index.cjs.js",

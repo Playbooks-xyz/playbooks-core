@@ -1,7 +1,7 @@
 {
 	"name": "@playbooks/components",
 	"version": "0.0.2",
-	"description": "A collection of components for React projects.",
+	"description": "A collection of React components for Playbooks.",
 	"author": "Eric Hubbell<eric@erichubbell.com>",
 	"license": "ISC",
 	"type": "module",

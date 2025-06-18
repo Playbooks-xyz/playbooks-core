@@ -1,7 +1,7 @@
 {
 	"name": "@playbooks/molecules",
 	"version": "0.0.11",
-	"description": "A collection of molecules for React projects.",
+	"description": "A collection of React molecules for Playbooks.",
 	"author": "Eric Hubbell<eric@erichubbell.com>",
 	"license": "ISC",
 	"main": "dist/index.cjs.js",

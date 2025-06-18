@@ -1,7 +1,7 @@
 {
 	"name": "@playbooks/contexts",
 	"version": "0.0.6",
-	"description": "A collection of contexts for React projects.",
+	"description": "A collection of React contexts for Playbooks.",
 	"author": "Eric Hubbell<eric@erichubbell.com>",
 	"license": "ISC",
 	"main": "dist/index.cjs",
