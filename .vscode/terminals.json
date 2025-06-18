@@ -30,6 +30,26 @@
 			"command": "cd packages/hooks",
 			"execute": false
 		},
+		{
+			"name": "playbooks-kit-molecules",
+			"command": "cd packages/molecules",
+			"execute": false
+		},
+		{
+			"name": "playbooks-kit-serializers",
+			"command": "cd packages/serializers",
+			"execute": false
+		},
+		{
+			"name": "playbooks-kit-theme",
+			"command": "cd packages/theme",
+			"execute": false
+		},
+		{
+			"name": "playbooks-kit-wrappers",
+			"command": "cd packages/wrappers",
+			"execute": false
+		},
     {
 			"name": "misc",
       "execute": false
