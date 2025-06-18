@@ -1,34 +1,50 @@
 # Overview
- A lightweight React / Vite based NPM package starter.
+This repo offers an opionionated collection of resources for Playbooks projects.
+Collectively, these resources offer a modern and extensible framework for building web applications with blazing speed.
+Feel free to clone or fork this repo to create your own framework or use it as is with a few modifications.
 
 ## Prerequisites
+- Font Awesome
 - React
 - Node
 - NPM
-- Yalc
+- Tailwind
 
 ## Quick Start
-- npm install
-- npm start
+
+```
+npx @playbooks/framework init
+```
 
 ## Development
-- npm link
+
+This project uses [yalc](https://npmjs.com/package/yalc) for local development.
+
+- npm run dev
 - switch to project
-- npm link <package_name>
+- npx yalc add @playbooks/adapters
+- After that, this library should hot reload into the consuming application
 
 ## Scripts
+
 - We've included a couple of helpful scripts for faster development.
 - deploy: `npm run deploy -- 'commit message'`
 - publish: `npm run publish -- 'commit message' [major|minor|patch]`
 
 ## Husky
+
 - Husky configuration is setup to lint and format the repo on every commit
 - Edit the `.husky/pre-commit` file to change your settings
 
-## Yalc
-- When adding this library to another React project via `npm link` the two versions of react will clobber each other.
-- To avoid this, you'll need to use `yalc` which creates a local package store as opposed to linking binaries.
-
 ## Author
+
 - [Eric Hubbell](http://www.erichubbell.com)
 - eric@erichubbell.com
+
+## Notes
+
+To see this library in action, checkout the following projects:
+
+- [playbooks](https://www.playbooks.xyz)
+- [playbooks blog](https://blog.playbooks.xyz)
+- [playbooks docs](https://docs.playbooks.xyz)
