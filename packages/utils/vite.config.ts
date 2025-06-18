@@ -26,18 +26,18 @@ export default defineConfig(({ mode }) => {
 			lib: {
 				entry: [
 					path.resolve(__dirname, 'src/index.ts'),
-					path.resolve(__dirname, 'src/arrays.ts'),
-					path.resolve(__dirname, 'src/dates.ts'),
-					path.resolve(__dirname, 'src/downloads.ts'),
-					path.resolve(__dirname, 'src/env.ts'),
-					path.resolve(__dirname, 'src/errors.ts'),
-					path.resolve(__dirname, 'src/helpers.ts'),
-					path.resolve(__dirname, 'src/inputs.ts'),
-					path.resolve(__dirname, 'src/logger.ts'),
-					path.resolve(__dirname, 'src/math.ts'),
-					path.resolve(__dirname, 'src/regex.ts'),
-					path.resolve(__dirname, 'src/tests.ts'),
-					path.resolve(__dirname, 'src/transforms.ts'),
+					path.resolve(__dirname, 'src/utils/arrays.ts'),
+					path.resolve(__dirname, 'src/utils/dates.ts'),
+					path.resolve(__dirname, 'src/utils/downloads.ts'),
+					path.resolve(__dirname, 'src/utils/env.ts'),
+					path.resolve(__dirname, 'src/utils/errors.ts'),
+					path.resolve(__dirname, 'src/utils/helpers.ts'),
+					path.resolve(__dirname, 'src/utils/inputs.ts'),
+					path.resolve(__dirname, 'src/utils/logger.ts'),
+					path.resolve(__dirname, 'src/utils/math.ts'),
+					path.resolve(__dirname, 'src/utils/regex.ts'),
+					path.resolve(__dirname, 'src/utils/tests.ts'),
+					path.resolve(__dirname, 'src/utils/transforms.ts'),
 				],
 				name: 'Utils',
 				formats: ['es', 'cjs'],
@@ -57,6 +57,7 @@ export default defineConfig(({ mode }) => {
 		resolve: {
 			alias: {
 				src: path.resolve(__dirname, '/src'),
+				utils: path.resolve(__dirname, '/src/utils'),
 			},
 		},
 	};

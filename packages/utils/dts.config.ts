@@ -15,11 +15,20 @@ const fileNames = [
 ];
 const config = {
 	compilationOptions: { preferredConfigPath: './tsconfig.json' },
-	entries: fileNames.map(fileName => ({
-		filePath: `./src/${fileName}.ts`,
-		outFile: `./dist/${fileName}.d.ts`,
-		noCheck: true,
-	})),
+	entries: fileNames.map(fileName => {
+		if (fileName !== 'index') {
+			return {
+				filePath: `./src/utils/${fileName}.ts`,
+				outFile: `./dist/${fileName}.d.ts`,
+				noCheck: true,
+			};
+		}
+		return {
+			filePath: `./src/${fileName}.ts`,
+			outFile: `./dist/${fileName}.d.ts`,
+			noCheck: true,
+		};
+	}),
 };
 
 module.exports = config;
