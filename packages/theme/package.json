@@ -19,8 +19,7 @@
 		"theme"
 	],
 	"scripts": {
-		"dev": "vite build --mode development --watch --minify false",
-		"start": "vite build --mode development --minify false",
+		"start": "vite build --mode development --minify false --watch",
 		"build": "vite build --mode production --minify true",
 		"build:ts": "dts-bundle-generator --config dts.config.ts",
 		"clean": "npm run lint:fix && npm run format:fix",
