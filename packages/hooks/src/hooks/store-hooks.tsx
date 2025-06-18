@@ -1,6 +1,6 @@
 import { useState } from 'react';
 
-import { logger } from '@playbooks/utils';
+import { logger } from '@playbooks/utils/logger';
 
 export const useQuery = (method, state = false): [method: any, loading: boolean, error: any] => {
 	const [error, setError] = useState(null);
