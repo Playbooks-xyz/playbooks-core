@@ -1,0 +1,5 @@
+{
+	"extends": "@playbooks/configs/ts-config-package",
+	"include": ["src", "tests", "types", "vite.config.ts"],
+	"exclude": ["node_modules"]
+}
