@@ -1,0 +1,296 @@
+{
+  "name": "@playbooks/ui",
+  "version": "0.8.26",
+  "description": "An interface library for Playbooks.",
+  "private": false,
+  "license": "ISC",
+  "type": "module",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/playbooks-xyz/ui.git"
+  },
+  "bugs": {
+    "url": "https://github.com/playbooks-xyz/ui/issues"
+  },
+  "files": [
+    "dist"
+  ],
+  "keywords": [
+    "playbooks",
+    "ui kit"
+  ],
+  "engines": {
+    "node": ">=16"
+  },
+  "scripts": {
+    "start": "vite build --mode development --minify false --watch",
+    "start:ts": "npm run build:ts && npx yalc push",
+    "build": "vite build --mode production --minify true && npm run build:ts",
+    "build:ts": "dts-bundle-generator --config dts.config.ts",
+    "clean": "npm run lint:fix",
+    "lint": "eslint src",
+    "lint:fix": "eslint src --fix",
+    "format": "prettier src",
+    "format:fix": "prettier --write src",
+    "commit": "scripts/commit.sh",
+    "deploy": "scripts/deploy.sh",
+    "packages": "scripts/packages.sh",
+    "yalc": "scripts/yalc.sh",
+    "git": "git push --tags",
+    "test": "jest",
+    "prepare": "husky"
+  },
+  "peerDependencies": {
+    "next": "^14 || ^15",
+    "react": "^18 || ^19",
+    "react-dom": "^18 || ^19",
+    "tailwindcss": "^4"
+  },
+  "dependencies": {
+    "@ehubbell/html": "^0.1.10",
+    "@ehubbell/scrollspy": "^0.0.2",
+    "@ehubbell/utils": "^0.0.25",
+    "@fortawesome/react-fontawesome": "^0.2.2",
+    "@playbooks/theme": "^0.1.15",
+    "@popperjs/core": "^2.11.8",
+    "@react-google-maps/api": "^2.20.5",
+    "@react-spring/web": "^10.0.1",
+    "@tailwindcss/forms": "^0.5.10",
+    "nprogress": "^0.2.0",
+    "react-currency-input-field": "^3.10.0",
+    "react-input-mask": "^2.0.4",
+    "react-intersection-observer": "^9.16.0",
+    "react-loading-skeleton": "^3.5.0",
+    "react-phone-number-input": "^3.4.3",
+    "react-popper": "github:ehubbell/popper",
+    "react-range": "^1.8.14",
+    "react-transition-group": "^4.4.5"
+  },
+  "devDependencies": {
+    "@ehubbell/configs": "^0.0.16",
+    "@fortawesome/fontawesome-svg-core": "^6.7.2",
+    "@types/jest": "^29.5.1",
+    "@types/react": "^19.1.1",
+    "@types/react-dom": "^19.1.2",
+    "@vitejs/plugin-react": "^4.5.2",
+    "autoprefixer": "^10.4.19",
+    "dts-bundle-generator": "^9.5.1",
+    "eslint": "^8.57.1",
+    "husky": "^9.1.7",
+    "jest": "^29.5.0",
+    "next": "^15.3.3",
+    "postcss": "^8.4.39",
+    "prettier": "^3.5.3",
+    "rollup-plugin-peer-deps-external": "^2.2.4",
+    "tailwindcss": "^4.1.8",
+    "ts-jest": "^29.1.0",
+    "ts-node": "^10.9.1",
+    "tslib": "^2.8.1",
+    "typescript": "^5.8.3",
+    "vite": "^6.3.5",
+    "vite-plugin-dts": "^4.5.0"
+  },
+  "exports": {
+    "./components": {
+      "import": "./dist/components.cjs",
+      "types": "./dist/components.d.ts"
+    },
+    "./contexts": {
+      "import": "./dist/contexts.cjs",
+      "types": "./dist/contexts.d.ts"
+    },
+    "./hooks": {
+      "import": "./dist/hooks.cjs",
+      "types": "./dist/hooks.d.ts"
+    },
+    "./interface": {
+      "import": "./dist/interface.cjs",
+      "types": "./dist/interface.d.ts"
+    },
+    "./molecules": {
+      "import": "./dist/molecules.cjs",
+      "types": "./dist/molecules.d.ts"
+    },
+    "./accordions": {
+      "import": "./dist/accordions.cjs",
+      "types": "./dist/accordions.d.ts"
+    },
+    "./alerts": {
+      "import": "./dist/alerts.cjs",
+      "types": "./dist/alerts.d.ts"
+    },
+    "./avatars": {
+      "import": "./dist/avatars.cjs",
+      "types": "./dist/avatars.d.ts"
+    },
+    "./badges": {
+      "import": "./dist/badges.cjs",
+      "types": "./dist/badges.d.ts"
+    },
+    "./banners": {
+      "import": "./dist/banners.cjs",
+      "types": "./dist/banners.d.ts"
+    },
+    "./breadcrumbs": {
+      "import": "./dist/breadcrumbs.cjs",
+      "types": "./dist/breadcrumbs.d.ts"
+    },
+    "./button-groups": {
+      "import": "./dist/button-groups.cjs",
+      "types": "./dist/button-groups.d.ts"
+    },
+    "./buttons": {
+      "import": "./dist/buttons.cjs",
+      "types": "./dist/buttons.d.ts"
+    },
+    "./cards": {
+      "import": "./dist/cards.cjs",
+      "types": "./dist/cards.d.ts"
+    },
+    "./commands": {
+      "import": "./dist/commands.cjs",
+      "types": "./dist/commands.d.ts"
+    },
+    "./drops": {
+      "import": "./dist/drops.cjs",
+      "types": "./dist/drops.d.ts"
+    },
+    "./feedbacks": {
+      "import": "./dist/feedbacks.cjs",
+      "types": "./dist/feedbacks.d.ts"
+    },
+    "./fonts": {
+      "import": "./dist/fonts.cjs",
+      "types": "./dist/fonts.d.ts"
+    },
+    "./footers": {
+      "import": "./dist/footers.cjs",
+      "types": "./dist/footers.d.ts"
+    },
+    "./forms": {
+      "import": "./dist/forms.cjs",
+      "types": "./dist/forms.d.ts"
+    },
+    "./grid": {
+      "import": "./dist/grid.cjs",
+      "types": "./dist/grid.d.ts"
+    },
+    "./head": {
+      "import": "./dist/head.cjs",
+      "types": "./dist/head.d.ts"
+    },
+    "./headers": {
+      "import": "./dist/headers.cjs",
+      "types": "./dist/headers.d.ts"
+    },
+    "./heros": {
+      "import": "./dist/heros.cjs",
+      "types": "./dist/heros.d.ts"
+    },
+    "./html": {
+      "import": "./dist/html.cjs",
+      "types": "./dist/html.d.ts"
+    },
+    "./icons": {
+      "import": "./dist/icons.cjs",
+      "types": "./dist/icons.d.ts"
+    },
+    "./input-groups": {
+      "import": "./dist/input-groups.cjs",
+      "types": "./dist/input-groups.d.ts"
+    },
+    "./links": {
+      "import": "./dist/links.cjs",
+      "types": "./dist/links.d.ts"
+    },
+    "./list-groups": {
+      "import": "./dist/list-groups.cjs",
+      "types": "./dist/list-groups.d.ts"
+    },
+    "./loaders": {
+      "import": "./dist/loaders.cjs",
+      "types": "./dist/loaders.d.ts"
+    },
+    "./menus": {
+      "import": "./dist/menus.cjs",
+      "types": "./dist/menus.d.ts"
+    },
+    "./modals": {
+      "import": "./dist/modals.cjs",
+      "types": "./dist/modals.d.ts"
+    },
+    "./navbars": {
+      "import": "./dist/navbars.cjs",
+      "types": "./dist/navbars.d.ts"
+    },
+    "./navs": {
+      "import": "./dist/navs.cjs",
+      "types": "./dist/navs.d.ts"
+    },
+    "./paginations": {
+      "import": "./dist/paginations.cjs",
+      "types": "./dist/paginations.d.ts"
+    },
+    "./prefooters": {
+      "import": "./dist/prefooters.cjs",
+      "types": "./dist/prefooters.d.ts"
+    },
+    "./progress-bars": {
+      "import": "./dist/progress-bars.cjs",
+      "types": "./dist/progress-bars.d.ts"
+    },
+    "./radios": {
+      "import": "./dist/radios.cjs",
+      "types": "./dist/radios.d.ts"
+    },
+    "./ranges": {
+      "import": "./dist/ranges.cjs",
+      "types": "./dist/ranges.d.ts"
+    },
+    "./routes": {
+      "import": "./dist/routes.cjs",
+      "types": "./dist/routes.d.ts"
+    },
+    "./sections": {
+      "import": "./dist/sections.cjs",
+      "types": "./dist/sections.d.ts"
+    },
+    "./slides": {
+      "import": "./dist/slides.cjs",
+      "types": "./dist/slides.d.ts"
+    },
+    "./spinners": {
+      "import": "./dist/spinners.cjs",
+      "types": "./dist/v.d.ts"
+    },
+    "./switches": {
+      "import": "./dist/switches.cjs",
+      "types": "./dist/switches.d.ts"
+    },
+    "./tables": {
+      "import": "./dist/tables.cjs",
+      "types": "./dist/tables.d.ts"
+    },
+    "./tabs": {
+      "import": "./dist/tabs.cjs",
+      "types": "./dist/tabs.d.ts"
+    },
+    "./tags": {
+      "import": "./dist/tags.cjs",
+      "types": "./dist/tags.d.ts"
+    },
+    "./toasts": {
+      "import": "./dist/toasts.cjs",
+      "types": "./dist/toasts.d.ts"
+    },
+    "./tooltips": {
+      "import": "./dist/tooltips.cjs",
+      "types": "./dist/tooltips.d.ts"
+    },
+    "./utils": {
+      "import": "./dist/utils.cjs",
+      "types": "./dist/utils.d.ts"
+    },
+    "./styles.css": "./dist/styles.css"
+  }
+}

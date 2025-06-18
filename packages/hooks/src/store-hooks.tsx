@@ -1,0 +1,129 @@
+import { useState } from 'react';
+
+import { logger } from '@playbooks/utils';
+
+export const useQuery = (method, state = false): [method: any, loading: boolean, error: any] => {
+	const [error, setError] = useState(null);
+	const [loading, setLoading] = useState(state);
+
+	// Methods
+	const onQuery = async (data?) => {
+		try {
+			setLoading(true);
+			await method(data);
+		} catch (e) {
+			setError(e);
+			logger.error(e);
+		} finally {
+			setLoading(false);
+		}
+	};
+
+	return [onQuery, loading, error];
+};
+
+export const useAction = (model, method, state = false): [method: any, task: any, error: any] => {
+	const [error, setError] = useState(null);
+	const [task, setTask] = useState({ id: '', name: 'action', running: state });
+
+	// Methods
+	const onAction = async (record?) => {
+		try {
+			setTask({ ...task, id: model.id ? model.id : record?.id, running: true });
+			await method(record);
+		} catch (e) {
+			setError(e);
+			logger.error(e);
+		} finally {
+			setTask({ ...task, id: null, running: false });
+		}
+	};
+
+	return [onAction, task, error];
+};
+
+export const useSave = (model, method): [method: any, task: any, error: any] => {
+	const [error, setError] = useState(null);
+	const [task, setTask] = useState({ id: '', name: 'save', running: false });
+
+	// Methods
+	const onSave = async (record?) => {
+		try {
+			setTask({ ...task, id: model.id ? model.id : record?.id, running: true });
+			await method(record);
+		} catch (e) {
+			setError(e);
+			logger.error(e);
+		} finally {
+			setTask({ ...task, id: null, running: false });
+		}
+	};
+
+	return [onSave, task, error];
+};
+
+export const useConfirm = (model, message, method): [method: any, task: any, error: any] => {
+	const [error, setError] = useState(null);
+	const [task, setTask] = useState({ id: '', name: 'save', running: false });
+
+	// Methods
+	const useConfirm = async (record?) => {
+		try {
+			setTask({ ...task, id: model.id ? model.id : record?.id, running: true });
+			const confirmed = window.confirm(message);
+			if (confirmed) await method(record);
+		} catch (e) {
+			setError(e);
+			logger.error(e);
+		} finally {
+			setTask({ ...task, id: null, running: false });
+		}
+	};
+
+	return [useConfirm, task, error];
+};
+
+export const useDelete = (model, modelName, method): [method: any, task: any, error: any] => {
+	const [error, setError] = useState(null);
+	const [task, setTask] = useState({ id: '', name: 'delete', running: false });
+
+	// Methods
+	const onDelete = async (record?) => {
+		try {
+			setTask({ ...task, id: record.id ? record.id : model?.id, running: true });
+			const confirmed = window.confirm(`Are you sure you want to delete this ${modelName}?`);
+			if (confirmed) await method(record);
+		} catch (e) {
+			setError(e);
+			logger.error(e);
+		} finally {
+			setTask({ ...task, id: null, running: false });
+		}
+	};
+
+	return [onDelete, task, error];
+};
+
+export const useDeletes = (model, modelName, method): [method: any, task: any, error: any] => {
+	const [error, setError] = useState(null);
+	const [task, setTask] = useState({ id: '', name: 'delete', running: false });
+
+	// Methods
+	const onDelete = async (record?) => {
+		try {
+			setTask({ ...task, id: model.id ? model.id : record?.id, running: true });
+			const confirmed = window.confirm(`Are you sure you want to delete ${model.length} ${modelName}?`);
+			if (confirmed) await method(record);
+		} catch (e) {
+			setError(e);
+			logger.error(e);
+		} finally {
+			setTask({ ...task, id: null, running: false });
+		}
+	};
+
+	return [onDelete, task, error];
+};
+
+// Usage
+// const [onSave, saveTask , error] = useQuery(async () => {})

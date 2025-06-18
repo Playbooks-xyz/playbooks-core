@@ -1,0 +1,6 @@
+{
+	"root": true,
+	"extends": [
+		"./node_modules/@ehubbell/configs/src/eslint-config-package.js"
+	]
+}
