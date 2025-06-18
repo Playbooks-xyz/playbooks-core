@@ -31,11 +31,6 @@
 			"execute": false
 		},
 		{
-			"name": "playbooks-kit-interface",
-			"command": "cd packages/interface",
-			"execute": false
-		},
-		{
 			"name": "playbooks-kit-molecules",
 			"command": "cd packages/molecules",
 			"execute": false
@@ -53,6 +48,11 @@
 		{
 			"name": "playbooks-kit-theme",
 			"command": "cd packages/theme",
+			"execute": false
+		},
+		{
+			"name": "playbooks-kit-ui",
+			"command": "cd packages/ui",
 			"execute": false
 		},
 		{
