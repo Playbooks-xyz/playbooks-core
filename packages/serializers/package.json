@@ -1,6 +1,6 @@
 {
 	"name": "@playbooks/serializers",
-	"version": "0.0.0",
+	"version": "0.0.1",
 	"description": "A collection of serializers for various projects.",
 	"author": "Eric Hubbell<eric@erichubbell.com>",
 	"license": "ISC",
@@ -9,10 +9,7 @@
 	"types": "dist/index.d.ts",
 	"repository": {
 		"type": "git",
-		"url": "git+https://github.com/playbooks/serializers.git"
-	},
-	"bugs": {
-		"url": "https://github.com/playbooks/serializers/issues"
+		"url": "git+https://github.com/playbooks-xyz/playbooks-kit/packages/serializers.git"
 	},
 	"files": [
 		"dist"

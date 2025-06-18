@@ -1,16 +1,16 @@
 module.exports = {
-	arrowParens: "avoid",
+	arrowParens: 'avoid',
 	bracketSameLine: true,
 	bracketSpacing: true,
-	htmlWhitespaceSensitivity: "ignore",
+	htmlWhitespaceSensitivity: 'ignore',
 	printWidth: 120,
 	semi: true,
 	singleQuote: true,
 	jsxSingleQuote: true,
-	trailingComma: "all",
+	trailingComma: 'all',
 	tabWidth: 2,
-	useTabs: true
-}
+	useTabs: true,
+};
 
 // Docs
 // https://prettier.io/docs/sharing-configurations

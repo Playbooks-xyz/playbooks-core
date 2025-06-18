@@ -1,6 +1,6 @@
 {
 	"name": "@playbooks/normalizers",
-	"version": "0.0.0",
+	"version": "0.0.1",
 	"description": "A collection of normalizers for various projects.",
 	"author": "Eric Hubbell<eric@erichubbell.com>",
 	"license": "ISC",

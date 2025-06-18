@@ -31,8 +31,18 @@
 			"execute": false
 		},
 		{
+			"name": "playbooks-kit-interface",
+			"command": "cd packages/interface",
+			"execute": false
+		},
+		{
 			"name": "playbooks-kit-molecules",
 			"command": "cd packages/molecules",
+			"execute": false
+		},
+		{
+			"name": "playbooks-kit-normalizers",
+			"command": "cd packages/normalizers",
 			"execute": false
 		},
 		{

@@ -1,129 +1,126 @@
 {
-  "name": "@playbooks/utils",
-  "version": "0.0.1",
-  "description": "A collection of utilities used for various projects.",
-  "author": "Eric Hubbell<eric@erichubbell.com>",
-  "license": "ISC",
-  "type": "module",
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/playbooks/utils.git"
-  },
-  "bugs": {
-    "url": "https://github.com/playbooks/utils/issues"
-  },
-  "files": [
-    "dist"
-  ],
-  "keywords": [
-    "playbooks",
-    "utils"
-  ],
-  "scripts": {
-    "start": "vite build --mode development --minify false --watch",
-    "build": "vite build --mode production --minify true && npm run build:ts",
-    "build:ts": "dts-bundle-generator --config dts.config.ts",
-    "lint": "eslint src",
-    "lint:fix": "eslint src --fix",
-    "format": "prettier src",
-    "format:fix": "prettier --write src",
-    "clean": "npm run lint:fix && npm run format:fix",
-    "commit": "scripts/commit.sh",
-    "deploy": "scripts/deploy.sh",
-    "git": "git push --tags",
-    "test": "jest",
-    "prepare": "husky"
-  },
-  "dependencies": {
-    "accounting": "^0.4.1",
-    "dayjs": "^1.11.13",
-    "js-abbreviation-number": "^1.4.0",
-    "pluralize": "^8.0.0",
-    "uniqid": "^5.4.0"
-  },
-  "devDependencies": {
-    "@playbooks/configs": "0.0.1",
-    "@types/accounting": "^0.4.5",
-    "@types/jest": "^29.5.1",
-    "@types/react": "^18.0.26",
-    "@types/react-dom": "^18.0.9",
-    "dts-bundle-generator": "^9.5.1",
-    "eslint": "^8.57.1",
-    "husky": "^9.1.7",
-    "jest": "^29.5.0",
-    "prettier": "^3.5.3",
-    "rollup-plugin-peer-deps-external": "^2.2.4",
-    "ts-jest": "^29.1.0",
-    "ts-node": "^10.9.1",
-    "tslib": "^2.8.1",
-    "typescript": "^5.8.3",
-    "vite": "^6.3.5"
-  },
-  "exports": {
-    ".": {
-      "types": "./dist/index.d.ts",
-      "import": "./dist/index.mjs",
-      "require": "./dist/index.cjs"
-    },
-    "./arrays": {
-      "types": "./dist/arrays.d.ts",
-      "import": "./dist/arrays.mjs",
-      "require": "./dist/arrays.cjs"
-    },
-    "./dates": {
-      "types": "./dist/dates.d.ts",
-      "import": "./dist/dates.mjs",
-      "require": "./dist/dates.cjs"
-    },
-    "./downloads": {
-      "types": "./dist/downloads.d.ts",
-      "import": "./dist/downloads.mjs",
-      "require": "./dist/downloads.cjs"
-    },
-    "./env": {
-      "types": "./dist/env.d.ts",
-      "import": "./dist/env.mjs",
-      "require": "./dist/env.cjs"
-    },
-    "./errors": {
-      "types": "./dist/errors.d.ts",
-      "import": "./dist/errors.mjs",
-      "require": "./dist/errors.cjs"
-    },
-    "./helpers": {
-      "types": "./dist/helpers.d.ts",
-      "import": "./dist/helpers.mjs",
-      "require": "./dist/helpers.cjs"
-    },
-    "./inputs": {
-      "types": "./dist/inputs.d.ts",
-      "import": "./dist/inputs.mjs",
-      "require": "./dist/inputs.cjs"
-    },
-    "./logger": {
-      "types": "./dist/logger.d.ts",
-      "import": "./dist/logger.mjs",
-      "require": "./dist/logger.cjs"
-    },
-    "./math": {
-      "types": "./dist/math.d.ts",
-      "import": "./dist/math.mjs",
-      "require": "./dist/math.cjs"
-    },
-    "./regex": {
-      "types": "./dist/regex.d.ts",
-      "import": "./dist/regex.mjs",
-      "require": "./dist/regex.cjs"
-    },
-    "./tests": {
-      "types": "./dist/tests.d.ts",
-      "import": "./dist/tests.mjs",
-      "require": "./dist/tests.cjs"
-    },
-    "./transforms": {
-      "types": "./dist/transforms.d.ts",
-      "import": "./dist/transforms.mjs",
-      "require": "./dist/transforms.cjs"
-    }
-  }
+	"name": "@playbooks/utils",
+	"version": "0.0.2",
+	"description": "A collection of utilities used for various projects.",
+	"author": "Eric Hubbell<eric@erichubbell.com>",
+	"license": "ISC",
+	"type": "module",
+	"repository": {
+		"type": "git",
+		"url": "git+https://github.com/playbooks-xyz/playbooks-kit/packages/utils.git"
+	},
+	"files": [
+		"dist"
+	],
+	"keywords": [
+		"playbooks",
+		"utils"
+	],
+	"scripts": {
+		"start": "vite build --mode development --minify false --watch",
+		"build": "vite build --mode production --minify true && npm run build:ts",
+		"build:ts": "dts-bundle-generator --config dts.config.ts",
+		"lint": "eslint src",
+		"lint:fix": "eslint src --fix",
+		"format": "prettier src",
+		"format:fix": "prettier --write src",
+		"clean": "npm run lint:fix && npm run format:fix",
+		"commit": "scripts/commit.sh",
+		"deploy": "scripts/deploy.sh",
+		"git": "git push --tags",
+		"test": "jest",
+		"prepare": "husky"
+	},
+	"dependencies": {
+		"accounting": "^0.4.1",
+		"dayjs": "^1.11.13",
+		"js-abbreviation-number": "^1.4.0",
+		"pluralize": "^8.0.0",
+		"uniqid": "^5.4.0"
+	},
+	"devDependencies": {
+		"@playbooks/configs": "0.0.1",
+		"@types/accounting": "^0.4.5",
+		"@types/jest": "^29.5.1",
+		"@types/react": "^18.0.26",
+		"@types/react-dom": "^18.0.9",
+		"dts-bundle-generator": "^9.5.1",
+		"eslint": "^8.57.1",
+		"husky": "^9.1.7",
+		"jest": "^29.5.0",
+		"prettier": "^3.5.3",
+		"rollup-plugin-peer-deps-external": "^2.2.4",
+		"ts-jest": "^29.1.0",
+		"ts-node": "^10.9.1",
+		"tslib": "^2.8.1",
+		"typescript": "^5.8.3",
+		"vite": "^6.3.5"
+	},
+	"exports": {
+		".": {
+			"types": "./dist/index.d.ts",
+			"import": "./dist/index.mjs",
+			"require": "./dist/index.cjs"
+		},
+		"./arrays": {
+			"types": "./dist/arrays.d.ts",
+			"import": "./dist/arrays.mjs",
+			"require": "./dist/arrays.cjs"
+		},
+		"./dates": {
+			"types": "./dist/dates.d.ts",
+			"import": "./dist/dates.mjs",
+			"require": "./dist/dates.cjs"
+		},
+		"./downloads": {
+			"types": "./dist/downloads.d.ts",
+			"import": "./dist/downloads.mjs",
+			"require": "./dist/downloads.cjs"
+		},
+		"./env": {
+			"types": "./dist/env.d.ts",
+			"import": "./dist/env.mjs",
+			"require": "./dist/env.cjs"
+		},
+		"./errors": {
+			"types": "./dist/errors.d.ts",
+			"import": "./dist/errors.mjs",
+			"require": "./dist/errors.cjs"
+		},
+		"./helpers": {
+			"types": "./dist/helpers.d.ts",
+			"import": "./dist/helpers.mjs",
+			"require": "./dist/helpers.cjs"
+		},
+		"./inputs": {
+			"types": "./dist/inputs.d.ts",
+			"import": "./dist/inputs.mjs",
+			"require": "./dist/inputs.cjs"
+		},
+		"./logger": {
+			"types": "./dist/logger.d.ts",
+			"import": "./dist/logger.mjs",
+			"require": "./dist/logger.cjs"
+		},
+		"./math": {
+			"types": "./dist/math.d.ts",
+			"import": "./dist/math.mjs",
+			"require": "./dist/math.cjs"
+		},
+		"./regex": {
+			"types": "./dist/regex.d.ts",
+			"import": "./dist/regex.mjs",
+			"require": "./dist/regex.cjs"
+		},
+		"./tests": {
+			"types": "./dist/tests.d.ts",
+			"import": "./dist/tests.mjs",
+			"require": "./dist/tests.cjs"
+		},
+		"./transforms": {
+			"types": "./dist/transforms.d.ts",
+			"import": "./dist/transforms.mjs",
+			"require": "./dist/transforms.cjs"
+		}
+	}
 }

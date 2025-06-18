@@ -13,10 +13,10 @@
 			"execute": false,
 			"command": "npm run buld"
 		},
-    {
+		{
 			"name": "misc",
 			"open": true,
-      "command": ""
+			"command": ""
 		}
 	]
 }

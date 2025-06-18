@@ -16,10 +16,10 @@
     "build": "vite build --mode production --minify true && npm run build:ts",
     "build:ts": "dts-bundle-generator --config dts.config.ts",
     "clean": "npm run lint:fix",
-    "lint": "eslint src",
-    "lint:fix": "eslint src --fix",
-    "format": "prettier src",
-    "format:fix": "prettier --write src",
+    "lint": "eslint packages",
+    "lint:fix": "eslint packages --fix",
+    "format": "prettier packages",
+    "format:fix": "prettier --write packages",
     "commit": "scripts/commit.sh",
     "deploy": "scripts/deploy.sh",
     "test": "jest",
@@ -33,7 +33,7 @@
     "accounting": "^0.4.1"
   },
   "devDependencies": {
-    "@ehubbell/configs": "^0.0.17",
+    "@playbooks/configs": "^0.0.1",
     "@types/accounting": "^0.4.5",
     "@types/jest": "^29.5.1",
     "@types/react": "^18.0.26",

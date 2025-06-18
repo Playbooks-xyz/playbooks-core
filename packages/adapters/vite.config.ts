@@ -39,7 +39,6 @@ export default defineConfig(({ mode }) => {
 			alias: {
 				src: path.resolve(__dirname, '/src'),
 				adapters: path.resolve(__dirname, '/src/adapters'),
-				utils: path.resolve(__dirname, '/src/utils'),
 			},
 		},
 	};
