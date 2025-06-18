@@ -1,1 +1,1 @@
-export * from 'adapters';
+export * from 'src/base-adapter';

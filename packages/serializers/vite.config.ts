@@ -33,7 +33,6 @@ export default defineConfig(({ mode }) => {
 		resolve: {
 			alias: {
 				src: path.resolve(__dirname, '/src'),
-				serializers: path.resolve(__dirname, '/src/serializers'),
 			},
 		},
 	};

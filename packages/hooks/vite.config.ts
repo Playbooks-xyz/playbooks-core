@@ -47,7 +47,6 @@ export default defineConfig(({ mode }) => {
 		resolve: {
 			alias: {
 				src: path.resolve(__dirname, '/src'),
-				hooks: path.resolve(__dirname, '/src/hooks'),
 			},
 		},
 	};

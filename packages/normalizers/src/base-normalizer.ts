@@ -1,4 +1,5 @@
-import { dashToCamel, dashToUnderscore, isArray, isObject } from '@playbooks/utils';
+import { isArray, isObject } from '@playbooks/utils/helpers';
+import { dashToCamel, dashToUnderscore } from '@playbooks/utils/transforms';
 
 // Helpers
 const formatLookup = type => {

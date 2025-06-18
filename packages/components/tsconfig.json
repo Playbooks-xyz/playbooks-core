@@ -2,7 +2,6 @@
 	"extends": "@playbooks/configs/ts-config-package",
 	"compilerOptions": {
 		"baseUrl": ".",
-		"rootDir": ".",
 		"types": ["vite/client", "node", "jest"]
 	},
 	"include": ["src", "tests", "types", "vite.config.ts"],

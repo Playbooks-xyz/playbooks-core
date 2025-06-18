@@ -23,7 +23,7 @@ export default defineConfig(({ mode }) => {
 		build: {
 			sourcemap: mode !== 'production',
 			lib: {
-				entry: [path.resolve(__dirname, 'src/index.ts'), path.resolve(__dirname, 'src/normalizers/normalizers.ts')],
+				entry: path.resolve(__dirname, 'src/index.ts'),
 				name: 'Normalizers',
 				formats: ['es', 'cjs'],
 				fileName: (format, entryName) => (format === 'es' ? `${entryName}.mjs` : `${entryName}.cjs`),
@@ -33,7 +33,6 @@ export default defineConfig(({ mode }) => {
 		resolve: {
 			alias: {
 				src: path.resolve(__dirname, '/src'),
-				normalizers: path.resolve(__dirname, '/src/normalizers'),
 			},
 		},
 	};
