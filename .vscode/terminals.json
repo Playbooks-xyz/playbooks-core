@@ -46,6 +46,11 @@
 			"execute": false
 		},
 		{
+			"name": "playbooks-kit-utils",
+			"command": "cd packages/utils",
+			"execute": false
+		},
+		{
 			"name": "playbooks-kit-wrappers",
 			"command": "cd packages/wrappers",
 			"execute": false

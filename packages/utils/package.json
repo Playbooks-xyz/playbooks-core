@@ -1,6 +1,6 @@
 {
   "name": "@playbooks/utils",
-  "version": "0.0.25",
+  "version": "0.0.0",
   "description": "A collection of utilities used for various projects.",
   "author": "Eric Hubbell<eric@erichubbell.com>",
   "license": "ISC",
@@ -23,8 +23,7 @@
     "utils"
   ],
   "scripts": {
-    "dev": "vite build --mode development --watch --minify false",
-    "start": "vite build --mode development --minify false",
+    "start": "vite build --mode development --minify false --watch",
     "build": "vite build --mode production --minify true && npm run build:ts",
     "build:ts": "dts-bundle-generator --config dts.config.ts",
     "lint": "eslint src",
@@ -46,7 +45,7 @@
     "uniqid": "^5.4.0"
   },
   "devDependencies": {
-    "@playbooks/configs": "^0.0.17",
+    "@playbooks/configs": "0.0.1",
     "@types/accounting": "^0.4.5",
     "@types/jest": "^29.5.1",
     "@types/react": "^18.0.26",
