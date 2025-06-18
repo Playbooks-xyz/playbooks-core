@@ -1,0 +1,9 @@
+{
+	"extends": "@playbooks/configs/ts-config-package",
+	"compilerOptions": {
+		"baseUrl": "src",
+		"rootDir": "."
+	},
+	"include": ["src", "tests", "types", "vite.config.ts"],
+	"exclude": ["node_modules"]
+}
