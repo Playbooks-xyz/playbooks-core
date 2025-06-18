@@ -1,14 +1,8 @@
-const fileNames = ['index', 'normalizers', 'serializers'];
+const fileNames = ['index', 'serializers'];
 
 const config = {
+	compilationOptions: { preferredConfigPath: './tsconfig.json' },
 	entries: fileNames.map(fileName => {
-		if (fileName === 'normalizers') {
-			return {
-				filePath: `./src/normalizers/${fileName}.ts`,
-				outFile: `./dist/${fileName}.d.ts`,
-				noCheck: false,
-			};
-		}
 		if (fileName === 'serializers') {
 			return {
 				filePath: `./src/serializers/${fileName}.ts`,

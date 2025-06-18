@@ -23,12 +23,8 @@ export default defineConfig(({ mode }) => {
 		build: {
 			sourcemap: mode !== 'production',
 			lib: {
-				entry: [
-					path.resolve(__dirname, 'src/index.ts'),
-					path.resolve(__dirname, 'src/normalizers/normalizers.ts'),
-					path.resolve(__dirname, 'src/serializers/serializers.ts'),
-				],
-				name: 'Serializes',
+				entry: path.resolve(__dirname, 'src/index.ts'),
+				name: 'Serializers',
 				formats: ['es', 'cjs'],
 				fileName: (format, entryName) => (format === 'es' ? `${entryName}.mjs` : `${entryName}.cjs`),
 			},
@@ -37,9 +33,7 @@ export default defineConfig(({ mode }) => {
 		resolve: {
 			alias: {
 				src: path.resolve(__dirname, '/src'),
-				normalizers: path.resolve(__dirname, '/src/normalizers'),
 				serializers: path.resolve(__dirname, '/src/serializers'),
-				utils: path.resolve(__dirname, '/src/utils'),
 			},
 		},
 	};

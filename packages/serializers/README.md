@@ -1,18 +1,22 @@
 # Overview
- This library offers a collection of data serializers for various projects.
- It's designed to be use in conjunction with the [@playbooks/adapters](https://github.com/playbooks/adapters) library though it also works well on it's own.
- Each serializer offers a simple interface for serializing and normalizing data arrays and objects according to your specification.
- By abstracting this logic into a package, we're able to reduce and consolidate the boilerplate code necessary for each project.
+
+This library offers a collection of data serializers for various projects.
+It's designed to be use in conjunction with the [@playbooks/adapters](https://github.com/playbooks/adapters) library though it also works well on it's own.
+Each serializer offers a simple interface for serializing and normalizing data arrays and objects according to your specification.
+By abstracting this logic into a package, we're able to reduce and consolidate the boilerplate code necessary for each project.
 
 ## Prerequisites
+
 - @playbooks/utils
 
 ## Installation
+
 ```
 npm install @playbooks/adapters
 ```
 
 ## Usage
+
 ```tsx
 import React from 'react';
 
@@ -83,31 +87,37 @@ const useStore = () => {
 };
 
 export { StoreProvider, useStore };
-
 ```
 
 ## Development
+
 This project uses [yalc](https://npmjs.com/package/yalc) for local development.
+
 - npm run dev
 - switch to project
 - npx yalc add @playbooks/serializers
 - After that, this library should hot reload into the consuming application
 
 ## Scripts
+
 - We've included a couple of helpful scripts for faster development.
 - deploy: `npm run deploy -- 'commit message'`
 - publish: `npm run publish -- 'commit message' [major|minor|patch]`
 
 ## Husky
+
 - Husky configuration is setup to lint and format the repo on every commit
 - Edit the `.husky/pre-commit` file to change your settings
 
 ## Author
+
 - [Eric Hubbell](http://www.erichubbell.com)
 - eric@erichubbell.com
 
 ## Notes
+
 To see this library in action, checkout the following projects:
+
 - [playbooks](https://www.playbooks.xyz)
 - [playbooks blog](https://blog.playbooks.xyz)
 - [playbooks docs](https://docs.playbooks.xyz)
