@@ -1,24 +1,39 @@
 # Overview
 
-A lightweight React / Vite based NPM package starter.
+A collection of components for React projects.
 
-## Prerequisites
+## Installation
 
-- React
-- Node
-- NPM
-- Yalc
+```
+npm install @playbooks/adapters
+```
 
-## Quick Start
+## Usage
 
-- npm install
-- npm start
+```tsx
+import React from 'react';
+
+import { H6 } from '@ehubbell/html';
+import { Animation, useAnimation } from '@playbooks/components';
+
+const AnimatedText = ({ text }) => {
+
+  return (
+    <H6>{text}</H6>
+  )
+};
+
+export { AnimatedText };
+```
 
 ## Development
 
-- npm link
+This project uses [yalc](https://npmjs.com/package/yalc) for local development.
+
+- npm run dev
 - switch to project
-- npm link <package_name>
+- npx yalc add @playbooks/utils
+- After that, this library should hot reload into the consuming application
 
 ## Scripts
 
@@ -31,12 +46,16 @@ A lightweight React / Vite based NPM package starter.
 - Husky configuration is setup to lint and format the repo on every commit
 - Edit the `.husky/pre-commit` file to change your settings
 
-## Yalc
-
-- When adding this library to another React project via `npm link` the two versions of react will clobber each other.
-- To avoid this, you'll need to use `yalc` which creates a local package store as opposed to linking binaries.
-
 ## Author
 
-- Eric Hubbell
+- [Eric Hubbell](http://www.erichubbell.com)
 - eric@erichubbell.com
+
+## Notes
+
+To see this library in action, checkout the following projects:
+
+- [playbooks](https://www.playbooks.xyz)
+- [playbooks blog](https://blog.playbooks.xyz)
+- [playbooks docs](https://docs.playbooks.xyz)
+
