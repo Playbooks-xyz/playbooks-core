@@ -1,6 +1,6 @@
 import { useRef, useState } from 'react';
 
-import { Fade } from '@playbooks/components';
+import { Fade } from '@playbooks/components/fade';
 import { useInterface } from 'contexts';
 import { AccentBtn } from 'interface/buttons';
 import { H6, P } from 'interface/fonts';

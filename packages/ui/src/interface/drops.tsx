@@ -1,7 +1,7 @@
 import { useRef, useState } from 'react';
 import { usePopper } from 'react-popper';
 
-import { Fade } from '@playbooks/components';
+import { Fade } from '@playbooks/components/fade';
 import { useKeyPress, useMouseUp } from '@playbooks/hooks';
 import { useInterface } from 'contexts';
 import { AccentBtn, Btn } from 'interface/buttons';

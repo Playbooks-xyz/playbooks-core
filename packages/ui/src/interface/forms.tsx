@@ -2,7 +2,10 @@ import { useRef } from 'react';
 
 import * as HTML from '@ehubbell/html';
 import { computeTailwind } from '@ehubbell/html';
-import { CurrencyInput, GoogleAutocomplete, MaskedInput, PhoneInput } from '@playbooks/components';
+import { CurrencyInput } from '@playbooks/components/currency-input';
+import { GoogleAutocomplete } from '@playbooks/components/google-autocomplete';
+import { MaskedInput } from '@playbooks/components/masked-input';
+import { PhoneInput } from '@playbooks/components/phone-input';
 import { useElementKeyPress } from '@playbooks/hooks';
 import { useInterface } from 'contexts';
 import { Div, Span } from 'interface/html';

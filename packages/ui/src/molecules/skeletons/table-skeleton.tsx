@@ -1,4 +1,4 @@
-import { Skeleton } from '@playbooks/components';
+import { Skeleton } from '@playbooks/components/skeleton';
 import { listBuilder } from '@playbooks/utils';
 import { H6 } from 'interface/fonts';
 import { Col, Grid } from 'interface/grid';

@@ -1,7 +1,7 @@
 import { useRef, useState } from 'react';
 import { usePopper } from 'react-popper';
 
-import { Fade } from '@playbooks/components';
+import { Fade } from '@playbooks/components/fade';
 import { useInterface } from 'contexts';
 import { Div, Span } from 'interface/html';
 import * as types from 'types/tooltip-types';

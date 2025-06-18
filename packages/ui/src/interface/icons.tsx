@@ -1,7 +1,7 @@
+import { FontAwesome } from '@playbooks/components/font-awesome';
 import { useInterface } from 'contexts';
 import { Div } from 'interface/html';
 import * as types from 'types/icon-types';
-import { FaWrapper } from 'wrappers/';
 
 export const Icon = props => {
 	switch (props?.type) {
@@ -45,7 +45,7 @@ export const FabIcon = ({ name = 'FabIcon', icon, tailwind, className, ...props 
 	const base = theme.icon();
 	const computed = { ...base, ...props, tailwind, className, name };
 
-	return <FaWrapper type='fab' icon={icon} {...computed} />;
+	return <FontAwesome type='fab' icon={icon} {...computed} />;
 };
 
 export const FadIcon = ({ name = 'FadIcon', icon, tailwind, className, ...props }: types.IconProps) => {
@@ -53,7 +53,7 @@ export const FadIcon = ({ name = 'FadIcon', icon, tailwind, className, ...props 
 	const base = theme.icon();
 	const computed = { ...base, ...props, tailwind, className, name };
 
-	return <FaWrapper type='fad' icon={icon} {...computed} />;
+	return <FontAwesome type='fad' icon={icon} {...computed} />;
 };
 
 export const FalIcon = ({ name = 'FalIcon', icon, tailwind, className, ...props }: types.IconProps) => {
@@ -61,7 +61,7 @@ export const FalIcon = ({ name = 'FalIcon', icon, tailwind, className, ...props 
 	const base = theme.icon();
 	const computed = { ...base, ...props, tailwind, className, name };
 
-	return <FaWrapper type='fal' icon={icon} {...computed} />;
+	return <FontAwesome type='fal' icon={icon} {...computed} />;
 };
 
 export const FarIcon = ({ name = 'FarIcon', icon, tailwind, className, ...props }: types.IconProps) => {
@@ -69,7 +69,7 @@ export const FarIcon = ({ name = 'FarIcon', icon, tailwind, className, ...props 
 	const base = theme.icon();
 	const computed = { ...base, ...props, tailwind, className, name };
 
-	return <FaWrapper type='far' icon={icon} {...computed} />;
+	return <FontAwesome type='far' icon={icon} {...computed} />;
 };
 
 export const FasIcon = ({ name = 'FasIcon', icon, tailwind, className, ...props }: types.IconProps) => {
@@ -77,7 +77,7 @@ export const FasIcon = ({ name = 'FasIcon', icon, tailwind, className, ...props 
 	const base = theme.icon();
 	const computed = { ...base, ...props, tailwind, className, name };
 
-	return <FaWrapper type='fas' icon={icon} {...computed} />;
+	return <FontAwesome type='fas' icon={icon} {...computed} />;
 };
 
 export const WrappedFabIcon = ({ name = 'WrappedFabIcon', icon, tailwind, className, ...props }: types.IconProps) => {
@@ -86,7 +86,7 @@ export const WrappedFabIcon = ({ name = 'WrappedFabIcon', icon, tailwind, classN
 	const computed = { ...base, ...props, tailwind, className, name };
 	return (
 		<Div {...computed}>
-			<FaWrapper type='fab' icon={icon} tailwind={tailwind?.icon} />
+			<FontAwesome type='fab' icon={icon} tailwind={tailwind?.icon} />
 		</Div>
 	);
 };
@@ -97,7 +97,7 @@ export const WrappedFadIcon = ({ name = 'WrappedFadIcon', icon, tailwind, classN
 	const computed = { ...base, ...props, tailwind, className, name };
 	return (
 		<Div {...computed}>
-			<FaWrapper type='fad' icon={icon} tailwind={tailwind?.icon} />
+			<FontAwesome type='fad' icon={icon} tailwind={tailwind?.icon} />
 		</Div>
 	);
 };
@@ -109,7 +109,7 @@ export const WrappedFalIcon = ({ name = 'WrappedFalIcon', icon, tailwind, classN
 
 	return (
 		<Div {...computed}>
-			<FaWrapper type='far' icon={icon} tailwind={tailwind?.icon} />
+			<FontAwesome type='far' icon={icon} tailwind={tailwind?.icon} />
 		</Div>
 	);
 };
@@ -121,7 +121,7 @@ export const WrappedFarIcon = ({ name = 'WrappedFarIcon', icon, tailwind, classN
 
 	return (
 		<Div {...computed}>
-			<FaWrapper type='far' icon={icon} tailwind={tailwind?.icon} />
+			<FontAwesome type='far' icon={icon} tailwind={tailwind?.icon} />
 		</Div>
 	);
 };
@@ -133,7 +133,7 @@ export const WrappedFasIcon = ({ name = 'WrappedFasIcon', icon, tailwind, classN
 
 	return (
 		<Div {...computed}>
-			<FaWrapper type='far' icon={icon} tailwind={tailwind?.icon} />
+			<FontAwesome type='far' icon={icon} tailwind={tailwind?.icon} />
 		</Div>
 	);
 };
