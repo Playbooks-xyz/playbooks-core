@@ -1,4 +1,4 @@
-import { isArray } from 'utils/helpers';
+import { isArray } from 'src/helpers';
 // import * as logger from 'utils/logger';
 
 export const formatErrors = (errors = []) => {
