@@ -30,6 +30,7 @@ export default defineConfig(({ mode }) => {
 				entry: [
 					path.resolve(__dirname, 'src/index.tsx'),
 					path.resolve(__dirname, 'src/contexts/contexts.tsx'),
+					path.resolve(__dirname, 'src/hooks/hooks.tsx'),
 					path.resolve(__dirname, 'src/interface/accordions.tsx'),
 					path.resolve(__dirname, 'src/interface/alerts.tsx'),
 					path.resolve(__dirname, 'src/interface/avatars.tsx'),
