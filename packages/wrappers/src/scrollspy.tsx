@@ -1,4 +1,4 @@
-import Scrollspy from '@playbooks/scrollspy';
+import Scrollspy from '@ehubbell/scrollspy';
 
 const defaultOpts = {
 	dataAttribute: 'scrollspy',

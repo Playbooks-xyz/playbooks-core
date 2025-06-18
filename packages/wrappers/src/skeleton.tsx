@@ -1,7 +1,7 @@
 import SkeletonWrapper, { SkeletonTheme } from 'react-loading-skeleton';
 
 import { computeTailwind } from '@ehubbell/html';
-import { HtmlProps } from 'types';
+import { HtmlProps } from '@playbooks/ui/html';
 
 export type SkeletonProps = HtmlProps;
 
