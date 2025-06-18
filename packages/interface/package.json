@@ -46,6 +46,8 @@
 		"@ehubbell/html": "^0.1.10",
 		"@ehubbell/scrollspy": "^0.0.2",
 		"@fortawesome/react-fontawesome": "^0.2.2",
+		"@playbooks/components": "^0.0.1",
+		"@playbooks/hooks": "^0.0.2",
 		"@playbooks/theme": "^0.1.16",
 		"@playbooks/utils": "^0",
 		"@popperjs/core": "^2.11.8",

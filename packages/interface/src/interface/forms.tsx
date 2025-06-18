@@ -2,11 +2,11 @@ import { useRef } from 'react';
 
 import * as HTML from '@ehubbell/html';
 import { computeTailwind } from '@ehubbell/html';
+import { CurrencyInput, GoogleAutocomplete, MaskedInput, PhoneInput } from '@playbooks/components';
+import { useElementKeyPress } from '@playbooks/hooks';
 import { useInterface } from 'contexts';
-import { useElementKeyPress } from 'hooks';
 import { Div, Span } from 'interface/html';
 import * as types from 'types/form-types';
-import { CurrencyInputWrapper, GoogleAutocompleteWrapper, MaskedInputWrapper, PhoneInputWrapper } from 'wrappers';
 
 export const Form = ({ id, name = 'Form', onSubmit, tailwind, className, children, ...props }: types.FormProps) => {
 	const { theme } = useInterface();
@@ -137,7 +137,7 @@ export const FormMaskInput = ({
 	const classes = computeTailwind({ ...base, ...props, ...tailwind, className });
 
 	return (
-		<MaskedInputWrapper
+		<MaskedInput
 			id={id}
 			mask={mask}
 			value={value}
@@ -170,7 +170,7 @@ export const FormCurrencyInput = ({
 	const classes = computeTailwind({ ...base, ...props, ...tailwind, className });
 
 	return (
-		<CurrencyInputWrapper
+		<CurrencyInput
 			id={id}
 			value={value}
 			prefix={prefix}
@@ -254,7 +254,7 @@ export const FormLocationInput = ({
 	}
 
 	return (
-		<GoogleAutocompleteWrapper options={options} googleMapsApiKey={googleMapsApiKey} onSelect={onSelect}>
+		<GoogleAutocomplete options={options} googleMapsApiKey={googleMapsApiKey} onSelect={onSelect}>
 			<HTML.Input
 				id={id}
 				ref={ref}
@@ -265,7 +265,7 @@ export const FormLocationInput = ({
 				readOnly={readOnly}
 				className={classes}
 			/>
-		</GoogleAutocompleteWrapper>
+		</GoogleAutocomplete>
 	);
 };
 
@@ -288,7 +288,7 @@ export const FormPhoneInput = ({
 	const classes = computeTailwind({ ...base, ...props, ...tailwind, className });
 
 	return (
-		<PhoneInputWrapper
+		<PhoneInput
 			id={id}
 			value={value}
 			placeholder={placeholder}

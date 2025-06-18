@@ -30,7 +30,6 @@ export default defineConfig(({ mode }) => {
 				entry: [
 					path.resolve(__dirname, 'src/index.tsx'),
 					path.resolve(__dirname, 'src/contexts/contexts.tsx'),
-					path.resolve(__dirname, 'src/hooks/hooks.tsx'),
 					path.resolve(__dirname, 'src/interface/accordions.tsx'),
 					path.resolve(__dirname, 'src/interface/alerts.tsx'),
 					path.resolve(__dirname, 'src/interface/avatars.tsx'),
@@ -113,14 +112,11 @@ export default defineConfig(({ mode }) => {
 			alias: {
 				src: path.resolve(__dirname, '/src'),
 				assets: path.resolve(__dirname, '/src/assets'),
-				components: path.resolve(__dirname, '/src/components'),
 				contexts: path.resolve(__dirname, '/src/contexts'),
-				hooks: path.resolve(__dirname, '/src/hooks'),
 				interface: path.resolve(__dirname, '/src/interface'),
 				molecules: path.resolve(__dirname, '/src/molecules'),
 				types: path.resolve(__dirname, '/src/types'),
 				utils: path.resolve(__dirname, '/src/utils'),
-				wrappers: path.resolve(__dirname, '/src/wrappers'),
 			},
 		},
 	};

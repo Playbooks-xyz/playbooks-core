@@ -1,4 +1,4 @@
-import { Skeleton } from 'components';
+import { Skeleton } from '@playbooks/components';
 import { Card, CardBody, CardFooter, CardHeader, CardPretitle, CardSubtitle, CardTitle } from 'interface/cards';
 import { Span } from 'interface/html';
 

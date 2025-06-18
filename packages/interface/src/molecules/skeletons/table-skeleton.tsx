@@ -1,5 +1,5 @@
+import { Skeleton } from '@playbooks/components';
 import { listBuilder } from '@playbooks/utils';
-import { Skeleton } from 'components';
 import { H6 } from 'interface/fonts';
 import { Col, Grid } from 'interface/grid';
 

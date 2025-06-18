@@ -1,8 +1,8 @@
 import { useEffect, useRef, useState } from 'react';
 
-import { Fade } from 'components';
+import { Fade } from '@playbooks/components';
+import { useKeyPress } from '@playbooks/hooks';
 import { useInterface } from 'contexts';
-import { useKeyPress } from 'hooks';
 import { AccentBtn } from 'interface/buttons';
 import { Font } from 'interface/fonts';
 import { Div, Span } from 'interface/html';

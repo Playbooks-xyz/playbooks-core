@@ -1,7 +1,7 @@
 import { Fragment } from 'react';
 
+import { Skeleton } from '@playbooks/components';
 import { listBuilder } from '@playbooks/utils';
-import { Skeleton } from 'components';
 import { Item } from 'molecules/items';
 
 const ItemSkeleton = ({ count }) => (

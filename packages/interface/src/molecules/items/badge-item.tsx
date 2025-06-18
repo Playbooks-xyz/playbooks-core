@@ -1,4 +1,4 @@
-import { Skeleton } from 'components';
+import { Skeleton } from '@playbooks/components';
 import { Badge } from 'interface/badges';
 import { Small } from 'interface/fonts';
 import { Li } from 'interface/html';
