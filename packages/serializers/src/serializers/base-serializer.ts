@@ -1,4 +1,4 @@
-import { camelToDash, camelToUnderscore, dashToCamel, isArray, isEmpty, isObject } from '@ehubbell/utils';
+import { camelToDash, camelToUnderscore, dashToCamel, isArray, isEmpty, isObject } from '@playbooks/utils';
 
 // Helpers
 const formatLookup = type => {

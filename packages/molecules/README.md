@@ -2,18 +2,18 @@
  A collection of molecules for React projects.
 
 ## Prerequisites
-- @ehubbell/utils
+- @playbooks/utils
 - @playbooks/ui
 
 ## Installation
 ```
-npm install @ehubbell/molecules
+npm install @playbooks/molecules
 ```
 
 ## Usage
 ```tsx
 import { useEffect, useState } from 'react';
-import { SuccessToast } from '@ehubbell/molecules';
+import { SuccessToast } from '@playbooks/molecules';
 
 const WelcomeRoute = ({ app, ssr, account, router, search, session, store, toast }) => {
   const [loaded, setLoaded] = useState(false);
@@ -39,7 +39,7 @@ export default WelcomeRoute;
 This project uses [yalc](https://npmjs.com/package/yalc) for local development.
 - npm run dev
 - switch to project
-- npx yalc add @ehubbell/molecules
+- npx yalc add @playbooks/molecules
 - After that, this library should hot reload into the consuming application
 
 ## Scripts

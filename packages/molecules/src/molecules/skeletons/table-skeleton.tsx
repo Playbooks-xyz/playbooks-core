@@ -1,7 +1,7 @@
-import { listBuilder } from '@ehubbell/utils';
 import { Skeleton } from '@playbooks/ui/components';
 import { H6 } from '@playbooks/ui/fonts';
 import { Col, Grid } from '@playbooks/ui/grid';
+import { listBuilder } from '@playbooks/utils';
 
 const TableSkeleton = ({ count, grid, tailwind }) => {
 	// Render

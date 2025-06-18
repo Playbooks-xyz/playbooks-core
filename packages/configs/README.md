@@ -4,21 +4,21 @@ It's designed to simplify and standardize your project setup for less boilerplat
 
 ## Installation
 ```
-npm i @ehubbell/configs --save-dev
+npm i @playbooks/configs --save-dev
 npm install
 ```
 
 ## ESLint Usage
 Add one of the following to your `package.json` file:
 ```json
-  "eslintConfig": { "extends": "./node_modules/@ehubbell/configs/src/eslint-config-node.js" },
-  "eslintConfig": { "extends": "./node_modules/@ehubbell/configs/src/eslint-config-web.js" },
+  "eslintConfig": { "extends": "./node_modules/@playbooks/configs/src/eslint-config-node.js" },
+  "eslintConfig": { "extends": "./node_modules/@playbooks/configs/src/eslint-config-web.js" },
 ```
 
 ## Prettier Usage
 Add the following to your `package.json` file:
 ```json
-  "prettier": "@ehubbell/configs/prettier-config",
+  "prettier": "@playbooks/configs/prettier-config",
 ```
 
 ## TSConfig Usage
@@ -26,7 +26,7 @@ Create a `tsconfig.json` file and add one of the following:
 
 ```json
 {
-  "extends": "@ehubbell/ts-config/web",
+  "extends": "@playbooks/ts-config/web",
   "compilerOptions": {
     "baseUrl": "src",
     "rootDir": "."
@@ -38,7 +38,7 @@ Create a `tsconfig.json` file and add one of the following:
 ```
 ```json
 {
-  "extends": "@ehubbell/ts-config/node",
+  "extends": "@playbooks/ts-config/node",
   "compilerOptions": {
     "baseUrl": "src",
     "rootDir": "."
@@ -48,10 +48,6 @@ Create a `tsconfig.json` file and add one of the following:
 }
 
 ```
-
-## Author
-- [Eric Hubbell](http://www.erichubbell.com)
-- eric@erichubbell.com
 
 ## Issues
 - eslint v9 doesn't allow nested `extends`

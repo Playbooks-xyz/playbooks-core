@@ -1,28 +1,28 @@
 # Overview
  This library offers a collection of data serializers for various projects.
- It's designed to be use in conjunction with the [@ehubbell/adapters](https://github.com/ehubbell/adapters) library though it also works well on it's own.
+ It's designed to be use in conjunction with the [@playbooks/adapters](https://github.com/playbooks/adapters) library though it also works well on it's own.
  Each serializer offers a simple interface for serializing and normalizing data arrays and objects according to your specification.
  By abstracting this logic into a package, we're able to reduce and consolidate the boilerplate code necessary for each project.
 
 ## Prerequisites
-- @ehubbell/utils
+- @playbooks/utils
 
 ## Installation
 ```
-npm install @ehubbell/adapters
+npm install @playbooks/adapters
 ```
 
 ## Usage
 ```tsx
 import React from 'react';
 
-import { BaseAdapter } from '@ehubbell/adapters';
+import { BaseAdapter } from '@playbooks/adapters';
 import {
 	jsonApiNormalize,
 	jsonApiNormalizeArray,
 	jsonApiSerialize,
 	jsonApiSerializeArray,
-} from '@ehubbell/serializers';
+} from '@playbooks/serializers';
 
 const StoreContext = React.createContext(null);
 
@@ -90,7 +90,7 @@ export { StoreProvider, useStore };
 This project uses [yalc](https://npmjs.com/package/yalc) for local development.
 - npm run dev
 - switch to project
-- npx yalc add @ehubbell/serializers
+- npx yalc add @playbooks/serializers
 - After that, this library should hot reload into the consuming application
 
 ## Scripts

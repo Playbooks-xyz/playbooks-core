@@ -1,7 +1,7 @@
 {
-  "name": "vite-basic-package-starter-react",
-  "version": "1.0.2",
-  "description": "A lightweight package starter for React projects.",
+  "name": "@playbooks/components",
+  "version": "0.0.0",
+  "description": "A collection of components for React projects.",
   "author": "Eric Hubbell<eric@erichubbell.com>",
   "license": "ISC",
   "main": "dist/index.cjs.js",
@@ -33,7 +33,7 @@
     "accounting": "^0.4.1"
   },
   "devDependencies": {
-    "@ehubbell/configs": "^0.0.16",
+    "@playbooks/configs": "latest",
     "@types/accounting": "^0.4.5",
     "@types/jest": "^29.5.1",
     "@types/react": "^18.0.26",

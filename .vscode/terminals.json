@@ -2,21 +2,37 @@
 	"autorun": true,
 	"terminals": [
 		{
-			"name": "project-terminal",
-			"focus": true,
-			"execute": false,
-			"command": "npm run dev"
+			"name": "playbooks-kit",
+			"focus": true
 		},
 		{
-			"name": "project-terminal-alt",
-			"focus": true,
-			"execute": false,
-			"command": "npm run buld"
+			"name": "playbooks-kit-adapters",
+			"command": "cd packages/adapters",
+			"execute": false
+		},
+		{
+			"name": "playbooks-kit-components",
+			"command": "cd packages/components",
+			"execute": false
+		},
+		{
+			"name": "playbooks-kit-configs",
+			"command": "cd packages/configs",
+			"execute": false
+		},
+		{
+			"name": "playbooks-kit-contexts",
+			"command": "cd packages/contexts",
+			"execute": false
+		},
+		{
+			"name": "playbooks-kit-hooks",
+			"command": "cd packages/hooks",
+			"execute": false
 		},
     {
 			"name": "misc",
-			"open": true,
-      "command": ""
+      "execute": false
 		}
 	]
 }

@@ -1,4 +1,4 @@
-import { dashToCamel, isArray, isObject } from '@ehubbell/utils';
+import { dashToCamel, isArray, isObject } from '@playbooks/utils';
 
 // Helpers
 const attrs = {

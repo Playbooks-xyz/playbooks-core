@@ -1,7 +1,7 @@
-import { capitalize } from '@ehubbell/utils';
 import { BtnGroup } from '@playbooks/ui/button-groups';
 import { AccentBtn } from '@playbooks/ui/buttons';
 import { Span } from '@playbooks/ui/html';
+import { capitalize } from '@playbooks/utils';
 
 const ViewToggle = ({ value, options, onClick, tailwind }) => {
 	// Methods

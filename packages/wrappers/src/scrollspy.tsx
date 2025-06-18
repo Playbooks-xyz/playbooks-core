@@ -1,4 +1,4 @@
-import Scrollspy from '@ehubbell/scrollspy';
+import Scrollspy from '@playbooks/scrollspy';
 
 const defaultOpts = {
 	dataAttribute: 'scrollspy',
@@ -18,4 +18,4 @@ const ScrollSpy = ({ ref = null, options = defaultOpts, onUpdate = () => null, c
 export { ScrollSpy };
 
 // Docs
-// https://www.npmjs.com/package/@ehubbell/scrollspy
+// https://www.npmjs.com/package/@playbooks/scrollspy

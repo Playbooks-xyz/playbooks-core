@@ -1,5 +1,5 @@
 # Overview
- An interface library for Playbooks
+ An interface library for Playbooks built with Tailwind.
 
 ## Prerequisites
 - Font Awesome

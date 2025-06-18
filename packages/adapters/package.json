@@ -1,5 +1,5 @@
 {
-  "name": "@ehubbell/adapters",
+  "name": "@playbooks/adapters",
   "version": "0.0.16",
   "description": "A collection of networking adapters for various projects.",
   "author": "Eric Hubbell<eric@erichubbell.com>",
@@ -9,10 +9,10 @@
   "types": "dist/index.d.ts",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/ehubbell/adapters.git"
+    "url": "git+https://github.com/playbooks/adapters.git"
   },
   "bugs": {
-    "url": "https://github.com/ehubbell/adapters/issues"
+    "url": "https://github.com/playbooks/adapters/issues"
   },
   "files": [
     "dist"
@@ -40,16 +40,13 @@
     "test": "jest",
     "prepare": "husky"
   },
-  "peerDependencies": {
-    "@ehubbell/utils": "^0"
-  },
   "dependencies": {
     "cross-fetch": "^4.1.0",
     "dayjs": "^1.11.13"
   },
   "devDependencies": {
-    "@ehubbell/configs": "^0.0.17",
-    "@ehubbell/utils": "^0.0.24",
+    "@playbooks/configs": "latest",
+    "@playbooks/utils": "latest",
     "@types/jest": "^29.5.1",
     "@types/react": "^19.1.7",
     "@types/react-dom": "^19.1.6",

@@ -3,7 +3,7 @@
 
 ## Installation
 ```
-npm install @ehubbell/adapters
+npm install @playbooks/adapters
 ```
 
 ## Usage
@@ -11,7 +11,7 @@ npm install @ehubbell/adapters
 import React from 'react';
 
 import { H6 } from '@ehubbell/html';
-import { formatDate } from '@ehubbell/utils';
+import { formatDate } from '@playbooks/utils';
 
 const FormattedDate = ({ date }) => <H6>{formatDate(date, 'DDDD, MO, YYYY @ HH:MMa')}</H6>;
 
@@ -23,7 +23,7 @@ export { FormattedDate };
 This project uses [yalc](https://npmjs.com/package/yalc) for local development.
 - npm run dev
 - switch to project
-- npx yalc add @ehubbell/utils
+- npx yalc add @playbooks/utils
 - After that, this library should hot reload into the consuming application
 
 ## Scripts

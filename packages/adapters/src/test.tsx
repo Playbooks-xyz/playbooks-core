@@ -1,6 +1,6 @@
 import React from 'react';
 
-import { BaseAdapter } from '@ehubbell/adapters';
+import { BaseAdapter } from '@playbooks/adapters';
 
 const StoreContext = React.createContext(null);
 

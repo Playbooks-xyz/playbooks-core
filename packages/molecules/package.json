@@ -1,5 +1,5 @@
 {
-  "name": "@ehubbell/molecules",
+  "name": "@playbooks/molecules",
   "version": "0.0.11",
   "description": "A collection of molecules for React projects.",
   "author": "Eric Hubbell<eric@erichubbell.com>",
@@ -9,10 +9,10 @@
   "types": "dist/index.d.ts",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/ehubbell/molecules.git"
+    "url": "git+https://github.com/playbooks/molecules.git"
   },
   "bugs": {
-    "url": "https://github.com/ehubbell/molecules/issues"
+    "url": "https://github.com/playbooks/molecules/issues"
   },
   "files": [
     "dist"
@@ -42,11 +42,11 @@
     "react-dom": "^18 || ^19"
   },
   "dependencies": {
-    "@ehubbell/utils": "^0.0.25",
+    "@playbooks/utils": "^0.0.25",
     "@playbooks/ui": "^0.8.23"
   },
   "devDependencies": {
-    "@ehubbell/configs": "^0.0.17",
+    "@playbooks/configs": "^0.0.17",
     "@types/jest": "^29.5.1",
     "@types/react": "^18.0.26",
     "@types/react-dom": "^18.0.9",

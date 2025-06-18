@@ -1,9 +1,9 @@
 import React, { Fragment, useEffect, useMemo, useState } from 'react';
 import { useRouter } from 'next/router';
 
-import { ErrorToast, InfoToast, SuccessToast } from '@ehubbell/molecules/toasts';
-import { formatError, getUUID, isEmpty, logger } from '@ehubbell/utils';
+import { ErrorToast, InfoToast, SuccessToast } from '@playbooks/molecules/toasts';
 import { ToastWrapper } from '@playbooks/ui/toasts';
+import { formatError, getUUID, isEmpty, logger } from '@playbooks/utils';
 
 export interface ToastProps {
 	showSuccess: (title, message) => any;

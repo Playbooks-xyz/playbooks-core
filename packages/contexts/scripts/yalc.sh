@@ -1,6 +1,6 @@
 echo "running packages...\n"
 
-npx yalc add @ehubbell/molecules
-npx yalc add @ehubbell/utils
+npx yalc add @playbooks/molecules
+npx yalc add @playbooks/utils
 
-npx yalc add @ehubbell/configs --save-dev
+npx yalc add @playbooks/configs --save-dev

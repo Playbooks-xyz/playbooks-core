@@ -1,5 +1,5 @@
 {
-  "name": "@ehubbell/utils",
+  "name": "@playbooks/utils",
   "version": "0.0.25",
   "description": "A collection of utilities used for various projects.",
   "author": "Eric Hubbell<eric@erichubbell.com>",
@@ -10,10 +10,10 @@
   "types": "dist/index.d.ts",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/ehubbell/utils.git"
+    "url": "git+https://github.com/playbooks/utils.git"
   },
   "bugs": {
-    "url": "https://github.com/ehubbell/utils/issues"
+    "url": "https://github.com/playbooks/utils/issues"
   },
   "files": [
     "dist"
@@ -46,7 +46,7 @@
     "uniqid": "^5.4.0"
   },
   "devDependencies": {
-    "@ehubbell/configs": "^0.0.17",
+    "@playbooks/configs": "^0.0.17",
     "@types/accounting": "^0.4.5",
     "@types/jest": "^29.5.1",
     "@types/react": "^18.0.26",

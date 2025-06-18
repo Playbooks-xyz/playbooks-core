@@ -30,5 +30,5 @@
 - To avoid this, you'll need to use `yalc` which creates a local package store as opposed to linking binaries.
 
 ## Author
-- Eric Hubbell
+- [Eric Hubbell](http://www.erichubbell.com)
 - eric@erichubbell.com

@@ -1,5 +1,5 @@
 {
-  "extends": "@ehubbell/configs/ts-config-package",
+  "extends": "@playbooks/configs/ts-config-package",
   "compilerOptions": {
     "types": ["vite/client", "node", "jest"],
   },

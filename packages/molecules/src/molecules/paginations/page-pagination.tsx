@@ -1,6 +1,5 @@
 import { Fragment, useEffect, useState } from 'react';
 
-import { toNumber } from '@ehubbell/utils';
 import { Small } from '@playbooks/ui/fonts';
 import {
 	Pagination,
@@ -10,6 +9,7 @@ import {
 	PaginationNext,
 	PaginationPrev,
 } from '@playbooks/ui/paginations';
+import { toNumber } from '@playbooks/utils';
 
 const PagePagination = ({ meta, params, setParams }) => {
 	const [pages, setPages] = useState([]);

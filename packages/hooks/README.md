@@ -2,19 +2,19 @@
  A collection of hooks for React projects.
 
 ## Prerequisites
-- @ehubbell/utils
+- @playbooks/utils
 - @playbooks/ui
 
 ## Installation
 ```
-npm install @ehubbell/hooks
+npm install @playbooks/hooks
 ```
 
 ## Usage
 ```tsx
 import { WelcomeMessage } from 'components/welcome/welcome-message';
 import { WelcomeWrapper } from 'components/welcome/welcome-wrapper';
-import { useLoaded } from '@ehubbell/hooks';
+import { useLoaded } from '@playbooks/hooks';
 
 const WelcomeRoute = ({ app, ssr, account, router, search, session, store, toast }) => {
 	// Hooks
@@ -41,7 +41,7 @@ export default WelcomeRoute;
 This project uses [yalc](https://npmjs.com/package/yalc) for local development.
 - npm run dev
 - switch to project
-- npx yalc add @ehubbell/hooks
+- npx yalc add @playbooks/hooks
 - After that, this library should hot reload into the consuming application
 
 ## Scripts

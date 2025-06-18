@@ -1,7 +1,7 @@
 import { Fragment } from 'react';
 
-import { listBuilder } from '@ehubbell/utils';
 import { Skeleton } from '@playbooks/ui/components';
+import { listBuilder } from '@playbooks/utils';
 import { Item } from 'molecules/items';
 
 const ItemSkeleton = ({ count }) => (

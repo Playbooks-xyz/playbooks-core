@@ -1,5 +1,5 @@
 {
-  "name": "@ehubbell/serializers",
+  "name": "@playbooks/serializers",
   "version": "0.0.13",
   "description": "A collection of data serializers for various projects.",
   "author": "Eric Hubbell<eric@erichubbell.com>",
@@ -7,10 +7,10 @@
   "type": "module",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/ehubbell/serializers.git"
+    "url": "git+https://github.com/playbooks/serializers.git"
   },
   "bugs": {
-    "url": "https://github.com/ehubbell/serializers/issues"
+    "url": "https://github.com/playbooks/serializers/issues"
   },
   "files": [
     "dist"
@@ -37,11 +37,11 @@
     "prepare": "husky"
   },
   "peerDependencies": {
-    "@ehubbell/utils": "^0.0.24"
+    "@playbooks/utils": "^0.0.24"
   },
   "devDependencies": {
-    "@ehubbell/configs": "^0.0.17",
-    "@ehubbell/utils": "^0.0.24",
+    "@playbooks/configs": "^0.0.17",
+    "@playbooks/utils": "^0.0.24",
     "@types/jest": "^29.5.1",
     "dts-bundle-generator": "^9.5.1",
     "eslint": "^8.57.1",

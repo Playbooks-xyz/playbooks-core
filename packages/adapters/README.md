@@ -5,18 +5,18 @@ For advanced scenarios, you can unpack the logic in each adapter and tailor it t
 By abstracting this logic into a package, we're able to reduce the boilerplate code necessary for each project.
 
 ## Prerequisites
-- @ehubbell/utils
+- @playbooks/utils
 
 ## Installation
 ```
-npm install @ehubbell/adapters
+npm install @playbooks/adapters
 ```
 
 ## Usage
 ```tsx
 import React from 'react';
 
-import { BaseAdapter } from '@ehubbell/adapters';
+import { BaseAdapter } from '@playbooks/adapters';
 
 const StoreContext = React.createContext(null);
 
@@ -46,7 +46,7 @@ export { StoreProvider, useStore };
 This project uses [yalc](https://npmjs.com/package/yalc) for local development.
 - npm run dev
 - switch to project
-- npx yalc add @ehubbell/adapters
+- npx yalc add @playbooks/adapters
 - After that, this library should hot reload into the consuming application
 
 ## Scripts

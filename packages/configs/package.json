@@ -1,5 +1,5 @@
 {
-  "name": "@ehubbell/configs",
+  "name": "@playbooks/configs",
   "version": "0.0.17",
   "description": "A collection of configs used for various projects.",
   "author": "Eric Hubbell<eric@erichubbell.com>",
@@ -18,7 +18,7 @@
   ],
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/ehubbell/configs.git"
+    "url": "git+https://github.com/playbooks/configs.git"
   },
   "keywords": [
     "playbooks",

@@ -1,7 +1,7 @@
 echo "running packages...\n"
 
-npm install @ehubbell/utils@latest
+npm install @playbooks/utils@latest
 
-npm install @ehubbell/configs@latest --save-dev
+npm install @playbooks/configs@latest --save-dev
 
 npx yalc remove --all
