@@ -2,67 +2,62 @@
 	"autorun": true,
 	"terminals": [
 		{
-			"name": "playbooks-kit",
+			"name": "playbooks-framework",
 			"focus": true
 		},
 		{
-			"name": "playbooks-kit-adapters",
+			"name": "playbooks-framework-adapters",
 			"command": "cd packages/adapters",
 			"execute": false
 		},
 		{
-			"name": "playbooks-kit-components",
+			"name": "playbooks-framework-components",
 			"command": "cd packages/components",
 			"execute": false
 		},
 		{
-			"name": "playbooks-kit-configs",
+			"name": "playbooks-framework-configs",
 			"command": "cd packages/configs",
 			"execute": false
 		},
 		{
-			"name": "playbooks-kit-contexts",
+			"name": "playbooks-framework-contexts",
 			"command": "cd packages/contexts",
 			"execute": false
 		},
 		{
-			"name": "playbooks-kit-hooks",
+			"name": "playbooks-framework-hooks",
 			"command": "cd packages/hooks",
 			"execute": false
 		},
 		{
-			"name": "playbooks-kit-molecules",
+			"name": "playbooks-framework-molecules",
 			"command": "cd packages/molecules",
 			"execute": false
 		},
 		{
-			"name": "playbooks-kit-normalizers",
+			"name": "playbooks-framework-normalizers",
 			"command": "cd packages/normalizers",
 			"execute": false
 		},
 		{
-			"name": "playbooks-kit-serializers",
+			"name": "playbooks-framework-serializers",
 			"command": "cd packages/serializers",
 			"execute": false
 		},
 		{
-			"name": "playbooks-kit-theme",
+			"name": "playbooks-framework-theme",
 			"command": "cd packages/theme",
 			"execute": false
 		},
 		{
-			"name": "playbooks-kit-ui",
+			"name": "playbooks-framework-ui",
 			"command": "cd packages/ui",
 			"execute": false
 		},
 		{
-			"name": "playbooks-kit-utils",
+			"name": "playbooks-framework-utils",
 			"command": "cd packages/utils",
-			"execute": false
-		},
-		{
-			"name": "playbooks-kit-wrappers",
-			"command": "cd packages/wrappers",
 			"execute": false
 		},
     {
