@@ -25,7 +25,7 @@ class BaseAdapter implements AdapterProps {
 	}
 
 	// Private
-	async client(url, options = {}) {
+	async client(url, options) {
 		const response = await fetch(url, options);
 		if (!response.ok) {
 			const data = await response.json();
@@ -34,7 +34,7 @@ class BaseAdapter implements AdapterProps {
 		return await response.json();
 	}
 
-	formatUrl(url: string, params: any = {}): URL {
+	formatUrl(url: string, params: any): URL {
 		const formattedUrl = new URL(this.domain + url);
 		Object.keys(params).map(key => {
 			const value = params[key];
