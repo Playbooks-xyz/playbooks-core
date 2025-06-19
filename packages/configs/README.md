@@ -33,11 +33,7 @@ Create a `tsconfig.json` file and add one of the following:
 
 ```json
 {
-	"extends": "@playbooks/ts-config/web",
-	"compilerOptions": {
-		"baseUrl": "src",
-		"rootDir": "."
-	},
+	"extends": "@playbooks/configs/tsconfig-web",
 	"include": ["src"],
 	"exclude": ["node_modules"]
 }
@@ -45,11 +41,7 @@ Create a `tsconfig.json` file and add one of the following:
 
 ```json
 {
-	"extends": "@playbooks/ts-config/node",
-	"compilerOptions": {
-		"baseUrl": "src",
-		"rootDir": "."
-	},
+	"extends": "@playbooks/configs/tsconfig-node",
 	"include": ["src"],
 	"exclude": ["node_modules"]
 }

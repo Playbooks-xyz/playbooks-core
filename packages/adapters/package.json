@@ -44,7 +44,6 @@
 		"dayjs": "^1.11.13"
 	},
 	"devDependencies": {
-		"@playbooks/configs": "^0.0.1",
 		"@playbooks/utils": "^0.0.2"
 	}
 }

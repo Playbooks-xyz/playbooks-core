@@ -1,6 +1,6 @@
 {
 	"name": "@playbooks/theme",
-	"version": "0.1.16",
+	"version": "0.1.17",
 	"description": "The default theme for Playbooks.",
 	"author": "Eric Hubbell<eric@erichubbell.com>",
 	"license": "ISC",
@@ -32,8 +32,5 @@
 		"git": "git push --tags",
 		"test": "jest",
 		"prepare": "husky"
-	},
-	"devDependencies": {
-		"@playbooks/configs": "^0.0.1"
 	}
 }

@@ -36,8 +36,5 @@
 		"@playbooks/ui": "^0.8.27",
 		"@playbooks/utils": "^0.0.2",
 		"nprogress": "^0.2.0"
-	},
-	"devDependencies": {
-		"@playbooks/configs": "^0.0.1"
 	}
 }

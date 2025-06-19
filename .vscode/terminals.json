@@ -6,58 +6,8 @@
 			"focus": true
 		},
 		{
-			"name": "playbooks-framework-adapters",
-			"command": "cd packages/adapters",
-			"execute": false
-		},
-		{
-			"name": "playbooks-framework-components",
-			"command": "cd packages/components",
-			"execute": false
-		},
-		{
-			"name": "playbooks-framework-configs",
-			"command": "cd packages/configs",
-			"execute": false
-		},
-		{
-			"name": "playbooks-framework-contexts",
-			"command": "cd packages/contexts",
-			"execute": false
-		},
-		{
-			"name": "playbooks-framework-hooks",
-			"command": "cd packages/hooks",
-			"execute": false
-		},
-		{
-			"name": "playbooks-framework-molecules",
-			"command": "cd packages/molecules",
-			"execute": false
-		},
-		{
-			"name": "playbooks-framework-normalizers",
-			"command": "cd packages/normalizers",
-			"execute": false
-		},
-		{
-			"name": "playbooks-framework-serializers",
-			"command": "cd packages/serializers",
-			"execute": false
-		},
-		{
-			"name": "playbooks-framework-theme",
-			"command": "cd packages/theme",
-			"execute": false
-		},
-		{
-			"name": "playbooks-framework-ui",
-			"command": "cd packages/ui",
-			"execute": false
-		},
-		{
-			"name": "playbooks-framework-utils",
-			"command": "cd packages/utils",
+			"name": "playbooks-framework-alt",
+			"command": "cd packages",
 			"execute": false
 		},
     {
