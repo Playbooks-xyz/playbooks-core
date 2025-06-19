@@ -11,30 +11,25 @@
     "dist"
   ],
   "scripts": {
-    "dev": "vite build --mode development --minify false --watch",
-    "start": "vite build --mode development --minify false",
-    "build": "vite build --mode production --minify true && npm run build:ts",
-    "build:ts": "dts-bundle-generator --config dts.config.ts",
-    "clean": "npm run lint:fix",
-    "lint": "eslint packages",
-    "lint:fix": "eslint packages --fix",
-    "format": "prettier packages",
-    "format:fix": "prettier --write packages",
+    "start": "npm start --workspaces",
+    "build": "npm run build --workspaces",
+    "build:ts": "npm run build:ts --workspaces",
+    "clean": "npm run clean --workspaces",
+    "lint": "npm run lint --workspaces",
+    "lint:fix": "npm run lint:fix --workspaces",
+    "format": "npm run format --workspaces",
+    "format:fix": "npm run format:fix --workspaces",
     "commit": "scripts/commit.sh",
     "deploy": "scripts/deploy.sh",
-    "test": "jest",
+    "test": "npm run jest --workspaces",
     "prepare": "husky"
   },
   "peerDependencies": {
     "react": "^18 || ^19",
     "react-dom": "^18 || ^19"
   },
-  "dependencies": {
-    "accounting": "^0.4.1"
-  },
   "devDependencies": {
     "@playbooks/configs": "^0.0.1",
-    "@types/accounting": "^0.4.5",
     "@types/jest": "^29.5.1",
     "@types/react": "^18.0.26",
     "@types/react-dom": "^18.0.9",
@@ -49,6 +44,20 @@
     "ts-node": "^10.9.1",
     "tslib": "^2.8.1",
     "typescript": "^5.8.3",
-    "vite": "^6.3.5"
-  }
+    "vite": "^6.3.5",
+    "vite-plugin-dts": "^4.5.4",
+    "vite-plugin-yalc": "^0.0.6"
+  },
+  "workspaces": [
+    "packages/adapters",
+    "packages/components",
+    "packages/contexts",
+    "packages/hooks",
+    "packages/molecules",
+    "packages/normalizers",
+    "packages/serializers",
+    "packages/theme",
+    "packages/ui",
+    "packages/utils"
+  ]
 }

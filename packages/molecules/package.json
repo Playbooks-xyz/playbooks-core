@@ -4,9 +4,7 @@
 	"description": "A collection of React molecules for Playbooks.",
 	"author": "Eric Hubbell<eric@erichubbell.com>",
 	"license": "ISC",
-	"main": "dist/index.cjs.js",
-	"module": "dist/index.es.js",
-	"types": "dist/index.d.ts",
+	"type": "module",
 	"repository": {
 		"type": "git",
 		"url": "git+https://github.com/playbooks-xyz/playbooks-kit/packages/molecules.git"
@@ -38,6 +36,7 @@
 		"react-dom": "^18 || ^19"
 	},
 	"dependencies": {
+		"@playbooks/components": "^0.0.2",
 		"@playbooks/ui": "^0.8.27",
 		"@playbooks/utils": "^0.0.2"
 	},
@@ -61,29 +60,39 @@
 	},
 	"exports": {
 		".": {
+			"types": "./dist/index.d.ts",
 			"import": "./dist/index.mjs",
-			"require": "./dist/index.cjs",
-			"types": "./dist/index.d.ts"
+			"require": "./dist/index.cjs"
 		},
 		"./feedbacks": {
+			"types": "./dist/feedbacks.d.ts",
 			"import": "./dist/feedbacks.mjs",
-			"require": "./dist/feedbacks.cjs",
-			"types": "./dist/feedbacks.d.ts"
+			"require": "./dist/feedbacks.cjs"
+		},
+		"./items": {
+			"types": "./dist/items.d.ts",
+			"import": "./dist/items.mjs",
+			"require": "./dist/items.cjs"
 		},
 		"./paginations": {
+			"types": "./dist/paginations.d.ts",
 			"import": "./dist/paginations.mjs",
-			"require": "./dist/paginations.cjs",
-			"types": "./dist/paginations.d.ts"
+			"require": "./dist/paginations.cjs"
 		},
 		"./skeletons": {
+			"types": "./dist/skeletons.d.ts",
 			"import": "./dist/skeletons.mjs",
-			"require": "./dist/skeletons.cjs",
-			"types": "./dist/skeletons.d.ts"
+			"require": "./dist/skeletons.cjs"
 		},
 		"./toasts": {
+			"types": "./dist/toasts.d.ts",
 			"import": "./dist/toasts.mjs",
-			"require": "./dist/toasts.cjs",
-			"types": "./dist/toasts.d.ts"
+			"require": "./dist/toasts.cjs"
+		},
+		"./toggles": {
+			"types": "./dist/toggles.d.ts",
+			"import": "./dist/toggles.mjs",
+			"require": "./dist/toggles.cjs"
 		}
 	}
 }

@@ -1,23 +1,10 @@
-import { exec } from 'node:child_process';
 import path from 'path';
 import peerDepsExternal from 'rollup-plugin-peer-deps-external';
 import { defineConfig } from 'vite';
-
-export function pushBuild() {
-	return {
-		name: 'pushBuild',
-		closeBundle: async () => {
-			exec('dts-bundle-generator --config dts.config.ts', (response, error) => {
-				if (error) console.error(error);
-				if (response) console.log(response);
-				exec('npx yalc push', (response, error) => (error ? console.error(error) : null));
-			});
-		},
-	};
-}
+import { runDts, runYalc } from 'vite-plugin-yalc';
 
 export default defineConfig(({ mode }) => {
-	const plugins = mode !== 'production' ? [pushBuild()] : [];
+	const plugins = [runYalc(), runDts()];
 
 	return {
 		base: './',

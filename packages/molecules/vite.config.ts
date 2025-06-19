@@ -28,12 +28,13 @@ export default defineConfig(({ mode }) => {
 			lib: {
 				entry: [
 					path.resolve(__dirname, 'src/index.tsx'),
-					path.resolve(__dirname, 'src/molecules/feedbacks/feedbacks'),
-					path.resolve(__dirname, 'src/molecules/items/items'),
-					path.resolve(__dirname, 'src/molecules/paginations/paginations'),
-					path.resolve(__dirname, 'src/molecules/skeletons/skeletons'),
-					path.resolve(__dirname, 'src/molecules/toasts/toasts'),
-					path.resolve(__dirname, 'src/molecules/toggles/toggles'),
+					path.resolve(__dirname, 'src/feedbacks/feedbacks'),
+					path.resolve(__dirname, 'src/forms/forms'),
+					path.resolve(__dirname, 'src/items/items'),
+					path.resolve(__dirname, 'src/paginations/paginations'),
+					path.resolve(__dirname, 'src/skeletons/skeletons'),
+					path.resolve(__dirname, 'src/toasts/toasts'),
+					path.resolve(__dirname, 'src/toggles/toggles'),
 				],
 				name: 'Molecules',
 				formats: ['es', 'cjs'],
@@ -55,7 +56,6 @@ export default defineConfig(({ mode }) => {
 		resolve: {
 			alias: {
 				src: path.resolve(__dirname, '/src'),
-				molecules: path.resolve(__dirname, '/src/molecules'),
 			},
 		},
 	};
