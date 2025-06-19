@@ -1,5 +1,8 @@
 module.exports = {
 	root: true,
+	env: {
+    "node": true
+  },
 	extends: [
 		'eslint:recommended',
 		'plugin:@typescript-eslint/recommended',
@@ -8,7 +11,7 @@ module.exports = {
 	],
 	parser: '@typescript-eslint/parser',
 	plugins: ['react', '@typescript-eslint', 'unused-imports', 'simple-import-sort'],
-	ignorePatterns: ['build', 'dist', '**/dist', '**/*.js'],
+	ignorePatterns: ['build', 'dist', 'node_modules'],
 	rules: {
 		eqeqeq: ['warn'],
 		'no-empty': ['warn'],

@@ -1,10 +1,8 @@
-const config = {
-	entries: [
-		{
-			filePath: './src/index.tsx',
-			outFile: './dist/index.d.ts',
-		},
-	],
+module.exports = {
+	compilationOptions: { preferredConfigPath: './tsconfig.json' },
+	entries: ['index'].map(fileName => ({
+		filePath: `./src/${fileName}.ts`,
+		outFile: `./dist/${fileName}.d.ts`,
+		noCheck: false,
+	})),
 };
-
-module.exports = config;

@@ -9,7 +9,7 @@ module.exports = {
 	],
 	parser: '@typescript-eslint/parser',
 	plugins: ['react', '@typescript-eslint', 'unused-imports', 'simple-import-sort'],
-	ignorePatterns: ['build', '**/*.js'],
+	ignorePatterns: ['build', 'dist', 'node_modules'],
 	rules: {
 		eqeqeq: ['warn'],
 		'no-empty': ['warn'],

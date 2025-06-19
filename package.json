@@ -51,6 +51,7 @@
   "workspaces": [
     "packages/adapters",
     "packages/components",
+    "packages/configs",
     "packages/contexts",
     "packages/hooks",
     "packages/molecules",
