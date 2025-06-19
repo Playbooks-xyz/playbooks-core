@@ -1,0 +1,38 @@
+{
+	"name": "@playbooks/types",
+	"version": "0.0.0",
+	"description": "A collection of shareable types for Playbooks",
+	"author": "Eric Hubbell<eric@erichubbell.com>",
+	"license": "ISC",
+	"type": "module",
+	"main": "dist/index.mjs",
+	"types": "dist/index.d.ts",
+	"repository": {
+		"type": "git",
+		"url": "git+https://github.com/playbooks-xyz/playbooks-kit/packages/adapters.git"
+	},
+	"files": [
+		"dist"
+	],
+	"keywords": [
+		"playbooks",
+		"adapters",
+		"networking",
+		"http",
+		"https"
+	],
+	"scripts": {
+		"start": "vite build --mode development --minify false --watch",
+		"build": "dts-bundle-generator --config dts.config.ts",
+		"clean": "npm run lint:fix",
+		"lint": "eslint src",
+		"lint:fix": "eslint src --fix",
+		"format": "prettier src",
+		"format:fix": "prettier --write src",
+		"commit": "scripts/commit.sh",
+		"deploy": "scripts/deploy.sh",
+		"git": "git push --tags",
+		"test": "jest",
+		"prepare": "husky"
+	}
+}
