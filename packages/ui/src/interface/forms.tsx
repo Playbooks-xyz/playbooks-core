@@ -7,9 +7,9 @@ import { GoogleAutocomplete } from '@playbooks/components/google-autocomplete';
 import { MaskedInput } from '@playbooks/components/masked-input';
 import { PhoneInput } from '@playbooks/components/phone-input';
 import { useElementKeyPress } from '@playbooks/hooks';
+import * as types from '@playbooks/types';
 import { useInterface } from 'contexts';
 import { Div, Span } from 'interface/html';
-import * as types from 'types/form-types';
 
 export const Form = ({ id, name = 'Form', onSubmit, tailwind, className, children, ...props }: types.FormProps) => {
 	const { theme } = useInterface();

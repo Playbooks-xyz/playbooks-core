@@ -1,6 +1,6 @@
+import * as types from '@playbooks/types';
 import { useInterface } from 'contexts';
 import { Div } from 'interface/html';
-import * as types from 'types/button-group-types';
 
 export const BtnGroup = ({ name = 'BtnGroup', tailwind, className, children, ...props }: types.ButtonGroupProps) => {
 	const { theme } = useInterface();

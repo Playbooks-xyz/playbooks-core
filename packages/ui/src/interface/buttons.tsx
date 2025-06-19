@@ -1,11 +1,11 @@
 import { Fragment } from 'react';
 
 import * as HTML from '@ehubbell/html';
+import * as types from '@playbooks/types';
 import { useInterface } from 'contexts';
 import { Img, Span } from 'interface/html';
 import { Icon } from 'interface/icons';
 import { Oval } from 'interface/spinners';
-import * as types from 'types/button-types';
 import { computeProps, computeTailwind } from 'utils';
 
 export const Btn = props => {

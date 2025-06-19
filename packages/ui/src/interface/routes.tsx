@@ -1,9 +1,9 @@
 import { useRouter } from 'next/router';
 
+import * as types from '@playbooks/types';
 import { useInterface } from 'contexts';
 import { Head } from 'interface/head';
 import { Div } from 'interface/html';
-import * as types from 'types/route-types';
 import { capitalize } from 'utils';
 
 export const Route = ({ name = 'Route', seo, tailwind, className, children, ...props }: types.RouteProps) => {

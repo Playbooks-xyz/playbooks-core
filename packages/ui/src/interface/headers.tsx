@@ -1,7 +1,7 @@
+import * as types from '@playbooks/types';
 import { useInterface } from 'contexts';
 import { Font, P } from 'interface/fonts';
 import { Div } from 'interface/html';
-import * as types from 'types/header-types';
 
 export const Header = ({ name = 'Header', tailwind, className, children, ...props }: types.HeaderProps) => {
 	const { theme } = useInterface();

@@ -1,8 +1,8 @@
 import { useMemo } from 'react';
 
+import * as types from '@playbooks/types';
 import { useInterface } from 'contexts';
 import { Span } from 'interface/html';
-import * as types from 'types/command-types';
 
 export const Command = ({ name = 'CMD', keys = [], tailwind, className, children, ...props }: types.CommandProps) => {
 	const { theme } = useInterface();

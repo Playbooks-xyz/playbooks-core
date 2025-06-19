@@ -1,10 +1,9 @@
 import * as HTML from '@ehubbell/html';
 import { computeProps } from '@ehubbell/html';
+import * as types from '@playbooks/types';
 import { useInterface } from 'contexts';
-import { HtmlProps } from 'types';
-import * as types from 'types/html-types';
 
-export const Article = ({ name = 'Article', tailwind, className, children, ...props }: HtmlProps) => {
+export const Article = ({ name = 'Article', tailwind, className, children, ...props }: types.HtmlProps) => {
 	const { theme } = useInterface();
 	const base = theme.article();
 	const formatted = { ...base, ...props, ...tailwind };
@@ -17,7 +16,7 @@ export const Article = ({ name = 'Article', tailwind, className, children, ...pr
 	);
 };
 
-export const Aside = ({ name = 'Aside', tailwind, className, children, ...props }: HtmlProps) => {
+export const Aside = ({ name = 'Aside', tailwind, className, children, ...props }: types.HtmlProps) => {
 	const { theme } = useInterface();
 	const base = theme.aside();
 	const formatted = { ...base, ...props, ...tailwind };
@@ -30,7 +29,7 @@ export const Aside = ({ name = 'Aside', tailwind, className, children, ...props 
 	);
 };
 
-export const Blockquote = ({ name = 'Blockquote', tailwind, className, children, ...props }: HtmlProps) => {
+export const Blockquote = ({ name = 'Blockquote', tailwind, className, children, ...props }: types.HtmlProps) => {
 	const { theme } = useInterface();
 	const base = theme.blockquote();
 	const formatted = { ...base, ...props, ...tailwind };
@@ -43,7 +42,7 @@ export const Blockquote = ({ name = 'Blockquote', tailwind, className, children,
 	);
 };
 
-export const Body = ({ name = 'Body', tailwind, className, children, ...props }: HtmlProps) => {
+export const Body = ({ name = 'Body', tailwind, className, children, ...props }: types.HtmlProps) => {
 	const { theme } = useInterface();
 	const base = theme.body();
 	const formatted = { ...base, ...props, ...tailwind };
@@ -56,7 +55,7 @@ export const Body = ({ name = 'Body', tailwind, className, children, ...props }:
 	);
 };
 
-export const Caption = ({ name = 'Caption', tailwind, className, children, ...props }: HtmlProps) => {
+export const Caption = ({ name = 'Caption', tailwind, className, children, ...props }: types.HtmlProps) => {
 	const { theme } = useInterface();
 	const base = theme.caption();
 	const formatted = { ...base, ...props, ...tailwind };
@@ -69,7 +68,7 @@ export const Caption = ({ name = 'Caption', tailwind, className, children, ...pr
 	);
 };
 
-export const Code = ({ name = 'Code', tailwind, className, children, ...props }: HtmlProps) => {
+export const Code = ({ name = 'Code', tailwind, className, children, ...props }: types.HtmlProps) => {
 	const { theme } = useInterface();
 	const base = theme.code();
 	const formatted = { ...base, ...props, ...tailwind };
@@ -82,7 +81,7 @@ export const Code = ({ name = 'Code', tailwind, className, children, ...props }:
 	);
 };
 
-export const Div = ({ name = 'Div', tailwind, className, children, ...props }: HtmlProps) => {
+export const Div = ({ name = 'Div', tailwind, className, children, ...props }: types.HtmlProps) => {
 	const { theme } = useInterface();
 	const base = theme.div();
 	const formatted = { ...base, ...props, ...tailwind };
@@ -95,7 +94,7 @@ export const Div = ({ name = 'Div', tailwind, className, children, ...props }: H
 	);
 };
 
-export const Figure = ({ name = 'Figure', tailwind, className, children, ...props }: HtmlProps) => {
+export const Figure = ({ name = 'Figure', tailwind, className, children, ...props }: types.HtmlProps) => {
 	const { theme } = useInterface();
 	const base = theme.figure();
 	const formatted = { ...base, ...props, ...tailwind };
@@ -108,7 +107,7 @@ export const Figure = ({ name = 'Figure', tailwind, className, children, ...prop
 	);
 };
 
-export const Hr = ({ name = 'Hr', tailwind, className, children, ...props }: HtmlProps) => {
+export const Hr = ({ name = 'Hr', tailwind, className, children, ...props }: types.HtmlProps) => {
 	const { theme } = useInterface();
 	const base = theme.hr();
 	const formatted = { ...base, ...props, ...tailwind };
@@ -121,7 +120,7 @@ export const Hr = ({ name = 'Hr', tailwind, className, children, ...props }: Htm
 	);
 };
 
-export const Html = ({ name = 'Html', tailwind, className, children, ...props }: HtmlProps) => {
+export const Html = ({ name = 'Html', tailwind, className, children, ...props }: types.HtmlProps) => {
 	const { theme } = useInterface();
 	const base = theme.html();
 	const formatted = { ...base, ...props, ...tailwind };
@@ -152,7 +151,7 @@ export const Img = ({ name = 'Img', src, alt = 'photo', tailwind, className, ...
 	return <HTML.Img name={name} src={src} alt={alt} tailwind={formatted} className={className} {...filtered} />;
 };
 
-export const Li = ({ name = 'Li', tailwind, className, children, ...props }: HtmlProps) => {
+export const Li = ({ name = 'Li', tailwind, className, children, ...props }: types.HtmlProps) => {
 	const { theme } = useInterface();
 	const base = theme.li();
 	const formatted = { ...base, ...props, ...tailwind };
@@ -165,7 +164,7 @@ export const Li = ({ name = 'Li', tailwind, className, children, ...props }: Htm
 	);
 };
 
-export const Main = ({ name = 'Main', tailwind, className, children, ...props }: HtmlProps) => {
+export const Main = ({ name = 'Main', tailwind, className, children, ...props }: types.HtmlProps) => {
 	const { theme } = useInterface();
 	const base = theme.main();
 	const formatted = { ...base, ...props, ...tailwind };
@@ -178,7 +177,7 @@ export const Main = ({ name = 'Main', tailwind, className, children, ...props }:
 	);
 };
 
-export const Pre = ({ name = 'Pre', tailwind, className, children, ...props }: HtmlProps) => {
+export const Pre = ({ name = 'Pre', tailwind, className, children, ...props }: types.HtmlProps) => {
 	const { theme } = useInterface();
 	const base = theme.pre();
 	const formatted = { ...base, ...props, ...tailwind };
@@ -191,7 +190,7 @@ export const Pre = ({ name = 'Pre', tailwind, className, children, ...props }: H
 	);
 };
 
-export const Span = ({ name = 'Span', tailwind, className, children, ...props }: HtmlProps) => {
+export const Span = ({ name = 'Span', tailwind, className, children, ...props }: types.HtmlProps) => {
 	const { theme } = useInterface();
 	const base = theme.span();
 	const formatted = { ...base, ...props, ...tailwind };
@@ -204,7 +203,7 @@ export const Span = ({ name = 'Span', tailwind, className, children, ...props }:
 	);
 };
 
-export const Ul = ({ name = 'Ul', tailwind, className, children, ...props }: HtmlProps) => {
+export const Ul = ({ name = 'Ul', tailwind, className, children, ...props }: types.HtmlProps) => {
 	const { theme } = useInterface();
 	const base = theme.ul();
 	const formatted = { ...base, ...props, ...tailwind };

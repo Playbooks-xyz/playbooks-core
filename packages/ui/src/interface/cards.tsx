@@ -1,8 +1,8 @@
+import * as types from '@playbooks/types';
 import { useInterface } from 'contexts';
 import { Font, P } from 'interface/fonts';
 import { Div, Img } from 'interface/html';
 import { Icon } from 'interface/icons';
-import * as types from 'types/card-types';
 
 export const Card = ({ name = 'Card', tailwind, className, children, ...props }: types.CardProps) => {
 	const { theme } = useInterface();

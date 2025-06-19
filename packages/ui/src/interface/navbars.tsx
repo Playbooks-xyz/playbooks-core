@@ -1,9 +1,9 @@
 import * as HTML from '@ehubbell/html';
 import { computeProps } from '@ehubbell/html';
+import * as types from '@playbooks/types';
 import { useInterface } from 'contexts';
 import { Img, Ul } from 'interface/html';
 import { LinkWrapper } from 'interface/links';
-import * as types from 'types/navbar-types';
 
 export const Navbar = ({ name = 'Navbar', tailwind, className, children, ...props }: types.NavPropsbar) => {
 	const { theme } = useInterface();

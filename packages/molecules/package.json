@@ -76,5 +76,8 @@
 			"import": "./dist/toggles.mjs",
 			"require": "./dist/toggles.cjs"
 		}
+	},
+	"devDependencies": {
+		"@playbooks/types": "^0.0.2"
 	}
 }

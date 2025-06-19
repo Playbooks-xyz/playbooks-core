@@ -1,10 +1,10 @@
 import { useEffect, useMemo, useRef, useState } from 'react';
 
+import * as types from '@playbooks/types';
 import { useInterface } from 'contexts';
 import { Btn } from 'interface/buttons';
 import { Font, P } from 'interface/fonts';
 import { Div } from 'interface/html';
-import * as types from 'types/accordion-types';
 
 export const Accordion = ({
 	name = 'Accordion',

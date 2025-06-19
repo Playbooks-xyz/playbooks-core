@@ -1,6 +1,6 @@
+import * as types from '@playbooks/types';
 import { useInterface } from 'contexts';
 import { Div } from 'interface/html';
-import * as types from 'types/progress-bar-types';
 
 export const ProgressBar = ({
 	name = 'ProgressBar',

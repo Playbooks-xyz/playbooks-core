@@ -1,10 +1,10 @@
+import * as types from '@playbooks/types';
 import { useInterface } from 'contexts';
 import { TextBtn } from 'interface/buttons';
 import { Li } from 'interface/html';
 import { FarIcon } from 'interface/icons';
 import { TextLink } from 'interface/links';
 import { Nav, NavList } from 'interface/navs';
-import * as types from 'types/breadcrumb-types';
 
 export const Breadcrumbs = ({
 	name = 'Breadcrumbs',

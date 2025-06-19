@@ -2,7 +2,7 @@ import dynamic from 'next/dynamic';
 
 import { computeTailwind } from '@ehubbell/html';
 import { IconPrefix } from '@fortawesome/fontawesome-svg-core';
-import { HtmlProps } from '@playbooks/ui/html';
+import { HtmlProps } from '@playbooks/types';
 
 export type FontAwesomeProps = HtmlProps & {
 	type?: IconPrefix;

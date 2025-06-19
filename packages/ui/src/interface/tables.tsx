@@ -1,9 +1,9 @@
 import * as HTML from '@ehubbell/html';
+import * as types from '@playbooks/types';
 import { useInterface } from 'contexts';
 import { BtnWrapper } from 'interface/buttons';
 import { Div } from 'interface/html';
 import { FarIcon } from 'interface/icons';
-import * as types from 'types/table-types';
 import { computeTailwind, isObject } from 'utils';
 
 export const Table = ({ name = 'Table', tailwind, className, children, ...props }: types.TableProps) => {

@@ -2,12 +2,12 @@ import { useRef, useState } from 'react';
 
 import { Fade } from '@playbooks/components/fade';
 import { useKeyPress, useMouseUp } from '@playbooks/hooks';
+import * as types from '@playbooks/types';
 import { useInterface } from 'contexts';
 import { AccentBtn } from 'interface/buttons';
 import { H6, P } from 'interface/fonts';
 import { Div, Li, Ul } from 'interface/html';
 import { AccentLink } from 'interface/links';
-import * as types from 'types/menu-types';
 
 export const Menu = ({ name = 'Menu', open, onClose, tailwind, className, children, ...props }: types.MenuProps) => {
 	const { theme } = useInterface();

@@ -1,8 +1,8 @@
+import * as types from '@playbooks/types';
 import { useInterface } from 'contexts';
 import { Font, P } from 'interface/fonts';
 import { Div } from 'interface/html';
 import { Icon } from 'interface/icons';
-import * as types from 'types/banner-types';
 
 export const Banner = ({ name = 'Banner', tailwind, className, children, ...props }: types.BannerProps) => {
 	const { theme } = useInterface();

@@ -1,7 +1,7 @@
+import * as types from '@playbooks/types';
 import { useInterface } from 'contexts';
 import { Font, P } from 'interface/fonts';
 import { Div, Img } from 'interface/html';
-import * as types from 'types/avatar-types';
 
 export const Avatar = ({ name = 'Avatar', tailwind, className, children, ...props }: types.AvatarProps) => {
 	const { theme } = useInterface();

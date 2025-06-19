@@ -2,11 +2,11 @@ import { useEffect, useRef, useState } from 'react';
 
 import { Fade } from '@playbooks/components/fade';
 import { useKeyPress } from '@playbooks/hooks';
+import * as types from '@playbooks/types';
 import { useInterface } from 'contexts';
 import { AccentBtn } from 'interface/buttons';
 import { Font } from 'interface/fonts';
 import { Div, Span } from 'interface/html';
-import * as types from 'types/modal-types';
 
 export const ModalWrapper = ({
 	name = 'ModalWrapper',

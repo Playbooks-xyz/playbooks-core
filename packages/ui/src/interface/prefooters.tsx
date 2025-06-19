@@ -1,8 +1,8 @@
+import * as types from '@playbooks/types';
 import { useInterface } from 'contexts';
 import { Font, H6, P } from 'interface/fonts';
 import { Div } from 'interface/html';
 import { Section } from 'interface/sections';
-import * as types from 'types/prefooter-types';
 
 export const Prefooter = ({ name = 'Prefooter', tailwind, className, children, ...props }: types.PrefooterProps) => {
 	const { theme } = useInterface();

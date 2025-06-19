@@ -1,8 +1,8 @@
+import * as types from '@playbooks/types';
 import { useInterface } from 'contexts';
 import { H5, P, Small } from 'interface/fonts';
 import { Div, Span } from 'interface/html';
 import { Oval } from 'interface/spinners';
-import * as types from 'types/loader-types';
 
 export const ModalLoader = ({
 	name = 'ModalLoader',

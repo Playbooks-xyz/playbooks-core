@@ -2,7 +2,7 @@ import { useInterface } from 'contexts';
 import { BtnWrapper } from 'interface/buttons';
 import { FarIcon } from 'interface/icons';
 import { Nav } from 'interface/navs';
-import * as types from 'types/pagination-types';
+import * as types from '@playbooks/types';
 
 export const Pagination = ({ name = 'Pagination', tailwind, className, children, ...props }: types.PaginationProps) => {
 	const { theme } = useInterface();

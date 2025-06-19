@@ -1,8 +1,8 @@
+import * as types from '@playbooks/types';
 import { useInterface } from 'contexts';
 import { Font, P } from 'interface/fonts';
 import { Div } from 'interface/html';
 import { Icon } from 'interface/icons';
-import * as types from 'types/alert-types';
 
 export const Alert = ({ type = 'info', name = 'Alert', tailwind, className, children, ...props }: types.AlertProps) => {
 	const { theme } = useInterface();

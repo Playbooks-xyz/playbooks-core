@@ -1,7 +1,7 @@
 import { FontAwesome } from '@playbooks/components/font-awesome';
+import * as types from '@playbooks/types';
 import { useInterface } from 'contexts';
 import { Div } from 'interface/html';
-import * as types from 'types/icon-types';
 
 export const Icon = props => {
 	switch (props?.type) {

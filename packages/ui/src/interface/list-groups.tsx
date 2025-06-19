@@ -1,6 +1,6 @@
+import * as types from '@playbooks/types';
 import { useInterface } from 'contexts';
 import { Li, Ul } from 'interface/html';
-import * as types from 'types/list-group-types';
 
 export const ListGroup = ({ name = 'ListGroup', tailwind, className, children, ...props }: types.LiPropsstGroup) => {
 	const { theme } = useInterface();

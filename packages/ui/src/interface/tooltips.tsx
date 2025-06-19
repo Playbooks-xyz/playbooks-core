@@ -2,9 +2,9 @@ import { useRef, useState } from 'react';
 import { usePopper } from 'react-popper';
 
 import { Fade } from '@playbooks/components/fade';
+import * as types from '@playbooks/types';
 import { useInterface } from 'contexts';
 import { Div, Span } from 'interface/html';
-import * as types from 'types/tooltip-types';
 
 export const Tooltip = ({
 	id,

@@ -2,11 +2,11 @@ import { useEffect, useRef, useState } from 'react';
 
 import { Fade } from '@playbooks/components/fade';
 import { useKeyPress } from '@playbooks/hooks';
+import * as types from '@playbooks/types';
 import { useInterface } from 'contexts';
 import { AccentBtn } from 'interface/buttons';
 import { H4 } from 'interface/fonts';
 import { Div } from 'interface/html';
-import * as types from 'types/slide-types';
 
 export const SlideWrapper = ({
 	name = 'SlideWrapper',

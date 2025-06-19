@@ -1,6 +1,6 @@
 import NextHead from 'next/head';
 
-import * as types from 'types/head-types';
+import * as types from '@playbooks/types';
 
 export const Head = (props: types.HeadProps) => {
 	// Render

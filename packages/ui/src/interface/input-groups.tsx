@@ -1,7 +1,7 @@
+import * as types from '@playbooks/types';
 import { useInterface } from 'contexts';
 import { Div } from 'interface/html';
 import { Icon } from 'interface/icons';
-import * as types from 'types/input-group-types';
 
 export const InputGroup = ({
 	name = 'InputGroup',

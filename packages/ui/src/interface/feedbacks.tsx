@@ -1,8 +1,8 @@
+import * as types from '@playbooks/types';
 import { useInterface } from 'contexts';
 import { Font, P, Small } from 'interface/fonts';
 import { Div } from 'interface/html';
 import { Icon } from 'interface/icons';
-import * as types from 'types/feedback-types';
 
 export const Feedback = ({ name = 'Feedback', tailwind, className, children, ...props }: types.FeedbackProps) => {
 	const { theme } = useInterface();

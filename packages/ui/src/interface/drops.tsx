@@ -3,12 +3,12 @@ import { usePopper } from 'react-popper';
 
 import { Fade } from '@playbooks/components/fade';
 import { useKeyPress, useMouseUp } from '@playbooks/hooks';
+import * as types from '@playbooks/types';
 import { useInterface } from 'contexts';
 import { AccentBtn, Btn } from 'interface/buttons';
 import { H6, P } from 'interface/fonts';
 import { Div, Li, Ul } from 'interface/html';
 import { AccentLink } from 'interface/links';
-import * as types from 'types/drop-types';
 
 export const Drop = ({
 	ref,

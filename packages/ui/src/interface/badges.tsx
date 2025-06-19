@@ -1,6 +1,6 @@
+import * as types from '@playbooks/types';
 import { useInterface } from 'contexts';
 import { Span } from 'interface/html';
-import * as types from 'types/badge-types';
 
 export const Badge = ({
 	name = 'Badge',

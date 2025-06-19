@@ -1,6 +1,6 @@
+import * as types from '@playbooks/types';
 import { useInterface } from 'contexts';
 import { Div, Img } from 'interface/html';
-import * as types from 'types/tag-types';
 
 export const Tags = ({ name = 'Tags', tailwind, className, children, ...props }: types.TagsProps) => {
 	const { theme } = useInterface();

@@ -1,8 +1,8 @@
+import * as types from '@playbooks/types';
 import { useInterface } from 'contexts';
 import { Btn } from 'interface/buttons';
 import { FormSelect } from 'interface/forms';
 import { Div } from 'interface/html';
-import * as types from 'types/tab-types';
 
 export const TabWrapper = ({ name = 'TabWrapper', tailwind, className, children, ...props }: types.TabWrapperProps) => {
 	const { theme } = useInterface();

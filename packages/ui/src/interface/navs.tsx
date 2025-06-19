@@ -1,11 +1,11 @@
 import * as HTML from '@ehubbell/html';
 import { computeProps } from '@ehubbell/html';
+import * as types from '@playbooks/types';
 import { useInterface } from 'contexts';
 import { AccentBtn } from 'interface/buttons';
 import { Font } from 'interface/fonts';
 import { Div, Li, Ul } from 'interface/html';
 import { AccentLink } from 'interface/links';
-import * as types from 'types/nav-types';
 
 export const Nav = ({ name = 'Nav', tailwind, className, children, ...props }: types.NavProps) => {
 	const { theme } = useInterface();
