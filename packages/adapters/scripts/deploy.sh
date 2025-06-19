@@ -4,7 +4,7 @@ if [ -z "$1" ]; then
   exit
 fi
 
-echo -e "\n deploying updates...\n"
+echo -e "\ndeploying updates...\n"
 
 npm run clean & clean_id=$!
 wait $clean_id
@@ -22,4 +22,4 @@ npm publish --access public & publish_id=$!
 wait $publish_id
 if [ $? -eq 1 ]; then exit; fi
 
-echo -e "\n deploy finished. \n"
+echo -e "\ndeploy finished.\n"

@@ -10,7 +10,7 @@ if [ -z "$2" ]; then
   exit
 fi
 
-echo -e "\n deploying updates...\n"
+echo -e "\ndeploying updates...\n"
 
 echo -e "\n git checkout main \n"
 git checkout main & checkout_id=$!
@@ -59,4 +59,4 @@ git push & push_id=$!
 wait $push_id
 if [ $? -eq 1 ]; then exit; fi
 
-echo -e "\n deploy finished. \n"
+echo -e "\ndeploy finished.\n"
