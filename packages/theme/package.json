@@ -20,7 +20,7 @@
 	],
 	"scripts": {
 		"start": "vite build --mode development --minify false --watch",
-		"build": "vite build --mode production --minify true",
+		"build": "vite build --mode production --minify true && npm run build:ts",
 		"build:ts": "dts-bundle-generator --config dts.config.ts",
 		"clean": "npm run lint:fix",
 		"lint": "eslint src",
