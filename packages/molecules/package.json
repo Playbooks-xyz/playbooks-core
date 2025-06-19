@@ -1,6 +1,6 @@
 {
 	"name": "@playbooks/molecules",
-	"version": "0.0.11",
+	"version": "0.0.12",
 	"description": "A collection of React molecules for Playbooks.",
 	"author": "Eric Hubbell<eric@erichubbell.com>",
 	"license": "ISC",
@@ -40,6 +40,9 @@
 		"@playbooks/ui": "^0.8.27",
 		"@playbooks/utils": "^0.0.2"
 	},
+	"devDependencies": {
+		"@playbooks/types": "^0.0.2"
+	},
 	"exports": {
 		".": {
 			"types": "./dist/index.d.ts",
@@ -76,8 +79,5 @@
 			"import": "./dist/toggles.mjs",
 			"require": "./dist/toggles.cjs"
 		}
-	},
-	"devDependencies": {
-		"@playbooks/types": "^0.0.2"
 	}
 }
