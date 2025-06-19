@@ -21,6 +21,7 @@
     "format:fix": "npm run format:fix --workspaces",
     "commit": "scripts/commit.sh",
     "deploy": "scripts/deploy.sh",
+    "deploy:workspace": "npm run deploy --workspaces",
     "test": "npm run jest --workspaces",
     "prepare": "husky"
   },
