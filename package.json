@@ -20,8 +20,7 @@
     "format": "npm run format --workspaces",
     "format:fix": "npm run format:fix --workspaces",
     "commit": "scripts/commit.sh",
-    "deploy": "scripts/deploy.sh",
-    "deploy:workspace": "npm run deploy --workspaces",
+    "deploy": "npm run deploy --workspaces",
     "test": "npm run jest --workspaces",
     "prepare": "husky"
   },
@@ -53,6 +52,7 @@
   },
   "workspaces": [
     "packages/adapters",
+    "packages/assets",
     "packages/components",
     "packages/configs",
     "packages/contexts",

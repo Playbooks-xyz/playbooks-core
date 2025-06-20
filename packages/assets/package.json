@@ -1,0 +1,39 @@
+{
+	"name": "@playbooks/assets",
+	"version": "0.0.1",
+	"description": "A collection of React components for Playbooks.",
+	"author": "Eric Hubbell<eric@erichubbell.com>",
+	"license": "ISC",
+	"type": "module",
+	"repository": {
+		"type": "git",
+		"url": "https://github.com/playbooks-xyz/playbooks-kit/packages/assets.git"
+	},
+	"files": [
+		"dist"
+	],
+	"scripts": {
+		"start": "vite build --mode development --minify false --watch",
+		"build": "vite build --mode production --minify true",
+		"build:ts": "dts-bundle-generator --config dts.config.ts",
+		"clean": "npm run lint:fix",
+		"lint": "eslint src",
+		"lint:fix": "eslint src --fix",
+		"format": "prettier src",
+		"format:fix": "prettier --write src",
+		"commit": "scripts/commit.sh",
+		"deploy": "scripts/deploy.sh",
+		"test": "jest",
+		"prepare": "husky"
+	},
+	"peerDependencies": {
+		"react": "^18 || ^19",
+		"react-dom": "^18 || ^19"
+	},
+	"exports": {
+		".": {
+			"import": "./dist/index.cjs",
+			"types": "./dist/index.d.ts"
+		}
+	}
+}

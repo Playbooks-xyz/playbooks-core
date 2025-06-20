@@ -13,7 +13,7 @@ export default defineConfig(({ mode }) => ({
 			entry: [
 				path.resolve(__dirname, 'src/index.tsx'),
 				path.resolve(__dirname, 'src/feedbacks/feedbacks'),
-				path.resolve(__dirname, 'src/forms/forms'),
+				path.resolve(__dirname, 'src/inputs/inputs'),
 				path.resolve(__dirname, 'src/items/items'),
 				path.resolve(__dirname, 'src/paginations/paginations'),
 				path.resolve(__dirname, 'src/skeletons/skeletons'),

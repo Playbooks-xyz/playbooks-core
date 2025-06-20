@@ -10,20 +10,27 @@ export default defineConfig(({ mode }) => ({
 	build: {
 		sourcemap: mode === 'development',
 		lib: {
-			entry: path.resolve(__dirname, 'src/index.tsx'),
+			entry: [
+				path.resolve(__dirname, 'src/index.tsx'),
+				path.resolve(__dirname, 'src/loading.tsx'),
+				path.resolve(__dirname, 'src/seo.tsx'),
+				path.resolve(__dirname, 'src/toast.tsx'),
+			],
 			name: 'Contexts',
 			formats: ['es', 'cjs'],
 			fileName: (format, entryName) => (format === 'es' ? `${entryName}.mjs` : `${entryName}.cjs`),
 		},
 		rollupOptions: {
-			external: ['react', 'react-dom'],
-			output: {
-				globals: {
-					react: 'React',
-					'react-dom': 'ReactDOM',
-					'react/jsx-runtime': 'react/jsx-runtime',
-				},
-			},
+			external: [
+				'react',
+				'react-dom',
+				'react/jsx-runtime',
+				'next',
+				'next/dynamic',
+				'next/head',
+				'next/link',
+				'next/router',
+			],
 			plugins: [peerDepsExternal()],
 		},
 	},

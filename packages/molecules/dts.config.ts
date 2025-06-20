@@ -4,7 +4,7 @@ module.exports = {
 		'index',
 		// 'cards',
 		'feedbacks',
-		'forms',
+		'inputs',
 		'items',
 		// 'lists',
 		'paginations',

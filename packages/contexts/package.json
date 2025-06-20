@@ -4,9 +4,7 @@
 	"description": "A collection of React contexts for Playbooks.",
 	"author": "Eric Hubbell<eric@erichubbell.com>",
 	"license": "ISC",
-	"main": "dist/index.cjs",
-	"module": "dist/index.mjs",
-	"types": "dist/index.d.ts",
+	"type": "module",
 	"files": [
 		"dist"
 	],
@@ -39,6 +37,24 @@
 		"nprogress": "^0.2.0"
 	},
 	"devDependencies": {
-		"@playbooks/theme": "^0.1.17"
+		"next": "^15.3.4"
+	},
+	"exports": {
+		".": {
+			"types": "./dist/index.d.ts",
+			"import": "./dist/index.cjs"
+		},
+		"./loading": {
+			"types": "./dist/loading.d.ts",
+			"import": "./dist/loading.cjs"
+		},
+		"./seo": {
+			"types": "./dist/seo.d.ts",
+			"import": "./dist/seo.cjs"
+		},
+		"./toast": {
+			"types": "./dist/toast.d.ts",
+			"import": "./dist/toast.cjs"
+		}
 	}
 }

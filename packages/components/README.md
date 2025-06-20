@@ -32,7 +32,7 @@ This project uses [yalc](https://npmjs.com/package/yalc) for local development.
 
 - npm run dev
 - switch to project
-- npx yalc add @playbooks/utils
+- npx yalc add @playbooks/components
 - After that, this library should hot reload into the consuming application
 
 ## Scripts

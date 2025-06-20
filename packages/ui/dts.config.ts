@@ -46,46 +46,9 @@ module.exports = {
 		'tags',
 		'toasts',
 		'tooltips',
-	].map(fileName => {
-		if (fileName === 'index') {
-			return {
-				filePath: `./src/${fileName}.tsx`,
-				outFile: `./dist/${fileName}.d.ts`,
-				noCheck: true,
-			};
-		}
-		if (fileName === 'contexts') {
-			return {
-				filePath: `./src/contexts/${fileName}.tsx`,
-				outFile: `./dist/${fileName}.d.ts`,
-				noCheck: true,
-			};
-		}
-		if (fileName === 'hooks') {
-			return {
-				filePath: `./src/hooks/${fileName}.tsx`,
-				outFile: `./dist/${fileName}.d.ts`,
-				noCheck: true,
-			};
-		}
-		if (fileName === 'molecules') {
-			return {
-				filePath: `./src/molecules/${fileName}.tsx`,
-				outFile: `./dist/${fileName}.d.ts`,
-				noCheck: true,
-			};
-		}
-		if (fileName === 'interface') {
-			return {
-				filePath: `./src/interface/${fileName}.tsx`,
-				outFile: `./dist/${fileName}.d.ts`,
-				noCheck: true,
-			};
-		}
-		return {
-			filePath: `./src/interface/${fileName}.tsx`,
-			outFile: `./dist/${fileName}.d.ts`,
-			noCheck: true,
-		};
-	}),
+	].map(fileName => ({
+		filePath: `./src/${fileName}.tsx`,
+		outFile: `./dist/${fileName}.d.ts`,
+		noCheck: true,
+	})),
 };

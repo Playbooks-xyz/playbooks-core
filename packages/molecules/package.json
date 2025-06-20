@@ -37,6 +37,7 @@
 	},
 	"dependencies": {
 		"@playbooks/components": "^0.0.2",
+		"@playbooks/theme": "^0.1.17",
 		"@playbooks/ui": "^0.8.27",
 		"@playbooks/utils": "^0.0.2"
 	},
@@ -46,38 +47,31 @@
 	"exports": {
 		".": {
 			"types": "./dist/index.d.ts",
-			"import": "./dist/index.mjs",
-			"require": "./dist/index.cjs"
+			"import": "./dist/index.cjs"
 		},
 		"./feedbacks": {
 			"types": "./dist/feedbacks.d.ts",
-			"import": "./dist/feedbacks.mjs",
-			"require": "./dist/feedbacks.cjs"
+			"import": "./dist/feedbacks.cjs"
 		},
 		"./items": {
 			"types": "./dist/items.d.ts",
-			"import": "./dist/items.mjs",
-			"require": "./dist/items.cjs"
+			"import": "./dist/items.cjs"
 		},
 		"./paginations": {
 			"types": "./dist/paginations.d.ts",
-			"import": "./dist/paginations.mjs",
-			"require": "./dist/paginations.cjs"
+			"import": "./dist/paginations.cjs"
 		},
 		"./skeletons": {
 			"types": "./dist/skeletons.d.ts",
-			"import": "./dist/skeletons.mjs",
-			"require": "./dist/skeletons.cjs"
+			"import": "./dist/skeletons.cjs"
 		},
 		"./toasts": {
 			"types": "./dist/toasts.d.ts",
-			"import": "./dist/toasts.mjs",
-			"require": "./dist/toasts.cjs"
+			"import": "./dist/toasts.cjs"
 		},
 		"./toggles": {
 			"types": "./dist/toggles.d.ts",
-			"import": "./dist/toggles.mjs",
-			"require": "./dist/toggles.cjs"
+			"import": "./dist/toggles.cjs"
 		}
 	}
 }

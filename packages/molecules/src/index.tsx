@@ -1,5 +1,5 @@
 export * from 'src/feedbacks';
-export * from 'src/forms';
+export * from 'src/inputs';
 export * from 'src/items';
 export * from 'src/paginations';
 export * from 'src/skeletons';

@@ -1,3 +1,3 @@
-export * from 'src/interface-context';
-export * from 'src/loading-context';
-export * from 'src/toast-context';
+export * from 'src/loading';
+export * from 'src/seo';
+export * from 'src/toast';
