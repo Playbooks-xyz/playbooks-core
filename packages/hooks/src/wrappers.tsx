@@ -1,7 +1,7 @@
 import { capitalize } from '@playbooks/utils';
 import { useAction, useConfirm, useDelete, useDeletes, useQuery, useSave } from 'src';
 
-export const useActionWrap = (toast, model, method, state?) => {
+export const useActionWrapper = (toast, model, method, state?) => {
 	// Methods
 	const formattedMethod = async (data?) => {
 		try {
@@ -14,7 +14,7 @@ export const useActionWrap = (toast, model, method, state?) => {
 	return useAction(model, formattedMethod, state);
 };
 
-export const useConfirmWrap = (toast, model, message, method) => {
+export const useConfirmWrapper = (toast, model, message, method) => {
 	// Methods
 	const formattedMethod = async (data?) => {
 		try {
@@ -27,7 +27,7 @@ export const useConfirmWrap = (toast, model, message, method) => {
 	return useConfirm(model, message, formattedMethod);
 };
 
-export const useDeleteWrap = (toast, model, modelName, method) => {
+export const useDeleteWrapper = (toast, model, modelName, method) => {
 	// Methods
 	const formattedMethod = async (data?) => {
 		try {
@@ -41,7 +41,7 @@ export const useDeleteWrap = (toast, model, modelName, method) => {
 	return useDelete(model, modelName, formattedMethod);
 };
 
-export const useDeletesWrap = (toast, model, modelName, method) => {
+export const useDeletesWrapper = (toast, model, modelName, method) => {
 	// Methods
 	const formattedMethod = async (data?) => {
 		try {
@@ -55,7 +55,7 @@ export const useDeletesWrap = (toast, model, modelName, method) => {
 	return useDeletes(model, modelName, formattedMethod);
 };
 
-export const useQueryWrap = (toast, method, state?) => {
+export const useQueryWrapper = (toast, method, state?) => {
 	// Methods
 	const formattedMethod = async (data?) => {
 		try {
@@ -68,7 +68,7 @@ export const useQueryWrap = (toast, method, state?) => {
 	return useQuery(formattedMethod, state);
 };
 
-export const useSaveWrap = (toast, model, modelName, method) => {
+export const useSaveWrapper = (toast, model, modelName, method) => {
 	// Methods
 	const formattedMethod = async (data?) => {
 		try {
