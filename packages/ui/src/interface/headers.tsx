@@ -1,10 +1,9 @@
+import * as theme from '@playbooks/theme';
 import * as types from '@playbooks/types';
-import { useInterface } from 'contexts';
 import { Font, P } from 'interface/fonts';
 import { Div } from 'interface/html';
 
 export const Header = ({ name = 'Header', tailwind, className, children, ...props }: types.HeaderProps) => {
-
 	const base = theme.header();
 	const computed = { ...base, ...props, tailwind, className, name };
 
@@ -19,7 +18,6 @@ export const HeaderTitle = ({
 	children,
 	...props
 }: types.HeaderTitleProps) => {
-
 	const base = theme.headerTitle();
 	const computed = { ...base, ...props, tailwind, className, name };
 
@@ -38,7 +36,6 @@ export const HeaderSubtitle = ({
 	children,
 	...props
 }: types.HeaderSubtitleProps) => {
-
 	const base = theme.headerSubtitle();
 	const computed = { ...base, ...props, tailwind, className, name };
 
@@ -50,7 +47,6 @@ export const HeaderSubtitle = ({
 };
 
 export const HeaderText = ({ name = 'HeaderText', tailwind, className, children, ...props }: types.HeaderTextProps) => {
-
 	const base = theme.headerText();
 	const computed = { ...base, ...props, tailwind, className, name };
 
@@ -64,7 +60,6 @@ export const HeaderActions = ({
 	children,
 	...props
 }: types.HeaderActionsProps) => {
-
 	const base = theme.headerActions();
 	const computed = { ...base, ...props, tailwind, className, name };
 

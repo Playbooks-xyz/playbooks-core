@@ -4,7 +4,7 @@
 	"description": "The default theme for Playbooks.",
 	"author": "Eric Hubbell<eric@erichubbell.com>",
 	"license": "ISC",
-	"types": "dist/index.d.ts",
+	"type": "module",
 	"repository": {
 		"type": "git",
 		"url": "git+https://github.com/playbooks-xyz/playbooks-kit/packages/theme.git"
@@ -18,7 +18,7 @@
 	],
 	"scripts": {
 		"start": "vite build --mode development --minify false --watch",
-		"build": "vite build --mode production --minify true && npm run build:ts",
+		"build": "vite build --mode production --minify true",
 		"build:ts": "dts-bundle-generator --config dts.config.ts",
 		"clean": "npm run lint:fix",
 		"lint": "eslint src",
@@ -35,6 +35,10 @@
 		"@playbooks/configs": "^0.0.2"
 	},
 	"exports": {
+		".": {
+			"import": "./dist/index.mjs",
+			"types": "./dist/index.d.ts"
+		},
 		"./accordions": {
 			"import": "./dist/accordions.mjs",
 			"types": "./dist/accordions.d.ts"

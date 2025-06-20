@@ -1,3 +1,7 @@
+export const rangeSlider = () => ({
+	display: 'block',
+});
+
 export const rangeSliderTrack = () => ({
 	bgColor: 'bg-gray-100 dark:bg-gray-800',
 	borderRadius: 'rounded-full',

@@ -1,13 +1,12 @@
 import * as HTML from '@ehubbell/html';
+import * as theme from '@playbooks/theme';
 import * as types from '@playbooks/types';
-import { useInterface } from 'contexts';
 import { BtnWrapper } from 'interface/buttons';
 import { Div } from 'interface/html';
 import { FarIcon } from 'interface/icons';
 import { computeTailwind, isObject } from 'utils';
 
 export const Table = ({ name = 'Table', tailwind, className, children, ...props }: types.TableProps) => {
-
 	const base = theme.table();
 	const classes = computeTailwind({ ...base, ...props, ...tailwind, className });
 
@@ -25,7 +24,6 @@ export const TableHeader = ({
 	children,
 	...props
 }: types.TableHeaderProps) => {
-
 	const base = theme.tableHeader();
 	const classes = computeTailwind({ ...base, ...props, ...tailwind, className });
 
@@ -43,7 +41,6 @@ export const TableHeaderRow = ({
 	children,
 	...props
 }: types.TableHeaderRowProps) => {
-
 	const base = theme.tableHeaderRow();
 	const classes = computeTailwind({ ...base, ...props, ...tailwind, className });
 
@@ -61,7 +58,6 @@ export const TableHead = ({
 	children,
 	...props
 }: types.TableHeadProps) => {
-
 	const base = theme.tableHead();
 	const classes = computeTailwind({ ...base, ...props, ...tailwind, className });
 	const direction = value === params?.sortProp && params?.sortValue === 'asc' ? 'desc' : 'asc';
@@ -90,7 +86,6 @@ export const TableHead = ({
 };
 
 export const TableBody = ({ name = 'TableBody', tailwind, className, children, ...props }: types.TableBodyProps) => {
-
 	const base = theme.tableBody();
 	const classes = computeTailwind({ ...base, ...props, ...tailwind, className });
 
@@ -102,7 +97,6 @@ export const TableBody = ({ name = 'TableBody', tailwind, className, children, .
 };
 
 export const TableRow = ({ name = 'TableRow', tailwind, className, children, ...props }: types.TableRowProps) => {
-
 	const base = theme.tableRow();
 	const classes = computeTailwind({ ...base, ...props, ...tailwind, className });
 
@@ -122,7 +116,6 @@ export const TableData = ({
 	children,
 	...props
 }: types.TableDataProps) => {
-
 	const base = theme.tableData({ title });
 	const classes = computeTailwind({ ...base, ...props, ...tailwind, className });
 

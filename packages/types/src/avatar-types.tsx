@@ -5,9 +5,9 @@ export type AvatarProps = HtmlProps;
 export type AvatarBadgeProps = HtmlProps;
 
 export type AvatarImgProps = HtmlProps & {
-	size?: string;
-	src?: string;
 	alt?: string;
+	size?: string;
+	src: string;
 };
 
 export type AvatarBodyProps = HtmlProps;

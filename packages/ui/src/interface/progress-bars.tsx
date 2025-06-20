@@ -1,5 +1,5 @@
+import * as theme from '@playbooks/theme';
 import * as types from '@playbooks/types';
-import { useInterface } from 'contexts';
 import { Div } from 'interface/html';
 
 export const ProgressBar = ({
@@ -9,7 +9,6 @@ export const ProgressBar = ({
 	children,
 	...props
 }: types.ProgressBarProps) => {
-
 	const base = theme.progressBar();
 	const computed = { ...base, ...props, tailwind, className, name };
 
@@ -17,7 +16,6 @@ export const ProgressBar = ({
 };
 
 export const Progress = ({ name = 'Progress', value = 0, tailwind, className, ...props }: types.ProgressProps) => {
-
 	const base = theme.progress();
 	const computed = { ...base, ...props, tailwind, className, name };
 

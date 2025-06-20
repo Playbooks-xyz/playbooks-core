@@ -1,10 +1,9 @@
 import { computeTailwind } from '@ehubbell/html';
+import * as theme from '@playbooks/theme';
 import * as types from '@playbooks/types';
 import * as Loaders from 'assets/loaders';
-import { useInterface } from 'contexts';
 
 export const Oval = ({ name = 'Oval', tailwind, className, ...props }: types.SpinnerProps) => {
-
 	const base = theme.spinner();
 	const classes = computeTailwind({ ...base, ...props, ...tailwind, className });
 
@@ -12,7 +11,6 @@ export const Oval = ({ name = 'Oval', tailwind, className, ...props }: types.Spi
 };
 
 export const Puff = ({ name = 'Puff', tailwind, className, ...props }: types.SpinnerProps) => {
-
 	const base = theme.spinner();
 	const classes = computeTailwind({ ...base, ...props, ...tailwind, className });
 

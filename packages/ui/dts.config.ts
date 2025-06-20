@@ -2,9 +2,6 @@ module.exports = {
 	compilationOptions: { preferredConfigPath: './tsconfig.json' },
 	entries: [
 		'index',
-		'contexts',
-		'hooks',
-		'molecules',
 		'accordions',
 		'alerts',
 		'avatars',

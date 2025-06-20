@@ -1,10 +1,9 @@
 import * as HTML from '@ehubbell/html';
 import { computeProps } from '@ehubbell/html';
+import * as theme from '@playbooks/theme';
 import * as types from '@playbooks/types';
-import { useInterface } from 'contexts';
 
 export const Article = ({ name = 'Article', tailwind, className, children, ...props }: types.HtmlProps) => {
-
 	const base = theme.article();
 	const formatted = { ...base, ...props, ...tailwind };
 	const filtered = computeProps(props);
@@ -17,7 +16,6 @@ export const Article = ({ name = 'Article', tailwind, className, children, ...pr
 };
 
 export const Aside = ({ name = 'Aside', tailwind, className, children, ...props }: types.HtmlProps) => {
-
 	const base = theme.aside();
 	const formatted = { ...base, ...props, ...tailwind };
 	const filtered = computeProps(props);
@@ -30,7 +28,6 @@ export const Aside = ({ name = 'Aside', tailwind, className, children, ...props 
 };
 
 export const Blockquote = ({ name = 'Blockquote', tailwind, className, children, ...props }: types.HtmlProps) => {
-
 	const base = theme.blockquote();
 	const formatted = { ...base, ...props, ...tailwind };
 	const filtered = computeProps(props);
@@ -43,7 +40,6 @@ export const Blockquote = ({ name = 'Blockquote', tailwind, className, children,
 };
 
 export const Body = ({ name = 'Body', tailwind, className, children, ...props }: types.HtmlProps) => {
-
 	const base = theme.body();
 	const formatted = { ...base, ...props, ...tailwind };
 	const filtered = computeProps(props);
@@ -56,7 +52,6 @@ export const Body = ({ name = 'Body', tailwind, className, children, ...props }:
 };
 
 export const Caption = ({ name = 'Caption', tailwind, className, children, ...props }: types.HtmlProps) => {
-
 	const base = theme.caption();
 	const formatted = { ...base, ...props, ...tailwind };
 	const filtered = computeProps(props);
@@ -69,7 +64,6 @@ export const Caption = ({ name = 'Caption', tailwind, className, children, ...pr
 };
 
 export const Code = ({ name = 'Code', tailwind, className, children, ...props }: types.HtmlProps) => {
-
 	const base = theme.code();
 	const formatted = { ...base, ...props, ...tailwind };
 	const filtered = computeProps(props);
@@ -82,7 +76,6 @@ export const Code = ({ name = 'Code', tailwind, className, children, ...props }:
 };
 
 export const Div = ({ name = 'Div', tailwind, className, children, ...props }: types.HtmlProps) => {
-
 	const base = theme.div();
 	const formatted = { ...base, ...props, ...tailwind };
 	const filtered = computeProps(props);
@@ -95,7 +88,6 @@ export const Div = ({ name = 'Div', tailwind, className, children, ...props }: t
 };
 
 export const Figure = ({ name = 'Figure', tailwind, className, children, ...props }: types.HtmlProps) => {
-
 	const base = theme.figure();
 	const formatted = { ...base, ...props, ...tailwind };
 	const filtered = computeProps(props);
@@ -108,7 +100,6 @@ export const Figure = ({ name = 'Figure', tailwind, className, children, ...prop
 };
 
 export const Hr = ({ name = 'Hr', tailwind, className, children, ...props }: types.HtmlProps) => {
-
 	const base = theme.hr();
 	const formatted = { ...base, ...props, ...tailwind };
 	const filtered = computeProps(props);
@@ -121,7 +112,6 @@ export const Hr = ({ name = 'Hr', tailwind, className, children, ...props }: typ
 };
 
 export const Html = ({ name = 'Html', tailwind, className, children, ...props }: types.HtmlProps) => {
-
 	const base = theme.html();
 	const formatted = { ...base, ...props, ...tailwind };
 	const filtered = computeProps(props);
@@ -134,7 +124,6 @@ export const Html = ({ name = 'Html', tailwind, className, children, ...props }:
 };
 
 export const IFrame = ({ name = 'iFrame', tailwind, className, ...props }: types.IFrameProps) => {
-
 	const base = theme.iFrame();
 	const formatted = { ...base, ...props, ...tailwind };
 	const filtered = computeProps(props);
@@ -143,7 +132,6 @@ export const IFrame = ({ name = 'iFrame', tailwind, className, ...props }: types
 };
 
 export const Img = ({ name = 'Img', src, alt = 'photo', tailwind, className, ...props }: types.ImgProps) => {
-
 	const base = theme.img();
 	const formatted = { ...base, ...props, ...tailwind };
 	const filtered = computeProps(props);
@@ -152,7 +140,6 @@ export const Img = ({ name = 'Img', src, alt = 'photo', tailwind, className, ...
 };
 
 export const Li = ({ name = 'Li', tailwind, className, children, ...props }: types.HtmlProps) => {
-
 	const base = theme.li();
 	const formatted = { ...base, ...props, ...tailwind };
 	const filtered = computeProps(props);
@@ -165,7 +152,6 @@ export const Li = ({ name = 'Li', tailwind, className, children, ...props }: typ
 };
 
 export const Main = ({ name = 'Main', tailwind, className, children, ...props }: types.HtmlProps) => {
-
 	const base = theme.main();
 	const formatted = { ...base, ...props, ...tailwind };
 	const filtered = computeProps(props);
@@ -178,7 +164,6 @@ export const Main = ({ name = 'Main', tailwind, className, children, ...props }:
 };
 
 export const Pre = ({ name = 'Pre', tailwind, className, children, ...props }: types.HtmlProps) => {
-
 	const base = theme.pre();
 	const formatted = { ...base, ...props, ...tailwind };
 	const filtered = computeProps(props);
@@ -191,7 +176,6 @@ export const Pre = ({ name = 'Pre', tailwind, className, children, ...props }: t
 };
 
 export const Span = ({ name = 'Span', tailwind, className, children, ...props }: types.HtmlProps) => {
-
 	const base = theme.span();
 	const formatted = { ...base, ...props, ...tailwind };
 	const filtered = computeProps(props);
@@ -204,7 +188,6 @@ export const Span = ({ name = 'Span', tailwind, className, children, ...props }:
 };
 
 export const Ul = ({ name = 'Ul', tailwind, className, children, ...props }: types.HtmlProps) => {
-
 	const base = theme.ul();
 	const formatted = { ...base, ...props, ...tailwind };
 	const filtered = computeProps(props);

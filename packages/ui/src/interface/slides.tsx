@@ -1,9 +1,10 @@
 import { useEffect, useRef, useState } from 'react';
+import { createPortal } from 'react-dom';
 
 import { Fade } from '@playbooks/components/fade';
 import { useKeyPress } from '@playbooks/hooks';
+import * as theme from '@playbooks/theme';
 import * as types from '@playbooks/types';
-import { useInterface } from 'contexts';
 import { AccentBtn } from 'interface/buttons';
 import { H4 } from 'interface/fonts';
 import { Div } from 'interface/html';
@@ -17,7 +18,6 @@ export const SlideWrapper = ({
 	children,
 	...props
 }: types.SlideWrapperProps) => {
-
 	const base = theme.slideWrapper();
 	const computed = { ...base, ...props, tailwind, className, name };
 
@@ -36,7 +36,6 @@ export const SlideBackdrop = ({
 	tailwind,
 	...props
 }: types.SlideBackdropProps) => {
-
 	const base = theme.slideBackdrop({ open });
 	const computed = { ...base, ...props, tailwind, name };
 
@@ -57,12 +56,12 @@ export const Slide = ({
 
 	const base = theme.slide({ open: show, placement });
 	const computed = { ...base, ...props, tailwind, className, name };
-	const { ref, createPortal, toggleScroll } = useInterface();
 	const nodeRef = useRef(null);
 
 	// Hooks
 	useEffect(() => {
-		toggleScroll(open);
+		const el = document.querySelector('body');
+		open ? el.classList?.add('overflow-hidden') : el.classList?.remove('overflow-hidden');
 	}, [open]);
 
 	useKeyPress(onKeyDown, [open]);
@@ -79,18 +78,17 @@ export const Slide = ({
 	const onExit = () => setShow(false);
 
 	// Render
-	return ref?.current
-		? createPortal(
-				<Fade ref={nodeRef} show={open} timeout={200} onEnter={onEnter} onExit={onExit}>
-					<SlideWrapper open={show} onClose={onClose}>
-						<Div ref={nodeRef} {...computed}>
-							{children}
-						</Div>
-					</SlideWrapper>
-				</Fade>,
-				ref?.current,
-			)
-		: null;
+	if (typeof window === 'undefined') return null;
+	return createPortal(
+		<Fade ref={nodeRef} show={open} timeout={200} onEnter={onEnter} onExit={onExit}>
+			<SlideWrapper open={show} onClose={onClose}>
+				<Div ref={nodeRef} {...computed}>
+					{children}
+				</Div>
+			</SlideWrapper>
+		</Fade>,
+		document?.body,
+	);
 };
 
 export const SlideHeader = ({
@@ -101,7 +99,6 @@ export const SlideHeader = ({
 	children,
 	...props
 }: types.SlideHeaderProps) => {
-
 	const base = theme.slideHeader();
 	const computed = { ...base, ...props, tailwind, className, name };
 
@@ -114,7 +111,6 @@ export const SlideHeader = ({
 };
 
 export const SlideTitle = ({ name = 'SlideTitle', tailwind, className, children, ...props }: types.SlideTitleProps) => {
-
 	const base = theme.slideTitle();
 	const computed = { ...base, ...props, tailwind, className, name };
 
@@ -122,7 +118,6 @@ export const SlideTitle = ({ name = 'SlideTitle', tailwind, className, children,
 };
 
 export const SlideBody = ({ name = 'SlideBody', tailwind, className, children, ...props }: types.SlideBodyProps) => {
-
 	const base = theme.slideBody();
 	const computed = { ...base, ...props, tailwind, className, name };
 
@@ -136,7 +131,6 @@ export const SlideFooter = ({
 	children,
 	...props
 }: types.SlideFooterProps) => {
-
 	const base = theme.slideFooter();
 	const computed = { ...base, ...props, tailwind, className, name };
 

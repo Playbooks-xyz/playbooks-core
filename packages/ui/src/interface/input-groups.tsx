@@ -1,5 +1,5 @@
+import * as theme from '@playbooks/theme';
 import * as types from '@playbooks/types';
-import { useInterface } from 'contexts';
 import { Div } from 'interface/html';
 import { Icon } from 'interface/icons';
 
@@ -11,7 +11,6 @@ export const InputGroup = ({
 	children,
 	...props
 }: types.InputGroupProps) => {
-
 	const base = theme.inputGroup();
 	const computed = { ...base, ...props, tailwind, className, name };
 
@@ -27,7 +26,6 @@ export const InputAppend = ({
 	children,
 	...props
 }: types.InputAddonProps) => {
-
 	const base = theme.inputAppend();
 	const computed = { ...base, ...props, tailwind, className, name };
 
@@ -44,7 +42,6 @@ export const InputPrepend = ({
 	children,
 	...props
 }: types.InputAddonProps) => {
-
 	const base = theme.inputPrepend();
 	const computed = { ...base, ...props, tailwind, className, name };
 

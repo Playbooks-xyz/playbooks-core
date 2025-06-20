@@ -1,10 +1,9 @@
+import * as theme from '@playbooks/theme';
 import * as types from '@playbooks/types';
-import { useInterface } from 'contexts';
 import { Font, P } from 'interface/fonts';
 import { Div, Img } from 'interface/html';
 
 export const Avatar = ({ name = 'Avatar', tailwind, className, children, ...props }: types.AvatarProps) => {
-
 	const base = theme.avatar();
 	const computed = { ...base, ...props, tailwind, className, name };
 
@@ -19,7 +18,6 @@ export const AvatarBadge = ({
 	children,
 	...props
 }: types.AvatarBadgeProps) => {
-
 	const base = theme.avatarBadge({ size });
 	const computed = { ...base, ...props, tailwind, className, name };
 
@@ -34,7 +32,6 @@ export const AvatarImg = ({
 	className,
 	...props
 }: types.AvatarImgProps) => {
-
 	const base = theme.avatarImg({ size });
 	const computed = { ...base, ...props, tailwind, className, name };
 
@@ -42,7 +39,6 @@ export const AvatarImg = ({
 };
 
 export const AvatarBody = ({ name = 'AvatarBody', tailwind, className, children, ...props }: types.AvatarBodyProps) => {
-
 	const base = theme.avatarBody();
 	const computed = { ...base, ...props, tailwind, className, name };
 
@@ -57,7 +53,6 @@ export const AvatarTitle = ({
 	children,
 	...props
 }: types.AvatarTitleProps) => {
-
 	const base = theme.avatarTitle();
 	const computed = { ...base, ...props, tailwind, className, name };
 
@@ -69,7 +64,6 @@ export const AvatarTitle = ({
 };
 
 export const AvatarText = ({ name = 'AvatarText', tailwind, className, children, ...props }: types.AvatarTextProps) => {
-
 	const base = theme.avatarText();
 	const computed = { ...base, ...props, tailwind, className, name };
 
@@ -83,7 +77,6 @@ export const AvatarActions = ({
 	children,
 	...props
 }: types.AvatarActionsProps) => {
-
 	const base = theme.avatarActions();
 	const computed = { ...base, ...props, tailwind, className, name };
 

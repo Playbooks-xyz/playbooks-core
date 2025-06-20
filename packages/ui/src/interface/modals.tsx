@@ -1,9 +1,10 @@
 import { useEffect, useRef, useState } from 'react';
+import { createPortal } from 'react-dom';
 
 import { Fade } from '@playbooks/components/fade';
 import { useKeyPress } from '@playbooks/hooks';
+import * as theme from '@playbooks/theme';
 import * as types from '@playbooks/types';
-import { useInterface } from 'contexts';
 import { AccentBtn } from 'interface/buttons';
 import { Font } from 'interface/fonts';
 import { Div, Span } from 'interface/html';
@@ -17,7 +18,6 @@ export const ModalWrapper = ({
 	children,
 	...props
 }: types.ModalWrapperProps) => {
-
 	const base = theme.modalWrapper();
 	const computed = { ...base, ...props, tailwind, className, name };
 
@@ -36,7 +36,6 @@ export const ModalBackdrop = ({
 	tailwind,
 	...props
 }: types.ModalBackdropProps) => {
-
 	const base = theme.modalBackdrop({ open });
 	const computed = { ...base, ...props, tailwind, name };
 
@@ -48,12 +47,12 @@ export const Modal = ({ name = 'Modal', open, onClose, tailwind, className, chil
 
 	const base = theme.modal({ open: show });
 	const computed = { ...base, ...props, tailwind, className, name };
-	const { ref, createPortal, toggleScroll } = useInterface();
 	const nodeRef = useRef(null);
 
 	// Hooks
 	useEffect(() => {
-		toggleScroll(open);
+		const el = document.querySelector('body');
+		open ? el.classList?.add('overflow-hidden') : el.classList?.remove('overflow-hidden');
 	}, [open]);
 
 	useKeyPress(onKeyDown, [open]);
@@ -70,18 +69,17 @@ export const Modal = ({ name = 'Modal', open, onClose, tailwind, className, chil
 	const onExit = () => setShow(false);
 
 	// Render
-	return ref?.current
-		? createPortal(
-				<Fade ref={nodeRef} show={open} timeout={200} onEnter={onEnter} onExit={onExit}>
-					<ModalWrapper open={show} onClose={onClose} tailwind={tailwind?.wrapper}>
-						<Div ref={nodeRef} {...computed}>
-							{children}
-						</Div>
-					</ModalWrapper>
-				</Fade>,
-				ref?.current,
-			)
-		: null;
+	if (typeof window === 'undefined') return null;
+	return createPortal(
+		<Fade ref={nodeRef} show={open} timeout={200} onEnter={onEnter} onExit={onExit}>
+			<ModalWrapper open={show} onClose={onClose} tailwind={tailwind?.wrapper}>
+				<Div ref={nodeRef} {...computed}>
+					{children}
+				</Div>
+			</ModalWrapper>
+		</Fade>,
+		document.body,
+	);
 };
 
 export const ModalHeader = ({
@@ -92,7 +90,6 @@ export const ModalHeader = ({
 	children,
 	...props
 }: types.ModalHeaderProps) => {
-
 	const base = theme.modalHeader();
 	const computed = { ...base, ...props, tailwind, className, name };
 
@@ -112,7 +109,6 @@ export const ModalTitle = ({
 	children,
 	...props
 }: types.ModalTitleProps) => {
-
 	const base = theme.modalTitle();
 	const computed = { ...base, ...props, tailwind, className, name };
 
@@ -131,7 +127,6 @@ export const ModalSubtitle = ({
 	children,
 	...props
 }: types.ModalSubtitleProps) => {
-
 	const base = theme.modalSubtitle();
 	const computed = { ...base, ...props, tailwind, className, name };
 
@@ -150,7 +145,6 @@ export const ModalBody = ({
 	children,
 	...props
 }: types.ModalBodyProps) => {
-
 	const base = theme.modalBody({ size });
 	const computed = { ...base, ...props, tailwind, className, name };
 
@@ -164,7 +158,6 @@ export const ModalFooter = ({
 	children,
 	...props
 }: types.ModalFooterProps) => {
-
 	const base = theme.modalFooter();
 	const computed = { ...base, ...props, tailwind, className, name };
 

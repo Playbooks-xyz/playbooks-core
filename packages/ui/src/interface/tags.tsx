@@ -1,9 +1,8 @@
+import * as theme from '@playbooks/theme';
 import * as types from '@playbooks/types';
-import { useInterface } from 'contexts';
 import { Div, Img } from 'interface/html';
 
 export const Tags = ({ name = 'Tags', tailwind, className, children, ...props }: types.TagsProps) => {
-
 	const base = theme.tags();
 	const computed = { ...base, ...props, tailwind, className, name };
 
@@ -11,7 +10,6 @@ export const Tags = ({ name = 'Tags', tailwind, className, children, ...props }:
 };
 
 export const Tag = ({ name = 'Tag', size = 'md', tailwind, className, children, ...props }: types.TagProps) => {
-
 	const base = theme.tag({ size });
 	const computed = { ...base, ...props, tailwind, className, name };
 
@@ -27,7 +25,6 @@ export const TagImg = ({
 	className,
 	...props
 }: types.TagImgProps) => {
-
 	const base = theme.tagImg({ size });
 	const computed = { ...base, ...props, tailwind, className, name };
 
@@ -35,7 +32,6 @@ export const TagImg = ({
 };
 
 export const TagBody = ({ name = 'TagBody', tailwind, className, children, ...props }: types.TagBodyProps) => {
-
 	const base = theme.tagBody();
 	const computed = { ...base, ...props, tailwind, className, name };
 
@@ -43,7 +39,6 @@ export const TagBody = ({ name = 'TagBody', tailwind, className, children, ...pr
 };
 
 export const TagActions = ({ name = 'TagActions', tailwind, className, children, ...props }: types.TagActionsProps) => {
-
 	const base = theme.tagActions();
 	const computed = { ...base, ...props, tailwind, className, name };
 

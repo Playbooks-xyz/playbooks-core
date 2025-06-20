@@ -1,5 +1,5 @@
+import * as theme from '@playbooks/theme';
 import * as types from '@playbooks/types';
-import { useInterface } from 'contexts';
 import { Div } from 'interface/html';
 
 export const Container = ({
@@ -10,7 +10,6 @@ export const Container = ({
 	children,
 	...props
 }: types.ContainerProps) => {
-
 	const base = theme.container({ size });
 	const computed = { ...base, ...props, tailwind, className, name };
 
@@ -18,7 +17,6 @@ export const Container = ({
 };
 
 export const Grid = ({ name = 'Grid', cols = '12', tailwind, className, children, ...props }: types.GridProps) => {
-
 	const base = theme.grid({ cols });
 	const computed = { ...base, ...props, tailwind, className, name };
 
@@ -38,7 +36,6 @@ export const Col = ({
 	children,
 	...props
 }: types.ColProps) => {
-
 	const base = theme.col({ span, sm, md, lg, xl, xxl });
 	const computed = { ...base, ...props, tailwind, className, name };
 

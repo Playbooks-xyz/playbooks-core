@@ -1,7 +1,7 @@
 import * as HTML from '@ehubbell/html';
 import { computeTailwind } from '@ehubbell/html';
+import * as theme from '@playbooks/theme';
 import * as types from '@playbooks/types';
-import { useInterface } from 'contexts';
 import { BtnWrapper } from 'interface/buttons';
 import { Div, Span } from 'interface/html';
 import { FadIcon } from 'interface/icons';
@@ -13,7 +13,6 @@ export const SwitchGroup = ({
 	children,
 	...props
 }: types.SwitchGroupProps) => {
-
 	const base = theme.switchGroup();
 	const computed = { ...base, ...props, tailwind, className, name };
 
@@ -29,7 +28,6 @@ export const Switch = ({
 	className,
 	...props
 }: types.SwitchProps) => {
-
 	const base = theme.switchBase();
 	const classes = computeTailwind({ ...base, ...props, ...tailwind, className });
 
@@ -50,7 +48,6 @@ export const SwitchBackdrop = ({
 	className,
 	...props
 }: types.SwitchBackdropProps) => {
-
 	const base = theme.switchBackdrop();
 	const computed = { ...base, ...props, tailwind, className, name };
 
@@ -64,7 +61,6 @@ export const SwitchInner = ({
 	className,
 	...props
 }: types.SwitchInnerProps) => {
-
 	const base = theme.switchInner({ checked });
 	const computed = { ...base, ...props, tailwind, className, name };
 
@@ -79,7 +75,6 @@ export const SwitchToggle = ({
 	className,
 	...props
 }: types.SwitchToggleProps) => {
-
 	const base = theme.switchToggle({ checked });
 	const computed = { ...base, ...props, tailwind, className, name };
 
@@ -103,7 +98,6 @@ export const SwitchLabel = ({
 	children,
 	...props
 }: types.SwitchLabelProps) => {
-
 	const base = theme.switchLabel();
 	const classes = computeTailwind({ ...base, ...props, ...tailwind, className });
 

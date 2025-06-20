@@ -66,7 +66,7 @@ export const AccordionBody = ({
 	...props
 }: types.AccordionBodyProps) => {
 	const wrapperBase = theme.accordionBodyWrapper();
-	const base = theme.accordionBody({ open });
+	const base = theme.accordionBody();
 	const computed = { ...base, ...props, tailwind, className, name };
 	const [height, setHeight] = useState(0);
 	const ref = useRef(null);

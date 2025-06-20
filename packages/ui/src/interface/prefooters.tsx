@@ -1,11 +1,10 @@
+import * as theme from '@playbooks/theme';
 import * as types from '@playbooks/types';
-import { useInterface } from 'contexts';
 import { Font, H6, P } from 'interface/fonts';
 import { Div } from 'interface/html';
 import { Section } from 'interface/sections';
 
 export const Prefooter = ({ name = 'Prefooter', tailwind, className, children, ...props }: types.PrefooterProps) => {
-
 	const base = theme.prefooter();
 	const computed = { ...base, ...props, tailwind, className, name };
 
@@ -19,7 +18,6 @@ export const PrefooterBody = ({
 	children,
 	...props
 }: types.PrefooterBodyProps) => {
-
 	const base = theme.prefooterBody();
 	const computed = { ...base, ...props, tailwind, className, name };
 
@@ -33,7 +31,6 @@ export const PrefooterPretitle = ({
 	children,
 	...props
 }: types.PrefooterPretitleProps) => {
-
 	const base = theme.prefooterPretitle();
 	const computed = { ...base, ...props, tailwind, className, name };
 
@@ -48,7 +45,6 @@ export const PrefooterTitle = ({
 	children,
 	...props
 }: types.PrefooterTitleProps) => {
-
 	const base = theme.prefooterTitle();
 	const computed = { ...base, ...props, tailwind, className, name };
 
@@ -67,7 +63,6 @@ export const PrefooterSubtitle = ({
 	children,
 	...props
 }: types.PrefooterSubtitleProps) => {
-
 	const base = theme.prefooterSubtitle();
 	const computed = { ...base, ...props, tailwind, className, name };
 
@@ -85,7 +80,6 @@ export const PrefooterText = ({
 	children,
 	...props
 }: types.PrefooterTextProps) => {
-
 	const base = theme.prefooterText();
 	const computed = { ...base, ...props, tailwind, className, name };
 
@@ -99,7 +93,6 @@ export const PrefooterActions = ({
 	children,
 	...props
 }: types.PrefooterActionsProps) => {
-
 	const base = theme.prefooterActions();
 	const computed = { ...base, ...props, tailwind, className, name };
 

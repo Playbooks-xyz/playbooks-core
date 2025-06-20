@@ -21,7 +21,7 @@
 	},
 	"scripts": {
 		"start": "vite build --mode development --minify false --watch",
-		"build": "vite build --mode production --minify true && npm run build:ts",
+		"build": "vite build --mode production --minify true",
 		"build:ts": "dts-bundle-generator --config dts.config.ts",
 		"clean": "npm run lint:fix",
 		"lint": "eslint src",
@@ -74,21 +74,9 @@
 		"tailwindcss": "^4.1.8"
 	},
 	"exports": {
-		"./contexts": {
-			"import": "./dist/contexts.cjs",
-			"types": "./dist/contexts.d.ts"
-		},
-		"./hooks": {
-			"import": "./dist/hooks.cjs",
-			"types": "./dist/hooks.d.ts"
-		},
-		"./interface": {
-			"import": "./dist/interface.cjs",
-			"types": "./dist/interface.d.ts"
-		},
-		"./molecules": {
-			"import": "./dist/molecules.cjs",
-			"types": "./dist/molecules.d.ts"
+		".": {
+			"import": "./dist/index.cjs",
+			"types": "./dist/index.d.ts"
 		},
 		"./accordions": {
 			"import": "./dist/accordions.cjs",
@@ -265,10 +253,6 @@
 		"./tooltips": {
 			"import": "./dist/tooltips.cjs",
 			"types": "./dist/tooltips.d.ts"
-		},
-		"./utils": {
-			"import": "./dist/utils.cjs",
-			"types": "./dist/utils.d.ts"
 		},
 		"./styles.css": "./dist/styles.css"
 	}

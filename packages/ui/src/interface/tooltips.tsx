@@ -2,8 +2,8 @@ import { useRef, useState } from 'react';
 import { usePopper } from 'react-popper';
 
 import { Fade } from '@playbooks/components/fade';
+import * as theme from '@playbooks/theme';
 import * as types from '@playbooks/types';
-import { useInterface } from 'contexts';
 import { Div, Span } from 'interface/html';
 
 export const Tooltip = ({
@@ -86,7 +86,6 @@ export const TooltipInner = ({
 	tailwind,
 	...props
 }: types.TooltipInnerProps) => {
-
 	const base = theme.tooltipInner();
 	const computed = { ...base, ...props, tailwind, className, name };
 
@@ -101,7 +100,6 @@ export const TooltipArrow = ({
 	style,
 	...props
 }: types.TooltipArrowProps) => {
-
 	const base = theme.tooltipArrow();
 	const computed = { ...base, ...props, tailwind, className, name };
 

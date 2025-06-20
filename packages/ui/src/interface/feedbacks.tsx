@@ -1,11 +1,10 @@
+import * as theme from '@playbooks/theme';
 import * as types from '@playbooks/types';
-import { useInterface } from 'contexts';
 import { Font, P, Small } from 'interface/fonts';
 import { Div } from 'interface/html';
 import { Icon } from 'interface/icons';
 
 export const Feedback = ({ name = 'Feedback', tailwind, className, children, ...props }: types.FeedbackProps) => {
-
 	const base = theme.feedback();
 	const computed = { ...base, ...props, tailwind, className, name };
 
@@ -19,7 +18,6 @@ export const FeedbackHeader = ({
 	children,
 	...props
 }: types.FeedbackHeaderProps) => {
-
 	const base = theme.feedbackHeader();
 	const computed = { ...base, ...props, tailwind, className, name };
 
@@ -34,7 +32,6 @@ export const FeedbackIcon = ({
 	className,
 	...props
 }: types.FeedbackIconProps) => {
-
 	const base = theme.feedbackIcon();
 	const computed = { ...base, ...props, tailwind, className, name };
 
@@ -48,7 +45,6 @@ export const FeedbackBody = ({
 	children,
 	...props
 }: types.FeedbackBodyProps) => {
-
 	const base = theme.feedbackBody();
 	const computed = { ...base, ...props, tailwind, className, name };
 
@@ -62,7 +58,6 @@ export const FeedbackPretitle = ({
 	children,
 	...props
 }: types.FeedbackTitleProps) => {
-
 	const base = theme.feedbackPretitle();
 	const computed = { ...base, ...props, tailwind, className, name };
 
@@ -77,7 +72,6 @@ export const FeedbackTitle = ({
 	children,
 	...props
 }: types.FeedbackTitleProps) => {
-
 	const base = theme.feedbackTitle();
 	const computed = { ...base, ...props, tailwind, className, name };
 
@@ -95,7 +89,6 @@ export const FeedbackText = ({
 	children,
 	...props
 }: types.FeedbackTextProps) => {
-
 	const base = theme.feedbackText();
 	const computed = { ...base, ...props, tailwind, className, name };
 
@@ -109,7 +102,6 @@ export const FeedbackActions = ({
 	children,
 	...props
 }: types.FeedbackActionsProps) => {
-
 	const base = theme.feedbackActions();
 	const computed = { ...base, ...props, tailwind, className, name };
 

@@ -1,5 +1,5 @@
+import * as theme from '@playbooks/theme';
 import * as types from '@playbooks/types';
-import { useInterface } from 'contexts';
 import { TextBtn } from 'interface/buttons';
 import { Li } from 'interface/html';
 import { FarIcon } from 'interface/icons';
@@ -13,7 +13,6 @@ export const Breadcrumbs = ({
 	children,
 	...props
 }: types.BreadcrumbsProps) => {
-
 	const base = theme.breadcrumbs();
 	const computed = { ...base, ...props, tailwind, className, name };
 
@@ -33,7 +32,6 @@ export const BreadcrumbItem = ({
 	children,
 	...props
 }: types.BreadcrumbItemProps) => {
-
 	const base = theme.breadcrumbItem();
 	const computed = { ...base, ...props, tailwind, className, name };
 
@@ -55,7 +53,6 @@ export const BreadcrumbBtn = ({
 	children,
 	...props
 }: types.BreadcrumbBtnProps) => {
-
 	const base = theme.breadcrumbBtn({ active });
 	const computed = { ...base, ...props, tailwind, size, className, name, active, children };
 
@@ -72,7 +69,6 @@ export const BreadcrumbLink = ({
 	children,
 	...props
 }: types.BreadcrumbLinkProps) => {
-
 	const base = theme.breadcrumbLink({ active });
 	const computed = { ...base, ...props, tailwind, size, className, name, active, children };
 

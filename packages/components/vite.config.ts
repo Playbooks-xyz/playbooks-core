@@ -37,7 +37,7 @@ export default defineConfig(({ mode }) => ({
 			plugins: [peerDepsExternal()],
 		},
 	},
-	plugins: mode === 'development' ? [runCombined()] : [],
+	plugins: [runCombined()],
 	resolve: {
 		alias: {
 			src: path.resolve(__dirname, '/src'),

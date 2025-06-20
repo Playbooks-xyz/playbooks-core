@@ -3,7 +3,7 @@ import react from '@vitejs/plugin-react';
 import path from 'path';
 import peerDepsExternal from 'rollup-plugin-peer-deps-external';
 import { defineConfig } from 'vite';
-import { runCombined, runYalc } from 'vite-plugin-yalc';
+import { runCombined } from 'vite-plugin-yalc';
 
 export default defineConfig(({ mode }) => ({
 	base: './',
@@ -13,8 +13,6 @@ export default defineConfig(({ mode }) => ({
 		lib: {
 			entry: [
 				path.resolve(__dirname, 'src/index.tsx'),
-				path.resolve(__dirname, 'src/contexts/contexts.tsx'),
-				path.resolve(__dirname, 'src/hooks/hooks.tsx'),
 				path.resolve(__dirname, 'src/interface/accordions.tsx'),
 				path.resolve(__dirname, 'src/interface/alerts.tsx'),
 				path.resolve(__dirname, 'src/interface/avatars.tsx'),
@@ -59,13 +57,11 @@ export default defineConfig(({ mode }) => ({
 				path.resolve(__dirname, 'src/interface/tags.tsx'),
 				path.resolve(__dirname, 'src/interface/toasts.tsx'),
 				path.resolve(__dirname, 'src/interface/tooltips.tsx'),
-				path.resolve(__dirname, 'src/molecules/molecules.tsx'),
-				// path.resolve(__dirname, 'src/utils/utils.tsx'),
 				path.resolve(__dirname, 'src/styles.css'),
 			],
-			formats: ['es'],
 			name: 'UI',
-			fileName: (format, entryName) => `${entryName}.mjs`,
+			formats: ['es', 'cjs'],
+			fileName: (format, entryName) => (format === 'es' ? `${entryName}.mjs` : `${entryName}.cjs`),
 		},
 		rollupOptions: {
 			external: [
@@ -91,7 +87,7 @@ export default defineConfig(({ mode }) => ({
 			plugins: [peerDepsExternal()],
 		},
 	},
-	plugins: mode === 'development' ? [react(), runCombined(), runYalc()] : [react()],
+	plugins: [react(), runCombined()],
 	resolve: {
 		alias: {
 			src: path.resolve(__dirname, '/src'),

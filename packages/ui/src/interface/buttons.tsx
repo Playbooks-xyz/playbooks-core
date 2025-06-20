@@ -1,8 +1,8 @@
 import { Fragment } from 'react';
 
 import * as HTML from '@ehubbell/html';
+import * as theme from '@playbooks/theme';
 import * as types from '@playbooks/types';
-import { useInterface } from 'contexts';
 import { Img, Span } from 'interface/html';
 import { Icon } from 'interface/icons';
 import { Oval } from 'interface/spinners';
@@ -41,7 +41,6 @@ export const PrimaryBtn = ({
 	className,
 	...props
 }: types.BtnProps) => {
-
 	const base = theme.primaryBtn({ active, size });
 
 	return <BtnShared name={name} className={className} {...base} tailwind={tailwind} {...props} />;
@@ -55,7 +54,6 @@ export const AccentBtn = ({
 	className,
 	...props
 }: types.BtnProps) => {
-
 	const base = theme.accentBtn({ active, size });
 
 	return <BtnShared name={name} className={className} {...base} tailwind={tailwind} {...props} />;
@@ -69,21 +67,18 @@ export const BorderBtn = ({
 	className,
 	...props
 }: types.BtnProps) => {
-
 	const base = theme.borderBtn({ active, size });
 
 	return <BtnShared name={name} className={className} {...base} tailwind={tailwind} {...props} />;
 };
 
 export const TabBtn = ({ name = 'TabBtn', size = 'sm', active, tailwind, className, ...props }: types.BtnProps) => {
-
 	const base = theme.tabBtn({ active, size });
 
 	return <BtnShared name={name} className={className} {...base} tailwind={tailwind} {...props} />;
 };
 
 export const TextBtn = ({ name = 'TextBtn', size = 'sm', active, tailwind, className, ...props }: types.BtnProps) => {
-
 	const base = theme.textBtn({ active, size });
 
 	return <BtnShared name={name} className={className} {...base} tailwind={tailwind} {...props} />;
@@ -142,7 +137,6 @@ export const BtnWrapper = ({
 	className,
 	...props
 }: types.BtnProps) => {
-
 	const base = theme.btnWrapper({ disabled });
 	const classes = computeTailwind({ ...base, ...props, ...tailwind, className });
 	const filtered = computeProps(props);

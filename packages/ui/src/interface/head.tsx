@@ -1,5 +1,6 @@
 import NextHead from 'next/head';
 
+import * as theme from '@playbooks/theme';
 import * as types from '@playbooks/types';
 
 export const Head = (props: types.HeadProps) => {

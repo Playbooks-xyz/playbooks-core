@@ -13,7 +13,7 @@ export default defineConfig(({ mode }) => ({
 			fileName: (format, entryName) => (format === 'es' ? `${entryName}.mjs` : `${entryName}.cjs`),
 		},
 	},
-	plugins: mode === 'development' ? [runCombined()] : [],
+	plugins: [runCombined()],
 	resolve: {
 		alias: {
 			src: path.resolve(__dirname, '/src'),

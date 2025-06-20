@@ -1,14 +1,13 @@
 import * as HTML from '@ehubbell/html';
 import { computeProps } from '@ehubbell/html';
+import * as theme from '@playbooks/theme';
 import * as types from '@playbooks/types';
-import { useInterface } from 'contexts';
 import { Btn } from 'interface/buttons';
 import { Font, P } from 'interface/fonts';
 import { Div, Li, Ul } from 'interface/html';
 import { Link } from 'interface/links';
 
 export const Footer = ({ name = 'Footer', tailwind, className, children, ...props }: types.FooterProps) => {
-
 	const base = theme.footer();
 	const formatted = { ...base, ...props, ...tailwind };
 	const filtered = computeProps(props);
@@ -27,7 +26,6 @@ export const FooterHeader = ({
 	children,
 	...props
 }: types.FooterHeaderProps) => {
-
 	const base = theme.footerHeader();
 	const computed = { ...base, ...props, tailwind, className, name };
 
@@ -35,7 +33,6 @@ export const FooterHeader = ({
 };
 
 export const FooterBody = ({ name = 'FooterBody', tailwind, className, children, ...props }: types.FooterBodyProps) => {
-
 	const base = theme.footerBody();
 	const computed = { ...base, ...props, tailwind, className, name };
 
@@ -50,7 +47,6 @@ export const FooterTitle = ({
 	children,
 	...props
 }: types.FooterTitleProps) => {
-
 	const base = theme.footerTitle();
 	const computed = { ...base, ...props, tailwind, className, name };
 
@@ -62,7 +58,6 @@ export const FooterTitle = ({
 };
 
 export const FooterText = ({ name = 'FooterText', tailwind, className, children, ...props }: types.FooterTextProps) => {
-
 	const base = theme.footerText();
 	const computed = { ...base, ...props, tailwind, className, name };
 
@@ -70,7 +65,6 @@ export const FooterText = ({ name = 'FooterText', tailwind, className, children,
 };
 
 export const FooterList = ({ name = 'FooterList', tailwind, className, children, ...props }: types.FooterListProps) => {
-
 	const base = theme.footerList();
 	const computed = { ...base, ...props, tailwind, className, name };
 
@@ -78,7 +72,6 @@ export const FooterList = ({ name = 'FooterList', tailwind, className, children,
 };
 
 export const FooterItem = ({ name = 'FooterItem', tailwind, className, children, ...props }: types.FooterItemProps) => {
-
 	const base = theme.footerItem();
 	const computed = { ...base, ...props, tailwind, className, name };
 
@@ -86,7 +79,6 @@ export const FooterItem = ({ name = 'FooterItem', tailwind, className, children,
 };
 
 export const FooterBtn = ({ name = 'FooterBtn', tailwind, className, children, ...props }: types.FooterBtnProps) => {
-
 	const base = theme.footerBtn();
 	const computed = { ...base, ...props, tailwind, className, children, name };
 
@@ -94,7 +86,6 @@ export const FooterBtn = ({ name = 'FooterBtn', tailwind, className, children, .
 };
 
 export const FooterLink = ({ name = 'FooterLink', tailwind, className, children, ...props }: types.FooterLinkProps) => {
-
 	const base = theme.footerLink();
 	const computed = { ...base, ...props, tailwind, className, children, name };
 
@@ -108,7 +99,6 @@ export const FooterFooter = ({
 	children,
 	...props
 }: types.FooterBodyProps) => {
-
 	const base = theme.footerFooter();
 	const computed = { ...base, ...props, tailwind, className, name };
 
