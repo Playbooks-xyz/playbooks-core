@@ -18,6 +18,7 @@ export default defineConfig(({ mode }) => ({
 				path.resolve(__dirname, 'src/inputs/inputs'),
 				path.resolve(__dirname, 'src/items/items'),
 				path.resolve(__dirname, 'src/lists/lists'),
+				path.resolve(__dirname, 'src/mdx/mdx'),
 				path.resolve(__dirname, 'src/paginations/paginations'),
 				path.resolve(__dirname, 'src/skeletons/skeletons'),
 				path.resolve(__dirname, 'src/toasts/toasts'),

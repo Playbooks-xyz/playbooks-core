@@ -39,7 +39,8 @@
 		"@playbooks/components": "^0.0.2",
 		"@playbooks/theme": "^0.1.17",
 		"@playbooks/ui": "^0.8.27",
-		"@playbooks/utils": "^0.0.2"
+		"@playbooks/utils": "^0.0.2",
+		"react-children-utilities": "^2.10.0"
 	},
 	"devDependencies": {
 		"@playbooks/types": "^0.0.2"
@@ -72,6 +73,10 @@
 		"./lists": {
 			"types": "./dist/lists.d.ts",
 			"import": "./dist/lists.cjs"
+		},
+		"./mdx": {
+			"types": "./dist/mdx.d.ts",
+			"import": "./dist/mdx.cjs"
 		},
 		"./paginations": {
 			"types": "./dist/paginations.d.ts",
