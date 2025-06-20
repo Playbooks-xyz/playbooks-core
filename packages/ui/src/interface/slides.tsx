@@ -17,7 +17,7 @@ export const SlideWrapper = ({
 	children,
 	...props
 }: types.SlideWrapperProps) => {
-	const { theme } = useInterface();
+
 	const base = theme.slideWrapper();
 	const computed = { ...base, ...props, tailwind, className, name };
 
@@ -36,7 +36,7 @@ export const SlideBackdrop = ({
 	tailwind,
 	...props
 }: types.SlideBackdropProps) => {
-	const { theme } = useInterface();
+
 	const base = theme.slideBackdrop({ open });
 	const computed = { ...base, ...props, tailwind, name };
 
@@ -54,7 +54,7 @@ export const Slide = ({
 	...props
 }: types.SlideProps) => {
 	const [show, setShow] = useState(false);
-	const { theme } = useInterface();
+
 	const base = theme.slide({ open: show, placement });
 	const computed = { ...base, ...props, tailwind, className, name };
 	const { ref, createPortal, toggleScroll } = useInterface();
@@ -101,7 +101,7 @@ export const SlideHeader = ({
 	children,
 	...props
 }: types.SlideHeaderProps) => {
-	const { theme } = useInterface();
+
 	const base = theme.slideHeader();
 	const computed = { ...base, ...props, tailwind, className, name };
 
@@ -114,7 +114,7 @@ export const SlideHeader = ({
 };
 
 export const SlideTitle = ({ name = 'SlideTitle', tailwind, className, children, ...props }: types.SlideTitleProps) => {
-	const { theme } = useInterface();
+
 	const base = theme.slideTitle();
 	const computed = { ...base, ...props, tailwind, className, name };
 
@@ -122,7 +122,7 @@ export const SlideTitle = ({ name = 'SlideTitle', tailwind, className, children,
 };
 
 export const SlideBody = ({ name = 'SlideBody', tailwind, className, children, ...props }: types.SlideBodyProps) => {
-	const { theme } = useInterface();
+
 	const base = theme.slideBody();
 	const computed = { ...base, ...props, tailwind, className, name };
 
@@ -136,7 +136,7 @@ export const SlideFooter = ({
 	children,
 	...props
 }: types.SlideFooterProps) => {
-	const { theme } = useInterface();
+
 	const base = theme.slideFooter();
 	const computed = { ...base, ...props, tailwind, className, name };
 

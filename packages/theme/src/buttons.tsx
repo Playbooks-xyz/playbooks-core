@@ -1,4 +1,4 @@
-import { computeBtnSize } from 'utils';
+import { computeBtnSize } from 'src/utils';
 
 export const btn = active => ({
 	align: 'text-center',

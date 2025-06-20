@@ -4,8 +4,6 @@
 	"description": "The default theme for Playbooks.",
 	"author": "Eric Hubbell<eric@erichubbell.com>",
 	"license": "ISC",
-	"main": "dist/index.cjs",
-	"module": "dist/index.mjs",
 	"types": "dist/index.d.ts",
 	"repository": {
 		"type": "git",
@@ -32,5 +30,186 @@
 		"git": "git push --tags",
 		"test": "jest",
 		"prepare": "husky"
+	},
+	"devDependencies": {
+		"@playbooks/configs": "^0.0.2"
+	},
+	"exports": {
+		"./accordions": {
+			"import": "./dist/accordions.mjs",
+			"types": "./dist/accordions.d.ts"
+		},
+		"./alerts": {
+			"import": "./dist/alerts.mjs",
+			"types": "./dist/alerts.d.ts"
+		},
+		"./avatars": {
+			"import": "./dist/avatars.mjs",
+			"types": "./dist/avatars.d.ts"
+		},
+		"./badges": {
+			"import": "./dist/badges.mjs",
+			"types": "./dist/badges.d.ts"
+		},
+		"./banners": {
+			"import": "./dist/banners.mjs",
+			"types": "./dist/banners.d.ts"
+		},
+		"./breadcrumbs": {
+			"import": "./dist/breadcrumbs.mjs",
+			"types": "./dist/breadcrumbs.d.ts"
+		},
+		"./button-groups": {
+			"import": "./dist/button-groups.mjs",
+			"types": "./dist/button-groups.d.ts"
+		},
+		"./buttons": {
+			"import": "./dist/buttons.mjs",
+			"types": "./dist/buttons.d.ts"
+		},
+		"./cards": {
+			"import": "./dist/cards.mjs",
+			"types": "./dist/cards.d.ts"
+		},
+		"./commands": {
+			"import": "./dist/commands.mjs",
+			"types": "./dist/commands.d.ts"
+		},
+		"./drops": {
+			"import": "./dist/drops.mjs",
+			"types": "./dist/drops.d.ts"
+		},
+		"./feedbacks": {
+			"import": "./dist/feedbacks.mjs",
+			"types": "./dist/feedbacks.d.ts"
+		},
+		"./fonts": {
+			"import": "./dist/fonts.mjs",
+			"types": "./dist/fonts.d.ts"
+		},
+		"./footers": {
+			"import": "./dist/footers.mjs",
+			"types": "./dist/footers.d.ts"
+		},
+		"./forms": {
+			"import": "./dist/forms.mjs",
+			"types": "./dist/forms.d.ts"
+		},
+		"./grid": {
+			"import": "./dist/grid.mjs",
+			"types": "./dist/grid.d.ts"
+		},
+		"./head": {
+			"import": "./dist/head.mjs",
+			"types": "./dist/head.d.ts"
+		},
+		"./headers": {
+			"import": "./dist/headers.mjs",
+			"types": "./dist/headers.d.ts"
+		},
+		"./heros": {
+			"import": "./dist/heros.mjs",
+			"types": "./dist/heros.d.ts"
+		},
+		"./html": {
+			"import": "./dist/html.mjs",
+			"types": "./dist/html.d.ts"
+		},
+		"./icons": {
+			"import": "./dist/icons.mjs",
+			"types": "./dist/icons.d.ts"
+		},
+		"./input-groups": {
+			"import": "./dist/input-groups.mjs",
+			"types": "./dist/input-groups.d.ts"
+		},
+		"./links": {
+			"import": "./dist/links.mjs",
+			"types": "./dist/links.d.ts"
+		},
+		"./list-groups": {
+			"import": "./dist/list-groups.mjs",
+			"types": "./dist/list-groups.d.ts"
+		},
+		"./loaders": {
+			"import": "./dist/loaders.mjs",
+			"types": "./dist/loaders.d.ts"
+		},
+		"./menus": {
+			"import": "./dist/menus.mjs",
+			"types": "./dist/menus.d.ts"
+		},
+		"./modals": {
+			"import": "./dist/modals.mjs",
+			"types": "./dist/modals.d.ts"
+		},
+		"./navbars": {
+			"import": "./dist/navbars.mjs",
+			"types": "./dist/navbars.d.ts"
+		},
+		"./navs": {
+			"import": "./dist/navs.mjs",
+			"types": "./dist/navs.d.ts"
+		},
+		"./paginations": {
+			"import": "./dist/paginations.mjs",
+			"types": "./dist/paginations.d.ts"
+		},
+		"./prefooters": {
+			"import": "./dist/prefooters.mjs",
+			"types": "./dist/prefooters.d.ts"
+		},
+		"./progress-bars": {
+			"import": "./dist/progress-bars.mjs",
+			"types": "./dist/progress-bars.d.ts"
+		},
+		"./radios": {
+			"import": "./dist/radios.mjs",
+			"types": "./dist/radios.d.ts"
+		},
+		"./ranges": {
+			"import": "./dist/ranges.mjs",
+			"types": "./dist/ranges.d.ts"
+		},
+		"./routes": {
+			"import": "./dist/routes.mjs",
+			"types": "./dist/routes.d.ts"
+		},
+		"./sections": {
+			"import": "./dist/sections.mjs",
+			"types": "./dist/sections.d.ts"
+		},
+		"./slides": {
+			"import": "./dist/slides.mjs",
+			"types": "./dist/slides.d.ts"
+		},
+		"./spinners": {
+			"import": "./dist/spinners.mjs",
+			"types": "./dist/v.d.ts"
+		},
+		"./switches": {
+			"import": "./dist/switches.mjs",
+			"types": "./dist/switches.d.ts"
+		},
+		"./tables": {
+			"import": "./dist/tables.mjs",
+			"types": "./dist/tables.d.ts"
+		},
+		"./tabs": {
+			"import": "./dist/tabs.mjs",
+			"types": "./dist/tabs.d.ts"
+		},
+		"./tags": {
+			"import": "./dist/tags.mjs",
+			"types": "./dist/tags.d.ts"
+		},
+		"./toasts": {
+			"import": "./dist/toasts.mjs",
+			"types": "./dist/toasts.d.ts"
+		},
+		"./tooltips": {
+			"import": "./dist/tooltips.mjs",
+			"types": "./dist/tooltips.d.ts"
+		}
 	}
 }

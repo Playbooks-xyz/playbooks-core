@@ -1,4 +1,4 @@
-import { computeSectionSize } from 'utils';
+import { computeSectionSize } from 'src/utils';
 
 export const modalWrapper = () => ({
 	inset: 'inset-0',

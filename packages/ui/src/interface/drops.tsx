@@ -20,7 +20,7 @@ export const Drop = ({
 	children,
 	...props
 }: types.DropProps) => {
-	const { theme } = useInterface();
+
 	const base = theme.drop();
 	const computed = { ...base, ...props, tailwind, className, name };
 
@@ -60,7 +60,7 @@ export const DropToggle = ({
 	children,
 	...props
 }: types.DropToggleProps) => {
-	const { theme } = useInterface();
+
 	const base = theme.dropToggle();
 	const computed = { ...base, ...props, tailwind, className, children, name };
 
@@ -78,7 +78,7 @@ export const DropMenu = ({
 	children,
 	...props
 }: types.DropMenuProps) => {
-	const { theme } = useInterface();
+
 	const [show, setShow] = useState(false);
 	const [dropRef, setDropRef] = useState(null);
 	const base = theme.dropMenu({ open: show });
@@ -115,7 +115,7 @@ export const DropMenu = ({
 };
 
 export const DropHeader = ({ name = 'DropHeader', tailwind, className, children, ...props }: types.DropHeaderProps) => {
-	const { theme } = useInterface();
+
 	const base = theme.dropHeader();
 	const computed = { ...base, ...props, tailwind, className, name };
 
@@ -123,7 +123,7 @@ export const DropHeader = ({ name = 'DropHeader', tailwind, className, children,
 };
 
 export const DropTitle = ({ name = 'DropTitle', tailwind, className, children, ...props }: types.DropTitleProps) => {
-	const { theme } = useInterface();
+
 	const base = theme.dropTitle();
 	const computed = { ...base, ...props, tailwind, className, name };
 
@@ -137,7 +137,7 @@ export const DropSubtitle = ({
 	children,
 	...props
 }: types.DropSubtitleProps) => {
-	const { theme } = useInterface();
+
 	const base = theme.dropSubtitle();
 	const computed = { ...base, ...props, tailwind, className, name };
 
@@ -145,7 +145,7 @@ export const DropSubtitle = ({
 };
 
 export const DropList = ({ name = 'DropList', tailwind, className, children, ...props }: types.DropListProps) => {
-	const { theme } = useInterface();
+
 	const base = theme.dropList();
 	const computed = { ...base, ...props, tailwind, className, name };
 
@@ -153,7 +153,7 @@ export const DropList = ({ name = 'DropList', tailwind, className, children, ...
 };
 
 export const DropItem = ({ name = 'DropItem', tailwind, className, children, ...props }: types.DropItemProps) => {
-	const { theme } = useInterface();
+
 	const base = theme.dropItem();
 	const computed = { ...base, ...props, tailwind, className, name };
 
@@ -161,7 +161,7 @@ export const DropItem = ({ name = 'DropItem', tailwind, className, children, ...
 };
 
 export const DropBtn = ({ name = 'DropBtn', tailwind, className, children, ...props }: types.DropBtnProps) => {
-	const { theme } = useInterface();
+
 	const base = theme.dropBtn();
 	const computed = { ...base, ...props, tailwind, className, children, name };
 
@@ -169,7 +169,7 @@ export const DropBtn = ({ name = 'DropBtn', tailwind, className, children, ...pr
 };
 
 export const DropLink = ({ name = 'DropLink', tailwind, className, children, ...props }: types.DropLinkProps) => {
-	const { theme } = useInterface();
+
 	const base = theme.dropLink();
 	const computed = { ...base, ...props, tailwind, className, children, name };
 

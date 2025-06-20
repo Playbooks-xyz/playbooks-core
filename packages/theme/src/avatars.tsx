@@ -1,4 +1,4 @@
-import { computeAvatarSize, computeBadgeSize } from 'utils';
+import { computeAvatarSize, computeBadgeSize } from 'src/utils';
 
 export const avatar = () => ({
 	display: 'flex-start',

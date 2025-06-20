@@ -1,4 +1,4 @@
-import { computeHeroSize, computeThumbnailSize } from 'utils';
+import { computeHeroSize, computeThumbnailSize } from 'src/utils';
 
 export const hero = ({ size }) => ({
 	bgColor: 'bg-white dark:bg-gray-900',

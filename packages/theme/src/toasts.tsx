@@ -1,4 +1,4 @@
-import { computeToastAnimation } from 'theme';
+import { computeToastAnimation } from 'src/utils';
 
 export const toastWrapper = () => ({
 	inset: 'bottom-0 right-0 left-0',

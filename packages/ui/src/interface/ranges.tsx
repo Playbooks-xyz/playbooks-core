@@ -16,7 +16,7 @@ export const RangeSlider = ({
 	className,
 	...props
 }: types.RangeSliderProps) => {
-	const { theme } = useInterface();
+
 	const base = theme.rangeSlider();
 	const classes = computeTailwind({ ...base, ...props, ...tailwind, className });
 
@@ -55,7 +55,7 @@ export const RangeSliders = ({
 	className,
 	...props
 }: types.RangeSlidersProps) => {
-	const { theme } = useInterface();
+
 	const base = theme.rangeSlider();
 	const classes = computeTailwind({ ...base, ...props, ...tailwind, className });
 
@@ -86,7 +86,7 @@ export const RangeSliders = ({
 };
 
 export const RangeSliderTrack = ({ ref, values, min, max, trackProps, children, onNext, tailwind, ...restProps }) => {
-	const { theme } = useInterface();
+
 	const base = theme.rangeSliderTrack();
 	const classes = computeTailwind({ ...base, ...restProps, tailwind });
 
@@ -112,7 +112,7 @@ export const RangeSliderTrack = ({ ref, values, min, max, trackProps, children, 
 };
 
 export const RangeSliderThumb = ({ ref, isDragged, tailwind, ...props }) => {
-	const { theme } = useInterface();
+
 	const base = theme.rangeSliderThumb({ isDragged });
 	const classes = computeTailwind({ ...base, ...props, tailwind });
 

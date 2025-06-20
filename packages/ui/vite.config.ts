@@ -63,9 +63,9 @@ export default defineConfig(({ mode }) => ({
 				// path.resolve(__dirname, 'src/utils/utils.tsx'),
 				path.resolve(__dirname, 'src/styles.css'),
 			],
-			formats: ['cjs'],
+			formats: ['es'],
 			name: 'UI',
-			fileName: (format, entryName) => `${entryName}.cjs`,
+			fileName: (format, entryName) => `${entryName}.mjs`,
 		},
 		rollupOptions: {
 			external: [

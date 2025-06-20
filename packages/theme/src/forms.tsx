@@ -1,4 +1,4 @@
-import { computeInputSize } from 'utils';
+import { computeInputSize } from 'src/utils';
 
 export const form = () => ({});
 

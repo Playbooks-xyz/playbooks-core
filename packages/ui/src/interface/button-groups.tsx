@@ -3,7 +3,7 @@ import { useInterface } from 'contexts';
 import { Div } from 'interface/html';
 
 export const BtnGroup = ({ name = 'BtnGroup', tailwind, className, children, ...props }: types.ButtonGroupProps) => {
-	const { theme } = useInterface();
+
 	const base = theme.btnGroup();
 	const computed = { ...base, ...props, tailwind, className, name };
 

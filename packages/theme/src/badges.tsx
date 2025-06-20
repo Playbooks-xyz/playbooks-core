@@ -1,4 +1,4 @@
-import { computeBadgeSize } from 'utils';
+import { computeBadgeSize } from 'src/utils';
 
 export const badge = ({ size }) => ({
 	size: computeBadgeSize(size),

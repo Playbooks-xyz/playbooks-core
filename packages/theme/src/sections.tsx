@@ -1,4 +1,4 @@
-import { computeSectionSize } from 'utils';
+import { computeSectionSize } from 'src/utils';
 
 export const section = () => ({
 	bgColor: 'bg-white dark:bg-gray-900',

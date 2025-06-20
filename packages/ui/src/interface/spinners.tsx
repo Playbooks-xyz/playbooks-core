@@ -4,7 +4,7 @@ import * as Loaders from 'assets/loaders';
 import { useInterface } from 'contexts';
 
 export const Oval = ({ name = 'Oval', tailwind, className, ...props }: types.SpinnerProps) => {
-	const { theme } = useInterface();
+
 	const base = theme.spinner();
 	const classes = computeTailwind({ ...base, ...props, ...tailwind, className });
 
@@ -12,7 +12,7 @@ export const Oval = ({ name = 'Oval', tailwind, className, ...props }: types.Spi
 };
 
 export const Puff = ({ name = 'Puff', tailwind, className, ...props }: types.SpinnerProps) => {
-	const { theme } = useInterface();
+
 	const base = theme.spinner();
 	const classes = computeTailwind({ ...base, ...props, ...tailwind, className });
 

@@ -17,7 +17,6 @@ export default defineConfig(({ mode }) => ({
 	resolve: {
 		alias: {
 			src: path.resolve(__dirname, '/src'),
-			theme: path.resolve(__dirname, '/src/theme'),
 			utils: path.resolve(__dirname, '/src/utils'),
 		},
 	},

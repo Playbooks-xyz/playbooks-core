@@ -13,7 +13,7 @@ export const ModalLoader = ({
 	children,
 	...props
 }: types.PageLoaderProps) => {
-	const { theme } = useInterface();
+
 	const base = theme.modalLoader();
 	const computed = { ...base, ...props, tailwind, className, name };
 
@@ -40,7 +40,7 @@ export const PageLoader = ({
 	children,
 	...props
 }: types.PageLoaderProps) => {
-	const { theme } = useInterface();
+
 	const base = theme.pageLoader();
 	const computed = { ...base, ...props, tailwind, className, name };
 
@@ -67,7 +67,7 @@ export const SectionLoader = ({
 	children,
 	...props
 }: types.SectionLoaderProps) => {
-	const { theme } = useInterface();
+
 	const base = theme.sectionLoader();
 	const computed = { ...base, ...props, tailwind, className, name };
 

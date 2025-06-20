@@ -1,4 +1,4 @@
-import { computeTagImgSize, computeTagSize } from 'utils';
+import { computeTagImgSize, computeTagSize } from 'src/utils';
 
 export const tags = () => ({
 	display: 'flex-start',

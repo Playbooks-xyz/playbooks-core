@@ -7,7 +7,7 @@ import { Div } from 'interface/html';
 import { capitalize } from 'utils';
 
 export const Route = ({ name = 'Route', seo, tailwind, className, children, ...props }: types.RouteProps) => {
-	const { theme } = useInterface();
+
 	const base = theme.route();
 	const computed = { ...base, ...props, tailwind, className, name };
 	const interfaceContext = useInterface();

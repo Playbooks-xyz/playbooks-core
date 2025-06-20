@@ -1,4 +1,4 @@
-import { computeSlideAnimation } from 'utils';
+import { computeSlideAnimation } from 'src/utils';
 
 export const slideWrapper = () => ({
 	inset: 'inset-0',

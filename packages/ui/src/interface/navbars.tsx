@@ -6,7 +6,7 @@ import { Img, Ul } from 'interface/html';
 import { LinkWrapper } from 'interface/links';
 
 export const Navbar = ({ name = 'Navbar', tailwind, className, children, ...props }: types.NavPropsbar) => {
-	const { theme } = useInterface();
+
 	const base = theme.navbar();
 	const formatted = { ...base, ...props, ...tailwind };
 	const filtered = computeProps(props);
@@ -28,7 +28,7 @@ export const NavbarBrand = ({
 	children,
 	...props
 }: types.NavPropsbarBrand) => {
-	const { theme } = useInterface();
+
 	const base = theme.navbarBrand();
 	const computed = { ...base, ...props, tailwind, className };
 
@@ -40,7 +40,7 @@ export const NavbarBrand = ({
 };
 
 export const NavbarList = ({ name = 'NavbarList', tailwind, className, children, ...props }: types.NavPropsbarList) => {
-	const { theme } = useInterface();
+
 	const base = theme.navbarList();
 	const computed = { ...base, ...props, tailwind, className, name };
 

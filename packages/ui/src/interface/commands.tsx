@@ -5,7 +5,7 @@ import { useInterface } from 'contexts';
 import { Span } from 'interface/html';
 
 export const Command = ({ name = 'CMD', keys = [], tailwind, className, children, ...props }: types.CommandProps) => {
-	const { theme } = useInterface();
+
 	const base = theme.command();
 	const computed = { ...base, ...props, tailwind, className, name };
 

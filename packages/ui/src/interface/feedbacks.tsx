@@ -5,7 +5,7 @@ import { Div } from 'interface/html';
 import { Icon } from 'interface/icons';
 
 export const Feedback = ({ name = 'Feedback', tailwind, className, children, ...props }: types.FeedbackProps) => {
-	const { theme } = useInterface();
+
 	const base = theme.feedback();
 	const computed = { ...base, ...props, tailwind, className, name };
 
@@ -19,7 +19,7 @@ export const FeedbackHeader = ({
 	children,
 	...props
 }: types.FeedbackHeaderProps) => {
-	const { theme } = useInterface();
+
 	const base = theme.feedbackHeader();
 	const computed = { ...base, ...props, tailwind, className, name };
 
@@ -34,7 +34,7 @@ export const FeedbackIcon = ({
 	className,
 	...props
 }: types.FeedbackIconProps) => {
-	const { theme } = useInterface();
+
 	const base = theme.feedbackIcon();
 	const computed = { ...base, ...props, tailwind, className, name };
 
@@ -48,7 +48,7 @@ export const FeedbackBody = ({
 	children,
 	...props
 }: types.FeedbackBodyProps) => {
-	const { theme } = useInterface();
+
 	const base = theme.feedbackBody();
 	const computed = { ...base, ...props, tailwind, className, name };
 
@@ -62,7 +62,7 @@ export const FeedbackPretitle = ({
 	children,
 	...props
 }: types.FeedbackTitleProps) => {
-	const { theme } = useInterface();
+
 	const base = theme.feedbackPretitle();
 	const computed = { ...base, ...props, tailwind, className, name };
 
@@ -77,7 +77,7 @@ export const FeedbackTitle = ({
 	children,
 	...props
 }: types.FeedbackTitleProps) => {
-	const { theme } = useInterface();
+
 	const base = theme.feedbackTitle();
 	const computed = { ...base, ...props, tailwind, className, name };
 
@@ -95,7 +95,7 @@ export const FeedbackText = ({
 	children,
 	...props
 }: types.FeedbackTextProps) => {
-	const { theme } = useInterface();
+
 	const base = theme.feedbackText();
 	const computed = { ...base, ...props, tailwind, className, name };
 
@@ -109,7 +109,7 @@ export const FeedbackActions = ({
 	children,
 	...props
 }: types.FeedbackActionsProps) => {
-	const { theme } = useInterface();
+
 	const base = theme.feedbackActions();
 	const computed = { ...base, ...props, tailwind, className, name };
 

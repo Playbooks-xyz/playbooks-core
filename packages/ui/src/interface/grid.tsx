@@ -10,7 +10,7 @@ export const Container = ({
 	children,
 	...props
 }: types.ContainerProps) => {
-	const { theme } = useInterface();
+
 	const base = theme.container({ size });
 	const computed = { ...base, ...props, tailwind, className, name };
 
@@ -18,7 +18,7 @@ export const Container = ({
 };
 
 export const Grid = ({ name = 'Grid', cols = '12', tailwind, className, children, ...props }: types.GridProps) => {
-	const { theme } = useInterface();
+
 	const base = theme.grid({ cols });
 	const computed = { ...base, ...props, tailwind, className, name };
 
@@ -38,7 +38,7 @@ export const Col = ({
 	children,
 	...props
 }: types.ColProps) => {
-	const { theme } = useInterface();
+
 	const base = theme.col({ span, sm, md, lg, xl, xxl });
 	const computed = { ...base, ...props, tailwind, className, name };
 

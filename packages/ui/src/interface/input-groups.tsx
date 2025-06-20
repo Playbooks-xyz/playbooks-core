@@ -11,7 +11,7 @@ export const InputGroup = ({
 	children,
 	...props
 }: types.InputGroupProps) => {
-	const { theme } = useInterface();
+
 	const base = theme.inputGroup();
 	const computed = { ...base, ...props, tailwind, className, name };
 
@@ -27,7 +27,7 @@ export const InputAppend = ({
 	children,
 	...props
 }: types.InputAddonProps) => {
-	const { theme } = useInterface();
+
 	const base = theme.inputAppend();
 	const computed = { ...base, ...props, tailwind, className, name };
 
@@ -44,7 +44,7 @@ export const InputPrepend = ({
 	children,
 	...props
 }: types.InputAddonProps) => {
-	const { theme } = useInterface();
+
 	const base = theme.inputPrepend();
 	const computed = { ...base, ...props, tailwind, className, name };
 

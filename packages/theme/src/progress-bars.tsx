@@ -1,4 +1,4 @@
-import { gradientBgColor } from 'utils';
+import { gradientBgColor } from 'src/utils';
 
 export const progressBar = () => ({
 	bgColor: 'bg-gray-200 dark:bg-gray-700',

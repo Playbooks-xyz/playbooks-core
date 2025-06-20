@@ -35,35 +35,35 @@ export const Link = props => {
 };
 
 export const PrimaryLink = ({ name = 'Link', size = 'sm', alt, active, className, ...props }: types.LinkProps) => {
-	const { theme } = useInterface();
+
 	const base = theme.primaryLink({ active, size });
 
 	return <LinkShared name={name} className={className} {...base} {...props} />;
 };
 
 export const AccentLink = ({ name = 'AccentLink', size = 'sm', active, className, ...props }: types.LinkProps) => {
-	const { theme } = useInterface();
+
 	const base = theme.accentLink({ active, size });
 
 	return <LinkShared name={name} className={className} {...base} {...props} />;
 };
 
 export const BorderLink = ({ name = 'BorderLink', size = 'sm', active, className, ...props }: types.LinkProps) => {
-	const { theme } = useInterface();
+
 	const base = theme.borderLink({ active, size });
 
 	return <LinkShared name={name} className={className} {...base} {...props} />;
 };
 
 export const TabLink = ({ name = 'TabLink', size = 'sm', active, className, ...props }: types.LinkProps) => {
-	const { theme } = useInterface();
+
 	const base = theme.tabLink({ active, size });
 
 	return <LinkShared name={name} className={className} {...base} {...props} />;
 };
 
 export const TextLink = ({ name = 'TextLink', size = 'sm', active, className, ...props }: types.LinkProps) => {
-	const { theme } = useInterface();
+
 	const base = theme.textLink({ active, size });
 
 	return <LinkShared name={name} className={className} {...base} {...props} />;
@@ -122,7 +122,7 @@ export const LinkWrapper = ({
 	children,
 	...props
 }: types.LinkProps) => {
-	const { theme } = useInterface();
+
 	const base = theme.linkWrapper({ disabled });
 	const classes = computeTailwind({ ...base, ...props, ...tailwind, className });
 	const filtered = computeProps(props);

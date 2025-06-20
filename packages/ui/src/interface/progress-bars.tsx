@@ -9,7 +9,7 @@ export const ProgressBar = ({
 	children,
 	...props
 }: types.ProgressBarProps) => {
-	const { theme } = useInterface();
+
 	const base = theme.progressBar();
 	const computed = { ...base, ...props, tailwind, className, name };
 
@@ -17,7 +17,7 @@ export const ProgressBar = ({
 };
 
 export const Progress = ({ name = 'Progress', value = 0, tailwind, className, ...props }: types.ProgressProps) => {
-	const { theme } = useInterface();
+
 	const base = theme.progress();
 	const computed = { ...base, ...props, tailwind, className, name };
 

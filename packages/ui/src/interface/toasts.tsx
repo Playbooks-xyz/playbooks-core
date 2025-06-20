@@ -2,7 +2,6 @@ import { useRef, useState } from 'react';
 
 import { Fade } from '@playbooks/components/fade';
 import * as types from '@playbooks/types';
-import { useInterface } from 'contexts';
 import { AccentBtn } from 'interface/buttons';
 import { H6, P } from 'interface/fonts';
 import { Div, Span } from 'interface/html';
@@ -15,7 +14,6 @@ export const ToastWrapper = ({
 	children,
 	...props
 }: types.ToastWrapperProps) => {
-	const { theme } = useInterface();
 	const base = theme.toastWrapper();
 	const computed = { ...base, ...props, tailwind, className, name };
 
@@ -33,7 +31,6 @@ export const Toast = ({
 	children,
 	...props
 }: types.ToastProps) => {
-	const { theme } = useInterface();
 	const [show, setShow] = useState(false);
 	const base = theme.toast({ open: show, direction });
 	const computed = { ...base, ...props, tailwind, className };
@@ -61,7 +58,6 @@ export const ToastHeader = ({
 	children,
 	...props
 }: types.ToastHeaderProps) => {
-	const { theme } = useInterface();
 	const base = theme.toastHeader();
 	const computed = { ...base, ...props, tailwind, className, name };
 
@@ -82,7 +78,6 @@ export const ToastIcon = ({
 	className,
 	...props
 }: types.ToastIconProps) => {
-	const { theme } = useInterface();
 	const base = theme.toastIcon();
 	const computed = { ...base, ...props, tailwind, className, name };
 
@@ -94,7 +89,6 @@ export const ToastIcon = ({
 };
 
 export const ToastTitle = ({ name = 'ToastTitle', tailwind, className, children, ...props }: types.ToastTitleProps) => {
-	const { theme } = useInterface();
 	const base = theme.toastTitle();
 	const computed = { ...base, ...props, tailwind, className, name };
 
@@ -102,7 +96,6 @@ export const ToastTitle = ({ name = 'ToastTitle', tailwind, className, children,
 };
 
 export const ToastBody = ({ name = 'ToastBody', tailwind, className, children, ...props }: types.ToastBodyProps) => {
-	const { theme } = useInterface();
 	const base = theme.toastBody();
 	const computed = { ...base, ...props, tailwind, className, name };
 
@@ -110,7 +103,6 @@ export const ToastBody = ({ name = 'ToastBody', tailwind, className, children, .
 };
 
 export const ToastText = ({ name = 'ToastText', tailwind, className, children, ...props }: types.ToastTextProps) => {
-	const { theme } = useInterface();
 	const base = theme.toastText();
 	const computed = { ...base, ...props, tailwind, className, name };
 

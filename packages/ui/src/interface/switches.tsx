@@ -13,7 +13,7 @@ export const SwitchGroup = ({
 	children,
 	...props
 }: types.SwitchGroupProps) => {
-	const { theme } = useInterface();
+
 	const base = theme.switchGroup();
 	const computed = { ...base, ...props, tailwind, className, name };
 
@@ -29,7 +29,7 @@ export const Switch = ({
 	className,
 	...props
 }: types.SwitchProps) => {
-	const { theme } = useInterface();
+
 	const base = theme.switchBase();
 	const classes = computeTailwind({ ...base, ...props, ...tailwind, className });
 
@@ -50,7 +50,7 @@ export const SwitchBackdrop = ({
 	className,
 	...props
 }: types.SwitchBackdropProps) => {
-	const { theme } = useInterface();
+
 	const base = theme.switchBackdrop();
 	const computed = { ...base, ...props, tailwind, className, name };
 
@@ -64,7 +64,7 @@ export const SwitchInner = ({
 	className,
 	...props
 }: types.SwitchInnerProps) => {
-	const { theme } = useInterface();
+
 	const base = theme.switchInner({ checked });
 	const computed = { ...base, ...props, tailwind, className, name };
 
@@ -79,7 +79,7 @@ export const SwitchToggle = ({
 	className,
 	...props
 }: types.SwitchToggleProps) => {
-	const { theme } = useInterface();
+
 	const base = theme.switchToggle({ checked });
 	const computed = { ...base, ...props, tailwind, className, name };
 
@@ -103,7 +103,7 @@ export const SwitchLabel = ({
 	children,
 	...props
 }: types.SwitchLabelProps) => {
-	const { theme } = useInterface();
+
 	const base = theme.switchLabel();
 	const classes = computeTailwind({ ...base, ...props, ...tailwind, className });
 

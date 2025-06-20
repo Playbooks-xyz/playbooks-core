@@ -1,7 +1,7 @@
 import { useEffect, useMemo, useRef, useState } from 'react';
 
+import * as theme from '@playbooks/theme';
 import * as types from '@playbooks/types';
-import { useInterface } from 'contexts';
 import { Btn } from 'interface/buttons';
 import { Font, P } from 'interface/fonts';
 import { Div } from 'interface/html';
@@ -14,7 +14,6 @@ export const Accordion = ({
 	children,
 	...props
 }: types.AccordionProps) => {
-	const { theme } = useInterface();
 	const base = theme.accordion();
 	const computed = { ...base, ...props, tailwind, className, name };
 
@@ -33,7 +32,6 @@ export const AccordionToggle = ({
 	children,
 	...props
 }: types.AccordionToggleProps) => {
-	const { theme } = useInterface();
 	const base = theme.accordionToggle({ open });
 	const computed = { ...base, ...props, tailwind, className, children, name };
 
@@ -48,7 +46,6 @@ export const AccordionTitle = ({
 	children,
 	...props
 }: types.AccordionTitleProps) => {
-	const { theme } = useInterface();
 	const base = theme.accordionTitle();
 	const computed = { ...base, ...props, tailwind, className, name };
 
@@ -68,7 +65,6 @@ export const AccordionBody = ({
 	children,
 	...props
 }: types.AccordionBodyProps) => {
-	const { theme } = useInterface();
 	const wrapperBase = theme.accordionBodyWrapper();
 	const base = theme.accordionBody({ open });
 	const computed = { ...base, ...props, tailwind, className, name };
@@ -108,7 +104,6 @@ export const AccordionText = ({
 	children,
 	...props
 }: types.AccordionTextProps) => {
-	const { theme } = useInterface();
 	const base = theme.accordionText();
 	const computed = { ...base, ...props, tailwind, className, name };
 

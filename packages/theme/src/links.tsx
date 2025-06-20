@@ -1,4 +1,4 @@
-import { computeBtnSize } from 'utils';
+import { computeBtnSize } from 'src/utils';
 
 // Shared
 export const link = active => ({

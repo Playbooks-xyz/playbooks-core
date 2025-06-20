@@ -13,7 +13,7 @@ export const Breadcrumbs = ({
 	children,
 	...props
 }: types.BreadcrumbsProps) => {
-	const { theme } = useInterface();
+
 	const base = theme.breadcrumbs();
 	const computed = { ...base, ...props, tailwind, className, name };
 
@@ -33,7 +33,7 @@ export const BreadcrumbItem = ({
 	children,
 	...props
 }: types.BreadcrumbItemProps) => {
-	const { theme } = useInterface();
+
 	const base = theme.breadcrumbItem();
 	const computed = { ...base, ...props, tailwind, className, name };
 
@@ -55,7 +55,7 @@ export const BreadcrumbBtn = ({
 	children,
 	...props
 }: types.BreadcrumbBtnProps) => {
-	const { theme } = useInterface();
+
 	const base = theme.breadcrumbBtn({ active });
 	const computed = { ...base, ...props, tailwind, size, className, name, active, children };
 
@@ -72,7 +72,7 @@ export const BreadcrumbLink = ({
 	children,
 	...props
 }: types.BreadcrumbLinkProps) => {
-	const { theme } = useInterface();
+
 	const base = theme.breadcrumbLink({ active });
 	const computed = { ...base, ...props, tailwind, size, className, name, active, children };
 

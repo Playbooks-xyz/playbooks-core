@@ -1,4 +1,4 @@
-import { computeTooltipAnimation } from 'theme';
+import { computeTooltipAnimation } from 'src/utils';;
 
 export const tooltip = ({ open, placement }) => ({
 	animation: 'transition-all',

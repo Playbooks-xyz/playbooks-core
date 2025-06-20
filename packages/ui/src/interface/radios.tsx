@@ -15,7 +15,7 @@ export const RadioWrapper = ({
 	children,
 	...props
 }: types.RadioWrapperProps) => {
-	const { theme } = useInterface();
+
 	const base = theme.radioWrapper({ active });
 	const classes = computeTailwind({ ...base, ...props, ...tailwind, className });
 
@@ -37,7 +37,7 @@ export const Radio = ({
 	children,
 	...props
 }: types.RadioProps) => {
-	const { theme } = useInterface();
+
 	const base = theme.radio();
 	const computed = { ...base, ...props, tailwind, className, name };
 
@@ -61,7 +61,7 @@ export const RadioInput = ({
 	children,
 	...props
 }: types.RadioInputProps) => {
-	const { theme } = useInterface();
+
 	const base = theme.radioInput();
 	const classes = computeTailwind({ ...base, ...props, ...tailwind, name, className });
 
@@ -80,7 +80,7 @@ export const RadioInput = ({
 };
 
 export const RadioTitle = ({ name = 'RadioLabel', tailwind, className, children, ...props }: types.FontProps) => {
-	const { theme } = useInterface();
+
 	const base = theme.radioTitle();
 	const computed = { ...base, ...props, tailwind, className, name };
 
@@ -88,7 +88,7 @@ export const RadioTitle = ({ name = 'RadioLabel', tailwind, className, children,
 };
 
 export const RadioText = ({ name = 'RadioLabel', tailwind, className, children, ...props }: types.FontProps) => {
-	const { theme } = useInterface();
+
 	const base = theme.radioText();
 	const computed = { ...base, ...props, tailwind, className, name };
 
