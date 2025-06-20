@@ -1,6 +1,6 @@
 {
 	"name": "@playbooks/molecules",
-	"version": "0.0.13",
+	"version": "0.0.15",
 	"description": "A collection of React molecules for Playbooks.",
 	"author": "Eric Hubbell<eric@erichubbell.com>",
 	"license": "ISC",
@@ -43,7 +43,7 @@
 		"react-children-utilities": "^2.10.0"
 	},
 	"devDependencies": {
-		"@playbooks/types": "^0.0.2"
+		"@playbooks/types": "^0.0.3"
 	},
 	"exports": {
 		".": {

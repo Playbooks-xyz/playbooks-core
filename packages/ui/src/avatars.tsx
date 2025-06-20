@@ -26,7 +26,7 @@ export const AvatarBadge = ({
 
 export const AvatarImg = ({
 	name = 'AvatarImg',
-	alt = 'thumbnail',
+	alt = '',
 	size = 'md',
 	tailwind,
 	className,

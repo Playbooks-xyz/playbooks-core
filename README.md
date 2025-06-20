@@ -41,6 +41,11 @@ This project uses [yalc](https://npmjs.com/package/yalc) for local development.
 - [Eric Hubbell](http://www.erichubbell.com)
 - eric@erichubbell.com
 
+## Troubleshooting
+- run types first
+- may need to update types per repo before deploy
+- look into vite-plugin-dts
+
 ## Notes
 
 To see this library in action, checkout the following projects:
