@@ -49,7 +49,7 @@
     "typescript": "^5.8.3",
     "vite": "^6.3.5",
     "vite-plugin-dts": "^4.5.4",
-    "vite-plugin-yalc": "^0.0.6"
+    "vite-plugin-yalc": "^0.0.8"
   },
   "workspaces": [
     "packages/adapters",

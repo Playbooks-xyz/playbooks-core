@@ -3,7 +3,7 @@ import react from '@vitejs/plugin-react';
 import path from 'path';
 import peerDepsExternal from 'rollup-plugin-peer-deps-external';
 import { defineConfig } from 'vite';
-import { runDts, runYalc } from 'vite-plugin-yalc';
+import { runCombined, runYalc } from 'vite-plugin-yalc';
 
 export default defineConfig(({ mode }) => ({
 	base: './',
@@ -60,7 +60,7 @@ export default defineConfig(({ mode }) => ({
 				path.resolve(__dirname, 'src/interface/toasts.tsx'),
 				path.resolve(__dirname, 'src/interface/tooltips.tsx'),
 				path.resolve(__dirname, 'src/molecules/molecules.tsx'),
-				path.resolve(__dirname, 'src/utils/utils.tsx'),
+				// path.resolve(__dirname, 'src/utils/utils.tsx'),
 				path.resolve(__dirname, 'src/styles.css'),
 			],
 			formats: ['cjs'],
@@ -91,7 +91,7 @@ export default defineConfig(({ mode }) => ({
 			plugins: [peerDepsExternal()],
 		},
 	},
-	plugins: mode === 'development' ? [react(), runYalc(), runDts()] : [react()],
+	plugins: mode === 'development' ? [react(), runCombined(), runYalc()] : [react()],
 	resolve: {
 		alias: {
 			src: path.resolve(__dirname, '/src'),

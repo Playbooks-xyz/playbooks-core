@@ -1,14 +1,14 @@
 import path from 'path';
 import peerDepsExternal from 'rollup-plugin-peer-deps-external';
 import { defineConfig } from 'vite';
-import { runDts, runYalc } from 'vite-plugin-yalc';
+import { runCombined } from 'vite-plugin-yalc';
 
 export default defineConfig(({ mode }) => ({
 	base: './',
 	build: {
 		sourcemap: mode === 'development',
 		lib: {
-			entry: path.resolve(__dirname, 'src/index.ts'),
+			entry: path.resolve(__dirname, 'src/index.tsx'),
 			name: 'Types',
 			formats: ['es', 'cjs'],
 			fileName: (format, entryName) => (format === 'es' ? `${entryName}.mjs` : `${entryName}.cjs`),
@@ -18,11 +18,11 @@ export default defineConfig(({ mode }) => ({
 			plugins: [peerDepsExternal()],
 		},
 	},
-	plugins: mode === 'development' ? [runYalc(), runDts()] : [],
+	plugins: mode === 'development' ? [runCombined()] : [],
 	resolve: {
 		alias: {
 			src: path.resolve(__dirname, '/src'),
-			adapters: path.resolve(__dirname, '/src/adapters'),
+			types: path.resolve(__dirname, '/types'),
 		},
 	},
 }));

@@ -1,6 +1,6 @@
 {
 	"name": "@playbooks/serializers",
-	"version": "0.0.1",
+	"version": "0.0.2",
 	"description": "A collection of serializers for Playbooks.",
 	"author": "Eric Hubbell<eric@erichubbell.com>",
 	"license": "ISC",
@@ -34,10 +34,7 @@
 		"test": "jest",
 		"prepare": "husky"
 	},
-	"peerDependencies": {
-		"@playbooks/utils": "^0.0.2"
-	},
-	"devDependencies": {
+	"dependencies": {
 		"@playbooks/utils": "^0.0.2"
 	}
 }

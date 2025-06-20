@@ -1,6 +1,6 @@
 {
 	"name": "@playbooks/adapters",
-	"version": "0.0.1",
+	"version": "0.0.2",
 	"description": "A collection of adapters for various projects.",
 	"author": "Eric Hubbell<eric@erichubbell.com>",
 	"license": "ISC",
@@ -36,14 +36,9 @@
 		"test": "jest",
 		"prepare": "husky"
 	},
-	"peerDependencies": {
-		"@playbooks/utils": "^0.0.2"
-	},
 	"dependencies": {
+		"@playbooks/utils": "^0.0.2",
 		"cross-fetch": "^4.1.0",
 		"dayjs": "^1.11.13"
-	},
-	"devDependencies": {
-		"@playbooks/utils": "^0.0.2"
 	}
 }
