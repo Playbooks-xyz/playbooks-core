@@ -4,9 +4,7 @@
 	"description": "A collection of React hooks for Playbooks.",
 	"author": "Eric Hubbell<eric@erichubbell.com>",
 	"license": "ISC",
-	"main": "dist/index.cjs",
-	"module": "dist/index.mjs",
-	"types": "dist/index.d.ts",
+	"type": "module",
 	"repository": {
 		"type": "git",
 		"url": "git+https://github.com/playbooks-xyz/playbooks-kit/packages/hooks.git"
@@ -45,5 +43,35 @@
 	},
 	"devDependencies": {
 		"@playbooks/types": "^0.0.1"
+	},
+	"exports": {
+		".": {
+			"types": "./dist/index.d.ts",
+			"import": "./dist/index.cjs"
+		},
+		"./keyboard": {
+			"types": "./dist/keyboard.d.ts",
+			"import": "./dist/keyboard.cjs"
+		},
+		"./mouse": {
+			"types": "./dist/mouse.d.ts",
+			"import": "./dist/mouse.cjs"
+		},
+		"./store": {
+			"types": "./dist/store.d.ts",
+			"import": "./dist/store.cjs"
+		},
+		"./util": {
+			"types": "./dist/util.d.ts",
+			"import": "./dist/util.cjs"
+		},
+		"./window": {
+			"types": "./dist/window.d.ts",
+			"import": "./dist/window.cjs"
+		},
+		"./wrappers": {
+			"types": "./dist/wrappers.d.ts",
+			"import": "./dist/wrappers.cjs"
+		}
 	}
 }

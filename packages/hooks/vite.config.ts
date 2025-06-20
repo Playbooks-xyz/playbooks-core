@@ -10,20 +10,21 @@ export default defineConfig(({ mode }) => ({
 	build: {
 		sourcemap: mode === 'development',
 		lib: {
-			entry: path.resolve(__dirname, 'src/index.tsx'),
+			entry: [
+				path.resolve(__dirname, 'src/index.tsx'),
+				path.resolve(__dirname, 'src/keyboard.tsx'),
+				path.resolve(__dirname, 'src/mouse.tsx'),
+				path.resolve(__dirname, 'src/store.tsx'),
+				path.resolve(__dirname, 'src/util.tsx'),
+				path.resolve(__dirname, 'src/window.tsx'),
+				path.resolve(__dirname, 'src/wrappers.tsx'),
+			],
 			name: 'Hooks',
 			formats: ['es', 'cjs'],
 			fileName: (format, entryName) => (format === 'es' ? `${entryName}.mjs` : `${entryName}.cjs`),
 		},
 		rollupOptions: {
-			external: ['react', 'react-dom', 'react/jsx-runtime'],
-			output: {
-				globals: {
-					react: 'React',
-					'react-dom': 'ReactDOM',
-					'react/jsx-runtime': 'react/jsx-runtime',
-				},
-			},
+			external: ['react', 'react-dom', 'react/jsx-runtime', '@playbooks/contexts'],
 			plugins: [peerDepsExternal()],
 		},
 	},
