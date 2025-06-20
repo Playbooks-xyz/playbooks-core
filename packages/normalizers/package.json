@@ -1,6 +1,6 @@
 {
 	"name": "@playbooks/normalizers",
-	"version": "0.0.1",
+	"version": "0.0.2",
 	"description": "A collection of normalizers for Playbooks.",
 	"author": "Eric Hubbell<eric@erichubbell.com>",
 	"license": "ISC",
@@ -9,7 +9,7 @@
 	"types": "dist/index.d.ts",
 	"repository": {
 		"type": "git",
-		"url": "git+https://github.com/playbooks-xyz/playbooks-kit.git"
+		"url": "git+https://github.com/playbooks-xyz/playbooks-core.git"
 	},
 	"files": [
 		"dist"
@@ -33,9 +33,6 @@
 		"git": "git push --tags",
 		"test": "jest",
 		"prepare": "husky"
-	},
-	"peerDependencies": {
-		"@playbooks/utils": "^0.0.2"
 	},
 	"devDependencies": {
 		"@playbooks/utils": "^0.0.2"

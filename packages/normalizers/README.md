@@ -1,7 +1,7 @@
 # Overview
 
 This library offers a collection of normalizers for various projects.
-It's designed to be use in conjunction with the [@playbooks/adapters](https://github.com/playbooks-xyz/playbooks-kit) library.
+It's designed to be use in conjunction with the [@playbooks/adapters](https://github.com/playbooks-xyz/playbooks-core) library.
 Each normalizer offers a simple interface for normalizing data arrays and objects returned by a server.
 By abstracting this logic into a package, we're able to reduce and consolidate the boilerplate code necessary for each project.
 

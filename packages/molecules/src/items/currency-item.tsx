@@ -1,7 +1,7 @@
 import { Li, Span } from '@playbooks/ui/html';
 import { SectionSubtitle, SectionText } from '@playbooks/ui/sections';
-import { Skeleton } from 'src/skeletons';
 import { toCurrency } from '@playbooks/utils';
+import { Skeleton } from 'src/skeletons';
 
 export const CurrencyItem = ({ keyName, disclaimer, loading, value, tailwind }) => {
 	// Render

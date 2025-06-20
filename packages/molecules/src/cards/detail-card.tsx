@@ -11,8 +11,8 @@ import {
 	CardTitle,
 } from '@playbooks/ui/cards';
 import { Div } from '@playbooks/ui/html';
-import { Skeleton } from 'src/skeletons';
 import { formatDate } from '@playbooks/utils';
+import { Skeleton } from 'src/skeletons';
 
 export const DetailCard = ({
 	icon,

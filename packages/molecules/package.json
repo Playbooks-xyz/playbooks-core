@@ -1,13 +1,13 @@
 {
 	"name": "@playbooks/molecules",
-	"version": "0.0.12",
+	"version": "0.0.13",
 	"description": "A collection of React molecules for Playbooks.",
 	"author": "Eric Hubbell<eric@erichubbell.com>",
 	"license": "ISC",
 	"type": "module",
 	"repository": {
 		"type": "git",
-		"url": "git+https://github.com/playbooks-xyz/playbooks-kit/packages/molecules.git"
+		"url": "git+https://github.com/playbooks-xyz/playbooks-core/packages/molecules.git"
 	},
 	"files": [
 		"dist"

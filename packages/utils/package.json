@@ -1,13 +1,13 @@
 {
 	"name": "@playbooks/utils",
-	"version": "0.0.3",
+	"version": "0.0.4",
 	"description": "A collection of utilities used for Playbooks.",
 	"author": "Eric Hubbell<eric@erichubbell.com>",
 	"license": "ISC",
 	"type": "module",
 	"repository": {
 		"type": "git",
-		"url": "https://github.com/playbooks-xyz/playbooks-kit/packages/utils.git"
+		"url": "https://github.com/playbooks-xyz/playbooks-core/packages/utils.git"
 	},
 	"files": [
 		"dist"

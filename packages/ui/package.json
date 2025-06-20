@@ -1,13 +1,13 @@
 {
 	"name": "@playbooks/ui",
-	"version": "0.8.33",
+	"version": "0.8.34",
 	"description": "An interface library for Playbooks.",
 	"private": false,
 	"license": "ISC",
 	"type": "module",
 	"repository": {
 		"type": "git",
-		"url": "git+https://github.com/playbooks-xyz/playbooks-kit/packages/interface.git"
+		"url": "git+https://github.com/playbooks-xyz/playbooks-core/packages/interface.git"
 	},
 	"files": [
 		"dist"

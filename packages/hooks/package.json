@@ -1,13 +1,13 @@
 {
 	"name": "@playbooks/hooks",
-	"version": "0.0.3",
+	"version": "0.0.4",
 	"description": "A collection of React hooks for Playbooks.",
 	"author": "Eric Hubbell<eric@erichubbell.com>",
 	"license": "ISC",
 	"type": "module",
 	"repository": {
 		"type": "git",
-		"url": "git+https://github.com/playbooks-xyz/playbooks-kit/packages/hooks.git"
+		"url": "git+https://github.com/playbooks-xyz/playbooks-core/packages/hooks.git"
 	},
 	"files": [
 		"dist"

@@ -1,9 +1,9 @@
 import { Fragment } from 'react';
 
 import { Col, Grid } from '@playbooks/ui/grid';
+import { listBuilder } from '@playbooks/utils';
 import { Feedback } from 'src/feedbacks';
 import { Skeleton } from 'src/skeletons';
-import { listBuilder } from '@playbooks/utils';
 
 const GridList = ({
 	type = 'grid',

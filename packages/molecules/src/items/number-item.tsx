@@ -1,7 +1,7 @@
 import { Li } from '@playbooks/ui/html';
 import { SectionSubtitle, SectionText } from '@playbooks/ui/sections';
-import { Skeleton } from 'src/skeletons';
 import { toShortNumber } from '@playbooks/utils';
+import { Skeleton } from 'src/skeletons';
 
 export const NumberItem = ({ keyName, loading, value, tailwind }) => {
 	// Render

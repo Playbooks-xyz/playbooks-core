@@ -1,13 +1,13 @@
 {
 	"name": "@playbooks/theme",
-	"version": "0.1.17",
+	"version": "0.1.18",
 	"description": "The default theme for Playbooks.",
 	"author": "Eric Hubbell<eric@erichubbell.com>",
 	"license": "ISC",
 	"type": "module",
 	"repository": {
 		"type": "git",
-		"url": "git+https://github.com/playbooks-xyz/playbooks-kit/packages/theme.git"
+		"url": "git+https://github.com/playbooks-xyz/playbooks-core/packages/theme.git"
 	},
 	"files": [
 		"dist"

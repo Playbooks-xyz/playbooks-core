@@ -2,9 +2,9 @@ import { Fragment } from 'react';
 
 import { Col, Grid } from '@playbooks/ui/grid';
 import { Div } from '@playbooks/ui/html';
+import { listBuilder } from '@playbooks/utils';
 import { Feedback } from 'src/feedbacks';
 import { Skeleton } from 'src/skeletons';
-import { listBuilder } from '@playbooks/utils';
 
 const SearchList = ({
 	type = 'search',

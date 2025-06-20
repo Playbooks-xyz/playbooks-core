@@ -1,13 +1,13 @@
 {
 	"name": "@playbooks/assets",
-	"version": "0.0.1",
+	"version": "0.0.2",
 	"description": "A collection of React components for Playbooks.",
 	"author": "Eric Hubbell<eric@erichubbell.com>",
 	"license": "ISC",
 	"type": "module",
 	"repository": {
 		"type": "git",
-		"url": "https://github.com/playbooks-xyz/playbooks-kit/packages/assets.git"
+		"url": "https://github.com/playbooks-xyz/playbooks-core/packages/assets.git"
 	},
 	"files": [
 		"dist"

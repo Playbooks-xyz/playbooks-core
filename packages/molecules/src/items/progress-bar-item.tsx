@@ -5,8 +5,8 @@ import { Col, Grid } from '@playbooks/ui/grid';
 import { Li, Span } from '@playbooks/ui/html';
 import { Progress, ProgressBar } from '@playbooks/ui/progress-bars';
 import { SectionSubtitle } from '@playbooks/ui/sections';
-import { Skeleton } from 'src/skeletons';
 import { sleep, toNumber } from '@playbooks/utils';
+import { Skeleton } from 'src/skeletons';
 
 export const ProgressBarItem = ({ title, keyName, loading, value, tailwind }) => {
 	const [progress, setProgress] = useState(0);

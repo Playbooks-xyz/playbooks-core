@@ -1,3 +1,4 @@
+import { HtmlProps } from '@playbooks/types';
 import {
 	Card,
 	CardActions,
@@ -9,9 +10,8 @@ import {
 	CardTitle,
 } from '@playbooks/ui/cards';
 import { Span } from '@playbooks/ui/html';
-import { Skeleton } from 'src/skeletons';
-import { HtmlProps } from '@playbooks/types';
 import { capitalize } from '@playbooks/utils';
+import { Skeleton } from 'src/skeletons';
 
 type iActivityCard = HtmlProps & {
 	type?: string;

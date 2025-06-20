@@ -1,6 +1,6 @@
 {
 	"name": "@playbooks/adapters",
-	"version": "0.0.2",
+	"version": "0.0.3",
 	"description": "A collection of adapters for various projects.",
 	"author": "Eric Hubbell<eric@erichubbell.com>",
 	"license": "ISC",
@@ -9,7 +9,7 @@
 	"types": "dist/index.d.ts",
 	"repository": {
 		"type": "git",
-		"url": "git+https://github.com/playbooks-xyz/playbooks-kit/packages/adapters.git"
+		"url": "git+https://github.com/playbooks-xyz/playbooks-core/packages/adapters.git"
 	},
 	"files": [
 		"dist"
