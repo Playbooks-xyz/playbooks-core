@@ -15,15 +15,15 @@ export const LinkItem = ({ keyName, loading, value, display, tailwind }) => {
 						size=''
 						bgColor=''
 						nextIcon='arrow-up-right'
-						color='text-blue-500 dark:text-cyan-500'
-						hover='h:underline'
+						color='text-primary dark:text-secondary'
+						hover='hover:underline'
 						href={value}
 						target='_blank'>
 						{display ? display : 'View'}
 					</AccentLink>
 				</Fragment>
 			) : (
-				<Span color='text-gray-700 dark:text-gray-400'>--</Span>
+				<Span>--</Span>
 			)}
 		</Li>
 	);

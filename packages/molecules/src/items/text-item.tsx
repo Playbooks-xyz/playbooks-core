@@ -1,21 +1,18 @@
-import { Skeleton } from '@playbooks/components/skeleton';
-import { Li, Span } from '@playbooks/ui/html';
+import { Li } from '@playbooks/ui/html';
 import { SectionSubtitle, SectionText } from '@playbooks/ui/sections';
+import { Skeleton } from 'src/skeletons';
 
-export const TextItem = ({ keyName, disclaimer, loading, value, tailwind }) => {
+export const TextItem = ({ keyName, loading, value, tailwind }) => {
 	// Render
 	return (
 		<Li border='border-b' display='flex-between' space='space-x-8' spacing='py-4' width='w-full' {...tailwind?.li}>
-			<Span display='flex-start' space='space-x-4'>
-				<SectionSubtitle fontSize='text-sm'>{keyName}</SectionSubtitle>
-				<SectionSubtitle opacity='opacity-75' fontSize='text-sm'>
-					{disclaimer}
-				</SectionSubtitle>
-			</Span>
+			<SectionSubtitle fontSize='text-sm' width='w-1/2' {...tailwind?.key}>
+				{keyName}
+			</SectionSubtitle>
 			{loading ? (
 				<Skeleton className='w-20' />
 			) : (
-				<SectionText fontSize='text-sm' {...tailwind?.value}>
+				<SectionText align='text-right' display='grow' fontSize='text-sm' width='w-1/2' {...tailwind?.text}>
 					{value}
 				</SectionText>
 			)}

@@ -12,9 +12,12 @@ export default defineConfig(({ mode }) => ({
 		lib: {
 			entry: [
 				path.resolve(__dirname, 'src/index.tsx'),
+				path.resolve(__dirname, 'src/avatars/avatars'),
+				path.resolve(__dirname, 'src/cards/cards'),
 				path.resolve(__dirname, 'src/feedbacks/feedbacks'),
 				path.resolve(__dirname, 'src/inputs/inputs'),
 				path.resolve(__dirname, 'src/items/items'),
+				path.resolve(__dirname, 'src/lists/lists'),
 				path.resolve(__dirname, 'src/paginations/paginations'),
 				path.resolve(__dirname, 'src/skeletons/skeletons'),
 				path.resolve(__dirname, 'src/toasts/toasts'),

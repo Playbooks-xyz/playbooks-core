@@ -49,13 +49,29 @@
 			"types": "./dist/index.d.ts",
 			"import": "./dist/index.cjs"
 		},
+		"./avatars": {
+			"types": "./dist/avatars.d.ts",
+			"import": "./dist/avatars.cjs"
+		},
+		"./cards": {
+			"types": "./dist/cards.d.ts",
+			"import": "./dist/cards.cjs"
+		},
 		"./feedbacks": {
 			"types": "./dist/feedbacks.d.ts",
 			"import": "./dist/feedbacks.cjs"
 		},
+		"./inputs": {
+			"types": "./dist/inputs.d.ts",
+			"import": "./dist/inputs.cjs"
+		},
 		"./items": {
 			"types": "./dist/items.d.ts",
 			"import": "./dist/items.cjs"
+		},
+		"./lists": {
+			"types": "./dist/lists.d.ts",
+			"import": "./dist/lists.cjs"
 		},
 		"./paginations": {
 			"types": "./dist/paginations.d.ts",
