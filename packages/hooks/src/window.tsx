@@ -1,5 +1,12 @@
 import { useEffect } from 'react';
 
+export const useLocalStorage = (method, listeners) => {
+	useEffect(() => {
+		window.addEventListener('storage', method);
+		return () => window.removeEventListener('storage', method);
+	}, [...listeners]);
+};
+
 export const useResize = (method, listeners) => {
 	useEffect(() => {
 		method();

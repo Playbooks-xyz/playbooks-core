@@ -6,7 +6,9 @@ export type HooksContextProps = {
 
 export const HooksContext = React.createContext<HooksContextProps>(null);
 
-export const HooksProvider = ({ toast, children }: { toast: any; children: any }) => {
+export const HooksProvider = ({ contexts, children }: { contexts: any; children: any }) => {
+	const toast = contexts?.useToast();
+
 	// Render
 	return <HooksContext.Provider value={{ toast }}>{children}</HooksContext.Provider>;
 };
