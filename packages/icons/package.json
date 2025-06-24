@@ -45,6 +45,10 @@
 			"import": "./dist/index.mjs",
 			"types": "./dist/index.d.ts"
 		},
+		"./context": {
+			"import": "./dist/context.mjs",
+			"types": "./dist/context.d.ts"
+		},
 		"./fab": {
 			"import": "./dist/fab.mjs",
 			"types": "./dist/fab.d.ts"

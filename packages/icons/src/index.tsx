@@ -1,3 +1,4 @@
+export * from 'src/context';
 export * as FabIcons from 'src/fab';
 export * as FarIcons from 'src/far';
 export * as FasIcons from 'src/fas';

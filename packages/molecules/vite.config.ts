@@ -37,7 +37,7 @@ export default defineConfig(({ mode }) => ({
 				path.resolve(__dirname, 'src/toggles/toggles'),
 			],
 			name: 'Molecules',
-			formats: ['es'],
+			formats: ['cjs'],
 			fileName: (format, entryName) => (format === 'es' ? `${entryName}.mjs` : `${entryName}.cjs`),
 		},
 		rollupOptions: {

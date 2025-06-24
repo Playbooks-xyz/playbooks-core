@@ -13,6 +13,7 @@ export default defineConfig(({ mode }) => ({
 		lib: {
 			entry: [
 				path.resolve(__dirname, 'src/index.tsx'),
+				path.resolve(__dirname, 'src/context.tsx'),
 				path.resolve(__dirname, 'src/fab.tsx'),
 				path.resolve(__dirname, 'src/far.tsx'),
 				path.resolve(__dirname, 'src/fas.tsx'),
