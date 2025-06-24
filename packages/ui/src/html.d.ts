@@ -1,18 +1,120 @@
 import * as types from '@playbooks/types';
-export declare const Article: ({ name, tailwind, className, children, ...props }: types.HtmlProps) => import("react/jsx-runtime").JSX.Element;
-export declare const Aside: ({ name, tailwind, className, children, ...props }: types.HtmlProps) => import("react/jsx-runtime").JSX.Element;
-export declare const Blockquote: ({ name, tailwind, className, children, ...props }: types.HtmlProps) => import("react/jsx-runtime").JSX.Element;
-export declare const Body: ({ name, tailwind, className, children, ...props }: types.HtmlProps) => import("react/jsx-runtime").JSX.Element;
-export declare const Caption: ({ name, tailwind, className, children, ...props }: types.HtmlProps) => import("react/jsx-runtime").JSX.Element;
-export declare const Code: ({ name, tailwind, className, children, ...props }: types.HtmlProps) => import("react/jsx-runtime").JSX.Element;
-export declare const Div: ({ name, tailwind, className, children, ...props }: types.HtmlProps) => import("react/jsx-runtime").JSX.Element;
-export declare const Figure: ({ name, tailwind, className, children, ...props }: types.HtmlProps) => import("react/jsx-runtime").JSX.Element;
-export declare const Hr: ({ name, tailwind, className, children, ...props }: types.HtmlProps) => import("react/jsx-runtime").JSX.Element;
-export declare const Html: ({ name, tailwind, className, children, ...props }: types.HtmlProps) => import("react/jsx-runtime").JSX.Element;
-export declare const IFrame: ({ name, tailwind, className, ...props }: types.IFrameProps) => import("react/jsx-runtime").JSX.Element;
-export declare const Img: ({ name, src, alt, tailwind, className, ...props }: types.ImgProps) => import("react/jsx-runtime").JSX.Element;
-export declare const Li: ({ name, tailwind, className, children, ...props }: types.HtmlProps) => import("react/jsx-runtime").JSX.Element;
-export declare const Main: ({ name, tailwind, className, children, ...props }: types.HtmlProps) => import("react/jsx-runtime").JSX.Element;
-export declare const Pre: ({ name, tailwind, className, children, ...props }: types.HtmlProps) => import("react/jsx-runtime").JSX.Element;
-export declare const Span: ({ name, tailwind, className, children, ...props }: types.HtmlProps) => import("react/jsx-runtime").JSX.Element;
-export declare const Ul: ({ name, tailwind, className, children, ...props }: types.HtmlProps) => import("react/jsx-runtime").JSX.Element;
+export declare const Article: ({
+	name,
+	tailwind,
+	className,
+	children,
+	...props
+}: types.HtmlProps) => import('react/jsx-runtime').JSX.Element;
+export declare const Aside: ({
+	name,
+	tailwind,
+	className,
+	children,
+	...props
+}: types.HtmlProps) => import('react/jsx-runtime').JSX.Element;
+export declare const Blockquote: ({
+	name,
+	tailwind,
+	className,
+	children,
+	...props
+}: types.HtmlProps) => import('react/jsx-runtime').JSX.Element;
+export declare const Body: ({
+	name,
+	tailwind,
+	className,
+	children,
+	...props
+}: types.HtmlProps) => import('react/jsx-runtime').JSX.Element;
+export declare const Caption: ({
+	name,
+	tailwind,
+	className,
+	children,
+	...props
+}: types.HtmlProps) => import('react/jsx-runtime').JSX.Element;
+export declare const Code: ({
+	name,
+	tailwind,
+	className,
+	children,
+	...props
+}: types.HtmlProps) => import('react/jsx-runtime').JSX.Element;
+export declare const Div: ({
+	name,
+	tailwind,
+	className,
+	children,
+	...props
+}: types.HtmlProps) => import('react/jsx-runtime').JSX.Element;
+export declare const Figure: ({
+	name,
+	tailwind,
+	className,
+	children,
+	...props
+}: types.HtmlProps) => import('react/jsx-runtime').JSX.Element;
+export declare const Hr: ({
+	name,
+	tailwind,
+	className,
+	children,
+	...props
+}: types.HtmlProps) => import('react/jsx-runtime').JSX.Element;
+export declare const Html: ({
+	name,
+	tailwind,
+	className,
+	children,
+	...props
+}: types.HtmlProps) => import('react/jsx-runtime').JSX.Element;
+export declare const IFrame: ({
+	name,
+	tailwind,
+	className,
+	...props
+}: types.IFrameProps) => import('react/jsx-runtime').JSX.Element;
+export declare const Img: ({
+	name,
+	src,
+	alt,
+	tailwind,
+	className,
+	...props
+}: types.ImgProps) => import('react/jsx-runtime').JSX.Element;
+export declare const Li: ({
+	name,
+	tailwind,
+	className,
+	children,
+	...props
+}: types.HtmlProps) => import('react/jsx-runtime').JSX.Element;
+export declare const Main: ({
+	name,
+	tailwind,
+	className,
+	children,
+	...props
+}: types.HtmlProps) => import('react/jsx-runtime').JSX.Element;
+export declare const Pre: ({
+	name,
+	tailwind,
+	className,
+	children,
+	...props
+}: types.HtmlProps) => import('react/jsx-runtime').JSX.Element;
+export declare const Span: ({
+	name,
+	tailwind,
+	className,
+	children,
+	...props
+}: types.HtmlProps) => import('react/jsx-runtime').JSX.Element;
+export declare const Ul: ({
+	name,
+	tailwind,
+	className,
+	children,
+	...props
+}: types.HtmlProps) => import('react/jsx-runtime').JSX.Element;

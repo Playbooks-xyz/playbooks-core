@@ -1,5 +1,7 @@
 import { Fragment, useRef } from 'react';
 import { useDrag, useDrop } from 'react-dnd';
+import { DndProvider } from 'react-dnd';
+import { HTML5Backend } from 'react-dnd-html5-backend';
 
 import { Div } from '@playbooks/ui/html';
 
@@ -61,7 +63,7 @@ const DragDrop = ({ index, model, disabled = false, onMove, onDrop, children, ta
 	);
 };
 
-export { DragDrop };
+export { DragDrop, DndProvider, HTML5Backend };
 
 // Docs
 // https://react-dnd.github.io/react-dnd/docs/api/use-drag

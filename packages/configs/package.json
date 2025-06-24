@@ -1,6 +1,6 @@
 {
 	"name": "@playbooks/configs",
-	"version": "0.0.7",
+	"version": "0.0.8",
 	"description": "A collection of configs used for Playbooks.",
 	"author": "Eric Hubbell<eric@erichubbell.com>",
 	"license": "ISC",

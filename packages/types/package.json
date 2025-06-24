@@ -1,6 +1,6 @@
 {
 	"name": "@playbooks/types",
-	"version": "0.0.3",
+	"version": "0.0.4",
 	"description": "A collection of shareable types for Playbooks",
 	"author": "Eric Hubbell<eric@erichubbell.com>",
 	"license": "ISC",
