@@ -37,6 +37,7 @@
 	},
 	"dependencies": {
 		"@playbooks/components": "^0.0.5",
+		"@playbooks/configs": "^0.0.5",
 		"@playbooks/icons": "^0.0.5",
 		"@playbooks/serializers": "^0.0.3",
 		"@playbooks/theme": "^0.1.17",

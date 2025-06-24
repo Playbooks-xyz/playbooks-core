@@ -38,6 +38,7 @@
 		"prepare": "husky"
 	},
 	"dependencies": {
+		"@playbooks/configs": "^0.0.5",
 		"@playbooks/utils": "^0.0.2",
 		"cross-fetch": "^4.1.0",
 		"dayjs": "^1.11.13"

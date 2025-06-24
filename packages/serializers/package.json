@@ -36,6 +36,7 @@
 		"prepare": "husky"
 	},
 	"dependencies": {
+		"@playbooks/configs": "^0.0.5",
 		"@playbooks/utils": "^0.0.2"
 	}
 }

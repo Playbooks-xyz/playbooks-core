@@ -34,5 +34,8 @@
 		"git": "git push --tags",
 		"test": "jest",
 		"prepare": "husky"
+	},
+	"dependencies": {
+		"@playbooks/configs": "^0.0.5"
 	}
 }

@@ -3,12 +3,12 @@
 	"compilerOptions": {
 		"baseUrl": "../../../../src",
 		"rootDir": "../../../..",
+		"outDir": "../../../../dist",
 		"lib": ["dom", "dom.iterable", "esnext"],
 		"jsx": "preserve",
 		"target": "esnext",
 		"module": "esnext",
 		"moduleResolution": "bundler",
-		"outDir": "dist",
 		"strict": false,
 		"noEmit": true,
 		"isolatedModules": true,

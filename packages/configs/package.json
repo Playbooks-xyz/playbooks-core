@@ -1,6 +1,6 @@
 {
 	"name": "@playbooks/configs",
-	"version": "0.0.3",
+	"version": "0.0.5",
 	"description": "A collection of configs used for Playbooks.",
 	"author": "Eric Hubbell<eric@erichubbell.com>",
 	"license": "ISC",
@@ -46,6 +46,7 @@
 	},
 	"dependencies": {
 		"@next/eslint-plugin-next": "^15.3.3",
+		"@playbooks/configs": "^0.0.5",
 		"@typescript-eslint/eslint-plugin": "^8.0.0",
 		"@typescript-eslint/parser": "^8.0.0",
 		"eslint-config-next": "^15.3.3",

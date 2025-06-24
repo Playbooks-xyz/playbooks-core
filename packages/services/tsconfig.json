@@ -4,6 +4,6 @@
 		"baseUrl": ".",
 		"types": ["vite/client", "node", "jest"]
 	},
-	"include": ["src", "tests", "types", "vite.config.ts"],
+	"include": ["src"],
 	"exclude": ["node_modules"]
 }

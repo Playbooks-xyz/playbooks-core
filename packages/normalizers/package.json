@@ -37,5 +37,8 @@
 	},
 	"devDependencies": {
 		"@playbooks/utils": "^0.0.2"
+	},
+	"dependencies": {
+		"@playbooks/configs": "^0.0.5"
 	}
 }

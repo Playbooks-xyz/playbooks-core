@@ -2,6 +2,7 @@
 	"compilerOptions": {
 		"baseUrl": "../../../..",
 		"rootDir": "../../../..",
+		"outDir": "../../../../dist",
 		"target": "esnext",
 		"module": "esnext",
 		"moduleResolution": "bundler",
@@ -29,6 +30,6 @@
 			"types/*": ["./types/*"]
 		}
 	},
-	"include": ["src", "tests", "types", "vite.config.ts"],
+	"include": ["src"],
 	"exclude": ["node_modules"]
 }

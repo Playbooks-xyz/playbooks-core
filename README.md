@@ -36,6 +36,10 @@ This project uses [yalc](https://npmjs.com/package/yalc) for local development.
 - Husky configuration is setup to lint and format the repo on every commit
 - Edit the `.husky/pre-commit` file to change your settings
 
+## Workspaces
+- npm run <command> -w packages/ui
+- npm run <command> --workspaces
+
 ## Author
 
 - [Eric Hubbell](http://www.erichubbell.com)
