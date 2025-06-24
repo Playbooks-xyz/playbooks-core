@@ -1,6 +1,6 @@
 {
 	"name": "@playbooks/hooks",
-	"version": "0.0.10",
+	"version": "0.0.13",
 	"description": "A collection of React hooks for Playbooks.",
 	"author": "Eric Hubbell<eric@erichubbell.com>",
 	"license": "ISC",

@@ -1,6 +1,6 @@
 {
 	"name": "@playbooks/ui",
-	"version": "0.8.36",
+	"version": "0.8.40",
 	"description": "An interface library for Playbooks.",
 	"private": false,
 	"license": "ISC",
@@ -50,6 +50,7 @@
 		"@playbooks/hooks": "^0.0.2",
 		"@playbooks/theme": "^0.1.17",
 		"@playbooks/utils": "^0",
+		"@playbooks/wrappers": "^0.0.5",
 		"@popperjs/core": "^2.11.8",
 		"@react-google-maps/api": "^2.20.5",
 		"@react-spring/web": "^10.0.1",

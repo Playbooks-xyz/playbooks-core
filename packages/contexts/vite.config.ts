@@ -16,7 +16,7 @@ export default defineConfig(({ mode }) => ({
 				path.resolve(__dirname, 'src/font.tsx'),
 				path.resolve(__dirname, 'src/intercom.tsx'),
 				path.resolve(__dirname, 'src/loading.tsx'),
-				path.resolve(__dirname, 'src/mixpanel.tsx'),
+				// path.resolve(__dirname, 'src/mixpanel.tsx'),
 				path.resolve(__dirname, 'src/session.tsx'),
 				path.resolve(__dirname, 'src/storage.tsx'),
 				path.resolve(__dirname, 'src/store.tsx'),
@@ -25,7 +25,7 @@ export default defineConfig(({ mode }) => ({
 				path.resolve(__dirname, 'src/toast.tsx'),
 			],
 			name: 'Contexts',
-			formats: ['es', 'cjs'],
+			formats: ['cjs'],
 			fileName: (format, entryName) => (format === 'es' ? `${entryName}.mjs` : `${entryName}.cjs`),
 		},
 		rollupOptions: {

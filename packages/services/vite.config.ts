@@ -14,7 +14,7 @@ export default defineConfig(({ mode }) => ({
 			entry: [
 				path.resolve(__dirname, 'src/index.tsx'),
 				path.resolve(__dirname, 'src/algolia-api-service.tsx'),
-				path.resolve(__dirname, 'src/algolia-search-service.tsx'),
+				path.resolve(__dirname, 'src/algolia-service.tsx'),
 			],
 			name: 'Services',
 			formats: ['es', 'cjs'],

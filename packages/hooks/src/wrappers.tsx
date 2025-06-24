@@ -1,5 +1,5 @@
-import { useAction, useConfirm, useDelete, useDeletes, useInit, useQuery, useSave } from '@playbooks/hooks';
-import { capitalize } from '@playbooks/utils';
+import { useAction, useConfirm, useDelete, useDeletes, useInit, useQuery, useSave } from '@playbooks/hooks/store';
+import { capitalize } from '@playbooks/utils/transforms';
 import { useContext } from 'src/context';
 
 export const useActionWrapper = (model, method) => {

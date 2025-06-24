@@ -5,7 +5,10 @@ import { computeTailwind } from '@ehubbell/html';
 import { useElementKeyPress } from '@playbooks/hooks';
 import * as theme from '@playbooks/theme';
 import * as types from '@playbooks/types';
-import { CurrencyInput, GoogleAutocomplete, MaskedInput, PhoneInput } from '@playbooks/wrappers';
+import { CurrencyInput } from '@playbooks/wrappers/currency-input';
+import { GoogleAutocomplete } from '@playbooks/wrappers/google-autocomplete';
+import { MaskedInput } from '@playbooks/wrappers/masked-input';
+// import { PhoneInput } from '@playbooks/wrappers/phone-input';
 import { useUI } from 'src/context';
 import { Div, Span } from 'src/html';
 
@@ -262,36 +265,36 @@ export const FormLocationInput = ({
 	);
 };
 
-export const FormPhoneInput = ({
-	id,
-	name = 'FormPhoneInput',
-	size = 'sm',
-	value,
-	variant,
-	placeholder,
-	onChange,
-	onBlur,
-	readOnly,
-	tailwind,
-	className,
-	...props
-}: types.FormInputPhoneProps) => {
-	// const { theme } = useInterface();
-	const base = theme.formInput({ size, variant });
-	const classes = computeTailwind({ ...base, ...props, ...tailwind, className });
+// export const FormPhoneInput = ({
+// 	id,
+// 	name = 'FormPhoneInput',
+// 	size = 'sm',
+// 	value,
+// 	variant,
+// 	placeholder,
+// 	onChange,
+// 	onBlur,
+// 	readOnly,
+// 	tailwind,
+// 	className,
+// 	...props
+// }: types.FormInputPhoneProps) => {
+// 	// const { theme } = useInterface();
+// 	const base = theme.formInput({ size, variant });
+// 	const classes = computeTailwind({ ...base, ...props, ...tailwind, className });
 
-	return (
-		<PhoneInput
-			id={id}
-			value={value}
-			placeholder={placeholder}
-			onBlur={onBlur}
-			onChange={onChange}
-			readOnly={readOnly}
-			className={classes}
-		/>
-	);
-};
+// 	return (
+// 		<PhoneInput
+// 			id={id}
+// 			value={value}
+// 			placeholder={placeholder}
+// 			onBlur={onBlur}
+// 			onChange={onChange}
+// 			readOnly={readOnly}
+// 			className={classes}
+// 		/>
+// 	);
+// };
 
 export const FormSelect = ({
 	id,

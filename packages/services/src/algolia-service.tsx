@@ -5,12 +5,12 @@ import Algoliasearch from 'algoliasearch/lite';
 const ALGOLIA_ID = process.env.NEXT_PUBLIC_ALGOLIA_APP_ID;
 const ALGOLIA_KEY = process.env.NEXT_PUBLIC_ALGOLIA_APP_KEY;
 
-interface AlgoliaSearchService {
+interface AlgoliaService {
 	tableName: string;
 	tableNames: string[];
 }
 
-class AlgoliaSearchService {
+class AlgoliaService {
 	constructor(props) {
 		this.tableName = props?.tableName;
 		this.tableNames = props?.tableNames || [];
@@ -117,7 +117,7 @@ class AlgoliaSearchService {
 	}
 }
 
-export { AlgoliaSearchService };
+export { AlgoliaService };
 
 // Docs
 // https://www.algolia.com/doc/api-client/methods/search
