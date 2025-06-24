@@ -23,7 +23,8 @@
 	],
 	"scripts": {
 		"start": "vite build --mode development --minify false --watch",
-		"build": "dts-bundle-generator --config dts.config.ts",
+		"build": "vite build --mode production --minify true",
+		"build:ts": "tsc --project tsconfig.json --noEmit false && tsc-alias",
 		"clean": "npm run lint:fix",
 		"lint": "eslint src",
 		"lint:fix": "eslint src --fix",

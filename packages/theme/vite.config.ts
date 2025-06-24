@@ -1,6 +1,6 @@
 import path from 'path';
 import { defineConfig } from 'vite';
-import { runCombined } from 'vite-plugin-yalc';
+import { runCommand } from 'vite-plugin-yalc';
 
 export default defineConfig(({ mode }) => ({
 	base: './',
@@ -58,7 +58,7 @@ export default defineConfig(({ mode }) => ({
 			fileName: (format, entryName) => (format === 'es' ? `${entryName}.mjs` : `${entryName}.cjs`),
 		},
 	},
-	plugins: [runCombined()],
+	plugins: [runCommand('npm run build:ts')],
 	resolve: {
 		alias: {
 			src: path.resolve(__dirname, '/src'),

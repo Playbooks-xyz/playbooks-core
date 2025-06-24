@@ -11,17 +11,17 @@
     "dist"
   ],
   "scripts": {
-    "start": "npm start --workspaces",
-    "build": "npm run build --workspaces",
-    "build:ts": "npm run build:ts --workspaces",
-    "clean": "npm run clean --workspaces",
-    "lint": "npm run lint --workspaces",
-    "lint:fix": "npm run lint:fix --workspaces",
-    "format": "npm run format --workspaces",
-    "format:fix": "npm run format:fix --workspaces",
+    "start": "npm start --workspaces --if-present",
+    "build": "npm run build --workspaces --if-present",
+    "build:ts": "npm run build:ts --workspaces --if-present",
+    "clean": "npm run clean --workspaces --if-present",
+    "lint": "npm run lint --workspaces --if-present",
+    "lint:fix": "npm run lint:fix --workspaces --if-present",
+    "format": "npm run format --workspaces --if-present",
+    "format:fix": "npm run format:fix --workspaces --if-present",
     "commit": "scripts/commit.sh",
-    "deploy": "npm run deploy --workspaces",
-    "test": "npm run jest --workspaces",
+    "deploy": "npm run deploy --workspaces --if-present",
+    "test": "npm run jest --workspaces --if-present",
     "prepare": "husky"
   },
   "peerDependencies": {
@@ -29,12 +29,11 @@
     "react-dom": "^18 || ^19"
   },
   "devDependencies": {
-    "@playbooks/configs": "^0.0.2",
+    "@playbooks/configs": "^0.0.7",
     "@types/jest": "^29.5.1",
     "@types/react": "^18.0.26",
     "@types/react-dom": "^18.0.9",
     "@vitejs/plugin-react": "^4.5.2",
-    "dts-bundle-generator": "^9.5.1",
     "eslint": "^8.57.1",
     "fs-extra": "^11.3.0",
     "husky": "^9.1.7",
@@ -43,11 +42,12 @@
     "rollup-plugin-peer-deps-external": "^2.2.4",
     "ts-jest": "^29.1.0",
     "ts-node": "^10.9.1",
+    "tsc-alias": "^1.8.16",
     "tslib": "^2.8.1",
     "typescript": "^5.8.3",
     "vite": "^6.3.5",
     "vite-plugin-dts": "^4.5.4",
-    "vite-plugin-yalc": "^0.0.8"
+    "vite-plugin-yalc": "^0.0.11"
   },
   "workspaces": [
     "packages/adapters",

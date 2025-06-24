@@ -1,0 +1,12 @@
+import * as types from '@playbooks/types';
+export declare const Menu: ({ name, open, onClose, tailwind, className, children, ...props }: types.MenuProps) => import("react/jsx-runtime").JSX.Element;
+export declare const MenuWrapper: ({ name, open, onClose, tailwind, className, children, ...props }: types.MenuWrapperProps) => import("react/jsx-runtime").JSX.Element;
+export declare const MenuBackdrop: ({ name, open, onClose, tailwind, className, ...props }: types.MenuBackdropProps) => import("react/jsx-runtime").JSX.Element;
+export declare const MenuMenu: ({ name, open, onClose, tailwind, className, children, ...props }: types.MenuMenuProps) => import("react/jsx-runtime").JSX.Element;
+export declare const MenuBlock: ({ name, tailwind, className, children, ...props }: types.MenuListProps) => import("react/jsx-runtime").JSX.Element;
+export declare const MenuTitle: ({ name, tailwind, className, children, ...props }: types.MenuTitleProps) => import("react/jsx-runtime").JSX.Element;
+export declare const MenuSubtitle: ({ name, tailwind, className, children, ...props }: types.MenuSubtitleProps) => import("react/jsx-runtime").JSX.Element;
+export declare const MenuList: ({ name, tailwind, className, children, ...props }: types.MenuListProps) => import("react/jsx-runtime").JSX.Element;
+export declare const MenuItem: ({ name, tailwind, className, children, ...props }: types.MenuItemProps) => import("react/jsx-runtime").JSX.Element;
+export declare const MenuBtn: ({ name, active, onClick, taskRunning, tailwind, className, children, ...props }: types.MenuBtnProps) => import("react/jsx-runtime").JSX.Element;
+export declare const MenuLink: ({ name, href, tailwind, className, children, ...props }: types.MenuLinkProps) => import("react/jsx-runtime").JSX.Element;

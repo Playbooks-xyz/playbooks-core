@@ -8,7 +8,7 @@ export type AdapterProps = {
 };
 
 export type requestProps = {
-	method?: string;
+	method: string;
 	url?: string;
 	headers?: any;
 	params?: any;

@@ -3,8 +3,7 @@ import react from '@vitejs/plugin-react';
 import path from 'path';
 import peerDepsExternal from 'rollup-plugin-peer-deps-external';
 import { defineConfig } from 'vite';
-import dts from 'vite-plugin-dts';
-import { runYalc } from 'vite-plugin-yalc';
+import { runCommand } from 'vite-plugin-yalc';
 
 export default defineConfig(({ mode }) => ({
 	base: './',
@@ -80,7 +79,7 @@ export default defineConfig(({ mode }) => ({
 			plugins: [peerDepsExternal()],
 		},
 	},
-	plugins: [react(), dts(), runYalc()],
+	plugins: [react(), runCommand('npm run build:ts')],
 	resolve: {
 		alias: {
 			src: path.resolve(__dirname, '/src'),

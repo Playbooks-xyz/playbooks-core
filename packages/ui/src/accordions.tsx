@@ -1,19 +1,18 @@
 import { useEffect, useMemo, useRef, useState } from 'react';
 
 import * as theme from '@playbooks/theme';
-import * as types from '@playbooks/types';
+import {
+	AccordionBodyProps,
+	AccordionProps,
+	AccordionTextProps,
+	AccordionTitleProps,
+	AccordionToggleProps,
+} from '@playbooks/types';
 import { Btn } from 'src/buttons';
 import { Font, P } from 'src/fonts';
 import { Div } from 'src/html';
 
-export const Accordion = ({
-	name = 'Accordion',
-	open,
-	tailwind,
-	className,
-	children,
-	...props
-}: types.AccordionProps) => {
+export const Accordion = ({ name = 'Accordion', open, tailwind, className, children, ...props }: AccordionProps) => {
 	const base = theme.accordion();
 	const computed = { ...base, ...props, tailwind, className, name };
 
@@ -31,7 +30,7 @@ export const AccordionToggle = ({
 	className,
 	children,
 	...props
-}: types.AccordionToggleProps) => {
+}: AccordionToggleProps) => {
 	const base = theme.accordionToggle({ open });
 	const computed = { ...base, ...props, tailwind, className, children, name };
 
@@ -45,7 +44,7 @@ export const AccordionTitle = ({
 	className,
 	children,
 	...props
-}: types.AccordionTitleProps) => {
+}: AccordionTitleProps) => {
 	const base = theme.accordionTitle();
 	const computed = { ...base, ...props, tailwind, className, name };
 
@@ -64,7 +63,7 @@ export const AccordionBody = ({
 	className,
 	children,
 	...props
-}: types.AccordionBodyProps) => {
+}: AccordionBodyProps) => {
 	const wrapperBase = theme.accordionBodyWrapper();
 	const base = theme.accordionBody();
 	const computed = { ...base, ...props, tailwind, className, name };
@@ -103,7 +102,7 @@ export const AccordionText = ({
 	className,
 	children,
 	...props
-}: types.AccordionTextProps) => {
+}: AccordionTextProps) => {
 	const base = theme.accordionText();
 	const computed = { ...base, ...props, tailwind, className, name };
 

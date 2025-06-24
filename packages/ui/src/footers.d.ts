@@ -1,0 +1,11 @@
+import * as types from '@playbooks/types';
+export declare const Footer: ({ name, tailwind, className, children, ...props }: types.FooterProps) => import("react/jsx-runtime").JSX.Element;
+export declare const FooterHeader: ({ name, tailwind, className, children, ...props }: types.FooterHeaderProps) => import("react/jsx-runtime").JSX.Element;
+export declare const FooterBody: ({ name, tailwind, className, children, ...props }: types.FooterBodyProps) => import("react/jsx-runtime").JSX.Element;
+export declare const FooterTitle: ({ name, size, tailwind, className, children, ...props }: types.FooterTitleProps) => import("react/jsx-runtime").JSX.Element;
+export declare const FooterText: ({ name, tailwind, className, children, ...props }: types.FooterTextProps) => import("react/jsx-runtime").JSX.Element;
+export declare const FooterList: ({ name, tailwind, className, children, ...props }: types.FooterListProps) => import("react/jsx-runtime").JSX.Element;
+export declare const FooterItem: ({ name, tailwind, className, children, ...props }: types.FooterItemProps) => import("react/jsx-runtime").JSX.Element;
+export declare const FooterBtn: ({ name, tailwind, className, children, ...props }: types.FooterBtnProps) => import("react/jsx-runtime").JSX.Element;
+export declare const FooterLink: ({ name, tailwind, className, children, ...props }: types.FooterLinkProps) => import("react/jsx-runtime").JSX.Element;
+export declare const FooterFooter: ({ name, tailwind, className, children, ...props }: types.FooterBodyProps) => import("react/jsx-runtime").JSX.Element;

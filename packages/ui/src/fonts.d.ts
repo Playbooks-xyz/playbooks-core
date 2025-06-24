@@ -1,0 +1,10 @@
+import * as types from '@playbooks/types';
+export declare const Font: (props: any) => import("react/jsx-runtime").JSX.Element;
+export declare const H1: ({ name, tailwind, className, children, ...props }: types.FontProps) => import("react/jsx-runtime").JSX.Element;
+export declare const H2: ({ name, tailwind, className, children, ...props }: types.FontProps) => import("react/jsx-runtime").JSX.Element;
+export declare const H3: ({ name, tailwind, className, children, ...props }: types.FontProps) => import("react/jsx-runtime").JSX.Element;
+export declare const H4: ({ name, tailwind, className, children, ...props }: types.FontProps) => import("react/jsx-runtime").JSX.Element;
+export declare const H5: ({ name, tailwind, className, children, ...props }: types.FontProps) => import("react/jsx-runtime").JSX.Element;
+export declare const H6: ({ name, tailwind, className, children, ...props }: types.FontProps) => import("react/jsx-runtime").JSX.Element;
+export declare const P: ({ name, tailwind, className, children, ...props }: types.FontProps) => import("react/jsx-runtime").JSX.Element;
+export declare const Small: ({ name, tailwind, className, children, ...props }: types.FontProps) => import("react/jsx-runtime").JSX.Element;

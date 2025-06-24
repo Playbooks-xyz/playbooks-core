@@ -12,7 +12,7 @@
 		"dev": "vite build --mode development --minify false --watch",
 		"start": "vite build --mode development --minify false",
 		"build": "vite build --mode production --minify true",
-		"build:ts": "dts-bundle-generator --config dts.config.ts",
+		"build:ts": "tsc --project tsconfig.json --noEmit false && tsc-alias",
 		"clean": "npm run lint:fix",
 		"lint": "eslint src",
 		"lint:fix": "eslint src --fix",
