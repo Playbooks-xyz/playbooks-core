@@ -9,7 +9,7 @@ export default defineConfig(({ mode }) => ({
 	base: './',
 	build: {
 		cssCodeSplit: true,
-		sourcemap: false,
+		sourcemap: mode === 'development',
 		lib: {
 			entry: [
 				path.resolve(__dirname, 'src/index.tsx'),
@@ -23,6 +23,7 @@ export default defineConfig(({ mode }) => ({
 				path.resolve(__dirname, 'src/buttons.tsx'),
 				path.resolve(__dirname, 'src/cards.tsx'),
 				path.resolve(__dirname, 'src/commands.tsx'),
+				path.resolve(__dirname, 'src/context.tsx'),
 				path.resolve(__dirname, 'src/drops.tsx'),
 				path.resolve(__dirname, 'src/feedbacks.tsx'),
 				path.resolve(__dirname, 'src/fonts.tsx'),
@@ -75,15 +76,6 @@ export default defineConfig(({ mode }) => ({
 				'next/router',
 				'@fortawesome/fontawesome-svg-core',
 			],
-			output: {
-				globals: {
-					react: 'React',
-					'react-dom': 'ReactDOM',
-					'react/jsx-runtime': 'react/jsx-runtime',
-					next: 'next',
-					tailwindcss: 'tailwindcss',
-				},
-			},
 			plugins: [peerDepsExternal()],
 		},
 	},

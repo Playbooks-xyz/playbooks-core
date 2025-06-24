@@ -1,10 +1,10 @@
 import { useEffect, useRef, useState } from 'react';
 import { createPortal } from 'react-dom';
 
-import { Fade } from '@playbooks/components/fade';
 import { useKeyPress } from '@playbooks/hooks';
 import * as theme from '@playbooks/theme';
 import * as types from '@playbooks/types';
+import { Fade } from '@playbooks/wrappers/fade';
 import { AccentBtn } from 'src/buttons';
 import { Font } from 'src/fonts';
 import { Div, Span } from 'src/html';

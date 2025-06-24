@@ -1,0 +1,67 @@
+import { Fragment, useRef } from 'react';
+import { useDrag, useDrop } from 'react-dnd';
+
+import { Div } from '@playbooks/ui/html';
+
+const DragDrop = ({ index, model, disabled = false, onMove, onDrop, children, tailwind }) => {
+	const ref = useRef(null);
+
+	// Hooks
+	const [{ isDragging }, drag] = useDrag({
+		type: 'requirement',
+		item: () => ({ index, model }),
+		collect: monitor => ({
+			isDragging: monitor.isDragging(),
+		}),
+	});
+
+	const [{ handlerId }, drop] = useDrop({
+		accept: 'requirement',
+		collect(monitor) {
+			return { handlerId: monitor.getHandlerId() };
+		},
+		drop(item: any, monitor) {
+			// console.log('drop: ', item, monitor);
+			const dropIndex = item.index;
+			onDrop(dropIndex, monitor);
+		},
+		hover(item: any, monitor) {
+			// console.log('hover: ', item, monitor);
+			const dragIndex = item.index;
+			const hoverIndex = index;
+			if (dragIndex === hoverIndex) return;
+			const hoverBoundingRect = ref.current?.getBoundingClientRect();
+			const hoverMiddleY = (hoverBoundingRect.bottom - hoverBoundingRect.top) / 2;
+			const clientOffset = monitor.getClientOffset();
+			const hoverClientY = clientOffset.y - hoverBoundingRect.top;
+			if (dragIndex < hoverIndex && hoverClientY < hoverMiddleY) return;
+			if (dragIndex > hoverIndex && hoverClientY > hoverMiddleY) return;
+			onMove(dragIndex, hoverIndex);
+			item.index = hoverIndex;
+		},
+	});
+
+	const classes = {
+		opacity: isDragging ? 'opacity-[30%]' : '',
+		shadow: isDragging ? 'shadow-md' : '',
+	};
+	drag(drop(ref));
+
+	// Render
+	return (
+		<Fragment>
+			{disabled ? (
+				<Div {...tailwind}>{children}</Div>
+			) : (
+				<Div ref={ref} data-handler-id={handlerId} {...classes} {...tailwind}>
+					{children}
+				</Div>
+			)}
+		</Fragment>
+	);
+};
+
+export { DragDrop };
+
+// Docs
+// https://react-dnd.github.io/react-dnd/docs/api/use-drag

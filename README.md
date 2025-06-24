@@ -45,6 +45,7 @@ This project uses [yalc](https://npmjs.com/package/yalc) for local development.
 - run types first
 - may need to update types per repo before deploy
 - look into vite-plugin-dts
+- adding global for `contexts` would be great
 
 ## Notes
 

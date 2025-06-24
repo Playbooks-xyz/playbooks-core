@@ -8,20 +8,18 @@ export default defineConfig(({ mode }) => ({
 	build: {
 		sourcemap: mode === 'development',
 		lib: {
-			entry: [path.resolve(__dirname, 'src/index.tsx')],
-			name: 'Components',
+			entry: [
+				path.resolve(__dirname, 'src/index.tsx'),
+				path.resolve(__dirname, 'src/brand/brand.tsx'),
+				path.resolve(__dirname, 'src/loaders/loaders.tsx'),
+				path.resolve(__dirname, 'src/patterns/patterns.tsx'),
+			],
+			name: 'Assets',
 			formats: ['es', 'cjs'],
 			fileName: (format, entryName) => (format === 'es' ? `${entryName}.mjs` : `${entryName}.cjs`),
 		},
 		rollupOptions: {
 			external: ['react', 'react-dom'],
-			output: {
-				globals: {
-					react: 'React',
-					'react-dom': 'ReactDOM',
-					'react/jsx-runtime': 'react/jsx-runtime',
-				},
-			},
 			plugins: [peerDepsExternal()],
 		},
 	},

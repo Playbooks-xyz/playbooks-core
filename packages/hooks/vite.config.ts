@@ -12,6 +12,7 @@ export default defineConfig(({ mode }) => ({
 		lib: {
 			entry: [
 				path.resolve(__dirname, 'src/index.tsx'),
+				path.resolve(__dirname, 'src/context.tsx'),
 				path.resolve(__dirname, 'src/keyboard.tsx'),
 				path.resolve(__dirname, 'src/mouse.tsx'),
 				path.resolve(__dirname, 'src/store.tsx'),
@@ -20,7 +21,7 @@ export default defineConfig(({ mode }) => ({
 				path.resolve(__dirname, 'src/wrappers.tsx'),
 			],
 			name: 'Hooks',
-			formats: ['es', 'cjs'],
+			formats: ['cjs'],
 			fileName: (format, entryName) => (format === 'es' ? `${entryName}.mjs` : `${entryName}.cjs`),
 		},
 		rollupOptions: {

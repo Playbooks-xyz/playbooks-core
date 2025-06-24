@@ -5,7 +5,7 @@ import { capitalize } from '@playbooks/utils';
 
 export const SeoContext = React.createContext(null);
 
-const SeoProvider = ({ meta, children }) => {
+export const SeoProvider = ({ meta, children }) => {
 	const router = useRouter();
 
 	// Computed
@@ -23,7 +23,9 @@ const SeoProvider = ({ meta, children }) => {
 	return <SeoContext.Provider value={{ computedTitle, computedUrl, meta }}>{children}</SeoContext.Provider>;
 };
 
-export { SeoProvider };
+export const useSeo = () => {
+	return React.useContext(SeoContext);
+};
 
 // Docs
 // https://www.npmjs.com/package/nprogress

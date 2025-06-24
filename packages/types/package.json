@@ -9,7 +9,7 @@
 	"types": "dist/index.d.ts",
 	"repository": {
 		"type": "git",
-		"url": "git+https://github.com/playbooks-xyz/playbooks-core/packages/adapters.git"
+		"url": "git+https://github.com/playbooks-xyz/playbooks-core/packages/types.git"
 	},
 	"files": [
 		"dist"

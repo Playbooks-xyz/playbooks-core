@@ -1,6 +1,6 @@
 {
 	"name": "@playbooks/utils",
-	"version": "0.0.4",
+	"version": "0.0.5",
 	"description": "A collection of utilities used for Playbooks.",
 	"author": "Eric Hubbell<eric@erichubbell.com>",
 	"license": "ISC",
@@ -32,6 +32,7 @@
 		"prepare": "husky"
 	},
 	"dependencies": {
+		"@ehubbell/html": "^0.1.10",
 		"accounting": "^0.4.1",
 		"dayjs": "^1.11.13",
 		"js-abbreviation-number": "^1.4.0",
@@ -77,6 +78,11 @@
 			"types": "./dist/helpers.d.ts",
 			"import": "./dist/helpers.mjs",
 			"require": "./dist/helpers.cjs"
+		},
+		"./html": {
+			"types": "./dist/html.d.ts",
+			"import": "./dist/html.mjs",
+			"require": "./dist/html.cjs"
 		},
 		"./inputs": {
 			"types": "./dist/inputs.d.ts",

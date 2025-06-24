@@ -52,46 +52,6 @@
 		".": {
 			"import": "./dist/index.cjs",
 			"types": "./dist/index.d.ts"
-		},
-		"./animation": {
-			"import": "./dist/animation.cjs",
-			"types": "./dist/animation.d.ts"
-		},
-		"./currency-input": {
-			"import": "./dist/currency-input.cjs",
-			"types": "./dist/currency-input.d.ts"
-		},
-		"./fade": {
-			"import": "./dist/fade.cjs",
-			"types": "./dist/fade.d.ts"
-		},
-		"./font-awesome": {
-			"import": "./dist/font-awesome.cjs",
-			"types": "./dist/font-awesome.d.ts"
-		},
-		"./google-autocomplete": {
-			"import": "./dist/google-autocomplete.cjs",
-			"types": "./dist/google-autocomplete.d.ts"
-		},
-		"./masked-input": {
-			"import": "./dist/masked-input.cjs",
-			"types": "./dist/masked-input.d.ts"
-		},
-		"./phone-input": {
-			"import": "./dist/phone-input.cjs",
-			"types": "./dist/phone-input.d.ts"
-		},
-		"./scrollspy": {
-			"import": "./dist/scrollspy.cjs",
-			"types": "./dist/scrollspy.d.ts"
-		},
-		"./skeleton": {
-			"import": "./dist/skeleton.cjs",
-			"types": "./dist/skeleton.d.ts"
-		},
-		"./waypoint": {
-			"import": "./dist/waypoint.cjs",
-			"types": "./dist/waypoint.d.ts"
 		}
 	}
 }

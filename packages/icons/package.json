@@ -1,0 +1,66 @@
+{
+	"name": "@playbooks/icons",
+	"version": "0.0.4",
+	"description": "A collection of Font Awesome Icons for Playbooks.",
+	"author": "Eric Hubbell<eric@erichubbell.com>",
+	"license": "ISC",
+	"type": "module",
+	"repository": {
+		"type": "git",
+		"url": "https://github.com/playbooks-xyz/playbooks-core/packages/icons.git"
+	},
+	"files": [
+		"dist"
+	],
+	"scripts": {
+		"start": "vite build --mode development --minify false --watch",
+		"build": "vite build --mode production --minify true",
+		"build:ts": "dts-bundle-generator --config dts.config.ts",
+		"clean": "npm run lint:fix",
+		"lint": "eslint src",
+		"lint:fix": "eslint src --fix",
+		"format": "prettier src",
+		"format:fix": "prettier --write src",
+		"commit": "scripts/commit.sh",
+		"deploy": "scripts/deploy.sh",
+		"test": "jest",
+		"prepare": "husky"
+	},
+	"peerDependencies": {
+		"react": "^18 || ^19",
+		"react-dom": "^18 || ^19"
+	},
+	"dependencies": {
+		"@fortawesome/fontawesome-svg-core": "^6.7.2",
+		"@fortawesome/free-brands-svg-icons": "^6.7.2",
+		"@fortawesome/free-regular-svg-icons": "^6.7.2",
+		"@fortawesome/free-solid-svg-icons": "^6.7.2",
+		"@fortawesome/react-fontawesome": "^0.2.2"
+	},
+	"devDependencies": {
+		"@playbooks/types": "^0.0.1"
+	},
+	"exports": {
+		".": {
+			"import": "./dist/index.mjs",
+			"types": "./dist/index.d.ts"
+		},
+		"./fab": {
+			"import": "./dist/fab.mjs",
+			"types": "./dist/fab.d.ts"
+		},
+		"./far": {
+			"import": "./dist/far.mjs",
+			"types": "./dist/far.d.ts"
+		},
+		"./fas": {
+			"import": "./dist/fas.mjs",
+			"types": "./dist/fas.d.ts"
+		},
+		"./library": {
+			"import": "./dist/library.mjs",
+			"types": "./dist/library.d.ts"
+		},
+		"./styles.css": "./dist/styles.css"
+	}
+}

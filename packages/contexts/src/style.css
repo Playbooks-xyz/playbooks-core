@@ -1,0 +1,15 @@
+/* Make clicks pass-through */
+#nprogress {
+	pointer-events: none;
+}
+
+#nprogress .bar {
+	@apply bg-linear-to-r from-secondary to-accent;
+	@apply shadow-xs;
+	@apply h-1;
+	@apply fixed;
+	@apply z-20;
+	@apply top-0;
+	@apply left-0;
+	@apply w-full;
+}

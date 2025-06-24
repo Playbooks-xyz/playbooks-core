@@ -8,6 +8,7 @@ module.exports = {
 		'env',
 		'errors',
 		'helpers',
+		'html',
 		'inputs',
 		'logger',
 		'math',

@@ -54,7 +54,7 @@ export default defineConfig(({ mode }) => ({
 				path.resolve(__dirname, 'src/tooltips.tsx'),
 			],
 			name: 'Theme',
-			formats: ['es', 'cjs'],
+			formats: ['es'],
 			fileName: (format, entryName) => (format === 'es' ? `${entryName}.mjs` : `${entryName}.cjs`),
 		},
 	},

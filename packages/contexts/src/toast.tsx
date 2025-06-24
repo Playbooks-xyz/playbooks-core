@@ -3,24 +3,19 @@ import { useRouter } from 'next/router';
 
 import { ErrorToast, InfoToast, SuccessToast } from '@playbooks/molecules/toasts';
 import { ToastWrapper } from '@playbooks/ui/toasts';
-import { formatError, getUUID, isEmpty, logger } from '@playbooks/utils';
+import { formatError } from '@playbooks/utils/errors';
+import { getUUID, isEmpty } from '@playbooks/utils/helpers';
+import { logger } from '@playbooks/utils/logger';
 
-export interface ToastProps {
+export type ToastContextProps = {
 	showSuccess: (title, message) => any;
 	showInfo: (title, message) => any;
 	showError: (v) => any;
-}
+};
 
-const ToastContext = React.createContext<ToastProps>(null);
+export const ToastContext = React.createContext<ToastContextProps>(null);
 
-interface iError {
-	type?: string;
-	status?: number;
-	title?: string;
-	message?: string;
-}
-
-const ToastProvider = ({ children }) => {
+export const ToastProvider = ({ children }) => {
 	const [toasts, setToasts] = useState([]);
 	const router = useRouter();
 
@@ -42,7 +37,7 @@ const ToastProvider = ({ children }) => {
 		setToasts(toasts => toasts.concat({ id: getUUID(), type: 'info', status: 'Info', title, message }));
 	};
 
-	const showError = (error: iError) => {
+	const showError = (error: { type?: string; status?: string; title?: string; message?: string }) => {
 		setToasts(toasts => toasts.concat({ id: getUUID(), type: 'error', ...formatError(error) }));
 	};
 
@@ -71,8 +66,6 @@ const ToastProvider = ({ children }) => {
 	);
 };
 
-const useToast = () => {
+export const useToast = () => {
 	return React.useContext(ToastContext);
 };
-
-export { ToastProvider, useToast };

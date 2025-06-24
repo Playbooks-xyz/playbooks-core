@@ -2,15 +2,15 @@
 	"autorun": true,
 	"terminals": [
 		{
-			"name": "playbooks-framework",
+			"name": "playbooks-core",
 			"focus": true
 		},
 		{
-			"name": "playbooks-framework-alt",
+			"name": "playbooks-core-alt",
 			"execute": false
 		},
 		{
-			"name": "playbooks-framework-alt-ii",
+			"name": "playbooks-core-alt-ii",
 			"execute": false
 		},
     {

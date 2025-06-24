@@ -5,7 +5,8 @@
 	"author": "Eric Hubbell<eric@erichubbell.com>",
 	"license": "ISC",
 	"type": "module",
-	"main": "dist/index.mjs",
+	"main": "dist/index.cjs",
+	"module": "dist/index.mjs",
 	"types": "dist/index.d.ts",
 	"repository": {
 		"type": "git",

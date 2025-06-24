@@ -1,6 +1,6 @@
 {
 	"name": "@playbooks/theme",
-	"version": "0.1.18",
+	"version": "0.1.19",
 	"description": "The default theme for Playbooks.",
 	"author": "Eric Hubbell<eric@erichubbell.com>",
 	"license": "ISC",

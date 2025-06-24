@@ -32,8 +32,24 @@
 	},
 	"exports": {
 		".": {
-			"import": "./dist/index.cjs",
-			"types": "./dist/index.d.ts"
+			"types": "./dist/index.d.ts",
+			"import": "./dist/index.mjs",
+			"require": "./dist/index.cjs"
+		},
+		"./brand": {
+			"types": "./dist/brand.d.ts",
+			"import": "./dist/brand.mjs",
+			"require": "./dist/brand.cjs"
+		},
+		"./loaders": {
+			"types": "./dist/loaders.d.ts",
+			"import": "./dist/loaders.mjs",
+			"require": "./dist/loaders.cjs"
+		},
+		"./patterns": {
+			"types": "./dist/patterns.d.ts",
+			"import": "./dist/patterns.mjs",
+			"require": "./dist/patterns.cjs"
 		}
 	}
 }

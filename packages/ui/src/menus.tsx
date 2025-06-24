@@ -1,9 +1,9 @@
 import { useRef, useState } from 'react';
 
-import { Fade } from '@playbooks/components/fade';
 import { useKeyPress, useMouseUp } from '@playbooks/hooks';
 import * as theme from '@playbooks/theme';
 import * as types from '@playbooks/types';
+import { Fade } from '@playbooks/wrappers/fade';
 import { AccentBtn } from 'src/buttons';
 import { H6, P } from 'src/fonts';
 import { Div, Li, Ul } from 'src/html';

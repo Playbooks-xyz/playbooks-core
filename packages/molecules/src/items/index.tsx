@@ -1,3 +1,4 @@
+export * from 'src/items/item';
 export * from 'src/items/accordion-items';
 export * from 'src/items/avatar-item';
 export * from 'src/items/badge-item';
@@ -11,7 +12,6 @@ export * from 'src/items/description-item';
 export * from 'src/items/html-item';
 export * from 'src/items/icon-item';
 export * from 'src/items/info-item';
-export * from 'src/items/item';
 export * from 'src/items/link-item';
 export * from 'src/items/list-items';
 export * from 'src/items/number-item';

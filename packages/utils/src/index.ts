@@ -4,6 +4,7 @@ export * from 'src/downloads';
 export * from 'src/env';
 export * from 'src/errors';
 export * from 'src/helpers';
+export * from 'src/html';
 export * from 'src/inputs';
 export * from 'src/logger';
 export * from 'src/math';

@@ -17,12 +17,10 @@ Router.events.on('routeChangeError', () => NProgress.done());
 
 export const LoadingContext = React.createContext(null);
 
-const LoadingProvider = ({ children }) => {
+export const LoadingProvider = ({ children }) => {
 	// Render
 	return <LoadingContext.Provider value={null}>{children}</LoadingContext.Provider>;
 };
-
-export { LoadingProvider };
 
 // Docs
 // https://www.npmjs.com/package/nprogress

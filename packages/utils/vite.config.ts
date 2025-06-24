@@ -29,11 +29,6 @@ export default defineConfig(({ mode }) => ({
 		},
 		rollupOptions: {
 			external: ['uniqid'],
-			output: {
-				globals: {
-					uniqid: 'uniqid',
-				},
-			},
 			plugins: [peerDepsExternal()],
 		},
 	},

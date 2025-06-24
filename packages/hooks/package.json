@@ -1,6 +1,6 @@
 {
 	"name": "@playbooks/hooks",
-	"version": "0.0.4",
+	"version": "0.0.10",
 	"description": "A collection of React hooks for Playbooks.",
 	"author": "Eric Hubbell<eric@erichubbell.com>",
 	"license": "ISC",
@@ -49,6 +49,10 @@
 			"types": "./dist/index.d.ts",
 			"import": "./dist/index.cjs"
 		},
+		"./context": {
+			"types": "./dist/context.d.ts",
+			"import": "./dist/context.cjs"
+		},
 		"./keyboard": {
 			"types": "./dist/keyboard.d.ts",
 			"import": "./dist/keyboard.cjs"
@@ -60,6 +64,10 @@
 		"./store": {
 			"types": "./dist/store.d.ts",
 			"import": "./dist/store.cjs"
+		},
+		"./toast": {
+			"types": "./dist/toast.d.ts",
+			"import": "./dist/toast.cjs"
 		},
 		"./util": {
 			"types": "./dist/util.d.ts",

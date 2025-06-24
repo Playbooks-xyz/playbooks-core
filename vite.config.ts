@@ -11,19 +11,12 @@ export default defineConfig(({ mode }) => {
 			sourcemap: mode !== 'production',
 			lib: {
 				entry: path.resolve(__dirname, 'src/index.tsx'),
-				name: 'mylib',
-				formats: ['es', 'cjs', 'umd', 'iife'],
-				fileName: format => `index.${format}.js`,
+				name: 'Core',
+				formats: ['es', 'cjs'],
+				fileName: (format, entryName) => (format === 'es' ? `${entryName}.mjs` : `${entryName}.cjs`),
 			},
 			rollupOptions: {
 				external: ['react', 'react-dom'],
-				output: {
-					globals: {
-						react: 'React',
-						'react-dom': 'ReactDOM',
-						'react/jsx-runtime': 'react/jsx-runtime',
-					},
-				},
 				plugins: [peerDepsExternal()],
 			},
 		},

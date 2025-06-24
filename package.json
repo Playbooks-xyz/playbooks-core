@@ -1,5 +1,5 @@
 {
-  "name": "@playbooks/framework",
+  "name": "@playbooks/core",
   "version": "1.0.3",
   "description": "A collection of resources for Playbooks.",
   "author": "Eric Hubbell<eric@erichubbell.com>",
@@ -56,12 +56,18 @@
     "packages/configs",
     "packages/contexts",
     "packages/hooks",
+    "packages/icons",
     "packages/molecules",
     "packages/normalizers",
     "packages/serializers",
+    "packages/services",
     "packages/theme",
     "packages/types",
     "packages/ui",
-    "packages/utils"
-  ]
+    "packages/utils",
+    "packages/wrappers"
+  ],
+  "dependencies": {
+    "@playbooks/services": "^0.0.1"
+  }
 }

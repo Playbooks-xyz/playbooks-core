@@ -12,6 +12,7 @@ module.exports = {
 		'buttons',
 		'cards',
 		'commands',
+		'context',
 		'drops',
 		'feedbacks',
 		'fonts',

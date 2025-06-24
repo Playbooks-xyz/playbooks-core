@@ -1,6 +1,6 @@
 {
 	"name": "@playbooks/molecules",
-	"version": "0.0.15",
+	"version": "0.0.19",
 	"description": "A collection of React molecules for Playbooks.",
 	"author": "Eric Hubbell<eric@erichubbell.com>",
 	"license": "ISC",
@@ -37,6 +37,7 @@
 	},
 	"dependencies": {
 		"@playbooks/components": "^0.0.2",
+		"@playbooks/serializers": "^0.0.3",
 		"@playbooks/theme": "^0.1.17",
 		"@playbooks/ui": "^0.8.27",
 		"@playbooks/utils": "^0.0.2",
@@ -48,51 +49,103 @@
 	"exports": {
 		".": {
 			"types": "./dist/index.d.ts",
-			"import": "./dist/index.cjs"
+			"import": "./dist/index.mjs"
+		},
+		"./accordions": {
+			"types": "./dist/accordions.d.ts",
+			"import": "./dist/accordions.mjs"
 		},
 		"./avatars": {
 			"types": "./dist/avatars.d.ts",
-			"import": "./dist/avatars.cjs"
+			"import": "./dist/avatars.mjs"
+		},
+		"./breadcrumbs": {
+			"types": "./dist/breadcrumbs.d.ts",
+			"import": "./dist/breadcrumbs.mjs"
+		},
+		"./buttons": {
+			"types": "./dist/buttons.d.ts",
+			"import": "./dist/buttons.mjs"
 		},
 		"./cards": {
 			"types": "./dist/cards.d.ts",
-			"import": "./dist/cards.cjs"
+			"import": "./dist/cards.mjs"
+		},
+		"./context": {
+			"types": "./dist/context.d.ts",
+			"import": "./dist/context.mjs"
+		},
+		"./drops": {
+			"types": "./dist/drops.d.ts",
+			"import": "./dist/drops.mjs"
 		},
 		"./feedbacks": {
 			"types": "./dist/feedbacks.d.ts",
-			"import": "./dist/feedbacks.cjs"
+			"import": "./dist/feedbacks.mjs"
+		},
+		"./form-groups": {
+			"types": "./dist/form-groups.d.ts",
+			"import": "./dist/form-groups.mjs"
+		},
+		"./forms": {
+			"types": "./dist/forms.d.ts",
+			"import": "./dist/forms.mjs"
 		},
 		"./inputs": {
 			"types": "./dist/inputs.d.ts",
-			"import": "./dist/inputs.cjs"
+			"import": "./dist/inputs.mjs"
 		},
 		"./items": {
 			"types": "./dist/items.d.ts",
-			"import": "./dist/items.cjs"
+			"import": "./dist/items.mjs"
 		},
 		"./lists": {
 			"types": "./dist/lists.d.ts",
-			"import": "./dist/lists.cjs"
+			"import": "./dist/lists.mjs"
 		},
 		"./mdx": {
 			"types": "./dist/mdx.d.ts",
-			"import": "./dist/mdx.cjs"
+			"import": "./dist/mdx.mjs"
 		},
 		"./paginations": {
 			"types": "./dist/paginations.d.ts",
-			"import": "./dist/paginations.cjs"
+			"import": "./dist/paginations.mjs"
+		},
+		"./pixels": {
+			"types": "./dist/pixels.d.ts",
+			"import": "./dist/pixels.mjs"
+		},
+		"./progress-bars": {
+			"types": "./dist/progress-bars.d.ts",
+			"import": "./dist/progress-bars.mjs"
 		},
 		"./skeletons": {
 			"types": "./dist/skeletons.d.ts",
-			"import": "./dist/skeletons.cjs"
+			"import": "./dist/skeletons.mjs"
+		},
+		"./slides": {
+			"types": "./dist/slides.d.ts",
+			"import": "./dist/slides.mjs"
+		},
+		"./stats": {
+			"types": "./dist/stats.d.ts",
+			"import": "./dist/stats.mjs"
+		},
+		"./subnavs": {
+			"types": "./dist/subnavs.d.ts",
+			"import": "./dist/subnavs.mjs"
+		},
+		"./tags": {
+			"types": "./dist/tags.d.ts",
+			"import": "./dist/tags.mjs"
 		},
 		"./toasts": {
 			"types": "./dist/toasts.d.ts",
-			"import": "./dist/toasts.cjs"
+			"import": "./dist/toasts.mjs"
 		},
 		"./toggles": {
 			"types": "./dist/toggles.d.ts",
-			"import": "./dist/toggles.cjs"
+			"import": "./dist/toggles.mjs"
 		}
 	}
 }

@@ -1,9 +1,9 @@
 import { useRef, useState } from 'react';
 import { usePopper } from 'react-popper';
 
-import { Fade } from '@playbooks/components/fade';
 import * as theme from '@playbooks/theme';
 import * as types from '@playbooks/types';
+import { Fade } from '@playbooks/wrappers/fade';
 import { Div, Span } from 'src/html';
 
 export const Tooltip = ({

@@ -5,7 +5,7 @@ A collection of components for React projects.
 ## Installation
 
 ```
-npm install @playbooks/adapters
+npm install @playbooks/components
 ```
 
 ## Usage

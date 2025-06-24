@@ -1,7 +1,12 @@
+import { useRef } from 'react';
+
 import * as HTML from '@ehubbell/html';
 import { computeTailwind } from '@ehubbell/html';
+import { useElementKeyPress } from '@playbooks/hooks';
 import * as theme from '@playbooks/theme';
 import * as types from '@playbooks/types';
+import { CurrencyInput, GoogleAutocomplete, MaskedInput, PhoneInput } from '@playbooks/wrappers';
+import { useUI } from 'src/context';
 import { Div, Span } from 'src/html';
 
 export const Form = ({ id, name = 'Form', onSubmit, tailwind, className, children, ...props }: types.FormProps) => {
@@ -108,6 +113,70 @@ export const FormInput = ({
 	);
 };
 
+export const FormMaskInput = ({
+	id,
+	name = 'FormMaskInput',
+	size = 'sm',
+	mask,
+	value,
+	variant,
+	placeholder,
+	onChange,
+	onBlur,
+	readOnly,
+	tailwind,
+	className,
+	...props
+}: types.FormInputMaskProps) => {
+	const base = theme.formInput({ size, variant });
+	const classes = computeTailwind({ ...base, ...props, ...tailwind, className });
+
+	return (
+		<MaskedInput
+			id={id}
+			mask={mask}
+			value={value}
+			placeholder={placeholder}
+			onChange={onChange}
+			onBlur={onBlur}
+			readOnly={readOnly}
+			className={classes}
+		/>
+	);
+};
+
+export const FormCurrencyInput = ({
+	id,
+	name = 'FormCurrencyInput',
+	size = 'sm',
+	value,
+	variant,
+	prefix,
+	placeholder,
+	onChange,
+	onBlur,
+	readOnly,
+	tailwind,
+	className,
+	...props
+}: types.FormInputCurrencyProps) => {
+	const ui = useUI();
+	const base = ui?.theme || theme.formInput({ size, variant });
+	const classes = computeTailwind({ ...base, ...props, ...tailwind, className });
+
+	return (
+		<CurrencyInput
+			id={id}
+			value={value}
+			prefix={prefix}
+			placeholder={placeholder}
+			onChange={onChange}
+			readOnly={readOnly}
+			className={classes}
+		/>
+	);
+};
+
 export const FormDivInput = ({
 	id,
 	name = 'FormDivInput',
@@ -145,6 +214,83 @@ export const FormFileInput = ({
 	const classes = computeTailwind({ ...base, ...props, ...tailwind, className });
 
 	return <HTML.Input placeholder={placeholder} value={value} onChange={onChange} className={classes} />;
+};
+
+export const FormLocationInput = ({
+	id,
+	name = 'FormLocationInput',
+	size = 'sm',
+	value,
+	variant,
+	options,
+	placeholder,
+	googleMapsApiKey,
+	onChange,
+	onSelect,
+	onBlur,
+	readOnly,
+	tailwind,
+	className,
+	...props
+}: types.FormInputLocationProps) => {
+	// const { theme } = useInterface();
+	const base = theme.formInput({ size, variant });
+	const classes = computeTailwind({ ...base, ...props, ...tailwind, className });
+	const ref = useRef(null);
+
+	// Hooks
+	useElementKeyPress(ref.current, onKeyPress, []);
+
+	// Methods
+	function onKeyPress(e) {
+		if (e.keyCode === 13) e.preventDefault();
+	}
+
+	return (
+		<GoogleAutocomplete options={options} googleMapsApiKey={googleMapsApiKey} onSelect={onSelect}>
+			<HTML.Input
+				id={id}
+				ref={ref}
+				value={value}
+				placeholder={placeholder}
+				onBlur={onBlur}
+				onChange={onChange}
+				readOnly={readOnly}
+				className={classes}
+			/>
+		</GoogleAutocomplete>
+	);
+};
+
+export const FormPhoneInput = ({
+	id,
+	name = 'FormPhoneInput',
+	size = 'sm',
+	value,
+	variant,
+	placeholder,
+	onChange,
+	onBlur,
+	readOnly,
+	tailwind,
+	className,
+	...props
+}: types.FormInputPhoneProps) => {
+	// const { theme } = useInterface();
+	const base = theme.formInput({ size, variant });
+	const classes = computeTailwind({ ...base, ...props, ...tailwind, className });
+
+	return (
+		<PhoneInput
+			id={id}
+			value={value}
+			placeholder={placeholder}
+			onBlur={onBlur}
+			onChange={onChange}
+			readOnly={readOnly}
+			className={classes}
+		/>
+	);
 };
 
 export const FormSelect = ({

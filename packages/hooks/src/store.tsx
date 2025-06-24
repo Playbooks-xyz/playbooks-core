@@ -1,8 +1,8 @@
 import { useState } from 'react';
 
-export const useAction = (model, method, state = false): [method: any, task: any, error: any] => {
+export const useAction = (model, method): [method: any, task: any, error: any] => {
 	const [error, setError] = useState(null);
-	const [task, setTask] = useState({ id: '', name: 'action', running: state });
+	const [task, setTask] = useState({ id: '', name: 'action', running: false });
 
 	// Methods
 	const onAction = async (record?) => {
@@ -79,9 +79,28 @@ export const useDeletes = (model, modelName, method): [method: any, task: any, e
 	return [onDelete, task, error];
 };
 
-export const useQuery = (method, state = false): [method: any, loading: boolean, error: any] => {
+export const useInit = (method): [method: any, loading: boolean, error: any] => {
 	const [error, setError] = useState(null);
-	const [loading, setLoading] = useState(state);
+	const [loading, setLoading] = useState(true);
+
+	// Methods
+	const onQuery = async (data?) => {
+		try {
+			setLoading(true);
+			await method(data);
+		} catch (e) {
+			setError(e);
+		} finally {
+			setLoading(false);
+		}
+	};
+
+	return [onQuery, loading, error];
+};
+
+export const useQuery = (method): [method: any, loading: boolean, error: any] => {
+	const [error, setError] = useState(null);
+	const [loading, setLoading] = useState(false);
 
 	// Methods
 	const onQuery = async (data?) => {
