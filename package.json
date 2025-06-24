@@ -64,10 +64,6 @@
     "packages/theme",
     "packages/types",
     "packages/ui",
-    "packages/utils",
-    "packages/wrappers"
-  ],
-  "dependencies": {
-    "@playbooks/services": "^0.0.1"
-  }
+    "packages/utils"
+  ]
 }

@@ -1,5 +1,5 @@
-import { Skeleton } from '@playbooks/wrappers/skeleton';
-import { Card, CardBody, CardFooter, CardHeader, CardPretitle, CardSubtitle, CardTitle } from '@playbooks/ui/cards';
+import { Skeleton } from '@playbooks/components/skeleton';
+import { Card, CardBody, CardFooter, CardHeader, CardSubtitle, CardTitle } from '@playbooks/ui/cards';
 import { Span } from '@playbooks/ui/html';
 
 const GridSkeleton = ({ tailwind }) => {
@@ -10,12 +10,12 @@ const GridSkeleton = ({ tailwind }) => {
 				<Skeleton className='w-full' />
 			</CardHeader>
 			<CardBody space='space-y-2' spacing='p-4'>
-				<CardPretitle display=''>
-					<Skeleton width='w-1/4' />
-				</CardPretitle>
 				<CardTitle display=''>
 					<Skeleton width='w-1/2' />
 				</CardTitle>
+				<CardSubtitle>
+					<Skeleton width='w-3/4' />
+				</CardSubtitle>
 				<CardSubtitle>
 					<Skeleton width='w-3/4' />
 				</CardSubtitle>

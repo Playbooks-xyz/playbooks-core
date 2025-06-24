@@ -1,6 +1,6 @@
+import { FontAwesome } from '@playbooks/components/font-awesome';
 import * as theme from '@playbooks/theme';
 import * as types from '@playbooks/types';
-import { FontAwesome } from '@playbooks/wrappers/font-awesome';
 import { Div } from 'src/html';
 
 export const Icon = props => {

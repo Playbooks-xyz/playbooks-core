@@ -1,5 +1,9 @@
 export * from 'src/animation';
+export * from 'src/context';
 export * from 'src/currency-input';
+export * from 'src/date-picker';
+export * from 'src/date-range-picker';
+export * from 'src/drag-drop';
 export * from 'src/fade';
 export * from 'src/font-awesome';
 export * from 'src/google-autocomplete';
@@ -7,4 +11,5 @@ export * from 'src/masked-input';
 export * from 'src/phone-input';
 export * from 'src/scrollspy';
 export * from 'src/skeleton';
+export * from 'src/star-rating';
 export * from 'src/waypoint';

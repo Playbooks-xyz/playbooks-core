@@ -1,4 +1,4 @@
-import { Skeleton } from '@playbooks/wrappers/skeleton';
+import { Skeleton } from '@playbooks/components/skeleton';
 import { Card, CardBody, CardHeader, CardTitle } from '@playbooks/ui/cards';
 import { Span } from '@playbooks/ui/html';
 

@@ -1,10 +1,12 @@
 {
 	"name": "@playbooks/services",
-	"version": "0.0.4",
+	"version": "0.0.5",
 	"description": "A collection of services for Playbooks.",
 	"author": "Eric Hubbell<eric@erichubbell.com>",
 	"license": "ISC",
 	"type": "module",
+	"main": "./dist/index.cjs",
+	"module": "./dist/index.cjs",
 	"repository": {
 		"type": "git",
 		"url": "https://github.com/playbooks-xyz/playbooks-core/packages/services.git"
@@ -36,7 +38,7 @@
 	"exports": {
 		".": {
 			"types": "./dist/index.d.ts",
-			"import": "./dist/index.mjs",
+			"import": "./dist/index.cjs",
 			"require": "./dist/index.cjs"
 		}
 	}

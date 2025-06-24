@@ -17,7 +17,7 @@ export default defineConfig(({ mode }) => ({
 				path.resolve(__dirname, 'src/algolia-service.tsx'),
 			],
 			name: 'Services',
-			formats: ['es', 'cjs'],
+			formats: ['cjs'],
 			fileName: (format, entryName) => (format === 'es' ? `${entryName}.mjs` : `${entryName}.cjs`),
 		},
 		rollupOptions: {

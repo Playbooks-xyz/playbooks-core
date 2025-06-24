@@ -2,13 +2,13 @@ import { useRef } from 'react';
 
 import * as HTML from '@ehubbell/html';
 import { computeTailwind } from '@ehubbell/html';
+import { CurrencyInput } from '@playbooks/components/currency-input';
+import { GoogleAutocomplete } from '@playbooks/components/google-autocomplete';
+import { MaskedInput } from '@playbooks/components/masked-input';
 import { useElementKeyPress } from '@playbooks/hooks';
 import * as theme from '@playbooks/theme';
 import * as types from '@playbooks/types';
-import { CurrencyInput } from '@playbooks/wrappers/currency-input';
-import { GoogleAutocomplete } from '@playbooks/wrappers/google-autocomplete';
-import { MaskedInput } from '@playbooks/wrappers/masked-input';
-// import { PhoneInput } from '@playbooks/wrappers/phone-input';
+// import { PhoneInput } from '@playbooks/components/phone-input';
 import { useUI } from 'src/context';
 import { Div, Span } from 'src/html';
 

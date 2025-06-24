@@ -21,7 +21,7 @@ export const UIProvider = ({ seo, theme, children }) => {
 	const url = seo?.baseUrl + router.asPath.split('?')[0];
 
 	// Render
-	return <UIContext.Provider value={{ seo: { title, url, ...seo }, theme }}>{children}</UIContext.Provider>;
+	return <UIContext.Provider value={{ seo: { ...seo, title, url }, theme }}>{children}</UIContext.Provider>;
 };
 
 export const useUI = () => {

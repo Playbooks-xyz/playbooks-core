@@ -8,7 +8,7 @@ export default defineConfig(({ mode }) => {
 	return {
 		base: './',
 		build: {
-			sourcemap: mode !== 'production',
+			sourcemap: mode === 'development',
 			lib: {
 				entry: path.resolve(__dirname, 'src/index.tsx'),
 				name: 'Core',

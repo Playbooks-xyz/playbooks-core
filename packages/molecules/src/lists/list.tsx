@@ -1,22 +1,40 @@
 import { DisplayList, GridList, ListList, PreviewList, SearchList, SubmitList } from 'src/lists';
 
-const ListWrapper = ({
+export type ListProps = {
+	type: string;
+	icon: string;
+	title: string;
+	text: string;
+	data: any[];
+	selected?: any[];
+	renderItem: any;
+	count?: number;
+	loading?: boolean;
+	taskRunning?: any;
+	rootLink?: string;
+	onClick?: any;
+	onNext?: any;
+	children?: any;
+	tailwind?: any;
+};
+
+const List = ({
 	type,
 	icon = 'database',
 	title = '',
 	text = '',
 	data = [],
+	selected,
 	renderItem,
-	count,
+	count = 3,
 	loading,
 	taskRunning,
-	selected,
 	rootLink,
 	onClick,
 	onNext,
 	children = null,
 	tailwind,
-}) => {
+}: ListProps) => {
 	const defaultText = `We don't have any ${title} that match your criteria.`;
 	const computedText = text ? text : defaultText;
 	const props = {
@@ -60,7 +78,7 @@ const ListWrapper = ({
 	}
 };
 
-export { ListWrapper };
+export { List };
 
 // Docs
 // https://react.dev/reference/react/cloneElement#passing-data-with-a-render-prop

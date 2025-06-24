@@ -1,0 +1,34 @@
+.star-container path {
+	stroke: none;
+}
+
+.react-simple-star-rating .filled-icons {
+	@apply flex!;
+	@apply flex-row!;
+	@apply justify-start!;
+	@apply space-x-2!;
+}
+
+.react-simple-star-rating .filled-icons svg {
+	@apply text-blue-500! dark:text-cyan-500!;
+}
+
+.react-simple-star-rating .empty-icons {
+	@apply flex!;
+	@apply flex-row!;
+	@apply justify-start!;
+	@apply space-x-2!;
+}
+
+.react-simple-star-rating .empty-icons svg {
+	@apply text-gray-300! dark:text-gray-700!;
+}
+
+.react-simple-star-rating-tooltip {
+	@apply bg-gray-100 dark:bg-gray-800;
+	@apply px-2! py-1!;
+	@apply text-xs;
+	@apply font-accent;
+	@apply uppercase;
+	@apply tracking-widest;
+}

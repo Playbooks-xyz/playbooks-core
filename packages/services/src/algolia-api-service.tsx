@@ -72,8 +72,7 @@ class AlgoliaApiService {
 		const { items } = await this.client.listIndices();
 		if (items?.length === 0) return logger.log('No indices to delete.');
 		const options = items.map(({ name }) => ({ indexName: name, action: 'delete' }));
-		// @ts-ignore
-		const response = await this.appClient.multipleBatch(options);
+		const response = await this.client.multipleBatch(options as any);
 		logger.log('Algolia deleteAppIndices: ', response);
 		return response;
 	}

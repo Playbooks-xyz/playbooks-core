@@ -1,6 +1,6 @@
 import { Fragment } from 'react';
 
-import { Skeleton } from '@playbooks/wrappers/skeleton';
+import { Skeleton } from '@playbooks/components/skeleton';
 import { listBuilder } from '@playbooks/utils/helpers';
 import { Item } from 'src/items';
 

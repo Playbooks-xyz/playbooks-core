@@ -1,0 +1,145 @@
+/* DayPicker styles */
+
+.DayPicker-Root {
+	@apply rounded-md;
+	@apply border-gray-200;
+	@apply relative;
+	@apply w-full;
+	font-size: 0.8em;
+}
+
+/* Container */
+.DayPicker-Months {
+	@apply w-full;
+}
+
+.DayPicker-Month {
+	@apply w-full;
+	@apply font-primary;
+	@apply font-normal;
+	@apply text-base;
+}
+
+.DayPicker-MonthCaption {
+	@apply text-lg;
+	@apply font-medium;
+	@apply text-gray-700 dark:text-white;
+}
+
+/* Nav */
+.DayPicker-Nav {
+	@apply absolute;
+	@apply flex;
+	@apply flex-row;
+	@apply justify-end;
+	@apply items-center;
+	@apply space-x-2;
+	@apply p-1;
+	@apply right-0;
+	@apply text-right;
+}
+
+.DayPicker-NavButton {
+	@apply px-2 py-1;
+	@apply flex;
+	@apply rounded-md;
+	@apply text-gray-700 dark:text-white;
+	@apply justify-center;
+	@apply items-center;
+	@apply transition-all;
+	@apply bg-transparent dark:bg-transparent;
+	@apply hover:bg-gray-300 dark:hover:bg-gray-700;
+}
+
+.DayPicker-Chevron {
+	@apply text-white dark:text-white;
+}
+
+/* Month View */
+.DayPicker-MonthGrid {
+	@apply my-2;
+	@apply w-full;
+}
+
+.DayPicker-Weekday {
+	@apply text-gray-700 dark:text-white;
+	@apply font-secondary;
+	@apply px-1 py-2;
+	@apply text-center;
+	@apply text-sm;
+}
+
+.DayPicker-Weekdays {
+	@apply text-gray-700 dark:text-white;
+	@apply opacity-75;
+}
+
+.DayPicker-Week {
+	@apply text-gray-700 dark:text-white;
+}
+
+.DayPicker-Weeks {
+	@apply w-full;
+}
+
+.DayPicker-Day {
+	@apply p-0;
+	@apply rounded-md;
+	@apply font-secondary;
+	vertical-align: middle;
+	text-align: center;
+}
+
+.DayPicker-DayBtn {
+	@apply text-sm;
+	@apply px-3 py-2;
+	@apply rounded-md;
+	cursor: pointer;
+	@apply text-gray-600 dark:text-gray-400;
+	@apply w-full;
+	@apply transition-all;
+	@apply bg-transparent dark:bg-transparent;
+	@apply hover:bg-gray-300 dark:hover:bg-gray-700;
+}
+
+.DayPicker-Footer {
+	padding-top: 0.5em;
+}
+
+/* Modifiers */
+.DayPicker-Day-Disabled button {
+	@apply line-through;
+	@apply text-gray-600 dark:text-gray-500;
+	@apply opacity-50 dark:opacity-50;
+}
+
+.DayPicker-Day-Today button {
+	@apply font-medium;
+	@apply text-blue-500 dark:text-cyan-500;
+}
+
+.DayPicker-Day-Outside button {
+	@apply bg-transparent dark:bg-transparent;
+	@apply hover:bg-gray-300 dark:hover:bg-gray-700;
+	cursor: default;
+}
+
+.DayPicker-Day-RangeStart button {
+	@apply rounded-none rounded-tl-md rounded-bl-md;
+	@apply bg-cyan-500;
+}
+
+.DayPicker-Day-RangeMiddle button {
+	@apply rounded-none;
+}
+
+.DayPicker-Day-RangeEnd button {
+	@apply rounded-none rounded-tr-md rounded-br-md;
+	@apply bg-cyan-500;
+}
+
+.DayPicker-Day-Selected button {
+	@apply bg-gray-300 bg-gray-700;
+	@apply text-white dark:text-white;
+	cursor: default;
+}

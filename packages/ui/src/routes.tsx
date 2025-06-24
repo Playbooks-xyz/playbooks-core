@@ -8,7 +8,7 @@ export const Route = ({ name = 'Route', seo, tailwind, className, children, ...p
 	const base = theme.route();
 	const computed = { ...base, ...props, tailwind, className, name };
 	const ui = useUI();
-	const head = { ...ui, ...seo };
+	const head = { ...ui?.seo, ...seo };
 
 	// Render
 	return (
