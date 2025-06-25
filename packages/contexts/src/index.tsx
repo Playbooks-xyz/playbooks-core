@@ -2,7 +2,7 @@ export * from 'src/fathom';
 export * from 'src/font';
 export * from 'src/intercom';
 export * from 'src/loading';
-// export * from 'src/mixpanel';
+export * from 'src/mixpanel';
 export * from 'src/session';
 export * from 'src/storage';
 export * from 'src/store';

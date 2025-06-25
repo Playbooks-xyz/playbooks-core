@@ -21,8 +21,8 @@
 		"https"
 	],
 	"scripts": {
-		"dev": "npm run dev",
-		"start": "tsc --project tsconfig.json --noEmit false --watch && tsc-alias",
+		"dev": "npm run start",
+		"start": "tsc --project tsconfig.json --noEmit false && tsc-alias",
 		"build": "npm run build:ts",
 		"build:ts": "tsc --project tsconfig.json --noEmit false && tsc-alias",
 		"clean": "npm run lint:fix",

@@ -114,7 +114,7 @@
 			"require": "./dist/breadcrumbs.cjs.js"
 		},
 		"./button-groups": {
-			"types": "./dist/button-src/groups.d.ts",
+			"types": "./dist/button-groups.d.ts",
 			"import": "./dist/button-groups.es.js",
 			"require": "./dist/button-groups.cjs.js"
 		},
@@ -194,7 +194,7 @@
 			"require": "./dist/icons.cjs.js"
 		},
 		"./input-groups": {
-			"types": "./dist/input-src/groups.d.ts",
+			"types": "./dist/input-groups.d.ts",
 			"import": "./dist/input-groups.es.js",
 			"require": "./dist/input-groups.cjs.js"
 		},
@@ -204,7 +204,7 @@
 			"require": "./dist/links.cjs.js"
 		},
 		"./list-groups": {
-			"types": "./dist/list-src/groups.d.ts",
+			"types": "./dist/list-groups.d.ts",
 			"import": "./dist/list-groups.es.js",
 			"require": "./dist/list-groups.cjs.js"
 		},
@@ -244,7 +244,7 @@
 			"require": "./dist/prefooters.cjs.js"
 		},
 		"./progress-bars": {
-			"types": "./dist/progress-src/bars.d.ts",
+			"types": "./dist/progress-bars.d.ts",
 			"import": "./dist/progress-bars.es.js",
 			"require": "./dist/progress-bars.cjs.js"
 		},

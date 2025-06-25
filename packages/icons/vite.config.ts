@@ -15,9 +15,9 @@ export default defineConfig(({ mode }) => ({
 			entry: [
 				path.resolve(__dirname, 'src/index.tsx'),
 				path.resolve(__dirname, 'src/context.tsx'),
-				path.resolve(__dirname, 'src/fab-icons.tsx'),
-				path.resolve(__dirname, 'src/far-icons.tsx'),
-				path.resolve(__dirname, 'src/fas-icons.tsx'),
+				path.resolve(__dirname, 'src/fab.tsx'),
+				path.resolve(__dirname, 'src/far.tsx'),
+				path.resolve(__dirname, 'src/fas.tsx'),
 				path.resolve(__dirname, 'src/library.tsx'),
 				path.resolve(__dirname, 'src/styles.css'),
 			],

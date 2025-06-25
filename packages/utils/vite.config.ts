@@ -12,6 +12,7 @@ export default defineConfig(({ mode }) => ({
 			entry: [
 				path.resolve(__dirname, 'src/index.ts'),
 				path.resolve(__dirname, 'src/arrays.ts'),
+				path.resolve(__dirname, 'src/bytes.ts'),
 				path.resolve(__dirname, 'src/dates.ts'),
 				path.resolve(__dirname, 'src/downloads.ts'),
 				path.resolve(__dirname, 'src/env.ts'),

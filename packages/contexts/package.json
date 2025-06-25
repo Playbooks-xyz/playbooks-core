@@ -55,51 +55,63 @@
 	"exports": {
 		".": {
 			"types": "./dist/index.d.ts",
-			"import": "./dist/index.cjs"
+			"import": "./dist/index.es.js",
+			"require": "./dist/index.cjs.js"
 		},
 		"./fathom": {
 			"types": "./dist/fathom.d.ts",
-			"import": "./dist/fathom.cjs"
+			"import": "./dist/fathom.es.js",
+			"require": "./dist/fathom.cjs.js"
 		},
 		"./font": {
 			"types": "./dist/font.d.ts",
-			"import": "./dist/font.cjs"
+			"import": "./dist/font.es.js",
+			"require": "./dist/font.cjs.js"
 		},
 		"./intercom": {
 			"types": "./dist/intercom.d.ts",
-			"import": "./dist/intercom.cjs"
+			"import": "./dist/intercom.es.js",
+			"require": "./dist/intercom.cjs.js"
 		},
 		"./loading": {
 			"types": "./dist/loading.d.ts",
-			"import": "./dist/loading.cjs"
+			"import": "./dist/loading.es.js",
+			"require": "./dist/loading.cjs.js"
 		},
 		"./mixpanel": {
 			"types": "./dist/mixpanel.d.ts",
-			"import": "./dist/mixpanel.cjs"
+			"import": "./dist/mixpanel.es.js",
+			"require": "./dist/mixpanel.cjs.js"
 		},
 		"./session": {
 			"types": "./dist/session.d.ts",
-			"import": "./dist/session.cjs"
+			"import": "./dist/session.es.js",
+			"require": "./dist/session.cjs.js"
 		},
 		"./store": {
 			"types": "./dist/store.d.ts",
-			"import": "./dist/store.cjs"
+			"import": "./dist/store.es.js",
+			"require": "./dist/store.cjs.js"
 		},
 		"./storage": {
 			"types": "./dist/storage.d.ts",
-			"import": "./dist/storage.cjs"
+			"import": "./dist/storage.es.js",
+			"require": "./dist/storage.cjs.js"
 		},
 		"./stripe": {
 			"types": "./dist/stripe.d.ts",
-			"import": "./dist/stripe.cjs"
+			"import": "./dist/stripe.es.js",
+			"require": "./dist/stripe.cjs.js"
 		},
 		"./theme": {
 			"types": "./dist/theme.d.ts",
-			"import": "./dist/theme.cjs"
+			"import": "./dist/theme.es.js",
+			"require": "./dist/theme.cjs.js"
 		},
 		"./toast": {
 			"types": "./dist/toast.d.ts",
-			"import": "./dist/toast.cjs"
+			"import": "./dist/toast.es.js",
+			"require": "./dist/toast.cjs.js"
 		}
 	}
 }

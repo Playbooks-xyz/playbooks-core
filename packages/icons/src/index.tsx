@@ -1,7 +1,7 @@
 export * from 'src/context';
-export * as FabIcons from 'src/fab-icons';
-export * as FarIcons from 'src/far-icons';
-export * as FasIcons from 'src/fas-icons';
+export * as FabIcons from 'src/fab';
+export * as FarIcons from 'src/far';
+export * as FasIcons from 'src/fas';
 export * from 'src/library';
 
 // Docs

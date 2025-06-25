@@ -70,7 +70,6 @@ export default defineConfig(({ mode }) => ({
 				'react',
 				'react-dom',
 				'react/jsx-runtime',
-				'next',
 				'next/dynamic',
 				'next/head',
 				'next/link',

@@ -18,7 +18,7 @@
 	],
 	"scripts": {
 		"dev": "vite build --mode development --minify false --watch",
-                "start": "vite build --mode development --minify false",
+		"start": "vite build --mode development --minify false",
 		"build": "vite build --mode production --minify true",
 		"build:ts": "tsc --project tsconfig.json --noEmit false && tsc-alias",
 		"clean": "npm run lint:fix",
@@ -37,184 +37,229 @@
 	},
 	"exports": {
 		".": {
-			"import": "./dist/index.mjs",
-			"types": "./dist/index.d.ts"
+			"types": "./dist/index.d.ts",
+			"import": "./dist/index.es.js",
+			"require": "./dist/index.cjs.js"
 		},
 		"./accordions": {
-			"import": "./dist/accordions.mjs",
-			"types": "./dist/accordions.d.ts"
+			"types": "./dist/accordions.d.ts",
+			"import": "./dist/accordions.es.js",
+			"require": "./dist/accordions.cjs.js"
 		},
 		"./alerts": {
-			"import": "./dist/alerts.mjs",
-			"types": "./dist/alerts.d.ts"
+			"types": "./dist/alerts.d.ts",
+			"import": "./dist/alerts.es.js",
+			"require": "./dist/alerts.cjs.js"
 		},
 		"./avatars": {
-			"import": "./dist/avatars.mjs",
-			"types": "./dist/avatars.d.ts"
+			"types": "./dist/avatars.d.ts",
+			"import": "./dist/avatars.es.js",
+			"require": "./dist/avatars.cjs.js"
 		},
 		"./badges": {
-			"import": "./dist/badges.mjs",
-			"types": "./dist/badges.d.ts"
+			"types": "./dist/badges.d.ts",
+			"import": "./dist/badges.es.js",
+			"require": "./dist/badges.cjs.js"
 		},
 		"./banners": {
-			"import": "./dist/banners.mjs",
-			"types": "./dist/banners.d.ts"
+			"types": "./dist/banners.d.ts",
+			"import": "./dist/banners.es.js",
+			"require": "./dist/banners.cjs.js"
 		},
 		"./breadcrumbs": {
-			"import": "./dist/breadcrumbs.mjs",
-			"types": "./dist/breadcrumbs.d.ts"
+			"types": "./dist/breadcrumbs.d.ts",
+			"import": "./dist/breadcrumbs.es.js",
+			"require": "./dist/breadcrumbs.cjs.js"
 		},
 		"./button-groups": {
-			"import": "./dist/button-groups.mjs",
-			"types": "./dist/button-groups.d.ts"
+			"types": "./dist/button-groups.d.ts",
+			"import": "./dist/button-groups.es.js",
+			"require": "./dist/button-groups.cjs.js"
 		},
 		"./buttons": {
-			"import": "./dist/buttons.mjs",
-			"types": "./dist/buttons.d.ts"
+			"types": "./dist/buttons.d.ts",
+			"import": "./dist/buttons.es.js",
+			"require": "./dist/buttons.cjs.js"
 		},
 		"./cards": {
-			"import": "./dist/cards.mjs",
-			"types": "./dist/cards.d.ts"
+			"types": "./dist/cards.d.ts",
+			"import": "./dist/cards.es.js",
+			"require": "./dist/cards.cjs.js"
 		},
 		"./commands": {
-			"import": "./dist/commands.mjs",
-			"types": "./dist/commands.d.ts"
+			"types": "./dist/commands.d.ts",
+			"import": "./dist/commands.es.js",
+			"require": "./dist/commands.cjs.js"
 		},
 		"./drops": {
-			"import": "./dist/drops.mjs",
-			"types": "./dist/drops.d.ts"
+			"types": "./dist/drops.d.ts",
+			"import": "./dist/drops.es.js",
+			"require": "./dist/drops.cjs.js"
 		},
 		"./feedbacks": {
-			"import": "./dist/feedbacks.mjs",
-			"types": "./dist/feedbacks.d.ts"
+			"types": "./dist/feedbacks.d.ts",
+			"import": "./dist/feedbacks.es.js",
+			"require": "./dist/feedbacks.cjs.js"
 		},
 		"./fonts": {
-			"import": "./dist/fonts.mjs",
-			"types": "./dist/fonts.d.ts"
+			"types": "./dist/fonts.d.ts",
+			"import": "./dist/fonts.es.js",
+			"require": "./dist/fonts.cjs.js"
 		},
 		"./footers": {
-			"import": "./dist/footers.mjs",
-			"types": "./dist/footers.d.ts"
+			"types": "./dist/footers.d.ts",
+			"import": "./dist/footers.es.js",
+			"require": "./dist/footers.cjs.js"
 		},
 		"./forms": {
-			"import": "./dist/forms.mjs",
-			"types": "./dist/forms.d.ts"
+			"types": "./dist/forms.d.ts",
+			"import": "./dist/forms.es.js",
+			"require": "./dist/forms.cjs.js"
 		},
 		"./grid": {
-			"import": "./dist/grid.mjs",
-			"types": "./dist/grid.d.ts"
+			"types": "./dist/grid.d.ts",
+			"import": "./dist/grid.es.js",
+			"require": "./dist/grid.cjs.js"
 		},
 		"./head": {
-			"import": "./dist/head.mjs",
-			"types": "./dist/head.d.ts"
+			"types": "./dist/head.d.ts",
+			"import": "./dist/head.es.js",
+			"require": "./dist/head.cjs.js"
 		},
 		"./headers": {
-			"import": "./dist/headers.mjs",
-			"types": "./dist/headers.d.ts"
+			"types": "./dist/headers.d.ts",
+			"import": "./dist/headers.es.js",
+			"require": "./dist/headers.cjs.js"
 		},
 		"./heros": {
-			"import": "./dist/heros.mjs",
-			"types": "./dist/heros.d.ts"
+			"types": "./dist/heros.d.ts",
+			"import": "./dist/heros.es.js",
+			"require": "./dist/heros.cjs.js"
 		},
 		"./html": {
-			"import": "./dist/html.mjs",
-			"types": "./dist/html.d.ts"
+			"types": "./dist/html.d.ts",
+			"import": "./dist/html.es.js",
+			"require": "./dist/html.cjs.js"
 		},
 		"./icons": {
-			"import": "./dist/icons.mjs",
-			"types": "./dist/icons.d.ts"
+			"types": "./dist/icons.d.ts",
+			"import": "./dist/icons.es.js",
+			"require": "./dist/icons.cjs.js"
 		},
 		"./input-groups": {
-			"import": "./dist/input-groups.mjs",
-			"types": "./dist/input-groups.d.ts"
+			"types": "./dist/input-groups.d.ts",
+			"import": "./dist/input-groups.es.js",
+			"require": "./dist/input-groups.cjs.js"
 		},
 		"./links": {
-			"import": "./dist/links.mjs",
-			"types": "./dist/links.d.ts"
+			"types": "./dist/links.d.ts",
+			"import": "./dist/links.es.js",
+			"require": "./dist/links.cjs.js"
 		},
 		"./list-groups": {
-			"import": "./dist/list-groups.mjs",
-			"types": "./dist/list-groups.d.ts"
+			"types": "./dist/list-groups.d.ts",
+			"import": "./dist/list-groups.es.js",
+			"require": "./dist/list-groups.cjs.js"
 		},
 		"./loaders": {
-			"import": "./dist/loaders.mjs",
-			"types": "./dist/loaders.d.ts"
+			"types": "./dist/loaders.d.ts",
+			"import": "./dist/loaders.es.js",
+			"require": "./dist/loaders.cjs.js"
 		},
 		"./menus": {
-			"import": "./dist/menus.mjs",
-			"types": "./dist/menus.d.ts"
+			"types": "./dist/menus.d.ts",
+			"import": "./dist/menus.es.js",
+			"require": "./dist/menus.cjs.js"
 		},
 		"./modals": {
-			"import": "./dist/modals.mjs",
-			"types": "./dist/modals.d.ts"
+			"types": "./dist/modals.d.ts",
+			"import": "./dist/modals.es.js",
+			"require": "./dist/modals.cjs.js"
 		},
 		"./navbars": {
-			"import": "./dist/navbars.mjs",
-			"types": "./dist/navbars.d.ts"
+			"types": "./dist/navbars.d.ts",
+			"import": "./dist/navbars.es.js",
+			"require": "./dist/navbars.cjs.js"
 		},
 		"./navs": {
-			"import": "./dist/navs.mjs",
-			"types": "./dist/navs.d.ts"
+			"types": "./dist/navs.d.ts",
+			"import": "./dist/navs.es.js",
+			"require": "./dist/navs.cjs.js"
 		},
 		"./paginations": {
-			"import": "./dist/paginations.mjs",
-			"types": "./dist/paginations.d.ts"
+			"types": "./dist/paginations.d.ts",
+			"import": "./dist/paginations.es.js",
+			"require": "./dist/paginations.cjs.js"
 		},
 		"./prefooters": {
-			"import": "./dist/prefooters.mjs",
-			"types": "./dist/prefooters.d.ts"
+			"types": "./dist/prefooters.d.ts",
+			"import": "./dist/prefooters.es.js",
+			"require": "./dist/prefooters.cjs.js"
 		},
 		"./progress-bars": {
-			"import": "./dist/progress-bars.mjs",
-			"types": "./dist/progress-bars.d.ts"
+			"types": "./dist/progress-bars.d.ts",
+			"import": "./dist/progress-bars.es.js",
+			"require": "./dist/progress-bars.cjs.js"
 		},
 		"./radios": {
-			"import": "./dist/radios.mjs",
-			"types": "./dist/radios.d.ts"
+			"types": "./dist/radios.d.ts",
+			"import": "./dist/radios.es.js",
+			"require": "./dist/radios.cjs.js"
 		},
 		"./ranges": {
-			"import": "./dist/ranges.mjs",
-			"types": "./dist/ranges.d.ts"
+			"types": "./dist/ranges.d.ts",
+			"import": "./dist/ranges.es.js",
+			"require": "./dist/ranges.cjs.js"
 		},
 		"./routes": {
-			"import": "./dist/routes.mjs",
-			"types": "./dist/routes.d.ts"
+			"types": "./dist/routes.d.ts",
+			"import": "./dist/routes.es.js",
+			"require": "./dist/routes.cjs.js"
 		},
 		"./sections": {
-			"import": "./dist/sections.mjs",
-			"types": "./dist/sections.d.ts"
+			"types": "./dist/sections.d.ts",
+			"import": "./dist/sections.es.js",
+			"require": "./dist/sections.cjs.js"
 		},
 		"./slides": {
-			"import": "./dist/slides.mjs",
-			"types": "./dist/slides.d.ts"
+			"types": "./dist/slides.d.ts",
+			"import": "./dist/slides.es.js",
+			"require": "./dist/slides.cjs.js"
 		},
 		"./spinners": {
-			"import": "./dist/spinners.mjs",
-			"types": "./dist/v.d.ts"
+			"types": "./dist/v.d.ts",
+			"import": "./dist/spinners.es.js",
+			"require": "./dist/spinners.cjs.js"
 		},
 		"./switches": {
-			"import": "./dist/switches.mjs",
-			"types": "./dist/switches.d.ts"
+			"types": "./dist/switches.d.ts",
+			"import": "./dist/switches.es.js",
+			"require": "./dist/switches.cjs.js"
 		},
 		"./tables": {
-			"import": "./dist/tables.mjs",
-			"types": "./dist/tables.d.ts"
+			"types": "./dist/tables.d.ts",
+			"import": "./dist/tables.es.js",
+			"require": "./dist/tables.cjs.js"
 		},
 		"./tabs": {
-			"import": "./dist/tabs.mjs",
-			"types": "./dist/tabs.d.ts"
+			"types": "./dist/tabs.d.ts",
+			"import": "./dist/tabs.es.js",
+			"require": "./dist/tabs.cjs.js"
 		},
 		"./tags": {
-			"import": "./dist/tags.mjs",
-			"types": "./dist/tags.d.ts"
+			"types": "./dist/tags.d.ts",
+			"import": "./dist/tags.es.js",
+			"require": "./dist/tags.cjs.js"
 		},
 		"./toasts": {
-			"import": "./dist/toasts.mjs",
-			"types": "./dist/toasts.d.ts"
+			"types": "./dist/toasts.d.ts",
+			"import": "./dist/toasts.es.js",
+			"require": "./dist/toasts.cjs.js"
 		},
 		"./tooltips": {
-			"import": "./dist/tooltips.mjs",
-			"types": "./dist/tooltips.d.ts"
+			"types": "./dist/tooltips.d.ts",
+			"import": "./dist/tooltips.es.js",
+			"require": "./dist/tooltips.cjs.js"
 		}
 	}
 }

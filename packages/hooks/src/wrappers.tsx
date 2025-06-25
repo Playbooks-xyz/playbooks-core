@@ -1,6 +1,6 @@
 import { capitalize } from '@playbooks/utils/transforms';
 import { useContext } from 'src/context';
-import { useAction, useConfirm, useDelete, useDeletes, useInit, useQuery, useSave } from 'src/store-hooks';
+import { useAction, useConfirm, useDelete, useDeletes, useInit, useQuery, useSave } from 'src/store';
 
 export const useActionWrapper = (model, method) => {
 	const { toast } = useContext();
