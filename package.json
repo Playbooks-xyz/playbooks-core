@@ -1,17 +1,25 @@
 {
   "name": "@playbooks/core",
-  "version": "1.0.3",
+  "version": "0.0.0",
   "description": "A collection of resources for Playbooks.",
   "author": "Eric Hubbell<eric@erichubbell.com>",
   "license": "ISC",
-  "main": "dist/index.cjs.js",
-  "module": "dist/index.es.js",
-  "types": "dist/index.d.ts",
-  "files": [
-    "dist"
-  ],
   "scripts": {
-    "start": "npm start --workspaces --if-present",
+    "start": "npm-run-all --parallel start:utils start:adapters start:normalizers start:serializers start:assets start:services start:types start:theme start:ui start:hooks start:contexts start:icons start:components start:molecules start:theme",
+    "start:adapters": "npm start -w packages/adapters",
+    "start:assets": "npm start -w packages/assets",
+    "start:components": "npm start -w packages/components",
+    "start:contexts": "npm start -w packages/contexts",
+    "start:hooks": "npm start -w packages/hooks",
+    "start:icons": "npm start -w packages/icons",
+    "start:molecules": "npm start -w packages/molecules",
+    "start:normalizers": "npm start -w packages/normalizers",
+    "start:serializers": "npm start -w packages/serializers",
+    "start:services": "npm start -w packages/services",
+    "start:theme": "npm start -w packages/theme",
+    "start:types": "npm start -w packages/types",
+    "start:ui": "npm start -w packages/ui",
+    "start:utils": "npm start -w packages/utils",
     "build": "npm run build --workspaces --if-present",
     "build:ts": "npm run build:ts --workspaces --if-present",
     "clean": "npm run clean --workspaces --if-present",
@@ -45,9 +53,9 @@
     "tsc-alias": "^1.8.16",
     "tslib": "^2.8.1",
     "typescript": "^5.8.3",
-    "vite": "^6.3.5",
-    "vite-plugin-dts": "^4.5.4",
-    "vite-plugin-yalc": "^0.0.11"
+    "vite": "^7.0.0",
+    "vite-plugin-size": "^0.1.2",
+    "vite-plugin-yalc": "^0.0.13"
   },
   "workspaces": [
     "packages/adapters",

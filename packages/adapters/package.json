@@ -5,9 +5,7 @@
 	"author": "Eric Hubbell<eric@erichubbell.com>",
 	"license": "ISC",
 	"type": "module",
-	"main": "dist/index.cjs",
-	"module": "dist/index.mjs",
-	"types": "dist/index.d.ts",
+	"main": "dist/index.cjs.js",
 	"repository": {
 		"type": "git",
 		"url": "git+https://github.com/playbooks-xyz/playbooks-core/packages/adapters.git"
@@ -23,7 +21,8 @@
 		"https"
 	],
 	"scripts": {
-		"start": "vite build --mode development --minify false --watch",
+		"dev": "vite build --mode development --minify false --watch",
+		"start": "vite build --mode development --minify false",
 		"build": "vite build --mode production --minify true",
 		"build:ts": "tsc --project tsconfig.json --noEmit false && tsc-alias",
 		"clean": "npm run lint:fix",
@@ -42,5 +41,10 @@
 		"@playbooks/utils": "^0.0.2",
 		"cross-fetch": "^4.1.0",
 		"dayjs": "^1.11.13"
+	},
+	"exports": {
+		"types": "./dist/index.d.ts",
+		"require": "./dist/index.cjs.js",
+		"import": "./dist/index.es.js"
 	}
 }

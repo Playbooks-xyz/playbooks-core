@@ -17,7 +17,8 @@
 		"molecules"
 	],
 	"scripts": {
-		"start": "vite build --mode development --minify false --watch",
+		"dev": "vite build --mode development --minify false --watch",
+		"start": "vite build --mode development --minify false",
 		"build": "vite build --mode production --minify true",
 		"build:ts": "tsc --project tsconfig.json --noEmit false && tsc-alias",
 		"lint": "eslint src",
@@ -51,103 +52,128 @@
 	"exports": {
 		".": {
 			"types": "./dist/index.d.ts",
-			"import": "./dist/index.cjs"
+			"import": "./dist/index.es.js",
+			"require": "./dist/index.cjs.js"
 		},
 		"./accordions": {
 			"types": "./dist/accordions.d.ts",
-			"import": "./dist/accordions.cjs"
+			"import": "./dist/accordions.es.js",
+			"require": "./dist/accordions.cjs.js"
 		},
 		"./avatars": {
 			"types": "./dist/avatars.d.ts",
-			"import": "./dist/avatars.cjs"
+			"import": "./dist/avatars.es.js",
+			"require": "./dist/avatars.cjs.js"
 		},
 		"./breadcrumbs": {
 			"types": "./dist/breadcrumbs.d.ts",
-			"import": "./dist/breadcrumbs.cjs"
+			"import": "./dist/breadcrumbs.es.js",
+			"require": "./dist/breadcrumbs.cjs.js"
 		},
 		"./buttons": {
 			"types": "./dist/buttons.d.ts",
-			"import": "./dist/buttons.cjs"
+			"import": "./dist/buttons.es.js",
+			"require": "./dist/buttons.cjs.js"
 		},
 		"./cards": {
 			"types": "./dist/cards.d.ts",
-			"import": "./dist/cards.cjs"
+			"import": "./dist/cards.es.js",
+			"require": "./dist/cards.cjs.js"
 		},
 		"./context": {
 			"types": "./dist/context.d.ts",
-			"import": "./dist/context.cjs"
+			"import": "./dist/context.es.js",
+			"require": "./dist/context.cjs.js"
 		},
 		"./drops": {
 			"types": "./dist/drops.d.ts",
-			"import": "./dist/drops.cjs"
+			"import": "./dist/drops.es.js",
+			"require": "./dist/drops.cjs.js"
 		},
 		"./feedbacks": {
 			"types": "./dist/feedbacks.d.ts",
-			"import": "./dist/feedbacks.cjs"
+			"import": "./dist/feedbacks.es.js",
+			"require": "./dist/feedbacks.cjs.js"
 		},
 		"./form-groups": {
 			"types": "./dist/form-groups.d.ts",
-			"import": "./dist/form-groups.cjs"
+			"import": "./dist/form-groups.es.js",
+			"require": "./dist/form-groups.cjs.js"
 		},
 		"./forms": {
 			"types": "./dist/forms.d.ts",
-			"import": "./dist/forms.cjs"
+			"import": "./dist/forms.es.js",
+			"require": "./dist/forms.cjs.js"
 		},
 		"./inputs": {
 			"types": "./dist/inputs.d.ts",
-			"import": "./dist/inputs.cjs"
+			"import": "./dist/inputs.es.js",
+			"require": "./dist/inputs.cjs.js"
 		},
 		"./items": {
 			"types": "./dist/items.d.ts",
-			"import": "./dist/items.cjs"
+			"import": "./dist/items.es.js",
+			"require": "./dist/items.cjs.js"
 		},
 		"./lists": {
 			"types": "./dist/lists.d.ts",
-			"import": "./dist/lists.cjs"
+			"import": "./dist/lists.es.js",
+			"require": "./dist/lists.cjs.js"
 		},
 		"./mdx": {
 			"types": "./dist/mdx.d.ts",
-			"import": "./dist/mdx.cjs"
+			"import": "./dist/mdx.es.js",
+			"require": "./dist/mdx.cjs.js"
 		},
 		"./paginations": {
 			"types": "./dist/paginations.d.ts",
-			"import": "./dist/paginations.cjs"
+			"import": "./dist/paginations.es.js",
+			"require": "./dist/paginations.cjs.js"
 		},
 		"./pixels": {
 			"types": "./dist/pixels.d.ts",
-			"import": "./dist/pixels.cjs"
+			"import": "./dist/pixels.es.js",
+			"require": "./dist/pixels.cjs.js"
 		},
 		"./progress-bars": {
 			"types": "./dist/progress-bars.d.ts",
-			"import": "./dist/progress-bars.cjs"
+			"import": "./dist/progress-bars.es.js",
+			"require": "./dist/progress-bars.cjs.js"
 		},
 		"./skeletons": {
 			"types": "./dist/skeletons.d.ts",
-			"import": "./dist/skeletons.cjs"
+			"import": "./dist/skeletons.es.js",
+			"require": "./dist/skeletons.cjs.js"
 		},
 		"./slides": {
 			"types": "./dist/slides.d.ts",
-			"import": "./dist/slides.cjs"
+			"import": "./dist/slides.es.js",
+			"require": "./dist/slides.cjs.js"
 		},
 		"./stats": {
 			"types": "./dist/stats.d.ts",
-			"import": "./dist/stats.cjs"
+			"import": "./dist/stats.es.js",
+			"require": "./dist/stats.cjs.js"
 		},
 		"./subnavs": {
 			"types": "./dist/subnavs.d.ts",
-			"import": "./dist/subnavs.cjs"
+			"import": "./dist/subnavs.es.js",
+			"require": "./dist/subnavs.cjs.js"
 		},
 		"./tags": {
 			"types": "./dist/tags.d.ts",
-			"import": "./dist/tags.cjs"
+			"import": "./dist/tags.es.js",
+			"require": "./dist/tags.cjs.js"
 		},
 		"./toasts": {
 			"types": "./dist/toasts.d.ts",
-			"import": "./dist/toasts.cjs"
+			"import": "./dist/toasts.es.js",
+			"require": "./dist/toasts.cjs.js"
 		},
 		"./toggles": {
 			"types": "./dist/toggles.d.ts",
-			"import": "./dist/toggles.cjs"
+			"import": "./dist/toggles.es.js",
+			"require": "./dist/toggles.cjs.js"
 		}
 	}
 }

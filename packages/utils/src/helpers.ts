@@ -65,44 +65,12 @@ export const listBuilder = (count = 1) => {
 	return [...new Array(count)].map((v, i) => i);
 };
 
-export const computeBytes = (data = 0, type = 'kb') => {
-	switch (type) {
-		case 'gb':
-			return parseFloat((data / 1024 / 1024 / 1024).toFixed(2));
-
-		case 'mb':
-			return parseFloat((data / 1024 / 1024).toFixed(2));
-
-		case 'kb':
-			return parseFloat((data / 1024).toFixed(2));
-
-		default:
-			return parseFloat(data.toFixed(2));
-	}
-};
-
-export const displayBytes = (data, type = 'kb') => {
-	return computeBytes(data, type) + ' ' + type;
-};
-
 export const stripHtmlEntities = (data = '') => {
 	return data.replace(/(<([^>]+)>)/gi, '');
 };
 
-export const parseBoolean = value => {
-	return value === 'true' || value === true ? true : false;
-};
-
 export const isArray = data => {
 	return Array.isArray(data);
-};
-
-export const isObject = data => {
-	return data !== null && data && typeof data === 'object';
-};
-
-export const isString = data => {
-	return typeof data === 'string';
 };
 
 export const isDate = data => {
@@ -111,6 +79,14 @@ export const isDate = data => {
 
 export const isFunction = data => {
 	return data ? typeof data === 'function' : false;
+};
+
+export const isObject = data => {
+	return data !== null && data && typeof data === 'object';
+};
+
+export const isString = data => {
+	return typeof data === 'string';
 };
 
 export const isEmpty = data => {

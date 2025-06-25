@@ -1,14 +1,16 @@
-import { env, isArray, isEmpty, isObject, logger, sleep, timeElapsed } from '@playbooks/utils';
-import fetch from 'cross-fetch';
+import 'cross-fetch/polyfill';
+import { timeElapsed } from '@playbooks/utils/dates';
+import { env } from '@playbooks/utils/env';
+import { isArray, isEmpty, isObject, sleep } from '@playbooks/utils/helpers';
+import { logger } from '@playbooks/utils/logger';
 import Https from 'https';
 
 export type AdapterProps = {
 	domain?: string;
-	debug?: boolean;
 };
 
 export type requestProps = {
-	method: string;
+	method?: string;
 	url?: string;
 	headers?: any;
 	params?: any;
@@ -17,11 +19,9 @@ export type requestProps = {
 
 class BaseAdapter implements AdapterProps {
 	domain: string;
-	debug?: boolean;
 
-	constructor({ domain, debug }: AdapterProps) {
+	constructor({ domain }: AdapterProps) {
 		this.domain = domain;
-		this.debug = debug || false;
 	}
 
 	// Private
@@ -69,26 +69,26 @@ class BaseAdapter implements AdapterProps {
 	}
 
 	async apiRequest({ method = 'GET', url, headers, params, data }: requestProps) {
-		if (this.debug) logger.info(`apiRequest: `, { method, url, params, data });
+		logger.info(`apiRequest: `, { method, url, params, data });
 		const [date, response] = await this.request({ method, url, headers, params, data });
-		if (this.debug) logger.info(`apiResponse (${date}): `, { method, url, params, response });
+		logger.info(`apiResponse (${date}): `, { method, url, params, response });
 		return response;
 	}
 
 	async storeRequest({ method = 'GET', url, headers, params, data }: requestProps) {
 		if (env === 'development') await sleep(300);
-		if (this.debug) logger.info(`storeRequest: `, { method, url, params, data });
+		logger.info(`storeRequest: `, { method, url, params, data });
 		const [date, response] = await this.request({ method, url, headers, params, data });
-		if (this.debug) logger.info(`storeResponse (${date}): `, { method, url, params, response });
+		logger.info(`storeResponse (${date}): `, { method, url, params, response });
 		return response;
 	}
 
 	async downloadRequest({ method = 'GET', url, headers, params, data }: requestProps) {
 		if (env === 'development') await sleep(300);
-		if (this.debug) logger.info(`downloadRequest: `, { method, url, params, data });
+		logger.info(`downloadRequest: `, { method, url, params, data });
 		const { date, formattedUrl, formattedOptions } = await this.formatRequest({ method, url, headers, params, data });
 		const response = await fetch(formattedUrl, formattedOptions);
-		if (this.debug) logger.info(`downloadResponse (${date}): `, { method, url, params, response });
+		logger.info(`downloadResponse (${date}): `, { method, url, params, response });
 		if (!response.ok) {
 			const data = await response.json();
 			throw data.errors;

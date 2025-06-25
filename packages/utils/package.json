@@ -17,7 +17,8 @@
 		"utils"
 	],
 	"scripts": {
-		"start": "vite build --mode development --minify false --watch",
+		"dev": "vite build --mode development --minify false --watch",
+		"start": "vite build --mode development --minify false",
 		"build": "vite build --mode production --minify true",
 		"build:ts": "tsc --project tsconfig.json --noEmit false && tsc-alias",
 		"lint": "eslint src",
@@ -34,6 +35,7 @@
 	"dependencies": {
 		"@ehubbell/html": "^0.1.10",
 		"accounting": "^0.4.1",
+		"bytes": "^3.1.2",
 		"dayjs": "^1.11.13",
 		"js-abbreviation-number": "^1.4.0",
 		"pluralize": "^8.0.0",

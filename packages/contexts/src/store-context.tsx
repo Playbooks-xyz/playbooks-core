@@ -1,7 +1,6 @@
 import React, { useMemo } from 'react';
 import { useRouter } from 'next/router';
 
-import { BaseAdapter } from '@playbooks/adapters';
 import { jsonApiNormalize, jsonApiNormalizeArray } from '@playbooks/normalizers';
 import { jsonApiSerialize, jsonApiSerializeArray } from '@playbooks/serializers';
 import { isArray } from '@playbooks/utils/helpers';
@@ -29,13 +28,11 @@ type StoreProps = {
 
 const StoreContext = React.createContext<StoreContextProps>(null);
 
-const StoreProvider = ({ contexts, children }) => {
+const StoreProvider = ({ client, contexts, children }) => {
 	const router = useRouter();
 	const storage = contexts.useStorage();
 
 	// Computed
-	const client = new BaseAdapter({ domain: process.env.NEXT_PUBLIC_API_DOMAIN });
-
 	const computedHeaders = useMemo(() => {
 		if (!storage.storage.token?.id) return {};
 		const account = storage.storage.account.uuid;

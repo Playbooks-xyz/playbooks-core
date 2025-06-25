@@ -9,8 +9,8 @@ export default defineConfig(({ mode }) => ({
 		lib: {
 			entry: path.resolve(__dirname, 'src/index.ts'),
 			name: 'Normalizers',
-			formats: ['es', 'cjs'],
-			fileName: (format, entryName) => (format === 'es' ? `${entryName}.mjs` : `${entryName}.cjs`),
+			formats: ['es'],
+			fileName: (format, entryName) => `${entryName}.${format}.js`,
 		},
 	},
 	plugins: [runCommand('npm run build:ts')],

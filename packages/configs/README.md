@@ -41,6 +41,14 @@ Create a `tsconfig.json` file and add one of the following:
 
 ```json
 {
+	"extends": "@playbooks/configs/tsconfig-package",
+	"include": ["src"],
+	"exclude": ["node_modules"]
+}
+```
+
+```json
+{
 	"extends": "@playbooks/configs/tsconfig-node",
 	"include": ["src"],
 	"exclude": ["node_modules"]

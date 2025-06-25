@@ -1,4 +1,5 @@
 export * from 'src/arrays';
+export * from 'src/bytes';
 export * from 'src/dates';
 export * from 'src/downloads';
 export * from 'src/env';

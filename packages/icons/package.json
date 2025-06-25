@@ -13,7 +13,8 @@
 		"dist"
 	],
 	"scripts": {
-		"start": "vite build --mode development --minify false --watch",
+		"dev": "vite build --mode development --minify false --watch",
+		"start": "vite build --mode development --minify false",
 		"build": "vite build --mode production --minify true",
 		"build:ts": "tsc --project tsconfig.json --noEmit false && tsc-alias",
 		"clean": "npm run lint:fix",
@@ -43,28 +44,34 @@
 	},
 	"exports": {
 		".": {
-			"import": "./dist/index.mjs",
-			"types": "./dist/index.d.ts"
+			"types": "./dist/index.d.ts",
+			"import": "./dist/index.es.js",
+			"require": "./dist/index.cjs.js"
 		},
 		"./context": {
-			"import": "./dist/context.mjs",
-			"types": "./dist/context.d.ts"
+			"types": "./dist/context.d.ts",
+			"import": "./dist/context.es.js",
+			"require": "./dist/context.cjs.js"
 		},
 		"./fab": {
-			"import": "./dist/fab.mjs",
-			"types": "./dist/fab.d.ts"
+			"types": "./dist/fab.d.ts",
+			"import": "./dist/fab.es.js",
+			"require": "./dist/fab.cjs.js"
 		},
 		"./far": {
-			"import": "./dist/far.mjs",
-			"types": "./dist/far.d.ts"
+			"types": "./dist/far.d.ts",
+			"import": "./dist/far.es.js",
+			"require": "./dist/far.cjs.js"
 		},
 		"./fas": {
-			"import": "./dist/fas.mjs",
-			"types": "./dist/fas.d.ts"
+			"types": "./dist/fas.d.ts",
+			"import": "./dist/fas.es.js",
+			"require": "./dist/fas.cjs.js"
 		},
 		"./library": {
-			"import": "./dist/library.mjs",
-			"types": "./dist/library.d.ts"
+			"types": "./dist/library.d.ts",
+			"import": "./dist/library.es.js",
+			"require": "./dist/library.cjs.js"
 		},
 		"./styles.css": "./dist/styles.css"
 	}

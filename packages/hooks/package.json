@@ -17,7 +17,8 @@
 		"hooks"
 	],
 	"scripts": {
-		"start": "vite build --mode development --minify false --watch",
+		"dev": "vite build --mode development --minify false --watch",
+		"start": "vite build --mode development --minify false",
 		"build": "vite build --mode production --minify true",
 		"build:ts": "tsc --project tsconfig.json --noEmit false && tsc-alias",
 		"lint": "eslint src",
@@ -48,39 +49,48 @@
 	"exports": {
 		".": {
 			"types": "./dist/index.d.ts",
-			"import": "./dist/index.cjs"
+			"import": "./dist/index.es.js",
+			"require": "./dist/index.cjs.js"
 		},
 		"./context": {
 			"types": "./dist/context.d.ts",
-			"import": "./dist/context.cjs"
+			"import": "./dist/context.es.js",
+			"require": "./dist/context.cjs.js"
 		},
 		"./keyboard": {
 			"types": "./dist/keyboard.d.ts",
-			"import": "./dist/keyboard.cjs"
+			"import": "./dist/keyboard.es.js",
+			"require": "./dist/keyboard.cjs.js"
 		},
 		"./mouse": {
 			"types": "./dist/mouse.d.ts",
-			"import": "./dist/mouse.cjs"
+			"import": "./dist/mouse.es.js",
+			"require": "./dist/mouse.cjs.js"
 		},
 		"./store": {
 			"types": "./dist/store.d.ts",
-			"import": "./dist/store.cjs"
+			"import": "./dist/store.es.js",
+			"require": "./dist/store.cjs.js"
 		},
 		"./toast": {
 			"types": "./dist/toast.d.ts",
-			"import": "./dist/toast.cjs"
+			"import": "./dist/toast.es.js",
+			"require": "./dist/toast.cjs.js"
 		},
 		"./util": {
 			"types": "./dist/util.d.ts",
-			"import": "./dist/util.cjs"
+			"import": "./dist/util.es.js",
+			"require": "./dist/util.cjs.js"
 		},
 		"./window": {
 			"types": "./dist/window.d.ts",
-			"import": "./dist/window.cjs"
+			"import": "./dist/window.es.js",
+			"require": "./dist/window.cjs.js"
 		},
 		"./wrappers": {
 			"types": "./dist/wrappers.d.ts",
-			"import": "./dist/wrappers.cjs"
+			"import": "./dist/wrappers.es.js",
+			"require": "./dist/wrappers.cjs.js"
 		}
 	}
 }

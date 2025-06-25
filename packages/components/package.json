@@ -13,7 +13,8 @@
 		"dist"
 	],
 	"scripts": {
-		"start": "vite build --mode development --minify false --watch",
+		"dev": "vite build --mode development --minify false --watch",
+		"start": "vite build --mode development --minify false",
 		"build": "vite build --mode production --minify true",
 		"build:ts": "tsc --project tsconfig.json --noEmit false && tsc-alias",
 		"clean": "npm run lint:fix",
@@ -56,64 +57,79 @@
 	},
 	"exports": {
 		".": {
-			"import": "./dist/index.cjs",
-			"types": "./dist/index.d.ts"
+			"types": "./dist/index.d.ts",
+			"import": "./dist/index.es.js",
+			"require": "./dist/index.cjs.js"
 		},
 		"./animation": {
-			"import": "./dist/animation.cjs",
-			"types": "./dist/animation.d.ts"
+			"types": "./dist/animation.d.ts",
+			"import": "./dist/animation.es.js",
+			"require": "./dist/animation.cjs.js"
 		},
 		"./chart": {
-			"import": "./dist/chart.cjs",
-			"types": "./dist/chart.d.ts"
+			"types": "./dist/chart.d.ts",
+			"import": "./dist/chart.es.js",
+			"require": "./dist/chart.cjs.js"
 		},
 		"./context": {
-			"import": "./dist/context.cjs",
-			"types": "./dist/context.d.ts"
+			"types": "./dist/context.d.ts",
+			"import": "./dist/context.es.js",
+			"require": "./dist/context.cjs.js"
 		},
 		"./date-picker": {
-			"import": "./dist/date-picker.cjs",
-			"types": "./dist/date-picker.d.ts"
+			"types": "./dist/date-picker.d.ts",
+			"import": "./dist/date-picker.es.js",
+			"require": "./dist/date-picker.cjs.js"
 		},
 		"./date-range-picker": {
-			"import": "./dist/date-range-picker.cjs",
-			"types": "./dist/date-range-picker.d.ts"
+			"types": "./dist/date-range-picker.d.ts",
+			"import": "./dist/date-range-picker.es.js",
+			"require": "./dist/date-range-picker.cjs.js"
 		},
 		"./currency-input": {
-			"import": "./dist/currency-input.cjs",
-			"types": "./dist/currency-input.d.ts"
+			"types": "./dist/currency-input.d.ts",
+			"import": "./dist/currency-input.es.js",
+			"require": "./dist/currency-input.cjs.js"
 		},
 		"./fade": {
-			"import": "./dist/fade.cjs",
-			"types": "./dist/fade.d.ts"
+			"types": "./dist/fade.d.ts",
+			"import": "./dist/fade.es.js",
+			"require": "./dist/fade.cjs.js"
 		},
 		"./font-awesome": {
-			"import": "./dist/font-awesome.cjs",
-			"types": "./dist/font-awesome.d.ts"
+			"types": "./dist/font-awesome.d.ts",
+			"import": "./dist/font-awesome.es.js",
+			"require": "./dist/font-awesome.cjs.js"
 		},
 		"./google-autocomplete": {
-			"import": "./dist/google-autocomplete.cjs",
-			"types": "./dist/google-autocomplete.d.ts"
+			"types": "./dist/google-autocomplete.d.ts",
+			"import": "./dist/google-autocomplete.es.js",
+			"require": "./dist/google-autocomplete.cjs.js"
 		},
 		"./masked-input": {
-			"import": "./dist/masked-input.cjs",
-			"types": "./dist/masked-input.d.ts"
+			"types": "./dist/masked-input.d.ts",
+			"import": "./dist/masked-input.es.js",
+			"require": "./dist/masked-input.cjs.js"
 		},
 		"./phone-input": {
-			"import": "./dist/phone-input.cjs",
-			"types": "./dist/phone-input.d.ts"
+			"types": "./dist/phone-input.d.ts",
+			"import": "./dist/phone-input.es.js",
+			"require": "./dist/phone-input.cjs.js"
 		},
 		"./scrollspy": {
-			"import": "./dist/scrollspy.cjs",
-			"types": "./dist/scrollspy.d.ts"
+			"types": "./dist/scrollspy.d.ts",
+			"import": "./dist/scrollspy.es.js",
+			"require": "./dist/scrollspy.cjs.js"
 		},
 		"./skeleton": {
-			"import": "./dist/skeleton.cjs",
-			"types": "./dist/skeleton.d.ts"
+			"types": "./dist/skeleton.d.ts",
+			"import": "./dist/skeleton.es.js",
+			"require": "./dist/skeleton.cjs.js"
 		},
 		"./waypoint": {
-			"import": "./dist/waypoint.cjs",
-			"types": "./dist/waypoint.d.ts"
+			"types": "./dist/waypoint.d.ts",
+			"import": "./dist/waypoint.es.js",
+			"require": "./dist/waypoint.cjs.js"
 		},
 		"./styles.css": "./dist/styles.css"
 	}

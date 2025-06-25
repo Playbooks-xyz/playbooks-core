@@ -20,7 +20,8 @@
 		"node": ">=16"
 	},
 	"scripts": {
-		"start": "vite build --mode development --minify false --watch",
+		"dev": "vite build --mode development --minify false --watch",
+		"start": "vite build --mode development --minify false",
 		"build": "vite build --mode production --minify true",
 		"build:ts": "tsc --project tsconfig.json --noEmit false && tsc-alias",
 		"clean": "npm run lint:fix",
@@ -70,194 +71,242 @@
 		"@playbooks/configs": "^0.0.7",
 		"@playbooks/types": "^0.0.3",
 		"autoprefixer": "^10.4.19",
+		"i": "^0.3.7",
 		"next": "^15.3.3",
+		"npm": "^11.4.2",
 		"postcss": "^8.4.39",
 		"tailwindcss": "^4.1.8"
 	},
 	"exports": {
 		".": {
 			"types": "./dist/index.d.ts",
-			"import": "./dist/index.cjs"
+			"import": "./dist/index.es.js",
+			"require": "./dist/index.cjs.js"
 		},
 		"./accordions": {
 			"types": "./dist/accordions.d.ts",
-			"import": "./dist/accordions.cjs"
+			"import": "./dist/accordions.es.js",
+			"require": "./dist/accordions.cjs.js"
 		},
 		"./alerts": {
 			"types": "./dist/alerts.d.ts",
-			"import": "./dist/alerts.cjs"
+			"import": "./dist/alerts.es.js",
+			"require": "./dist/alerts.cjs.js"
 		},
 		"./avatars": {
 			"types": "./dist/avatars.d.ts",
-			"import": "./dist/avatars.cjs"
+			"import": "./dist/avatars.es.js",
+			"require": "./dist/avatars.cjs.js"
 		},
 		"./badges": {
 			"types": "./dist/badges.d.ts",
-			"import": "./dist/badges.cjs"
+			"import": "./dist/badges.es.js",
+			"require": "./dist/badges.cjs.js"
 		},
 		"./banners": {
 			"types": "./dist/banners.d.ts",
-			"import": "./dist/banners.cjs"
+			"import": "./dist/banners.es.js",
+			"require": "./dist/banners.cjs.js"
 		},
 		"./breadcrumbs": {
 			"types": "./dist/breadcrumbs.d.ts",
-			"import": "./dist/breadcrumbs.cjs"
+			"import": "./dist/breadcrumbs.es.js",
+			"require": "./dist/breadcrumbs.cjs.js"
 		},
 		"./button-groups": {
 			"types": "./dist/button-src/groups.d.ts",
-			"import": "./dist/button-groups.cjs"
+			"import": "./dist/button-groups.es.js",
+			"require": "./dist/button-groups.cjs.js"
 		},
 		"./buttons": {
 			"types": "./dist/buttons.d.ts",
-			"import": "./dist/buttons.cjs"
+			"import": "./dist/buttons.es.js",
+			"require": "./dist/buttons.cjs.js"
 		},
 		"./cards": {
 			"types": "./dist/cards.d.ts",
-			"import": "./dist/cards.cjs"
+			"import": "./dist/cards.es.js",
+			"require": "./dist/cards.cjs.js"
 		},
 		"./commands": {
 			"types": "./dist/commands.d.ts",
-			"import": "./dist/commands.cjs"
+			"import": "./dist/commands.es.js",
+			"require": "./dist/commands.cjs.js"
 		},
 		"./context": {
 			"types": "./dist/context.d.ts",
-			"import": "./dist/context.cjs"
+			"import": "./dist/context.es.js",
+			"require": "./dist/context.cjs.js"
 		},
 		"./drops": {
 			"types": "./dist/drops.d.ts",
-			"import": "./dist/drops.cjs"
+			"import": "./dist/drops.es.js",
+			"require": "./dist/drops.cjs.js"
 		},
 		"./feedbacks": {
 			"types": "./dist/feedbacks.d.ts",
-			"import": "./dist/feedbacks.cjs"
+			"import": "./dist/feedbacks.es.js",
+			"require": "./dist/feedbacks.cjs.js"
 		},
 		"./fonts": {
 			"types": "./dist/fonts.d.ts",
-			"import": "./dist/fonts.cjs"
+			"import": "./dist/fonts.es.js",
+			"require": "./dist/fonts.cjs.js"
 		},
 		"./footers": {
 			"types": "./dist/footers.d.ts",
-			"import": "./dist/footers.cjs"
+			"import": "./dist/footers.es.js",
+			"require": "./dist/footers.cjs.js"
 		},
 		"./forms": {
 			"types": "./dist/forms.d.ts",
-			"import": "./dist/forms.cjs"
+			"import": "./dist/forms.es.js",
+			"require": "./dist/forms.cjs.js"
 		},
 		"./grid": {
 			"types": "./dist/grid.d.ts",
-			"import": "./dist/grid.cjs"
+			"import": "./dist/grid.es.js",
+			"require": "./dist/grid.cjs.js"
 		},
 		"./head": {
 			"types": "./dist/head.d.ts",
-			"import": "./dist/head.cjs"
+			"import": "./dist/head.es.js",
+			"require": "./dist/head.cjs.js"
 		},
 		"./headers": {
 			"types": "./dist/headers.d.ts",
-			"import": "./dist/headers.cjs"
+			"import": "./dist/headers.es.js",
+			"require": "./dist/headers.cjs.js"
 		},
 		"./heros": {
 			"types": "./dist/heros.d.ts",
-			"import": "./dist/heros.cjs"
+			"import": "./dist/heros.es.js",
+			"require": "./dist/heros.cjs.js"
 		},
 		"./html": {
 			"types": "./dist/html.d.ts",
-			"import": "./dist/html.cjs"
+			"import": "./dist/html.es.js",
+			"require": "./dist/html.cjs.js"
 		},
 		"./icons": {
 			"types": "./dist/icons.d.ts",
-			"import": "./dist/icons.cjs"
+			"import": "./dist/icons.es.js",
+			"require": "./dist/icons.cjs.js"
 		},
 		"./input-groups": {
 			"types": "./dist/input-src/groups.d.ts",
-			"import": "./dist/input-groups.cjs"
+			"import": "./dist/input-groups.es.js",
+			"require": "./dist/input-groups.cjs.js"
 		},
 		"./links": {
 			"types": "./dist/links.d.ts",
-			"import": "./dist/links.cjs"
+			"import": "./dist/links.es.js",
+			"require": "./dist/links.cjs.js"
 		},
 		"./list-groups": {
 			"types": "./dist/list-src/groups.d.ts",
-			"import": "./dist/list-groups.cjs"
+			"import": "./dist/list-groups.es.js",
+			"require": "./dist/list-groups.cjs.js"
 		},
 		"./loaders": {
 			"types": "./dist/loaders.d.ts",
-			"import": "./dist/loaders.cjs"
+			"import": "./dist/loaders.es.js",
+			"require": "./dist/loaders.cjs.js"
 		},
 		"./menus": {
 			"types": "./dist/menus.d.ts",
-			"import": "./dist/menus.cjs"
+			"import": "./dist/menus.es.js",
+			"require": "./dist/menus.cjs.js"
 		},
 		"./modals": {
 			"types": "./dist/modals.d.ts",
-			"import": "./dist/modals.cjs"
+			"import": "./dist/modals.es.js",
+			"require": "./dist/modals.cjs.js"
 		},
 		"./navbars": {
 			"types": "./dist/navbars.d.ts",
-			"import": "./dist/navbars.cjs"
+			"import": "./dist/navbars.es.js",
+			"require": "./dist/navbars.cjs.js"
 		},
 		"./navs": {
 			"types": "./dist/navs.d.ts",
-			"import": "./dist/navs.cjs"
+			"import": "./dist/navs.es.js",
+			"require": "./dist/navs.cjs.js"
 		},
 		"./paginations": {
 			"types": "./dist/paginations.d.ts",
-			"import": "./dist/paginations.cjs"
+			"import": "./dist/paginations.es.js",
+			"require": "./dist/paginations.cjs.js"
 		},
 		"./prefooters": {
 			"types": "./dist/prefooters.d.ts",
-			"import": "./dist/prefooters.cjs"
+			"import": "./dist/prefooters.es.js",
+			"require": "./dist/prefooters.cjs.js"
 		},
 		"./progress-bars": {
 			"types": "./dist/progress-src/bars.d.ts",
-			"import": "./dist/progress-bars.cjs"
+			"import": "./dist/progress-bars.es.js",
+			"require": "./dist/progress-bars.cjs.js"
 		},
 		"./radios": {
 			"types": "./dist/radios.d.ts",
-			"import": "./dist/radios.cjs"
+			"import": "./dist/radios.es.js",
+			"require": "./dist/radios.cjs.js"
 		},
 		"./ranges": {
 			"types": "./dist/ranges.d.ts",
-			"import": "./dist/ranges.cjs"
+			"import": "./dist/ranges.es.js",
+			"require": "./dist/ranges.cjs.js"
 		},
 		"./routes": {
 			"types": "./dist/routes.d.ts",
-			"import": "./dist/routes.cjs"
+			"import": "./dist/routes.es.js",
+			"require": "./dist/routes.cjs.js"
 		},
 		"./sections": {
 			"types": "./dist/sections.d.ts",
-			"import": "./dist/sections.cjs"
+			"import": "./dist/sections.es.js",
+			"require": "./dist/sections.cjs.js"
 		},
 		"./slides": {
 			"types": "./dist/slides.d.ts",
-			"import": "./dist/slides.cjs"
+			"import": "./dist/slides.es.js",
+			"require": "./dist/slides.cjs.js"
 		},
 		"./spinners": {
 			"types": "./dist/spinners.d.ts",
-			"import": "./dist/spinners.cjs"
+			"import": "./dist/spinners.es.js",
+			"require": "./dist/spinners.cjs.js"
 		},
 		"./switches": {
 			"types": "./dist/switches.d.ts",
-			"import": "./dist/switches.cjs"
+			"import": "./dist/switches.es.js",
+			"require": "./dist/switches.cjs.js"
 		},
 		"./tables": {
 			"types": "./dist/tables.d.ts",
-			"import": "./dist/tables.cjs"
+			"import": "./dist/tables.es.js",
+			"require": "./dist/tables.cjs.js"
 		},
 		"./tabs": {
 			"types": "./dist/tabs.d.ts",
-			"import": "./dist/tabs.cjs"
+			"import": "./dist/tabs.es.js",
+			"require": "./dist/tabs.cjs.js"
 		},
 		"./tags": {
 			"types": "./dist/tags.d.ts",
-			"import": "./dist/tags.cjs"
+			"import": "./dist/tags.es.js",
+			"require": "./dist/tags.cjs.js"
 		},
 		"./toasts": {
 			"types": "./dist/toasts.d.ts",
-			"import": "./dist/toasts.cjs"
+			"import": "./dist/toasts.es.js",
+			"require": "./dist/toasts.cjs.js"
 		},
 		"./tooltips": {
 			"types": "./dist/tooltips.d.ts",
-			"import": "./dist/tooltips.cjs"
+			"import": "./dist/tooltips.es.js",
+			"require": "./dist/tooltips.cjs.js"
 		},
 		"./styles.css": "./dist/styles.css"
 	}

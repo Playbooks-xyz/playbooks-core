@@ -1,2 +1,1 @@
-export * from 'src/normalizers';
 export * from 'src/serializers';
