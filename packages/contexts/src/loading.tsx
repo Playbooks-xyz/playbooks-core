@@ -1,5 +1,4 @@
-import React from 'react';
-import Router from 'next/router';
+import React, { useEffect } from 'react';
 
 import NProgress from 'nprogress';
 
@@ -11,13 +10,36 @@ NProgress.configure({
 });
 
 // Events
-Router.events.on('routeChangeStart', () => NProgress.start());
-Router.events.on('routeChangeComplete', () => NProgress.done());
-Router.events.on('routeChangeError', () => NProgress.done());
-
 export const LoadingContext = React.createContext(null);
 
-export const LoadingProvider = ({ children }) => {
+export const LoadingProvider = ({ contexts, children }) => {
+	const router = contexts.useRouter();
+
+	// Hooks
+	useEffect(() => {
+		router.events.on('routeChangeStart', onRouteStart);
+		router.events.on('routeChangeComplete', onRouteComplete);
+		router.events.on('routeChangeError', () => onRouteError);
+		return () => {
+			router.events.off('routeChangeStart', onRouteStart);
+			router.events.off('routeChangeComplete', onRouteComplete);
+			router.events.off('routeChangeError', onRouteError);
+		};
+	}, [router]);
+
+	// Methods
+	const onRouteStart = () => {
+		NProgress.start();
+	};
+
+	const onRouteComplete = () => {
+		NProgress.done();
+	};
+
+	const onRouteError = () => {
+		NProgress.done();
+	};
+
 	// Render
 	return <LoadingContext.Provider value={null}>{children}</LoadingContext.Provider>;
 };

@@ -1,8 +1,9 @@
-import NextHead from 'next/head';
-
 import * as types from '@playbooks/types';
+import { useUI } from 'src/context';
 
 export const Head = (props: types.HeadProps) => {
+	const context = useUI();
+	const NextHead = context?.components?.Head;
 	// Render
 	return (
 		<NextHead>

@@ -18,7 +18,7 @@ const IntercomContext = React.createContext<IntercomProps>(null);
 const IntercomProvider = ({ contexts, children }) => {
 	const [active, setActive] = useState(false);
 	const [loaded, setLoaded] = useState(false);
-	const session = contexts?.useSession();
+	const session = contexts.useSession();
 
 	// Hooks
 	useEffect(() => {

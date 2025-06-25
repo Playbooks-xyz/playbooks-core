@@ -1,6 +1,5 @@
 import React, { useEffect, useState } from 'react';
 import { Cookies } from 'react-cookie';
-import { useRouter } from 'next/router';
 
 import { logger } from '@playbooks/utils/logger';
 import * as LocalStorage from 'local-storage';
@@ -39,7 +38,7 @@ const storageKey = process.env.NEXT_PUBLIC_STORAGE_KEY;
 
 const StorageContext = React.createContext<StorageContextProps>(null);
 
-const StorageProvider = ({ children }) => {
+const StorageProvider = ({ contexts, children }) => {
 	const [storage, setStorage] = useState<StorageProps>({
 		type: LocalStorage.get(`${storageKey}.type`) || 'User',
 		session: LocalStorage.get(`${storageKey}.session`) || {},
@@ -53,7 +52,7 @@ const StorageProvider = ({ children }) => {
 		tempToken: LocalStorage.get(`${storageKey}.tempToken`) || {},
 	});
 	const [loaded, setLoaded] = useState(false);
-	const router = useRouter();
+	const router = contexts.useRouter();
 	const cookies = new Cookies();
 
 	// Hooks

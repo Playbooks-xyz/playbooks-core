@@ -1,5 +1,4 @@
 import React, { useEffect, useState } from 'react';
-import { useRouter } from 'next/router';
 
 import { useQuery } from '@playbooks/hooks/store';
 import { logger } from '@playbooks/utils/logger';
@@ -29,10 +28,10 @@ const SessionContext = React.createContext<SessionContextProps>(null);
 const SessionProvider = ({ contexts, children }) => {
 	const [user, setUser] = useState<any>({});
 	const [loaded, setLoaded] = useState(false);
+	const router = contexts.useRouter();
 	const storage = contexts.useStorage();
 	const store = contexts.useStore();
 	const toast = contexts.useToast();
-	const router = useRouter();
 
 	// Computed
 	const rootApi = `/session`;

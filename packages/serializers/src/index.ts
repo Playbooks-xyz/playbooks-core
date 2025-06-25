@@ -1,2 +1,2 @@
-export * from 'src/normalizers';
-export * from 'src/serializers';
+export * from 'src/base-serializer';
+export * from 'src/json-api-serializer';

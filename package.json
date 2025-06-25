@@ -6,22 +6,9 @@
   "license": "ISC",
   "scripts": {
     "start": "npm start --workspaces --if-present",
-    "start:adapters": "npm start -w packages/adapters",
-    "start:assets": "npm start -w packages/assets",
-    "start:components": "npm start -w packages/components",
-    "start:contexts": "npm start -w packages/contexts",
-    "start:hooks": "npm start -w packages/hooks",
-    "start:icons": "npm start -w packages/icons",
-    "start:molecules": "npm start -w packages/molecules",
-    "start:normalizers": "npm start -w packages/normalizers",
-    "start:serializers": "npm start -w packages/serializers",
-    "start:services": "npm start -w packages/services",
-    "start:theme": "npm start -w packages/theme",
-    "start:types": "npm start -w packages/types",
-    "start:ui": "npm start -w packages/ui",
-    "start:utils": "npm start -w packages/utils",
     "build": "npm run build --workspaces --if-present",
     "build:ts": "npm run build:ts --workspaces --if-present",
+    "build:dev": "npm run build -w packages/utils -w packages/types -w packages/theme -w packages/ui -w packages/contexts -w packages/hooks -w packages/components -w packages/molecules",
     "clean": "npm run clean --workspaces --if-present",
     "lint": "npm run lint --workspaces --if-present",
     "lint:fix": "npm run lint:fix --workspaces --if-present",
@@ -37,7 +24,7 @@
     "react-dom": "^18 || ^19"
   },
   "devDependencies": {
-    "@playbooks/configs": "^0.0.7",
+    "@playbooks/configs": "^0.0.8",
     "@types/jest": "^29.5.1",
     "@types/react": "^18.0.26",
     "@types/react-dom": "^18.0.9",
@@ -46,7 +33,6 @@
     "fs-extra": "^11.3.0",
     "husky": "^9.1.7",
     "jest": "^29.5.0",
-    "lerna": "^8.2.2",
     "prettier": "^3.5.3",
     "rollup-plugin-peer-deps-external": "^2.2.4",
     "ts-jest": "^29.1.0",
@@ -74,6 +60,5 @@
     "packages/types",
     "packages/ui",
     "packages/utils"
-  ],
-  "dependencies": {}
+  ]
 }

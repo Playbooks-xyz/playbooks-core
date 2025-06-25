@@ -10,7 +10,7 @@
 	],
 	"scripts": {
 		"dev": "vite build --mode development --minify false --watch",
-		"start": "vite build --mode development --minify false",
+		"start": "vite build --mode production --minify false --watch",
 		"build": "vite build --mode production --minify true",
 		"build:ts": "tsc --project tsconfig.json --noEmit false && tsc-alias",
 		"clean": "npm run lint:fix",
@@ -22,8 +22,7 @@
 		"deploy": "scripts/deploy.sh",
 		"packages": "scripts/packages.sh",
 		"yalc": "scripts/yalc.sh",
-		"test": "jest",
-		"prepare": "husky"
+		"test": "jest"
 	},
 	"peerDependencies": {
 		"next": "^14 || ^15",
@@ -77,11 +76,6 @@
 			"types": "./dist/loading.d.ts",
 			"import": "./dist/loading.es.js",
 			"require": "./dist/loading.cjs.js"
-		},
-		"./mixpanel": {
-			"types": "./dist/mixpanel.d.ts",
-			"import": "./dist/mixpanel.es.js",
-			"require": "./dist/mixpanel.cjs.js"
 		},
 		"./session": {
 			"types": "./dist/session.d.ts",

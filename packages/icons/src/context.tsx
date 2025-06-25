@@ -10,7 +10,7 @@ export const IconProvider = ({ icons, children }) => {
 	return <IconContext.Provider value={{ icons }}>{children}</IconContext.Provider>;
 };
 
-export const useContext = () => {
+export const useIcons = () => {
 	return React.useContext(IconContext);
 };
 

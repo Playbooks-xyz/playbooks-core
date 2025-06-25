@@ -7,7 +7,7 @@ export const WrapperProvider = ({ theme, children }) => {
 	return <WrapperContext.Provider value={{ theme }}>{children}</WrapperContext.Provider>;
 };
 
-export const useContext = () => {
+export const useComponents = () => {
 	return React.useContext(WrapperContext);
 };
 

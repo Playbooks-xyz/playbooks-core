@@ -20,7 +20,7 @@
 	],
 	"scripts": {
 		"dev": "vite build --mode development --minify false --watch",
-		"start": "vite build --mode development --minify false",
+		"start": "vite build --mode production --minify false --watch",
 		"build": "vite build --mode production --minify true",
 		"build:ts": "tsc --project tsconfig.json --noEmit false && tsc-alias",
 		"lint": "eslint src",
@@ -40,7 +40,7 @@
 	},
 	"exports": {
 		"types": "./dist/index.d.ts",
-		"require": "./dist/index.cjs.js",
-		"import": "./dist/index.es.js"
+		"import": "./dist/index.es.js",
+		"require": "./dist/index.cjs.js"
 	}
 }

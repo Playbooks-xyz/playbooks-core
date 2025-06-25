@@ -1,5 +1,4 @@
 import React, { useEffect, useState } from 'react';
-import { useRouter } from 'next/router';
 
 import { logger } from '@playbooks/utils/logger';
 import * as Fathom from 'fathom-client';
@@ -12,9 +11,9 @@ type FathomProps = {
 const FATHOM_ID = process.env.NEXT_PUBLIC_FATHOM_ID;
 const FathomContext = React.createContext<FathomProps>(null);
 
-const FathomProvider = ({ debug = false, children }) => {
+const FathomProvider = ({ contexts, debug = false, children }) => {
 	const [loaded, setLoaded] = useState(false);
-	const router = useRouter();
+	const router = contexts.useRouter();
 
 	// Hooks
 	useEffect(() => {

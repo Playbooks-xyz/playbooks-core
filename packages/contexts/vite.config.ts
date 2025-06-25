@@ -17,7 +17,7 @@ export default defineConfig(({ mode }) => ({
 				path.resolve(__dirname, 'src/font.tsx'),
 				path.resolve(__dirname, 'src/intercom.tsx'),
 				path.resolve(__dirname, 'src/loading.tsx'),
-				path.resolve(__dirname, 'src/mixpanel.tsx'),
+				// path.resolve(__dirname, 'src/mixpanel.tsx'),
 				path.resolve(__dirname, 'src/session.tsx'),
 				path.resolve(__dirname, 'src/storage.tsx'),
 				path.resolve(__dirname, 'src/store.tsx'),

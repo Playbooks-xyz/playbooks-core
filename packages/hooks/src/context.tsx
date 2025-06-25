@@ -13,7 +13,7 @@ export const HooksProvider = ({ contexts, children }: { contexts: any; children:
 	return <HooksContext.Provider value={{ toast }}>{children}</HooksContext.Provider>;
 };
 
-export const useContext = () => {
+export const useHooks = () => {
 	return React.useContext(HooksContext);
 };
 

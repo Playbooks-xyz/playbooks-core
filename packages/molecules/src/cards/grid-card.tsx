@@ -10,7 +10,7 @@ import {
 	CardText,
 	CardTitle,
 } from '@playbooks/ui/cards';
-import { LinkWrapper } from '@playbooks/ui/links';
+import { LinkWrapper } from 'src/components';
 import { Skeleton } from 'src/skeletons';
 
 const GridCard = ({

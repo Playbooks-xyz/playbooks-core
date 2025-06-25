@@ -1,23 +1,19 @@
-import { useRouter } from 'next/router';
-
 import { BorderBtn, Btn } from '@playbooks/ui/buttons';
 import { Span } from '@playbooks/ui/html';
 import { Slide, SlideBody, SlideFooter, SlideHeader, SlideTitle } from '@playbooks/ui/slides';
 
-const FacetSlide = ({ title = 'Filters', open, setOpen, placement = 'left', children, tailwind = null }) => {
-	const router = useRouter();
-
+const FacetSlide = ({
+	title = 'Filters',
+	open,
+	setOpen,
+	placement = 'left',
+	onClear,
+	onSave,
+	children,
+	tailwind = null,
+}) => {
 	// Methods
-	const onSave = () => {
-		setOpen(false);
-	};
-
 	const onToggle = () => setOpen(!open);
-
-	const onClear = () => {
-		router.push({ query: {} }, undefined, { shallow: true });
-		setOpen(false);
-	};
 
 	// Render
 	return (

@@ -12,11 +12,11 @@ import {
 	PointElement,
 	Tooltip,
 } from 'chart.js';
-import { useContext } from 'src/context';
+import { useComponents } from 'src/context';
 
 const Chart = ({ type = 'line', data = {}, options, tailwind = {} }) => {
 	const className = computeTailwind(tailwind);
-	const context = useContext();
+	const context = useComponents();
 
 	// Computed
 	ChartJS.register(BarElement, CategoryScale, Colors, Tooltip, Legend, LinearScale, PointElement, LineElement);

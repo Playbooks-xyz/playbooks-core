@@ -12,6 +12,9 @@ export default defineConfig(({ mode }) => ({
 			formats: ['es'],
 			fileName: (format, entryName) => `${entryName}.${format}.js`,
 		},
+		rollupOptions: {
+			external: ['os'],
+		},
 	},
 	plugins: [runCommand('npm run build:ts')],
 	resolve: {

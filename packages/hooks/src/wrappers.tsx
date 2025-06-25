@@ -1,9 +1,9 @@
 import { capitalize } from '@playbooks/utils/transforms';
-import { useContext } from 'src/context';
+import { useHooks } from 'src/context';
 import { useAction, useConfirm, useDelete, useDeletes, useInit, useQuery, useSave } from 'src/store';
 
 export const useActionWrapper = (model, method) => {
-	const { toast } = useContext();
+	const { toast } = useHooks();
 
 	// Methods
 	const formattedMethod = async (data?) => {
@@ -18,7 +18,7 @@ export const useActionWrapper = (model, method) => {
 };
 
 export const useConfirmWrapper = (model, message, method) => {
-	const { toast } = useContext();
+	const { toast } = useHooks();
 
 	// Methods
 	const formattedMethod = async (data?) => {
@@ -33,7 +33,7 @@ export const useConfirmWrapper = (model, message, method) => {
 };
 
 export const useDeleteWrapper = (model, modelName, method) => {
-	const { toast } = useContext();
+	const { toast } = useHooks();
 
 	// Methods
 	const formattedMethod = async (data?) => {
@@ -49,7 +49,7 @@ export const useDeleteWrapper = (model, modelName, method) => {
 };
 
 export const useDeletesWrapper = (model, modelName, method) => {
-	const { toast } = useContext();
+	const { toast } = useHooks();
 
 	// Methods
 	const formattedMethod = async (data?) => {
@@ -65,7 +65,7 @@ export const useDeletesWrapper = (model, modelName, method) => {
 };
 
 export const useInitWrapper = method => {
-	const { toast } = useContext();
+	const { toast } = useHooks();
 
 	// Methods
 	const formattedMethod = async (data?) => {
@@ -80,7 +80,7 @@ export const useInitWrapper = method => {
 };
 
 export const useQueryWrapper = method => {
-	const { toast } = useContext();
+	const { toast } = useHooks();
 
 	// Methods
 	const formattedMethod = async (data?) => {
@@ -95,7 +95,7 @@ export const useQueryWrapper = method => {
 };
 
 export const useSaveWrapper = (model, modelName, method) => {
-	const { toast } = useContext();
+	const { toast } = useHooks();
 
 	// Methods
 	const formattedMethod = async (data?) => {

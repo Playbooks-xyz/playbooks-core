@@ -18,7 +18,7 @@
 	],
 	"scripts": {
 		"dev": "vite build --mode development --minify false --watch",
-		"start": "vite build --mode development --minify false",
+		"start": "vite build --mode production --minify false --watch",
 		"build": "vite build --mode production --minify true",
 		"build:ts": "tsc --project tsconfig.json --noEmit false && tsc-alias",
 		"lint": "eslint src",
@@ -77,10 +77,10 @@
 			"import": "./dist/toast.es.js",
 			"require": "./dist/toast.cjs.js"
 		},
-		"./util": {
-			"types": "./dist/util.d.ts",
-			"import": "./dist/util.es.js",
-			"require": "./dist/util.cjs.js"
+		"./utils": {
+			"types": "./dist/utils.d.ts",
+			"import": "./dist/utils.es.js",
+			"require": "./dist/utils.cjs.js"
 		},
 		"./window": {
 			"types": "./dist/window.d.ts",

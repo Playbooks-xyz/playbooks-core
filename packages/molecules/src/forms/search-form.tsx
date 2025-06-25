@@ -1,5 +1,4 @@
 import { useEffect, useState } from 'react';
-import { useRouter } from 'next/router';
 
 import { AccentBtn } from '@playbooks/ui/buttons';
 import { FormInput } from '@playbooks/ui/forms';
@@ -42,15 +41,12 @@ const SearchForm = ({
 	const [localQuery, setLocalQuery] = useState(query || '');
 	const [queue, setQueue] = useState([]);
 	const [loaded, setLoaded] = useState(false);
-	const router = useRouter();
 
 	// Hooks
 	useEffect(() => {
-		if (router.isReady) {
-			setLocalQuery(query);
-			setLoaded(true);
-		}
-	}, [router.isReady, query]);
+		setLocalQuery(query);
+		setLoaded(true);
+	}, [query]);
 
 	useEffect(() => {
 		if (loaded) addQuery();

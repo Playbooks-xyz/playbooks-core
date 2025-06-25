@@ -1,6 +1,6 @@
 import { Font } from '@playbooks/ui/fonts';
 import { Span } from '@playbooks/ui/html';
-import { TextLink } from '@playbooks/ui/links';
+import { TextLink } from 'src/components';
 
 export const HeaderElement = ({ size, ...props }) => {
 	// Render

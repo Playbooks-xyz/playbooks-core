@@ -8,14 +8,13 @@ export default defineConfig(({ mode }) => ({
 	build: {
 		sourcemap: mode === 'development',
 		lib: {
-			entry: [
-				path.resolve(__dirname, 'src/index.ts'),
-				path.resolve(__dirname, 'src/normalizers/normalizers.ts'),
-				path.resolve(__dirname, 'src/serializers/serializers.ts')
-			],
+			entry: path.resolve(__dirname, 'src/index.ts'),
 			name: 'Serializers',
 			formats: ['es', 'cjs'],
 			fileName: (format, entryName) => `${entryName}.${format}.js`,
+		},
+		rollupOptions: {
+			external: ['os'],
 		},
 	},
 	plugins: [runCommand('npm run build:ts'), runSize()],

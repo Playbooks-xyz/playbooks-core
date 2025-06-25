@@ -1,10 +1,10 @@
 import { Fragment } from 'react';
-import NLink from 'next/link';
 
 import * as HTML from '@ehubbell/html';
 import { computeProps, computeTailwind } from '@ehubbell/html';
 import * as theme from '@playbooks/theme';
 import * as types from '@playbooks/types';
+import { useUI } from 'src/context';
 import { Img, Span } from 'src/html';
 import { Icon } from 'src/icons';
 import { Oval } from 'src/spinners';
@@ -117,9 +117,11 @@ export const LinkWrapper = ({
 	children,
 	...props
 }: types.LinkProps) => {
+	const context = useUI();
 	const base = theme.linkWrapper({ disabled });
 	const classes = computeTailwind({ ...base, ...props, ...tailwind, className });
 	const filtered = computeProps(props);
+	const NextLink = context?.components?.Link;
 
 	return (
 		<Fragment>
@@ -128,9 +130,9 @@ export const LinkWrapper = ({
 					{children}
 				</HTML.A>
 			) : (
-				<NLink aria-label={alt} title={alt} data-name={name} href={href} className={classes} {...filtered}>
+				<NextLink aria-label={alt} title={alt} data-name={name} href={href} className={classes} {...filtered}>
 					{children}
-				</NLink>
+				</NextLink>
 			)}
 		</Fragment>
 	);

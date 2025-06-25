@@ -1,5 +1,4 @@
 import React, { useMemo } from 'react';
-import { useRouter } from 'next/router';
 
 import { jsonApiNormalize, jsonApiNormalizeArray } from '@playbooks/normalizers';
 import { jsonApiSerialize, jsonApiSerializeArray } from '@playbooks/serializers';
@@ -29,7 +28,7 @@ type StoreProps = {
 const StoreContext = React.createContext<StoreContextProps>(null);
 
 const StoreProvider = ({ client, contexts, children }) => {
-	const router = useRouter();
+	const router = contexts.useRouter();
 	const storage = contexts.useStorage();
 
 	// Computed

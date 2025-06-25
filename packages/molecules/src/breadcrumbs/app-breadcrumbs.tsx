@@ -1,11 +1,8 @@
 import { useMemo } from 'react';
-import { useRouter } from 'next/router';
 
 import { BreadcrumbItem, BreadcrumbLink, Breadcrumbs } from '@playbooks/ui/breadcrumbs';
 
-const AppBreadcrumbs = ({ tailwind }: { tailwind?: any }) => {
-	const router = useRouter();
-
+const AppBreadcrumbs = ({ router, tailwind }: { router: any; tailwind?: any }) => {
 	// Computed
 	const breadcrumbs = useMemo(() => {
 		const paths = router.asPath.split('?')[0].split('#')[0].split('/');
@@ -30,7 +27,7 @@ const AppBreadcrumbs = ({ tailwind }: { tailwind?: any }) => {
 						alt={breadcrumb}
 						href={'/' + breadcrumbs.slice(0, i + 1).join('/')}
 						active={breadcrumbs.length === i + 1}>
-						{typeof breadcrumb === 'number' ? `${parseInt(breadcrumb)}` : breadcrumb}
+						{breadcrumb}
 					</BreadcrumbLink>
 				</BreadcrumbItem>
 			))}

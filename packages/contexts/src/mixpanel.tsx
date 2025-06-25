@@ -1,5 +1,4 @@
 import React, { useEffect } from 'react';
-import { useRouter } from 'next/router';
 
 import { env } from '@playbooks/utils/env';
 import { logger } from '@playbooks/utils/logger';
@@ -17,8 +16,8 @@ type MixpanelContext = {
 const MIXPANEL_TOKEN = process.env.NEXT_PUBLIC_MIXPANEL_TOKEN;
 const MixpanelContext = React.createContext<MixpanelContext>(null);
 
-const MixpanelProvider = ({ platform, children }) => {
-	const router = useRouter();
+const MixpanelProvider = ({ contexts, platform, children }) => {
+	const router = contexts.useRouter();
 
 	// Computed
 	const computedParams = { env, platform, pathname: router.asPath };

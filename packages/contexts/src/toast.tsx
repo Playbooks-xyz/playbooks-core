@@ -1,5 +1,4 @@
 import React, { Fragment, useEffect, useMemo, useState } from 'react';
-import { useRouter } from 'next/router';
 
 import { ErrorToast, InfoToast, SuccessToast } from '@playbooks/molecules/toasts';
 import { ToastWrapper } from '@playbooks/ui/toasts';
@@ -15,9 +14,9 @@ export type ToastContextProps = {
 
 export const ToastContext = React.createContext<ToastContextProps>(null);
 
-export const ToastProvider = ({ children }) => {
+export const ToastProvider = ({ contexts, children }) => {
 	const [toasts, setToasts] = useState([]);
-	const router = useRouter();
+	const router = contexts.useRouter();
 
 	// Hooks
 	useEffect(() => {
