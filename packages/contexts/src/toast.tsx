@@ -1,10 +1,10 @@
 import React, { Fragment, useEffect, useMemo, useState } from 'react';
 
-import { ErrorToast, InfoToast, SuccessToast } from '@playbooks/molecules/toasts';
 import { ToastWrapper } from '@playbooks/ui/toasts';
 import { formatError } from '@playbooks/utils/errors';
 import { getUUID, isEmpty } from '@playbooks/utils/helpers';
 import { logger } from '@playbooks/utils/logger';
+import { ErrorToast, InfoToast, SuccessToast } from 'src/molecules/toasts';
 
 export type ToastContextProps = {
 	showSuccess: (title, message) => any;

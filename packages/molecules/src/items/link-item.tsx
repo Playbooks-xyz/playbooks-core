@@ -1,8 +1,8 @@
 import { Fragment } from 'react';
 
 import { Li, Span } from '@playbooks/ui/html';
-import { AccentLink } from 'src/components';
 import { SectionSubtitle } from '@playbooks/ui/sections';
+import { AccentLink } from 'src/components';
 
 export const LinkItem = ({ keyName, loading, value, display, tailwind }) => {
 	// Render
