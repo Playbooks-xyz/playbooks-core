@@ -13,7 +13,7 @@ const InfoToast = ({ toast, onRemove }) => {
 	// Render
 	return (
 		<Toast open={open} setOpen={setOpen} onRemove={() => onRemove(toast)}>
-			<ToastHeader onRemove={() => onRemove(toast)} className='flex-start'>
+			<ToastHeader onRemove={() => onRemove(toast)}>
 				<ToastIcon icon='circle-info' color='text-primary dark:text-secondary' />
 				<ToastTitle>{toast.title}</ToastTitle>
 			</ToastHeader>

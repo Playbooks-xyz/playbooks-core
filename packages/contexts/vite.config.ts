@@ -9,6 +9,7 @@ import { runCommand } from 'vite-plugin-yalc';
 export default defineConfig(({ mode }) => ({
 	base: './',
 	build: {
+		cssCodeSplit: true,
 		sourcemap: mode === 'development',
 		lib: {
 			entry: [
@@ -24,9 +25,10 @@ export default defineConfig(({ mode }) => ({
 				path.resolve(__dirname, 'src/stripe.tsx'),
 				path.resolve(__dirname, 'src/theme.tsx'),
 				path.resolve(__dirname, 'src/toast.tsx'),
+				path.resolve(__dirname, 'src/styles.css'),
 			],
 			name: 'Contexts',
-			formats: ['es', 'cjs'],
+			formats: ['es'],
 			fileName: (format, entryName) => `${entryName}.${format}.js`,
 		},
 		rollupOptions: {

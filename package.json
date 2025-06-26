@@ -51,7 +51,6 @@
     "packages/contexts",
     "packages/hooks",
     "packages/icons",
-    "packages/molecules",
     "packages/normalizers",
     "packages/serializers",
     "packages/services",

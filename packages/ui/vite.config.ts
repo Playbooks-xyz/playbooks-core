@@ -62,7 +62,7 @@ export default defineConfig(({ mode }) => ({
 				path.resolve(__dirname, 'src/styles.css'),
 			],
 			name: 'UI',
-			formats: ['es', 'cjs'],
+			formats: ['es'],
 			fileName: (format, entryName) => `${entryName}.${format}.js`,
 		},
 		rollupOptions: {

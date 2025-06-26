@@ -10,7 +10,7 @@ export const toastWrapper = () => ({
 
 export const toast = ({ open, direction }) => ({
 	animation: 'transition-all',
-	bgColor: 'bg-white dark:bg-gray-800',
+	bgColor: 'bg-gray-100 dark:bg-gray-800',
 	borderRadius: 'rounded-md',
 	color: 'text-gray-700 dark:text-white',
 	duration: 'duration-200',
@@ -27,10 +27,12 @@ export const toast = ({ open, direction }) => ({
 
 export const toastHeader = () => ({
 	display: 'flex-between',
+	space: 'space-x-4',
 	spacing: 'p-2',
 });
 
 export const toastIcon = () => ({
+	bgColor: 'bg-gray-200 dark:bg-gray-700',
 	color: 'text-gray-700 dark:text-gray-300',
 	borderRadius: 'rounded-md',
 	spacing: 'px-2 py-1',
@@ -43,7 +45,7 @@ export const toastBody = () => ({
 export const toastTitle = () => ({
 	color: 'text-gray-800 dark:text-gray-200',
 	fontWeight: 'font-semibold',
-	fontSize: 'text-sm',
+	fontSize: 'text-base',
 	tracking: 'tracking-wide',
 });
 

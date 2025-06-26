@@ -13,7 +13,7 @@ export const BooleanItem = ({ keyName, loading, icon, value, tailwind }) => {
 			) : (
 				<FadIcon
 					icon={value ? 'circle-check' : 'circle-xmark'}
-					color={value ? 'green-500' : 'red-500'}
+					color={value ? 'text-green-500' : 'text-red-500'}
 					fontSize='text-xl'
 				/>
 			)}

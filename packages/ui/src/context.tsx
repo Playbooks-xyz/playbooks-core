@@ -1,5 +1,6 @@
 import React, { useEffect } from 'react';
 
+import * as defaultTheme from '@playbooks/theme';
 import { capitalize } from '@playbooks/utils/transforms';
 
 export type UIProviderProps = {
@@ -15,6 +16,7 @@ export const UIContext = React.createContext(null);
 
 export const UIProvider = ({ components, contexts, fonts, seo, theme, children }: UIProviderProps) => {
 	const router = contexts?.useRouter();
+	const computedTheme = theme || defaultTheme;
 
 	// Computed
 	const paths = router?.asPath?.split('?')[0].split('/') || [];
@@ -22,7 +24,7 @@ export const UIProvider = ({ components, contexts, fonts, seo, theme, children }
 	const joinedPaths = formattedPaths.map(path => path.join(' '));
 	const title = seo?.title + joinedPaths.join(' | ');
 	const url = seo?.baseUrl + router?.asPath?.split('?')[0];
-	const computed = { ...seo, title, url };
+	const computedSeo = { ...seo, title, url };
 
 	// Hooks
 	useEffect(() => {
@@ -31,7 +33,9 @@ export const UIProvider = ({ components, contexts, fonts, seo, theme, children }
 	}, [fonts]);
 
 	// Render
-	return <UIContext.Provider value={{ components, seo: computed, theme }}>{children}</UIContext.Provider>;
+	return (
+		<UIContext.Provider value={{ components, seo: computedSeo, theme: computedTheme }}>{children}</UIContext.Provider>
+	);
 };
 
 export const useUI = () => {

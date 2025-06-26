@@ -13,7 +13,7 @@ export const StepItem = ({ keyName, loading, value, tailwind }) => {
 			) : (
 				<FadIcon
 					icon={value.status === 'finished' ? 'circle-check' : 'circle-xmark'}
-					color={value.status === 'finished' ? 'green-500' : 'red-500'}
+					color={value.status === 'finished' ? 'text-green-500' : 'text-red-500'}
 					fontSize='text-xl'
 				/>
 			)}
