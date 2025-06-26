@@ -3,9 +3,9 @@ import { createPortal } from 'react-dom';
 
 import { Fade } from '@playbooks/components/fade';
 import { useKeyPress } from '@playbooks/hooks';
-import * as theme from '@playbooks/theme';
 import * as types from '@playbooks/types';
 import { AccentBtn } from 'src/buttons';
+import { useUI } from 'src/context';
 import { H4 } from 'src/fonts';
 import { Div } from 'src/html';
 
@@ -18,7 +18,8 @@ export const SlideWrapper = ({
 	children,
 	...props
 }: types.SlideWrapperProps) => {
-	const base = theme.slideWrapper();
+	const context = useUI();
+	const base = context?.theme?.slideWrapper();
 	const computed = { ...base, ...props, tailwind, className, name };
 
 	return (
@@ -36,7 +37,8 @@ export const SlideBackdrop = ({
 	tailwind,
 	...props
 }: types.SlideBackdropProps) => {
-	const base = theme.slideBackdrop({ open });
+	const context = useUI();
+	const base = context?.theme?.slideBackdrop({ open });
 	const computed = { ...base, ...props, tailwind, name };
 
 	return <Div onClick={onClose} {...computed} />;
@@ -54,7 +56,8 @@ export const Slide = ({
 }: types.SlideProps) => {
 	const [show, setShow] = useState(false);
 
-	const base = theme.slide({ open: show, placement });
+	const context = useUI();
+	const base = context?.theme?.slide({ open: show, placement });
 	const computed = { ...base, ...props, tailwind, className, name };
 	const nodeRef = useRef(null);
 
@@ -99,7 +102,8 @@ export const SlideHeader = ({
 	children,
 	...props
 }: types.SlideHeaderProps) => {
-	const base = theme.slideHeader();
+	const context = useUI();
+	const base = context?.theme?.slideHeader();
 	const computed = { ...base, ...props, tailwind, className, name };
 
 	return (
@@ -111,14 +115,16 @@ export const SlideHeader = ({
 };
 
 export const SlideTitle = ({ name = 'SlideTitle', tailwind, className, children, ...props }: types.SlideTitleProps) => {
-	const base = theme.slideTitle();
+	const context = useUI();
+	const base = context?.theme?.slideTitle();
 	const computed = { ...base, ...props, tailwind, className, name };
 
 	return <H4 {...computed}>{children}</H4>;
 };
 
 export const SlideBody = ({ name = 'SlideBody', tailwind, className, children, ...props }: types.SlideBodyProps) => {
-	const base = theme.slideBody();
+	const context = useUI();
+	const base = context?.theme?.slideBody();
 	const computed = { ...base, ...props, tailwind, className, name };
 
 	return <Div {...computed}>{children}</Div>;
@@ -131,7 +137,8 @@ export const SlideFooter = ({
 	children,
 	...props
 }: types.SlideFooterProps) => {
-	const base = theme.slideFooter();
+	const context = useUI();
+	const base = context?.theme?.slideFooter();
 	const computed = { ...base, ...props, tailwind, className, name };
 
 	return <Div {...computed}>{children}</Div>;

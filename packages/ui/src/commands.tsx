@@ -1,11 +1,12 @@
 import { useMemo } from 'react';
 
-import * as theme from '@playbooks/theme';
 import * as types from '@playbooks/types';
+import { useUI } from 'src/context';
 import { Span } from 'src/html';
 
 export const Command = ({ name = 'CMD', keys = [], tailwind, className, children, ...props }: types.CommandProps) => {
-	const base = theme.command();
+	const context = useUI();
+	const base = context?.theme?.command();
 	const computed = { ...base, ...props, tailwind, className, name };
 
 	// Computed

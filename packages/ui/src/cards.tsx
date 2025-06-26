@@ -1,18 +1,20 @@
-import * as theme from '@playbooks/theme';
 import * as types from '@playbooks/types';
+import { useUI } from 'src/context';
 import { Font, P } from 'src/fonts';
 import { Div, Img } from 'src/html';
 import { Icon } from 'src/icons';
 
 export const Card = ({ name = 'Card', tailwind, className, children, ...props }: types.CardProps) => {
-	const base = theme.card();
+	const context = useUI();
+	const base = context?.theme?.card();
 	const computed = { ...base, ...props, tailwind, className, name };
 
 	return <Div {...computed}>{children}</Div>;
 };
 
 export const CardHeader = ({ name = 'CardHeader', tailwind, className, children, ...props }: types.CardHeaderProps) => {
-	const base = theme.cardHeader();
+	const context = useUI();
+	const base = context?.theme?.cardHeader();
 	const computed = { ...base, ...props, tailwind, className, name };
 
 	return <Div {...computed}>{children}</Div>;
@@ -26,7 +28,8 @@ export const CardIcon = ({
 	className,
 	...props
 }: types.CardIconProps) => {
-	const base = theme.cardIcon();
+	const context = useUI();
+	const base = context?.theme?.cardIcon();
 	const computed = { ...base, ...props, tailwind, className, name };
 
 	return <Icon type={type} icon={icon} {...computed} />;
@@ -40,14 +43,16 @@ export const CardImg = ({
 	children,
 	...props
 }: types.CardImgProps) => {
-	const base = theme.cardImg();
+	const context = useUI();
+	const base = context?.theme?.cardImg();
 	const computed = { ...base, ...props, tailwind, className, name };
 
 	return <Img alt={alt} {...computed} />;
 };
 
 export const CardBody = ({ name = 'CardBody', tailwind, className, children, ...props }: types.CardBodyProps) => {
-	const base = theme.cardBody();
+	const context = useUI();
+	const base = context?.theme?.cardBody();
 	const computed = { ...base, ...props, tailwind, className, name };
 
 	return <Div {...computed}>{children}</Div>;
@@ -60,7 +65,8 @@ export const CardPretitle = ({
 	children,
 	...props
 }: types.CardPretitleProps) => {
-	const base = theme.cardPretitle();
+	const context = useUI();
+	const base = context?.theme?.cardPretitle();
 	const computed = { ...base, ...props, tailwind, className, name };
 
 	return <P {...computed}>{children}</P>;
@@ -74,7 +80,8 @@ export const CardTitle = ({
 	children,
 	...props
 }: types.CardTitleProps) => {
-	const base = theme.cardTitle();
+	const context = useUI();
+	const base = context?.theme?.cardTitle();
 	const computed = { ...base, ...props, tailwind, className, name };
 
 	return (
@@ -91,21 +98,24 @@ export const CardSubtitle = ({
 	children,
 	...props
 }: types.CardSubtitleProps) => {
-	const base = theme.cardSubtitle();
+	const context = useUI();
+	const base = context?.theme?.cardSubtitle();
 	const computed = { ...base, ...props, tailwind, className, name };
 
 	return <P {...computed}>{children}</P>;
 };
 
 export const CardText = ({ name = 'CardText', tailwind, className, children, ...props }: types.CardTextProps) => {
-	const base = theme.cardText();
+	const context = useUI();
+	const base = context?.theme?.cardText();
 	const computed = { ...base, ...props, tailwind, className, name };
 
 	return <P {...computed}>{children}</P>;
 };
 
 export const CardFooter = ({ name = 'CardFooter', tailwind, className, children, ...props }: types.CardFooterProps) => {
-	const base = theme.cardFooter();
+	const context = useUI();
+	const base = context?.theme?.cardFooter();
 	const computed = { ...base, ...props, tailwind, className, name };
 
 	return <Div {...computed}>{children}</Div>;
@@ -118,7 +128,8 @@ export const CardActions = ({
 	children,
 	...props
 }: types.CardActionsProps) => {
-	const base = theme.cardActions();
+	const context = useUI();
+	const base = context?.theme?.cardActions();
 	const computed = { ...base, ...props, tailwind, className, name };
 
 	return <Div {...computed}>{children}</Div>;

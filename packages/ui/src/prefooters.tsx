@@ -1,11 +1,12 @@
-import * as theme from '@playbooks/theme';
 import * as types from '@playbooks/types';
+import { useUI } from 'src/context';
 import { Font, H6, P } from 'src/fonts';
 import { Div } from 'src/html';
 import { Section } from 'src/sections';
 
 export const Prefooter = ({ name = 'Prefooter', tailwind, className, children, ...props }: types.PrefooterProps) => {
-	const base = theme.prefooter();
+	const context = useUI();
+	const base = context?.theme?.prefooter();
 	const computed = { ...base, ...props, tailwind, className, name };
 
 	return <Section {...computed}>{children}</Section>;
@@ -18,7 +19,8 @@ export const PrefooterBody = ({
 	children,
 	...props
 }: types.PrefooterBodyProps) => {
-	const base = theme.prefooterBody();
+	const context = useUI();
+	const base = context?.theme?.prefooterBody();
 	const computed = { ...base, ...props, tailwind, className, name };
 
 	return <Div {...computed}>{children}</Div>;
@@ -31,7 +33,8 @@ export const PrefooterPretitle = ({
 	children,
 	...props
 }: types.PrefooterPretitleProps) => {
-	const base = theme.prefooterPretitle();
+	const context = useUI();
+	const base = context?.theme?.prefooterPretitle();
 	const computed = { ...base, ...props, tailwind, className, name };
 
 	return <H6 {...computed}>{children}</H6>;
@@ -45,7 +48,8 @@ export const PrefooterTitle = ({
 	children,
 	...props
 }: types.PrefooterTitleProps) => {
-	const base = theme.prefooterTitle();
+	const context = useUI();
+	const base = context?.theme?.prefooterTitle();
 	const computed = { ...base, ...props, tailwind, className, name };
 
 	return (
@@ -63,7 +67,8 @@ export const PrefooterSubtitle = ({
 	children,
 	...props
 }: types.PrefooterSubtitleProps) => {
-	const base = theme.prefooterSubtitle();
+	const context = useUI();
+	const base = context?.theme?.prefooterSubtitle();
 	const computed = { ...base, ...props, tailwind, className, name };
 
 	return (
@@ -80,7 +85,8 @@ export const PrefooterText = ({
 	children,
 	...props
 }: types.PrefooterTextProps) => {
-	const base = theme.prefooterText();
+	const context = useUI();
+	const base = context?.theme?.prefooterText();
 	const computed = { ...base, ...props, tailwind, className, name };
 
 	return <P {...computed}>{children}</P>;
@@ -93,7 +99,8 @@ export const PrefooterActions = ({
 	children,
 	...props
 }: types.PrefooterActionsProps) => {
-	const base = theme.prefooterActions();
+	const context = useUI();
+	const base = context?.theme?.prefooterActions();
 	const computed = { ...base, ...props, tailwind, className, name };
 
 	return <Div {...computed}>{children}</Div>;

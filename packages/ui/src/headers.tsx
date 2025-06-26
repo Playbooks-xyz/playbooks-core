@@ -1,10 +1,11 @@
-import * as theme from '@playbooks/theme';
 import * as types from '@playbooks/types';
+import { useUI } from 'src/context';
 import { Font, P } from 'src/fonts';
 import { Div } from 'src/html';
 
 export const Header = ({ name = 'Header', tailwind, className, children, ...props }: types.HeaderProps) => {
-	const base = theme.header();
+	const context = useUI();
+	const base = context?.theme?.header();
 	const computed = { ...base, ...props, tailwind, className, name };
 
 	return <Div {...computed}>{children}</Div>;
@@ -18,7 +19,8 @@ export const HeaderTitle = ({
 	children,
 	...props
 }: types.HeaderTitleProps) => {
-	const base = theme.headerTitle();
+	const context = useUI();
+	const base = context?.theme?.headerTitle();
 	const computed = { ...base, ...props, tailwind, className, name };
 
 	return (
@@ -36,7 +38,8 @@ export const HeaderSubtitle = ({
 	children,
 	...props
 }: types.HeaderSubtitleProps) => {
-	const base = theme.headerSubtitle();
+	const context = useUI();
+	const base = context?.theme?.headerSubtitle();
 	const computed = { ...base, ...props, tailwind, className, name };
 
 	return (
@@ -47,7 +50,8 @@ export const HeaderSubtitle = ({
 };
 
 export const HeaderText = ({ name = 'HeaderText', tailwind, className, children, ...props }: types.HeaderTextProps) => {
-	const base = theme.headerText();
+	const context = useUI();
+	const base = context?.theme?.headerText();
 	const computed = { ...base, ...props, tailwind, className, name };
 
 	return <P {...computed}>{children}</P>;
@@ -60,7 +64,8 @@ export const HeaderActions = ({
 	children,
 	...props
 }: types.HeaderActionsProps) => {
-	const base = theme.headerActions();
+	const context = useUI();
+	const base = context?.theme?.headerActions();
 	const computed = { ...base, ...props, tailwind, className, name };
 
 	return <Div {...computed}>{children}</Div>;

@@ -1,6 +1,6 @@
-import * as theme from '@playbooks/theme';
 import * as types from '@playbooks/types';
 import { TextBtn } from 'src/buttons';
+import { useUI } from 'src/context';
 import { Li } from 'src/html';
 import { FarIcon } from 'src/icons';
 import { TextLink } from 'src/links';
@@ -13,7 +13,8 @@ export const Breadcrumbs = ({
 	children,
 	...props
 }: types.BreadcrumbsProps) => {
-	const base = theme.breadcrumbs();
+	const context = useUI();
+	const base = context?.theme?.breadcrumbs();
 	const computed = { ...base, ...props, tailwind, className, name };
 
 	return (
@@ -32,7 +33,8 @@ export const BreadcrumbItem = ({
 	children,
 	...props
 }: types.BreadcrumbItemProps) => {
-	const base = theme.breadcrumbItem();
+	const context = useUI();
+	const base = context?.theme?.breadcrumbItem();
 	const computed = { ...base, ...props, tailwind, className, name };
 
 	return (
@@ -53,7 +55,8 @@ export const BreadcrumbBtn = ({
 	children,
 	...props
 }: types.BreadcrumbBtnProps) => {
-	const base = theme.breadcrumbBtn({ active });
+	const context = useUI();
+	const base = context?.theme?.breadcrumbBtn({ active });
 	const computed = { ...base, ...props, tailwind, size, className, name, active, children };
 
 	return <TextBtn onClick={onClick} {...computed} />;
@@ -69,7 +72,8 @@ export const BreadcrumbLink = ({
 	children,
 	...props
 }: types.BreadcrumbLinkProps) => {
-	const base = theme.breadcrumbLink({ active });
+	const context = useUI();
+	const base = context?.theme?.breadcrumbLink({ active });
 	const computed = { ...base, ...props, tailwind, size, className, name, active, children };
 
 	return <TextLink href={href} {...computed} />;

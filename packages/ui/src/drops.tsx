@@ -3,9 +3,9 @@ import { usePopper } from 'react-popper';
 
 import { Fade } from '@playbooks/components/fade';
 import { useKeyPress, useMouseUp } from '@playbooks/hooks';
-import * as theme from '@playbooks/theme';
 import * as types from '@playbooks/types';
 import { AccentBtn, Btn } from 'src/buttons';
+import { useUI } from 'src/context';
 import { H6, P } from 'src/fonts';
 import { Div, Li, Ul } from 'src/html';
 import { AccentLink } from 'src/links';
@@ -20,7 +20,8 @@ export const Drop = ({
 	children,
 	...props
 }: types.DropProps) => {
-	const base = theme.drop();
+	const context = useUI();
+	const base = context?.theme?.drop();
 	const computed = { ...base, ...props, tailwind, className, name };
 
 	// Hooks
@@ -59,7 +60,8 @@ export const DropToggle = ({
 	children,
 	...props
 }: types.DropToggleProps) => {
-	const base = theme.dropToggle();
+	const context = useUI();
+	const base = context?.theme?.dropToggle();
 	const computed = { ...base, ...props, tailwind, className, children, name };
 
 	return <Btn alt={alt} variant={variant} nextIcon={nextIcon} onClick={onClick} {...computed} />;
@@ -78,7 +80,8 @@ export const DropMenu = ({
 }: types.DropMenuProps) => {
 	const [show, setShow] = useState(false);
 	const [dropRef, setDropRef] = useState(null);
-	const base = theme.dropMenu({ open: show });
+	const context = useUI();
+	const base = context?.theme?.dropMenu({ open: show });
 	const computed = { ...base, ...props, tailwind, className, name };
 	const nodeRef = useRef(null);
 	const { styles: popperStyles, attributes } = usePopper(ref?.current, dropRef, {
@@ -112,14 +115,16 @@ export const DropMenu = ({
 };
 
 export const DropHeader = ({ name = 'DropHeader', tailwind, className, children, ...props }: types.DropHeaderProps) => {
-	const base = theme.dropHeader();
+	const context = useUI();
+	const base = context?.theme?.dropHeader();
 	const computed = { ...base, ...props, tailwind, className, name };
 
 	return <Div {...computed}>{children}</Div>;
 };
 
 export const DropTitle = ({ name = 'DropTitle', tailwind, className, children, ...props }: types.DropTitleProps) => {
-	const base = theme.dropTitle();
+	const context = useUI();
+	const base = context?.theme?.dropTitle();
 	const computed = { ...base, ...props, tailwind, className, name };
 
 	return <H6 {...computed}>{children}</H6>;
@@ -132,35 +137,40 @@ export const DropSubtitle = ({
 	children,
 	...props
 }: types.DropSubtitleProps) => {
-	const base = theme.dropSubtitle();
+	const context = useUI();
+	const base = context?.theme?.dropSubtitle();
 	const computed = { ...base, ...props, tailwind, className, name };
 
 	return <P {...computed}>{children}</P>;
 };
 
 export const DropList = ({ name = 'DropList', tailwind, className, children, ...props }: types.DropListProps) => {
-	const base = theme.dropList();
+	const context = useUI();
+	const base = context?.theme?.dropList();
 	const computed = { ...base, ...props, tailwind, className, name };
 
 	return <Ul {...computed}>{children}</Ul>;
 };
 
 export const DropItem = ({ name = 'DropItem', tailwind, className, children, ...props }: types.DropItemProps) => {
-	const base = theme.dropItem();
+	const context = useUI();
+	const base = context?.theme?.dropItem();
 	const computed = { ...base, ...props, tailwind, className, name };
 
 	return <Li {...computed}>{children}</Li>;
 };
 
 export const DropBtn = ({ name = 'DropBtn', tailwind, className, children, ...props }: types.DropBtnProps) => {
-	const base = theme.dropBtn();
+	const context = useUI();
+	const base = context?.theme?.dropBtn();
 	const computed = { ...base, ...props, tailwind, className, children, name };
 
 	return <AccentBtn {...computed} />;
 };
 
 export const DropLink = ({ name = 'DropLink', tailwind, className, children, ...props }: types.DropLinkProps) => {
-	const base = theme.dropLink();
+	const context = useUI();
+	const base = context?.theme?.dropLink();
 	const computed = { ...base, ...props, tailwind, className, children, name };
 
 	return <AccentLink {...computed} />;

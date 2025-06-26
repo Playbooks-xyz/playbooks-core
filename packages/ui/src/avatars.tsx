@@ -1,10 +1,11 @@
-import * as theme from '@playbooks/theme';
 import * as types from '@playbooks/types';
+import { useUI } from 'src/context';
 import { Font, P } from 'src/fonts';
 import { Div, Img } from 'src/html';
 
 export const Avatar = ({ name = 'Avatar', tailwind, className, children, ...props }: types.AvatarProps) => {
-	const base = theme.avatar();
+	const context = useUI();
+	const base = context?.theme?.avatar();
 	const computed = { ...base, ...props, tailwind, className, name };
 
 	return <Div {...computed}>{children}</Div>;
@@ -18,7 +19,8 @@ export const AvatarBadge = ({
 	children,
 	...props
 }: types.AvatarBadgeProps) => {
-	const base = theme.avatarBadge({ size });
+	const context = useUI();
+	const base = context?.theme?.avatarBadge({ size });
 	const computed = { ...base, ...props, tailwind, className, name };
 
 	return <Div {...computed}>{children}</Div>;
@@ -32,14 +34,16 @@ export const AvatarImg = ({
 	className,
 	...props
 }: types.AvatarImgProps) => {
-	const base = theme.avatarImg({ size });
+	const context = useUI();
+	const base = context?.theme?.avatarImg({ size });
 	const computed = { ...base, ...props, tailwind, className, name };
 
 	return <Img alt={alt} {...computed} />;
 };
 
 export const AvatarBody = ({ name = 'AvatarBody', tailwind, className, children, ...props }: types.AvatarBodyProps) => {
-	const base = theme.avatarBody();
+	const context = useUI();
+	const base = context?.theme?.avatarBody();
 	const computed = { ...base, ...props, tailwind, className, name };
 
 	return <Div {...computed}>{children}</Div>;
@@ -53,7 +57,8 @@ export const AvatarTitle = ({
 	children,
 	...props
 }: types.AvatarTitleProps) => {
-	const base = theme.avatarTitle();
+	const context = useUI();
+	const base = context?.theme?.avatarTitle();
 	const computed = { ...base, ...props, tailwind, className, name };
 
 	return (
@@ -64,7 +69,8 @@ export const AvatarTitle = ({
 };
 
 export const AvatarText = ({ name = 'AvatarText', tailwind, className, children, ...props }: types.AvatarTextProps) => {
-	const base = theme.avatarText();
+	const context = useUI();
+	const base = context?.theme?.avatarText();
 	const computed = { ...base, ...props, tailwind, className, name };
 
 	return <P {...computed}>{children}</P>;
@@ -77,7 +83,8 @@ export const AvatarActions = ({
 	children,
 	...props
 }: types.AvatarActionsProps) => {
-	const base = theme.avatarActions();
+	const context = useUI();
+	const base = context?.theme?.avatarActions();
 	const computed = { ...base, ...props, tailwind, className, name };
 
 	return <Div {...computed}>{children}</Div>;

@@ -1,11 +1,12 @@
-import * as theme from '@playbooks/theme';
 import * as types from '@playbooks/types';
+import { useUI } from 'src/context';
 import { Font, P } from 'src/fonts';
 import { Div } from 'src/html';
 import { Icon } from 'src/icons';
 
 export const Alert = ({ type = 'info', name = 'Alert', tailwind, className, children, ...props }: types.AlertProps) => {
-	const base = theme.alert({ type });
+	const context = useUI();
+	const base = context?.theme?.alert({ type });
 	const computed = { ...base, ...props, tailwind, className, name };
 
 	return <Div {...computed}>{children}</Div>;
@@ -19,14 +20,16 @@ export const AlertIcon = ({
 	className,
 	...props
 }: types.AlertIconProps) => {
-	const base = theme.alertIcon();
+	const context = useUI();
+	const base = context?.theme?.alertIcon();
 	const computed = { ...base, ...props, tailwind, className, name };
 
 	return <Icon type={type} icon={icon} {...computed} />;
 };
 
 export const AlertBody = ({ name = 'AlertBody', tailwind, className, children, ...props }: types.AlertBodyProps) => {
-	const base = theme.alertBody();
+	const context = useUI();
+	const base = context?.theme?.alertBody();
 	const computed = { ...base, ...props, tailwind, className, name };
 
 	return <Div {...computed}>{children}</Div>;
@@ -40,7 +43,8 @@ export const AlertTitle = ({
 	children,
 	...props
 }: types.AlertTitleProps) => {
-	const base = theme.alertTitle();
+	const context = useUI();
+	const base = context?.theme?.alertTitle();
 	const computed = { ...base, ...props, tailwind, className, name };
 
 	return (
@@ -51,7 +55,8 @@ export const AlertTitle = ({
 };
 
 export const AlertText = ({ name = 'AlertText', tailwind, className, children, ...props }: types.AlertTextProps) => {
-	const base = theme.alertText();
+	const context = useUI();
+	const base = context?.theme?.alertText();
 	const computed = { ...base, ...props, tailwind, className, name };
 
 	return <P {...computed}>{children}</P>;
@@ -64,7 +69,8 @@ export const AlertActions = ({
 	children,
 	...props
 }: types.AlertActionsProps) => {
-	const base = theme.alertActions();
+	const context = useUI();
+	const base = context?.theme?.alertActions();
 	const computed = { ...base, ...props, tailwind, className, name };
 
 	return <Div {...computed}>{children}</Div>;

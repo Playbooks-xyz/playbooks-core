@@ -2,8 +2,8 @@ import { Fragment } from 'react';
 
 import * as HTML from '@ehubbell/html';
 import { computeProps, computeTailwind } from '@ehubbell/html';
-import * as theme from '@playbooks/theme';
 import * as types from '@playbooks/types';
+import { useUI } from 'src/context';
 import { Img, Span } from 'src/html';
 import { Icon } from 'src/icons';
 import { Oval } from 'src/spinners';
@@ -41,7 +41,8 @@ export const PrimaryBtn = ({
 	className,
 	...props
 }: types.BtnProps) => {
-	const base = theme.primaryBtn({ active, size });
+	const context = useUI();
+	const base = context?.theme?.primaryBtn({ active, size });
 
 	return <BtnShared name={name} className={className} {...base} tailwind={tailwind} {...props} />;
 };
@@ -54,7 +55,8 @@ export const AccentBtn = ({
 	className,
 	...props
 }: types.BtnProps) => {
-	const base = theme.accentBtn({ active, size });
+	const context = useUI();
+	const base = context?.theme?.accentBtn({ active, size });
 
 	return <BtnShared name={name} className={className} {...base} tailwind={tailwind} {...props} />;
 };
@@ -67,19 +69,22 @@ export const BorderBtn = ({
 	className,
 	...props
 }: types.BtnProps) => {
-	const base = theme.borderBtn({ active, size });
+	const context = useUI();
+	const base = context?.theme?.borderBtn({ active, size });
 
 	return <BtnShared name={name} className={className} {...base} tailwind={tailwind} {...props} />;
 };
 
 export const TabBtn = ({ name = 'TabBtn', size = 'sm', active, tailwind, className, ...props }: types.BtnProps) => {
-	const base = theme.tabBtn({ active, size });
+	const context = useUI();
+	const base = context?.theme?.tabBtn({ active, size });
 
 	return <BtnShared name={name} className={className} {...base} tailwind={tailwind} {...props} />;
 };
 
 export const TextBtn = ({ name = 'TextBtn', size = 'sm', active, tailwind, className, ...props }: types.BtnProps) => {
-	const base = theme.textBtn({ active, size });
+	const context = useUI();
+	const base = context?.theme?.textBtn({ active, size });
 
 	return <BtnShared name={name} className={className} {...base} tailwind={tailwind} {...props} />;
 };
@@ -137,7 +142,8 @@ export const BtnWrapper = ({
 	className,
 	...props
 }: types.BtnProps) => {
-	const base = theme.btnWrapper({ disabled });
+	const context = useUI();
+	const base = context?.theme?.btnWrapper({ disabled });
 	const classes = computeTailwind({ ...base, ...props, ...tailwind, className });
 	const filtered = computeProps(props);
 

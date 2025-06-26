@@ -1,14 +1,15 @@
 import * as HTML from '@ehubbell/html';
 import { computeTailwind } from '@ehubbell/html';
-import * as theme from '@playbooks/theme';
 import * as types from '@playbooks/types';
 import { isObject } from '@playbooks/utils';
 import { BtnWrapper } from 'src/buttons';
+import { useUI } from 'src/context';
 import { Div } from 'src/html';
 import { FarIcon } from 'src/icons';
 
 export const Table = ({ name = 'Table', tailwind, className, children, ...props }: types.TableProps) => {
-	const base = theme.table();
+	const context = useUI();
+	const base = context?.theme?.table();
 	const classes = computeTailwind({ ...base, ...props, ...tailwind, className });
 
 	return (
@@ -25,7 +26,8 @@ export const TableHeader = ({
 	children,
 	...props
 }: types.TableHeaderProps) => {
-	const base = theme.tableHeader();
+	const context = useUI();
+	const base = context?.theme?.tableHeader();
 	const classes = computeTailwind({ ...base, ...props, ...tailwind, className });
 
 	return (
@@ -42,7 +44,8 @@ export const TableHeaderRow = ({
 	children,
 	...props
 }: types.TableHeaderRowProps) => {
-	const base = theme.tableHeaderRow();
+	const context = useUI();
+	const base = context?.theme?.tableHeaderRow();
 	const classes = computeTailwind({ ...base, ...props, ...tailwind, className });
 
 	return <HTML.TR className={classes}>{children}</HTML.TR>;
@@ -59,7 +62,8 @@ export const TableHead = ({
 	children,
 	...props
 }: types.TableHeadProps) => {
-	const base = theme.tableHead();
+	const context = useUI();
+	const base = context?.theme?.tableHead();
 	const classes = computeTailwind({ ...base, ...props, ...tailwind, className });
 	const direction = value === params?.sortProp && params?.sortValue === 'asc' ? 'desc' : 'asc';
 
@@ -87,7 +91,8 @@ export const TableHead = ({
 };
 
 export const TableBody = ({ name = 'TableBody', tailwind, className, children, ...props }: types.TableBodyProps) => {
-	const base = theme.tableBody();
+	const context = useUI();
+	const base = context?.theme?.tableBody();
 	const classes = computeTailwind({ ...base, ...props, ...tailwind, className });
 
 	return (
@@ -98,7 +103,8 @@ export const TableBody = ({ name = 'TableBody', tailwind, className, children, .
 };
 
 export const TableRow = ({ name = 'TableRow', tailwind, className, children, ...props }: types.TableRowProps) => {
-	const base = theme.tableRow();
+	const context = useUI();
+	const base = context?.theme?.tableRow();
 	const classes = computeTailwind({ ...base, ...props, ...tailwind, className });
 
 	return (
@@ -117,7 +123,8 @@ export const TableData = ({
 	children,
 	...props
 }: types.TableDataProps) => {
-	const base = theme.tableData({ title });
+	const context = useUI();
+	const base = context?.theme?.tableData({ title });
 	const classes = computeTailwind({ ...base, ...props, ...tailwind, className });
 
 	return (

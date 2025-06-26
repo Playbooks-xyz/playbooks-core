@@ -1,5 +1,5 @@
-import * as theme from '@playbooks/theme';
 import * as types from '@playbooks/types';
+import { useUI } from 'src/context';
 import { Span } from 'src/html';
 
 export const Badge = ({
@@ -11,7 +11,8 @@ export const Badge = ({
 	children,
 	...props
 }: types.BadgeProps) => {
-	const base = theme.badge({ size });
+	const context = useUI();
+	const base = context?.theme?.badge({ size });
 	const computed = { ...base, ...props, tailwind, className, name };
 
 	// Render
@@ -58,49 +59,56 @@ export const Badge = ({
 };
 
 export const DraftBadge = ({ tailwind, className, children, ...props }: types.BadgeProps) => {
-	const base = theme.draftBadge();
+	const context = useUI();
+	const base = context?.theme?.draftBadge();
 	const computed = { ...base, ...props, tailwind, className };
 
 	return <Span {...computed}>{children}</Span>;
 };
 
 export const PendingBadge = ({ tailwind, className, children, ...props }: types.BadgeProps) => {
-	const base = theme.pendingBadge();
+	const context = useUI();
+	const base = context?.theme?.pendingBadge();
 	const computed = { ...base, ...props, tailwind, className };
 
 	return <Span {...computed}>{children}</Span>;
 };
 
 export const WarningBadge = ({ tailwind, className, children, ...props }: types.BadgeProps) => {
-	const base = theme.warningBadge();
+	const context = useUI();
+	const base = context?.theme?.warningBadge();
 	const computed = { ...base, ...props, tailwind, className };
 
 	return <Span {...computed}>{children}</Span>;
 };
 
 export const SuccessBadge = ({ tailwind, className, children, ...props }: types.BadgeProps) => {
-	const base = theme.successBadge();
+	const context = useUI();
+	const base = context?.theme?.successBadge();
 	const computed = { ...base, ...props, tailwind, className };
 
 	return <Span {...computed}>{children}</Span>;
 };
 
 export const FinishedBadge = ({ tailwind, className, children, ...props }: types.BadgeProps) => {
-	const base = theme.finishedBadge();
+	const context = useUI();
+	const base = context?.theme?.finishedBadge();
 	const computed = { ...base, ...props, tailwind, className };
 
 	return <Span {...computed}>{children}</Span>;
 };
 
 export const ErrorBadge = ({ tailwind, className, children, ...props }: types.BadgeProps) => {
-	const base = theme.errorBadge();
+	const context = useUI();
+	const base = context?.theme?.errorBadge();
 	const computed = { ...base, ...props, tailwind, className };
 
 	return <Span {...computed}>{children}</Span>;
 };
 
 export const DefaultBadge = ({ tailwind, className, children, ...props }: types.BadgeProps) => {
-	const base = theme.outlineBadge();
+	const context = useUI();
+	const base = context?.theme?.outlineBadge();
 	const computed = { ...base, ...props, tailwind, className };
 
 	return <Span {...computed}>{children}</Span>;

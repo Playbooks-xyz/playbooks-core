@@ -7,13 +7,13 @@ import { GoogleAutocomplete } from '@playbooks/components/google-autocomplete';
 import { MaskedInput } from '@playbooks/components/masked-input';
 import { PhoneInput } from '@playbooks/components/phone-input';
 import { useElementKeyPress } from '@playbooks/hooks';
-import * as theme from '@playbooks/theme';
 import * as types from '@playbooks/types';
 import { useUI } from 'src/context';
 import { Div, Span } from 'src/html';
 
 export const Form = ({ id, name = 'Form', onSubmit, tailwind, className, children, ...props }: types.FormProps) => {
-	const base = theme.form();
+	const context = useUI();
+	const base = context?.theme?.form();
 	const classes = computeTailwind({ ...base, ...props, ...tailwind, className });
 
 	return (
@@ -24,7 +24,8 @@ export const Form = ({ id, name = 'Form', onSubmit, tailwind, className, childre
 };
 
 export const FormGroup = ({ name = 'FormGroup', tailwind, className, children, ...props }: types.FormGroupProps) => {
-	const base = theme.formGroup();
+	const context = useUI();
+	const base = context?.theme?.formGroup();
 	const computed = { ...base, ...props, tailwind, name, className };
 
 	return <Div {...computed}>{children}</Div>;
@@ -40,7 +41,8 @@ export const FormLabel = ({
 	children,
 	...props
 }: types.FormLabelProps) => {
-	const base = theme.formLabel();
+	const context = useUI();
+	const base = context?.theme?.formLabel();
 	const classes = computeTailwind({ ...base, ...props, ...tailwind, className });
 
 	return (
@@ -60,7 +62,8 @@ export const FormCheckbox = ({
 	className,
 	...props
 }: types.FormCheckboxProps) => {
-	const base = theme.formCheckbox();
+	const context = useUI();
+	const base = context?.theme?.formCheckbox();
 	const classes = computeTailwind({ ...base, ...props, ...tailwind, className });
 
 	return (
@@ -94,7 +97,8 @@ export const FormInput = ({
 	className,
 	...props
 }: types.FormInputProps) => {
-	const base = theme.formInput({ size, variant });
+	const context = useUI();
+	const base = context?.theme?.formInput({ size, variant });
 	const classes = computeTailwind({ ...base, ...props, ...tailwind, className });
 
 	return (
@@ -131,7 +135,8 @@ export const FormMaskInput = ({
 	className,
 	...props
 }: types.FormInputMaskProps) => {
-	const base = theme.formInput({ size, variant });
+	const context = useUI();
+	const base = context?.theme?.formInput({ size, variant });
 	const classes = computeTailwind({ ...base, ...props, ...tailwind, className });
 
 	return (
@@ -163,8 +168,8 @@ export const FormCurrencyInput = ({
 	className,
 	...props
 }: types.FormInputCurrencyProps) => {
-	const ui = useUI();
-	const base = ui?.theme || theme.formInput({ size, variant });
+	const context = useUI();
+	const base = context?.theme?.formInput({ size, variant });
 	const classes = computeTailwind({ ...base, ...props, ...tailwind, className });
 
 	return (
@@ -193,7 +198,8 @@ export const FormDivInput = ({
 	children,
 	...props
 }: types.FormInputProps) => {
-	const base = theme.formDivInput({ size, variant });
+	const context = useUI();
+	const base = context?.theme?.formDivInput({ size, variant });
 	const computed = { ...base, ...props, tailwind, name, className };
 
 	return (
@@ -213,7 +219,8 @@ export const FormFileInput = ({
 	className,
 	...props
 }: types.FormFileProps) => {
-	const base = theme.formFileInput();
+	const context = useUI();
+	const base = context?.theme?.formFileInput();
 	const classes = computeTailwind({ ...base, ...props, ...tailwind, className });
 
 	return <HTML.Input placeholder={placeholder} value={value} onChange={onChange} className={classes} />;
@@ -237,7 +244,8 @@ export const FormLocationInput = ({
 	...props
 }: types.FormInputLocationProps) => {
 	// const { theme } = useInterface();
-	const base = theme.formInput({ size, variant });
+	const context = useUI();
+	const base = context?.theme?.formInput({ size, variant });
 	const classes = computeTailwind({ ...base, ...props, ...tailwind, className });
 	const ref = useRef(null);
 
@@ -280,7 +288,8 @@ export const FormPhoneInput = ({
 	...props
 }: types.FormInputPhoneProps) => {
 	// const { theme } = useInterface();
-	const base = theme.formInput({ size, variant });
+	const context = useUI();
+	const base = context?.theme?.formInput({ size, variant });
 	const classes = computeTailwind({ ...base, ...props, ...tailwind, className });
 
 	return (
@@ -310,7 +319,8 @@ export const FormSelect = ({
 	className,
 	...props
 }: types.FormSelectProps) => {
-	const base = theme.formSelect({ size, variant });
+	const context = useUI();
+	const base = context?.theme?.formSelect({ size, variant });
 	const classes = computeTailwind({ ...base, ...props, ...tailwind, className });
 
 	return (
@@ -328,7 +338,8 @@ export const FormSelect = ({
 };
 
 export const FormText = ({ name = 'FormText', tailwind, className, children, ...props }: types.FormTextProps) => {
-	const base = theme.formText();
+	const context = useUI();
+	const base = context?.theme?.formText();
 	const computed = { ...base, ...props, tailwind, name, className };
 
 	return <Div {...computed}>{children}</Div>;
@@ -348,7 +359,8 @@ export const FormTextArea = ({
 	className,
 	...props
 }: types.FormTextAreaProps) => {
-	const base = theme.formInput({ size, variant });
+	const context = useUI();
+	const base = context?.theme?.formInput({ size, variant });
 	const classes = computeTailwind({ ...base, ...props, ...tailwind, className });
 
 	return (

@@ -1,7 +1,7 @@
 import * as HTML from '@ehubbell/html';
 import { computeProps } from '@ehubbell/html';
-import * as theme from '@playbooks/theme';
 import * as types from '@playbooks/types';
+import { useUI } from 'src/context';
 
 export const Font = props => {
 	switch (props?.size) {
@@ -35,7 +35,8 @@ export const Font = props => {
 };
 
 export const H1 = ({ name = 'H1', tailwind, className, children, ...props }: types.FontProps) => {
-	const base = theme.h1();
+	const context = useUI();
+	const base = context?.theme?.h1();
 	const formatted = { ...base, ...props, ...tailwind };
 	const filtered = computeProps(props);
 
@@ -47,7 +48,8 @@ export const H1 = ({ name = 'H1', tailwind, className, children, ...props }: typ
 };
 
 export const H2 = ({ name = 'H2', tailwind, className, children, ...props }: types.FontProps) => {
-	const base = theme.h2();
+	const context = useUI();
+	const base = context?.theme?.h2();
 	const formatted = { ...base, ...props, ...tailwind };
 	const filtered = computeProps(props);
 
@@ -59,7 +61,8 @@ export const H2 = ({ name = 'H2', tailwind, className, children, ...props }: typ
 };
 
 export const H3 = ({ name = 'H3', tailwind, className, children, ...props }: types.FontProps) => {
-	const base = theme.h3();
+	const context = useUI();
+	const base = context?.theme?.h3();
 	const formatted = { ...base, ...props, ...tailwind };
 	const filtered = computeProps(props);
 
@@ -71,7 +74,8 @@ export const H3 = ({ name = 'H3', tailwind, className, children, ...props }: typ
 };
 
 export const H4 = ({ name = 'H4', tailwind, className, children, ...props }: types.FontProps) => {
-	const base = theme.h4();
+	const context = useUI();
+	const base = context?.theme?.h4();
 	const formatted = { ...base, ...props, ...tailwind };
 	const filtered = computeProps(props);
 
@@ -83,7 +87,8 @@ export const H4 = ({ name = 'H4', tailwind, className, children, ...props }: typ
 };
 
 export const H5 = ({ name = 'H5', tailwind, className, children, ...props }: types.FontProps) => {
-	const base = theme.h5();
+	const context = useUI();
+	const base = context?.theme?.h5();
 	const formatted = { ...base, ...props, ...tailwind };
 	const filtered = computeProps(props);
 
@@ -95,7 +100,8 @@ export const H5 = ({ name = 'H5', tailwind, className, children, ...props }: typ
 };
 
 export const H6 = ({ name = 'H6', tailwind, className, children, ...props }: types.FontProps) => {
-	const base = theme.h6();
+	const context = useUI();
+	const base = context?.theme?.h6();
 	const formatted = { ...base, ...props, ...tailwind };
 	const filtered = computeProps(props);
 
@@ -107,7 +113,8 @@ export const H6 = ({ name = 'H6', tailwind, className, children, ...props }: typ
 };
 
 export const P = ({ name = 'P', tailwind, className, children, ...props }: types.FontProps) => {
-	const base = theme.p();
+	const context = useUI();
+	const base = context?.theme?.p();
 	const formatted = { ...base, ...props, ...tailwind };
 	const filtered = computeProps(props);
 
@@ -119,7 +126,8 @@ export const P = ({ name = 'P', tailwind, className, children, ...props }: types
 };
 
 export const Small = ({ name = 'Small', tailwind, className, children, ...props }: types.FontProps) => {
-	const base = theme.small();
+	const context = useUI();
+	const base = context?.theme?.small();
 	const formatted = { ...base, ...props, ...tailwind };
 	const filtered = computeProps(props);
 

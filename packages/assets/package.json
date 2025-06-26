@@ -1,6 +1,6 @@
 {
 	"name": "@playbooks/assets",
-	"version": "0.9.1",
+	"version": "0.9.3",
 	"description": "A collection of React components for Playbooks.",
 	"author": "Eric Hubbell<eric@erichubbell.com>",
 	"license": "ISC",
@@ -34,23 +34,23 @@
 	"exports": {
 		".": {
 			"types": "./dist/index.d.ts",
-			"import": "./dist/index.mjs",
-			"require": "./dist/index.cjs"
+			"import": "./dist/index.es.js",
+			"require": "./dist/index.cjs.js"
 		},
 		"./brand": {
-			"types": "./dist/brand.d.ts",
-			"import": "./dist/brand.mjs",
-			"require": "./dist/brand.cjs"
+			"types": "./dist/brand/brand.d.ts",
+			"import": "./dist/brand.es.js",
+			"require": "./dist/brand.cjs.js"
 		},
 		"./loaders": {
-			"types": "./dist/loaders.d.ts",
-			"import": "./dist/loaders.mjs",
-			"require": "./dist/loaders.cjs"
+			"types": "./dist/loaders/loaders.d.ts",
+			"import": "./dist/loaders.es.js",
+			"require": "./dist/loaders.cjs.js"
 		},
 		"./patterns": {
-			"types": "./dist/patterns.d.ts",
-			"import": "./dist/patterns.mjs",
-			"require": "./dist/patterns.cjs"
+			"types": "./dist/patterns/patterns.d.ts",
+			"import": "./dist/patterns.es.js",
+			"require": "./dist/patterns.cjs.js"
 		}
 	},
 	"dependencies": {

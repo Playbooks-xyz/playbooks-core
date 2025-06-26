@@ -1,6 +1,5 @@
 import { useEffect, useMemo, useRef, useState } from 'react';
 
-import * as theme from '@playbooks/theme';
 import {
 	AccordionBodyProps,
 	AccordionProps,
@@ -9,11 +8,13 @@ import {
 	AccordionToggleProps,
 } from '@playbooks/types';
 import { Btn } from 'src/buttons';
+import { useUI } from 'src/context';
 import { Font, P } from 'src/fonts';
 import { Div } from 'src/html';
 
 export const Accordion = ({ name = 'Accordion', open, tailwind, className, children, ...props }: AccordionProps) => {
-	const base = theme.accordion();
+	const context = useUI();
+	const base = context?.theme?.accordion();
 	const computed = { ...base, ...props, tailwind, className, name };
 
 	return <Div {...computed}>{children}</Div>;
@@ -31,7 +32,8 @@ export const AccordionToggle = ({
 	children,
 	...props
 }: AccordionToggleProps) => {
-	const base = theme.accordionToggle({ open });
+	const context = useUI();
+	const base = context?.theme?.accordionToggle({ open });
 	const computed = { ...base, ...props, tailwind, className, children, name };
 
 	return <Btn id={id} variant={variant} nextIcon={nextIcon} onClick={() => onClick(id)} {...computed} />;
@@ -45,7 +47,8 @@ export const AccordionTitle = ({
 	children,
 	...props
 }: AccordionTitleProps) => {
-	const base = theme.accordionTitle();
+	const context = useUI();
+	const base = context?.theme?.accordionTitle();
 	const computed = { ...base, ...props, tailwind, className, name };
 
 	return (
@@ -64,8 +67,9 @@ export const AccordionBody = ({
 	children,
 	...props
 }: AccordionBodyProps) => {
-	const wrapperBase = theme.accordionBodyWrapper();
-	const base = theme.accordionBody();
+	const context = useUI();
+	const base = context?.theme?.accordionBody();
+	const wrapper = context?.theme?.accordionBodyWrapper();
 	const computed = { ...base, ...props, tailwind, className, name };
 	const [height, setHeight] = useState(0);
 	const ref = useRef(null);
@@ -88,7 +92,7 @@ export const AccordionBody = ({
 
 	// Render
 	return (
-		<Div style={style} {...wrapperBase}>
+		<Div style={style} {...wrapper}>
 			<Div ref={ref} {...computed}>
 				{children}
 			</Div>
@@ -103,7 +107,8 @@ export const AccordionText = ({
 	children,
 	...props
 }: AccordionTextProps) => {
-	const base = theme.accordionText();
+	const context = useUI();
+	const base = context?.theme?.accordionText();
 	const computed = { ...base, ...props, tailwind, className, name };
 
 	return <P {...computed}>{children}</P>;

@@ -11,7 +11,7 @@ export const useDebounce = (value, delay) => {
 	return debounce;
 };
 
-export const useDelay = (method = null, listeners = []) => {
+export const useDelay = (method, listeners = []) => {
 	const [active, setActive] = useState(false);
 
 	useEffect(() => {
@@ -36,7 +36,7 @@ export const useFocus = (listeners = []) => {
 
 export const useInterval = (method, listeners = []) => {
 	useEffect(() => {
-		setTimeout(() => method(), listeners[0] || 1000);
+		setTimeout(() => method(), listeners[0]);
 	}, [...listeners]);
 };
 
@@ -50,10 +50,12 @@ export const useLoaded = (method = null, listeners = []) => {
 	return loaded;
 };
 
-export const useMount = (method, listeners = []) => {
+export const useMounted = (method, listeners = []) => {
 	const [loaded, setLoaded] = useState(false);
 
 	useEffect(() => {
 		loaded ? method() : setLoaded(true);
 	}, [...listeners]);
+
+	return loaded;
 };

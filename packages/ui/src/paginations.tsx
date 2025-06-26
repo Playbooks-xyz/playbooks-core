@@ -1,11 +1,12 @@
-import * as theme from '@playbooks/theme';
 import * as types from '@playbooks/types';
 import { BtnWrapper } from 'src/buttons';
+import { useUI } from 'src/context';
 import { FarIcon } from 'src/icons';
 import { Nav } from 'src/navs';
 
 export const Pagination = ({ name = 'Pagination', tailwind, className, children, ...props }: types.PaginationProps) => {
-	const base = theme.pagination();
+	const context = useUI();
+	const base = context?.theme?.pagination();
 	const computed = { ...base, ...props, tailwind, className, name };
 
 	return <Nav {...computed}>{children}</Nav>;
@@ -20,7 +21,8 @@ export const PaginationFirst = ({
 	onClick,
 	...props
 }: types.PaginationBtnProps) => {
-	const base = theme.paginationBtn();
+	const context = useUI();
+	const base = context?.theme?.paginationBtn();
 	const computed = { ...base, ...props, tailwind, className, name };
 
 	return (
@@ -39,7 +41,8 @@ export const PaginationPrev = ({
 	onClick,
 	...props
 }: types.PaginationBtnProps) => {
-	const base = theme.paginationBtn();
+	const context = useUI();
+	const base = context?.theme?.paginationBtn();
 	const computed = { ...base, ...props, tailwind, className, name };
 
 	return (
@@ -59,7 +62,8 @@ export const PaginationBtn = ({
 	children,
 	...props
 }: types.PaginationBtnProps) => {
-	const base = theme.paginationBtn({ active });
+	const context = useUI();
+	const base = context?.theme?.paginationBtn({ active });
 	const computed = { ...base, ...props, tailwind, className, name };
 
 	return (
@@ -78,7 +82,8 @@ export const PaginationNext = ({
 	onClick,
 	...props
 }: types.PaginationBtnProps) => {
-	const base = theme.paginationBtn();
+	const context = useUI();
+	const base = context?.theme?.paginationBtn();
 	const computed = { ...base, ...props, tailwind, className, name };
 
 	return (
@@ -97,7 +102,8 @@ export const PaginationLast = ({
 	onClick,
 	...props
 }: types.PaginationBtnProps) => {
-	const base = theme.paginationBtn();
+	const context = useUI();
+	const base = context?.theme?.paginationBtn();
 	const computed = { ...base, ...props, tailwind, className, name };
 
 	return (

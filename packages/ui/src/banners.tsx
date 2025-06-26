@@ -1,11 +1,12 @@
-import * as theme from '@playbooks/theme';
 import * as types from '@playbooks/types';
+import { useUI } from 'src/context';
 import { Font, P } from 'src/fonts';
 import { Div } from 'src/html';
 import { Icon } from 'src/icons';
 
 export const Banner = ({ name = 'Banner', tailwind, className, children, ...props }: types.BannerProps) => {
-	const base = theme.banner();
+	const context = useUI();
+	const base = context?.theme?.banner();
 	const computed = { ...base, ...props, tailwind, className, name };
 
 	return <Div {...computed}>{children}</Div>;
@@ -18,7 +19,8 @@ export const BannerIcon = ({
 	className,
 	...props
 }: types.BannerIconProps) => {
-	const base = theme.bannerIcon();
+	const context = useUI();
+	const base = context?.theme?.bannerIcon();
 	const computed = { ...base, ...props, tailwind, className, name };
 
 	return (
@@ -29,7 +31,8 @@ export const BannerIcon = ({
 };
 
 export const BannerBody = ({ name = 'BannerBody', tailwind, className, children, ...props }: types.BannerBodyProps) => {
-	const base = theme.bannerBody();
+	const context = useUI();
+	const base = context?.theme?.bannerBody();
 	const computed = { ...base, ...props, tailwind, className, name };
 
 	return <Div {...computed}>{children}</Div>;
@@ -43,7 +46,8 @@ export const BannerTitle = ({
 	children,
 	...props
 }: types.BannerTitleProps) => {
-	const base = theme.bannerTitle();
+	const context = useUI();
+	const base = context?.theme?.bannerTitle();
 	const computed = { ...base, ...props, tailwind, className, name };
 
 	return (
@@ -54,7 +58,8 @@ export const BannerTitle = ({
 };
 
 export const BannerText = ({ name = 'BannerText', tailwind, className, children, ...props }: types.BannerTextProps) => {
-	const base = theme.bannerText();
+	const context = useUI();
+	const base = context?.theme?.bannerText();
 	const computed = { ...base, ...props, tailwind, className, name };
 
 	return <P {...computed}>{children}</P>;
@@ -67,7 +72,8 @@ export const BannerActions = ({
 	children,
 	...props
 }: types.BannerActionsProps) => {
-	const base = theme.bannerActions();
+	const context = useUI();
+	const base = context?.theme?.bannerActions();
 	const computed = { ...base, ...props, tailwind, className, name };
 
 	return <Div {...computed}>{children}</Div>;

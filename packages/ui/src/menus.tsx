@@ -2,15 +2,16 @@ import { useRef, useState } from 'react';
 
 import { Fade } from '@playbooks/components/fade';
 import { useKeyPress, useMouseUp } from '@playbooks/hooks';
-import * as theme from '@playbooks/theme';
 import * as types from '@playbooks/types';
 import { AccentBtn } from 'src/buttons';
+import { useUI } from 'src/context';
 import { H6, P } from 'src/fonts';
 import { Div, Li, Ul } from 'src/html';
 import { AccentLink } from 'src/links';
 
 export const Menu = ({ name = 'Menu', open, onClose, tailwind, className, children, ...props }: types.MenuProps) => {
-	const base = theme.menu();
+	const context = useUI();
+	const base = context?.theme?.menu();
 	const computed = { ...base, ...props, tailwind, className, name };
 	const ref = useRef(null);
 
@@ -48,7 +49,8 @@ export const MenuWrapper = ({
 	children,
 	...props
 }: types.MenuWrapperProps) => {
-	const base = theme.menuWrapper();
+	const context = useUI();
+	const base = context?.theme?.menuWrapper();
 	const computed = { ...base, ...props, tailwind, className, name };
 
 	return (
@@ -67,7 +69,8 @@ export const MenuBackdrop = ({
 	className,
 	...props
 }: types.MenuBackdropProps) => {
-	const base = theme.menuBackdrop({ open });
+	const context = useUI();
+	const base = context?.theme?.menuBackdrop({ open });
 	const computed = { ...base, ...props, tailwind, className, name };
 
 	return <Div onClick={onClose} {...computed} />;
@@ -84,7 +87,8 @@ export const MenuMenu = ({
 }: types.MenuMenuProps) => {
 	const [show, setShow] = useState(false);
 
-	const base = theme.menuMenu({ open: show });
+	const context = useUI();
+	const base = context?.theme?.menuMenu({ open: show });
 	const computed = { ...base, ...props, tailwind, className, name };
 	const ref = useRef(null);
 
@@ -105,14 +109,16 @@ export const MenuMenu = ({
 };
 
 export const MenuBlock = ({ name = 'MenuBlock', tailwind, className, children, ...props }: types.MenuListProps) => {
-	const base = theme.menuBlock();
+	const context = useUI();
+	const base = context?.theme?.menuBlock();
 	const computed = { ...base, ...props, tailwind, className, name };
 
 	return <Div {...computed}>{children}</Div>;
 };
 
 export const MenuTitle = ({ name = 'MenuTitle', tailwind, className, children, ...props }: types.MenuTitleProps) => {
-	const base = theme.menuTitle();
+	const context = useUI();
+	const base = context?.theme?.menuTitle();
 	const computed = { ...base, ...props, tailwind, className, name };
 
 	return <H6 {...computed}>{children}</H6>;
@@ -125,21 +131,24 @@ export const MenuSubtitle = ({
 	children,
 	...props
 }: types.MenuSubtitleProps) => {
-	const base = theme.menuSubtitle();
+	const context = useUI();
+	const base = context?.theme?.menuSubtitle();
 	const computed = { ...base, ...props, tailwind, className, name };
 
 	return <P {...computed}>{children}</P>;
 };
 
 export const MenuList = ({ name = 'MenuList', tailwind, className, children, ...props }: types.MenuListProps) => {
-	const base = theme.menuList();
+	const context = useUI();
+	const base = context?.theme?.menuList();
 	const computed = { ...base, ...props, tailwind, className, name };
 
 	return <Ul {...computed}>{children}</Ul>;
 };
 
 export const MenuItem = ({ name = 'MenuItem', tailwind, className, children, ...props }: types.MenuItemProps) => {
-	const base = theme.menuItem();
+	const context = useUI();
+	const base = context?.theme?.menuItem();
 	const computed = { ...base, ...props, tailwind, className, name };
 
 	return <Li {...computed}>{children}</Li>;
@@ -155,7 +164,8 @@ export const MenuBtn = ({
 	children,
 	...props
 }: types.MenuBtnProps) => {
-	const base = theme.menuBtn();
+	const context = useUI();
+	const base = context?.theme?.menuBtn();
 	const computed = { ...base, ...props, tailwind, className, children, name };
 
 	return <AccentBtn active={active} taskRunning={taskRunning} onClick={onClick} {...computed} />;
@@ -169,7 +179,8 @@ export const MenuLink = ({
 	children,
 	...props
 }: types.MenuLinkProps) => {
-	const base = theme.menuLink();
+	const context = useUI();
+	const base = context?.theme?.menuLink();
 	const computed = { ...base, ...props, tailwind, className, children, name };
 
 	return <AccentLink href={href} {...computed} />;

@@ -1,5 +1,5 @@
-import * as theme from '@playbooks/theme';
 import * as types from '@playbooks/types';
+import { useUI } from 'src/context';
 import { H5, P, Small } from 'src/fonts';
 import { Div, Span } from 'src/html';
 import { Oval } from 'src/spinners';
@@ -13,7 +13,8 @@ export const ModalLoader = ({
 	children,
 	...props
 }: types.PageLoaderProps) => {
-	const base = theme.modalLoader();
+	const context = useUI();
+	const base = context?.theme?.modalLoader();
 	const computed = { ...base, ...props, tailwind, className, name };
 
 	return (
@@ -39,7 +40,8 @@ export const PageLoader = ({
 	children,
 	...props
 }: types.PageLoaderProps) => {
-	const base = theme.pageLoader();
+	const context = useUI();
+	const base = context?.theme?.pageLoader();
 	const computed = { ...base, ...props, tailwind, className, name };
 
 	return (
@@ -65,7 +67,8 @@ export const SectionLoader = ({
 	children,
 	...props
 }: types.SectionLoaderProps) => {
-	const base = theme.sectionLoader();
+	const context = useUI();
+	const base = context?.theme?.sectionLoader();
 	const computed = { ...base, ...props, tailwind, className, name };
 
 	return (

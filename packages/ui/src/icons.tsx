@@ -1,6 +1,6 @@
 import { FontAwesome } from '@playbooks/components/font-awesome';
-import * as theme from '@playbooks/theme';
 import * as types from '@playbooks/types';
+import { useUI } from 'src/context';
 import { Div } from 'src/html';
 
 export const Icon = props => {
@@ -41,42 +41,48 @@ export const Icon = props => {
 };
 
 export const FabIcon = ({ name = 'FabIcon', icon, tailwind, className, ...props }: types.IconProps) => {
-	const base = theme.icon();
+	const context = useUI();
+	const base = context?.theme?.icon();
 	const computed = { ...base, ...props, tailwind, className, name };
 
 	return <FontAwesome type='fab' icon={icon} {...computed} />;
 };
 
 export const FadIcon = ({ name = 'FadIcon', icon, tailwind, className, ...props }: types.IconProps) => {
-	const base = theme.icon();
+	const context = useUI();
+	const base = context?.theme?.icon();
 	const computed = { ...base, ...props, tailwind, className, name };
 
 	return <FontAwesome type='fad' icon={icon} {...computed} />;
 };
 
 export const FalIcon = ({ name = 'FalIcon', icon, tailwind, className, ...props }: types.IconProps) => {
-	const base = theme.icon();
+	const context = useUI();
+	const base = context?.theme?.icon();
 	const computed = { ...base, ...props, tailwind, className, name };
 
 	return <FontAwesome type='fal' icon={icon} {...computed} />;
 };
 
 export const FarIcon = ({ name = 'FarIcon', icon, tailwind, className, ...props }: types.IconProps) => {
-	const base = theme.icon();
+	const context = useUI();
+	const base = context?.theme?.icon();
 	const computed = { ...base, ...props, tailwind, className, name };
 
 	return <FontAwesome type='far' icon={icon} {...computed} />;
 };
 
 export const FasIcon = ({ name = 'FasIcon', icon, tailwind, className, ...props }: types.IconProps) => {
-	const base = theme.icon();
+	const context = useUI();
+	const base = context?.theme?.icon();
 	const computed = { ...base, ...props, tailwind, className, name };
 
 	return <FontAwesome type='fas' icon={icon} {...computed} />;
 };
 
 export const WrappedFabIcon = ({ name = 'WrappedFabIcon', icon, tailwind, className, ...props }: types.IconProps) => {
-	const base = theme.wrappedIcon();
+	const context = useUI();
+	const base = context?.theme?.wrappedIcon();
 	const computed = { ...base, ...props, tailwind, className, name };
 	return (
 		<Div {...computed}>
@@ -86,7 +92,8 @@ export const WrappedFabIcon = ({ name = 'WrappedFabIcon', icon, tailwind, classN
 };
 
 export const WrappedFadIcon = ({ name = 'WrappedFadIcon', icon, tailwind, className, ...props }: types.IconProps) => {
-	const base = theme.wrappedIcon();
+	const context = useUI();
+	const base = context?.theme?.wrappedIcon();
 	const computed = { ...base, ...props, tailwind, className, name };
 	return (
 		<Div {...computed}>
@@ -96,7 +103,8 @@ export const WrappedFadIcon = ({ name = 'WrappedFadIcon', icon, tailwind, classN
 };
 
 export const WrappedFalIcon = ({ name = 'WrappedFalIcon', icon, tailwind, className, ...props }: types.IconProps) => {
-	const base = theme.wrappedIcon();
+	const context = useUI();
+	const base = context?.theme?.wrappedIcon();
 	const computed = { ...base, ...props, tailwind, className, name };
 
 	return (
@@ -107,7 +115,8 @@ export const WrappedFalIcon = ({ name = 'WrappedFalIcon', icon, tailwind, classN
 };
 
 export const WrappedFarIcon = ({ name = 'WrappedFarIcon', icon, tailwind, className, ...props }: types.IconProps) => {
-	const base = theme.wrappedIcon();
+	const context = useUI();
+	const base = context?.theme?.wrappedIcon();
 	const computed = { ...base, ...props, tailwind, className, name };
 
 	return (
@@ -118,7 +127,8 @@ export const WrappedFarIcon = ({ name = 'WrappedFarIcon', icon, tailwind, classN
 };
 
 export const WrappedFasIcon = ({ name = 'WrappedFasIcon', icon, tailwind, className, ...props }: types.IconProps) => {
-	const base = theme.wrappedIcon();
+	const context = useUI();
+	const base = context?.theme?.wrappedIcon();
 	const computed = { ...base, ...props, tailwind, className, name };
 
 	return (

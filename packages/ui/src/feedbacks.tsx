@@ -1,11 +1,12 @@
-import * as theme from '@playbooks/theme';
 import * as types from '@playbooks/types';
+import { useUI } from 'src/context';
 import { Font, P, Small } from 'src/fonts';
 import { Div } from 'src/html';
 import { Icon } from 'src/icons';
 
 export const Feedback = ({ name = 'Feedback', tailwind, className, children, ...props }: types.FeedbackProps) => {
-	const base = theme.feedback();
+	const context = useUI();
+	const base = context?.theme?.feedback();
 	const computed = { ...base, ...props, tailwind, className, name };
 
 	return <Div {...computed}>{children}</Div>;
@@ -18,7 +19,8 @@ export const FeedbackHeader = ({
 	children,
 	...props
 }: types.FeedbackHeaderProps) => {
-	const base = theme.feedbackHeader();
+	const context = useUI();
+	const base = context?.theme?.feedbackHeader();
 	const computed = { ...base, ...props, tailwind, className, name };
 
 	return <Div {...computed}>{children}</Div>;
@@ -32,7 +34,8 @@ export const FeedbackIcon = ({
 	className,
 	...props
 }: types.FeedbackIconProps) => {
-	const base = theme.feedbackIcon();
+	const context = useUI();
+	const base = context?.theme?.feedbackIcon();
 	const computed = { ...base, ...props, tailwind, className, name };
 
 	return <Icon type={type} icon={icon} {...computed} />;
@@ -45,7 +48,8 @@ export const FeedbackBody = ({
 	children,
 	...props
 }: types.FeedbackBodyProps) => {
-	const base = theme.feedbackBody();
+	const context = useUI();
+	const base = context?.theme?.feedbackBody();
 	const computed = { ...base, ...props, tailwind, className, name };
 
 	return <Div {...computed}>{children}</Div>;
@@ -58,7 +62,8 @@ export const FeedbackPretitle = ({
 	children,
 	...props
 }: types.FeedbackTitleProps) => {
-	const base = theme.feedbackPretitle();
+	const context = useUI();
+	const base = context?.theme?.feedbackPretitle();
 	const computed = { ...base, ...props, tailwind, className, name };
 
 	return <Small {...computed}>{children}</Small>;
@@ -72,7 +77,8 @@ export const FeedbackTitle = ({
 	children,
 	...props
 }: types.FeedbackTitleProps) => {
-	const base = theme.feedbackTitle();
+	const context = useUI();
+	const base = context?.theme?.feedbackTitle();
 	const computed = { ...base, ...props, tailwind, className, name };
 
 	return (
@@ -89,7 +95,8 @@ export const FeedbackText = ({
 	children,
 	...props
 }: types.FeedbackTextProps) => {
-	const base = theme.feedbackText();
+	const context = useUI();
+	const base = context?.theme?.feedbackText();
 	const computed = { ...base, ...props, tailwind, className, name };
 
 	return <P {...computed}>{children}</P>;
@@ -102,7 +109,8 @@ export const FeedbackActions = ({
 	children,
 	...props
 }: types.FeedbackActionsProps) => {
-	const base = theme.feedbackActions();
+	const context = useUI();
+	const base = context?.theme?.feedbackActions();
 	const computed = { ...base, ...props, tailwind, className, name };
 
 	return <Div {...computed}>{children}</Div>;

@@ -1,9 +1,9 @@
 import { useRef, useState } from 'react';
 
 import { Fade } from '@playbooks/components/fade';
-import * as theme from '@playbooks/theme';
 import * as types from '@playbooks/types';
 import { AccentBtn } from 'src/buttons';
+import { useUI } from 'src/context';
 import { H6, P } from 'src/fonts';
 import { Div, Span } from 'src/html';
 import { FadIcon } from 'src/icons';
@@ -15,7 +15,8 @@ export const ToastWrapper = ({
 	children,
 	...props
 }: types.ToastWrapperProps) => {
-	const base = theme.toastWrapper();
+	const context = useUI();
+	const base = context?.theme?.toastWrapper();
 	const computed = { ...base, ...props, tailwind, className, name };
 
 	return <Div {...computed}>{children}</Div>;
@@ -33,7 +34,8 @@ export const Toast = ({
 	...props
 }: types.ToastProps) => {
 	const [show, setShow] = useState(false);
-	const base = theme.toast({ open: show, direction });
+	const context = useUI();
+	const base = context?.theme?.toast({ open: show, direction });
 	const computed = { ...base, ...props, tailwind, className };
 	const ref = useRef(null);
 
@@ -59,7 +61,8 @@ export const ToastHeader = ({
 	children,
 	...props
 }: types.ToastHeaderProps) => {
-	const base = theme.toastHeader();
+	const context = useUI();
+	const base = context?.theme?.toastHeader();
 	const computed = { ...base, ...props, tailwind, className, name };
 
 	return (
@@ -79,7 +82,8 @@ export const ToastIcon = ({
 	className,
 	...props
 }: types.ToastIconProps) => {
-	const base = theme.toastIcon();
+	const context = useUI();
+	const base = context?.theme?.toastIcon();
 	const computed = { ...base, ...props, tailwind, className, name };
 
 	return (
@@ -90,21 +94,24 @@ export const ToastIcon = ({
 };
 
 export const ToastTitle = ({ name = 'ToastTitle', tailwind, className, children, ...props }: types.ToastTitleProps) => {
-	const base = theme.toastTitle();
+	const context = useUI();
+	const base = context?.theme?.toastTitle();
 	const computed = { ...base, ...props, tailwind, className, name };
 
 	return <H6 {...computed}>{children}</H6>;
 };
 
 export const ToastBody = ({ name = 'ToastBody', tailwind, className, children, ...props }: types.ToastBodyProps) => {
-	const base = theme.toastBody();
+	const context = useUI();
+	const base = context?.theme?.toastBody();
 	const computed = { ...base, ...props, tailwind, className, name };
 
 	return <Div {...computed}>{children}</Div>;
 };
 
 export const ToastText = ({ name = 'ToastText', tailwind, className, children, ...props }: types.ToastTextProps) => {
-	const base = theme.toastText();
+	const context = useUI();
+	const base = context?.theme?.toastText();
 	const computed = { ...base, ...props, tailwind, className, name };
 
 	return <P {...computed}>{children}</P>;

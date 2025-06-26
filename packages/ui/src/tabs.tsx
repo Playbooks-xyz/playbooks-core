@@ -1,11 +1,12 @@
-import * as theme from '@playbooks/theme';
 import * as types from '@playbooks/types';
 import { Btn } from 'src/buttons';
+import { useUI } from 'src/context';
 import { FormSelect } from 'src/forms';
 import { Div } from 'src/html';
 
 export const TabWrapper = ({ name = 'TabWrapper', tailwind, className, children, ...props }: types.TabWrapperProps) => {
-	const base = theme.tabWrapper();
+	const context = useUI();
+	const base = context?.theme?.tabWrapper();
 	const computed = { ...base, ...props, tailwind, className, name };
 
 	return <Div {...computed}>{children}</Div>;
@@ -21,7 +22,8 @@ export const TabSelect = ({
 	children,
 	...props
 }: types.TabSelectProps) => {
-	const base = theme.tabSelect();
+	const context = useUI();
+	const base = context?.theme?.tabSelect();
 	const computed = { ...base, ...props, tailwind, className, name };
 
 	return <FormSelect value={activeTab} options={tabs} onChange={onSelect} {...computed} />;
@@ -37,7 +39,8 @@ export const Tabs = ({
 	children,
 	...props
 }: types.TabPropss) => {
-	const base = theme.tabs();
+	const context = useUI();
+	const base = context?.theme?.tabs();
 	const computed = { ...base, ...props, tailwind, className, name };
 
 	return (
@@ -61,14 +64,16 @@ export const Tab = ({
 	children,
 	...props
 }: types.TabProps) => {
-	const base = theme.tab({ active });
+	const context = useUI();
+	const base = context?.theme?.tab({ active });
 	const computed = { ...base, ...props, tailwind, alt, children, className, name };
 
 	return <Btn variant={variant} onClick={() => onSelect(value)} {...computed} />;
 };
 
 export const TabPanes = ({ name = 'TabPanes', tailwind, className, children, ...props }: types.TabPanesProps) => {
-	const base = theme.tabPanes();
+	const context = useUI();
+	const base = context?.theme?.tabPanes();
 	const computed = { ...base, ...props, tailwind, className, name };
 
 	return <Div {...computed}>{children}</Div>;
@@ -83,7 +88,8 @@ export const TabPane = ({
 	children,
 	...props
 }: types.TabPaneProps) => {
-	const base = theme.tabPane({ active });
+	const context = useUI();
+	const base = context?.theme?.tabPane({ active });
 	const computed = { ...base, ...props, tailwind, className, name };
 
 	return <Div {...computed}>{children}</Div>;

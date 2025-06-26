@@ -1,12 +1,13 @@
 import * as HTML from '@ehubbell/html';
 import { computeProps } from '@ehubbell/html';
-import * as theme from '@playbooks/theme';
 import * as types from '@playbooks/types';
+import { useUI } from 'src/context';
 import { Img, Ul } from 'src/html';
 import { LinkWrapper } from 'src/links';
 
 export const Navbar = ({ name = 'Navbar', tailwind, className, children, ...props }: types.NavPropsbar) => {
-	const base = theme.navbar();
+	const context = useUI();
+	const base = context?.theme?.navbar();
 	const formatted = { ...base, ...props, ...tailwind };
 	const filtered = computeProps(props);
 
@@ -27,7 +28,8 @@ export const NavbarBrand = ({
 	children,
 	...props
 }: types.NavPropsbarBrand) => {
-	const base = theme.navbarBrand();
+	const context = useUI();
+	const base = context?.theme?.navbarBrand();
 	const computed = { ...base, ...props, tailwind, className };
 
 	return (
@@ -38,7 +40,8 @@ export const NavbarBrand = ({
 };
 
 export const NavbarList = ({ name = 'NavbarList', tailwind, className, children, ...props }: types.NavPropsbarList) => {
-	const base = theme.navbarList();
+	const context = useUI();
+	const base = context?.theme?.navbarList();
 	const computed = { ...base, ...props, tailwind, className, name };
 
 	return <Ul {...computed}>{children}</Ul>;

@@ -2,8 +2,8 @@ import { Range } from 'react-range';
 
 import * as HTML from '@ehubbell/html';
 import { computeTailwind } from '@ehubbell/html';
-import * as theme from '@playbooks/theme';
 import * as types from '@playbooks/types';
+import { useUI } from 'src/context';
 
 export const RangeSlider = ({
 	ref,
@@ -16,7 +16,8 @@ export const RangeSlider = ({
 	className,
 	...props
 }: types.RangeSliderProps) => {
-	const base = theme.rangeSlider();
+	const context = useUI();
+	const base = context?.theme?.rangeSlider();
 	const classes = computeTailwind({ ...base, ...props, ...tailwind, className });
 
 	return (
@@ -54,7 +55,8 @@ export const RangeSliders = ({
 	className,
 	...props
 }: types.RangeSlidersProps) => {
-	const base = theme.rangeSlider();
+	const context = useUI();
+	const base = context?.theme?.rangeSlider();
 	const classes = computeTailwind({ ...base, ...props, ...tailwind, className });
 
 	return (
@@ -84,7 +86,8 @@ export const RangeSliders = ({
 };
 
 export const RangeSliderTrack = ({ ref, values, min, max, trackProps, children, onNext, tailwind, ...restProps }) => {
-	const base = theme.rangeSliderTrack();
+	const context = useUI();
+	const base = context?.theme?.rangeSliderTrack();
 	const classes = computeTailwind({ ...base, ...restProps, tailwind });
 
 	return (
@@ -109,7 +112,8 @@ export const RangeSliderTrack = ({ ref, values, min, max, trackProps, children, 
 };
 
 export const RangeSliderThumb = ({ ref, isDragged, tailwind, ...props }) => {
-	const base = theme.rangeSliderThumb({ isDragged });
+	const context = useUI();
+	const base = context?.theme?.rangeSliderThumb({ isDragged });
 	const classes = computeTailwind({ ...base, ...props, tailwind });
 
 	return <HTML.Div ref={ref} {...props} className={classes} style={props.style} />;

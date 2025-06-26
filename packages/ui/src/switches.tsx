@@ -1,8 +1,8 @@
 import * as HTML from '@ehubbell/html';
 import { computeTailwind } from '@ehubbell/html';
-import * as theme from '@playbooks/theme';
 import * as types from '@playbooks/types';
 import { BtnWrapper } from 'src/buttons';
+import { useUI } from 'src/context';
 import { Div, Span } from 'src/html';
 import { FadIcon } from 'src/icons';
 
@@ -13,7 +13,8 @@ export const SwitchGroup = ({
 	children,
 	...props
 }: types.SwitchGroupProps) => {
-	const base = theme.switchGroup();
+	const context = useUI();
+	const base = context?.theme?.switchGroup();
 	const computed = { ...base, ...props, tailwind, className, name };
 
 	return <Div {...computed}>{children}</Div>;
@@ -28,7 +29,8 @@ export const Switch = ({
 	className,
 	...props
 }: types.SwitchProps) => {
-	const base = theme.switchBase();
+	const context = useUI();
+	const base = context?.theme?.switchBase();
 	const classes = computeTailwind({ ...base, ...props, ...tailwind, className });
 
 	return (
@@ -48,7 +50,8 @@ export const SwitchBackdrop = ({
 	className,
 	...props
 }: types.SwitchBackdropProps) => {
-	const base = theme.switchBackdrop();
+	const context = useUI();
+	const base = context?.theme?.switchBackdrop();
 	const computed = { ...base, ...props, tailwind, className, name };
 
 	return <Span aria-hidden='true' {...computed} />;
@@ -61,7 +64,8 @@ export const SwitchInner = ({
 	className,
 	...props
 }: types.SwitchInnerProps) => {
-	const base = theme.switchInner({ checked });
+	const context = useUI();
+	const base = context?.theme?.switchInner({ checked });
 	const computed = { ...base, ...props, tailwind, className, name };
 
 	return <Span aria-hidden='true' {...computed} />;
@@ -75,7 +79,8 @@ export const SwitchToggle = ({
 	className,
 	...props
 }: types.SwitchToggleProps) => {
-	const base = theme.switchToggle({ checked });
+	const context = useUI();
+	const base = context?.theme?.switchToggle({ checked });
 	const computed = { ...base, ...props, tailwind, className, name };
 
 	return (
@@ -98,7 +103,8 @@ export const SwitchLabel = ({
 	children,
 	...props
 }: types.SwitchLabelProps) => {
-	const base = theme.switchLabel();
+	const context = useUI();
+	const base = context?.theme?.switchLabel();
 	const classes = computeTailwind({ ...base, ...props, ...tailwind, className });
 
 	return (

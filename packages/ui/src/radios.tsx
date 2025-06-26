@@ -1,7 +1,7 @@
 import * as HTML from '@ehubbell/html';
 import { computeTailwind } from '@ehubbell/html';
-import * as theme from '@playbooks/theme';
 import * as types from '@playbooks/types';
+import { useUI } from 'src/context';
 import { P, Small } from 'src/fonts';
 import { Div } from 'src/html';
 
@@ -15,7 +15,8 @@ export const RadioWrapper = ({
 	children,
 	...props
 }: types.RadioWrapperProps) => {
-	const base = theme.radioWrapper({ active });
+	const context = useUI();
+	const base = context?.theme?.radioWrapper({ active });
 	const classes = computeTailwind({ ...base, ...props, ...tailwind, className });
 
 	return (
@@ -36,7 +37,8 @@ export const Radio = ({
 	children,
 	...props
 }: types.RadioProps) => {
-	const base = theme.radio();
+	const context = useUI();
+	const base = context?.theme?.radio();
 	const computed = { ...base, ...props, tailwind, className, name };
 
 	return (
@@ -59,7 +61,8 @@ export const RadioInput = ({
 	children,
 	...props
 }: types.RadioInputProps) => {
-	const base = theme.radioInput();
+	const context = useUI();
+	const base = context?.theme?.radioInput();
 	const classes = computeTailwind({ ...base, ...props, ...tailwind, name, className });
 
 	return (
@@ -77,14 +80,16 @@ export const RadioInput = ({
 };
 
 export const RadioTitle = ({ name = 'RadioLabel', tailwind, className, children, ...props }: types.FontProps) => {
-	const base = theme.radioTitle();
+	const context = useUI();
+	const base = context?.theme?.radioTitle();
 	const computed = { ...base, ...props, tailwind, className, name };
 
 	return <P {...computed}>{children}</P>;
 };
 
 export const RadioText = ({ name = 'RadioLabel', tailwind, className, children, ...props }: types.FontProps) => {
-	const base = theme.radioText();
+	const context = useUI();
+	const base = context?.theme?.radioText();
 	const computed = { ...base, ...props, tailwind, className, name };
 
 	return <Small {...computed}>{children}</Small>;

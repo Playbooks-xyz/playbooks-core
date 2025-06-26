@@ -1,6 +1,6 @@
 {
 	"name": "@playbooks/ui",
-	"version": "0.9.1",
+	"version": "0.9.2",
 	"description": "An interface library for Playbooks.",
 	"private": false,
 	"license": "ISC",
@@ -45,26 +45,17 @@
 	},
 	"dependencies": {
 		"@ehubbell/html": "^0.1.10",
-		"@ehubbell/scrollspy": "^0.0.2",
 		"@fortawesome/react-fontawesome": "^0.2.2",
-		"@playbooks/assets": "^0.0.1",
+		"@playbooks/assets": "^0.9.3",
 		"@playbooks/components": "^0.0.5",
 		"@playbooks/hooks": "^0.0.2",
-		"@playbooks/theme": "^0.1.17",
 		"@playbooks/utils": "^0.0.2",
 		"@popperjs/core": "^2.11.8",
 		"@react-google-maps/api": "^2.20.5",
 		"@react-spring/web": "^10.0.1",
 		"@tailwindcss/forms": "^0.5.10",
-		"nprogress": "^0.2.0",
-		"react-currency-input-field": "^3.10.0",
-		"react-input-mask": "^2.0.4",
-		"react-intersection-observer": "^9.16.0",
-		"react-loading-skeleton": "^3.5.0",
-		"react-phone-number-input": "^3.4.3",
 		"react-popper": "^2.3.0",
-		"react-range": "^1.8.14",
-		"react-transition-group": "^4.4.5"
+		"react-range": "^1.8.14"
 	},
 	"devDependencies": {
 		"@fortawesome/fontawesome-svg-core": "^6.7.2",

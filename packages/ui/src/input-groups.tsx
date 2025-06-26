@@ -1,5 +1,5 @@
-import * as theme from '@playbooks/theme';
 import * as types from '@playbooks/types';
+import { useUI } from 'src/context';
 import { Div } from 'src/html';
 import { Icon } from 'src/icons';
 
@@ -11,7 +11,8 @@ export const InputGroup = ({
 	children,
 	...props
 }: types.InputGroupProps) => {
-	const base = theme.inputGroup();
+	const context = useUI();
+	const base = context?.theme?.inputGroup();
 	const computed = { ...base, ...props, tailwind, className, name };
 
 	return <Div {...computed}>{children}</Div>;
@@ -26,7 +27,8 @@ export const InputAppend = ({
 	children,
 	...props
 }: types.InputAddonProps) => {
-	const base = theme.inputAppend();
+	const context = useUI();
+	const base = context?.theme?.inputAppend();
 	const computed = { ...base, ...props, tailwind, className, name };
 
 	return <Div {...computed}>{icon ? <Icon icon={icon?.icon || icon} {...icon} /> : children}</Div>;
@@ -42,7 +44,8 @@ export const InputPrepend = ({
 	children,
 	...props
 }: types.InputAddonProps) => {
-	const base = theme.inputPrepend();
+	const context = useUI();
+	const base = context?.theme?.inputPrepend();
 	const computed = { ...base, ...props, tailwind, className, name };
 
 	return <Div {...computed}>{icon ? <Icon icon={icon?.icon || icon} {...icon} /> : children}</Div>;
