@@ -1,6 +1,6 @@
 {
 	"name": "@playbooks/components",
-	"version": "0.9.5",
+	"version": "0.9.7",
 	"description": "A collection of React components for Playbooks.",
 	"author": "Eric Hubbell<eric@erichubbell.com>",
 	"license": "ISC",
@@ -38,8 +38,8 @@
 		"@playbooks/configs": "^0.0.5",
 		"@react-google-maps/api": "^2.20.7",
 		"@react-spring/web": "^10.0.1",
+		"chart.js": "^4.5.0",
 		"date-fns": "^4.1.0",
-		"emoji-picker-react": "^4.12.2",
 		"react-chartjs-2": "^5.3.0",
 		"react-countup": "^6.5.3",
 		"react-currency-input-field": "^3.10.0",
@@ -68,10 +68,10 @@
 			"import": "./dist/animation.es.js",
 			"require": "./dist/animation.cjs.js"
 		},
-		"./chart": {
-			"types": "./dist/chart.d.ts",
-			"import": "./dist/chart.es.js",
-			"require": "./dist/chart.cjs.js"
+		"./charts": {
+			"types": "./dist/charts.d.ts",
+			"import": "./dist/charts.es.js",
+			"require": "./dist/charts.cjs.js"
 		},
 		"./context": {
 			"types": "./dist/context.d.ts",
@@ -102,6 +102,11 @@
 			"types": "./dist/drag-drop.d.ts",
 			"import": "./dist/drag-drop.es.js",
 			"require": "./dist/drag-drop.cjs.js"
+		},
+		"./emojis": {
+			"types": "./dist/emojis.d.ts",
+			"import": "./dist/emojis.es.js",
+			"require": "./dist/emojis.cjs.js"
 		},
 		"./fade": {
 			"types": "./dist/fade.d.ts",

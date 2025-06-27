@@ -1,0 +1,9 @@
+.EmojiPickerReact {
+	--epr-emoji-variation-picker-bg-color: transparent !important;
+	--epr-bg-color: transparent !important;
+	--epr-reactions-bg-color: transparent !important;
+	--epr-category-label-bg-color: transparent !important;
+	--epr-category-label-height: 20px !important;
+	--epr-emoji-size: 20px !important;
+	transition: none !important;
+}

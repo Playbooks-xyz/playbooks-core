@@ -12,16 +12,14 @@ import {
 	PointElement,
 	Tooltip,
 } from 'chart.js';
-import { useComponents } from 'src/context';
 
-const Chart = ({ type = 'line', data = {}, options, tailwind = {} }) => {
+const Chart = ({ type = 'line', data = {}, options, theme, tailwind = {} }) => {
 	const className = computeTailwind(tailwind);
-	const context = useComponents();
 
 	// Computed
 	ChartJS.register(BarElement, CategoryScale, Colors, Tooltip, Legend, LinearScale, PointElement, LineElement);
 
-	ChartJS.defaults.borderColor = context?.theme?.isDark ? '#334155' : '#e2e8f0';
+	ChartJS.defaults.borderColor = theme?.isDark ? '#334155' : '#e2e8f0';
 	ChartJS.defaults.color = '#9EA7B3';
 	ChartJS.defaults.elements.line.borderWidth = 2;
 	ChartJS.defaults.elements.line.borderJoinStyle = 'round';

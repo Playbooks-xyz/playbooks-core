@@ -14,7 +14,7 @@ const TextEditor = ({
 	className,
 	tailwind,
 }) => {
-	const base = { ...formInput({ size }), overflow: 'overflow-hidden' };
+	const base = { ...formInput({ size }), overflow: 'overflow-hidden', spacing: '' };
 	const classes = computeTailwind({ ...base, ...tailwind, className });
 	const ref = useRef(null);
 
