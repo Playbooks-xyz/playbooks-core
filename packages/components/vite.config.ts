@@ -13,7 +13,6 @@ export default defineConfig(({ mode }) => ({
 			entry: [
 				path.resolve(__dirname, 'src/index.tsx'),
 				path.resolve(__dirname, 'src/animation.tsx'),
-				path.resolve(__dirname, 'src/charts.tsx'),
 				path.resolve(__dirname, 'src/context.tsx'),
 				path.resolve(__dirname, 'src/count-up.tsx'),
 				path.resolve(__dirname, 'src/currency-input.tsx'),
@@ -30,7 +29,6 @@ export default defineConfig(({ mode }) => ({
 				path.resolve(__dirname, 'src/scrollspy.tsx'),
 				path.resolve(__dirname, 'src/skeleton.tsx'),
 				path.resolve(__dirname, 'src/star-rating.tsx'),
-				path.resolve(__dirname, 'src/text-editor.tsx'),
 				path.resolve(__dirname, 'src/waypoint.tsx'),
 				path.resolve(__dirname, 'src/styles.css'),
 			],

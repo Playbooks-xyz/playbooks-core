@@ -1,4 +1,5 @@
 import { useRef, useState } from 'react';
+import { createPortal } from 'react-dom';
 import { usePopper } from 'react-popper';
 
 import { Fade } from '@playbooks/components/fade';
@@ -55,7 +56,8 @@ export const Tooltip = ({
 	};
 
 	// Render
-	return (
+	if (typeof window === 'undefined') return null;
+	return createPortal(
 		<Span
 			id={id}
 			ref={setRefElement}
@@ -76,7 +78,8 @@ export const Tooltip = ({
 					</Div>
 				</Div>
 			</Fade>
-		</Span>
+		</Span>,
+		document.body,
 	);
 };
 

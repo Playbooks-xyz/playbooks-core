@@ -3,8 +3,8 @@ import { Rating } from 'react-simple-star-rating';
 const StarRating = ({
 	value,
 	iconsCount = 5,
-	fillIcon,
-	emptyIcon,
+	fillIcon = null,
+	emptyIcon = null,
 	transition = false,
 	onChange = null,
 	readOnly = false,

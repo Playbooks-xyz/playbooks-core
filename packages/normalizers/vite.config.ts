@@ -9,7 +9,7 @@ export default defineConfig(({ mode }) => ({
 		lib: {
 			entry: path.resolve(__dirname, 'src/index.ts'),
 			name: 'Normalizers',
-			formats: ['es'],
+			formats: ['es', 'cjs'],
 			fileName: (format, entryName) => `${entryName}.${format}.js`,
 		},
 		rollupOptions: {

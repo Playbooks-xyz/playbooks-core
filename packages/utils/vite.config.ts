@@ -29,7 +29,7 @@ export default defineConfig(({ mode }) => ({
 				path.resolve(__dirname, 'src/transforms.ts'),
 			],
 			name: 'Utils',
-			formats: ['es'],
+			formats: ['es', 'cjs'],
 			fileName: (format, entryName) => `${entryName}.${format}.js`,
 		},
 		rollupOptions: {

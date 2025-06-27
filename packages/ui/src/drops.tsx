@@ -1,4 +1,5 @@
 import { useRef, useState } from 'react';
+import { createPortal } from 'react-dom';
 import { usePopper } from 'react-popper';
 
 import { Fade } from '@playbooks/components/fade';
@@ -90,27 +91,34 @@ export const DropMenu = ({
 		...options,
 	});
 
+	// Hooks
+	// useEffect(() => {
+	// 	update();
+	// }, [open]);
+
 	// Methods
 	const onEnter = () => setShow(true);
 	const onExit = () => setShow(false);
 
 	// Render
-	return (
+	if (typeof window === 'undefined') return null;
+	return createPortal(
 		<Fade ref={nodeRef} show={open} timeout={200} onEnter={onEnter} onExit={onExit}>
-			<div
+			<Div
 				ref={setDropRef}
 				role='menu'
 				aria-orientation='vertical'
 				aria-labelledby='menu-button'
 				tabIndex={-1}
-				className='w-auto z-10'
+				className='w-auto z-50'
 				style={popperStyles.popper}
 				{...attributes.popper}>
 				<Div ref={nodeRef} {...computed}>
 					{children}
 				</Div>
-			</div>
-		</Fade>
+			</Div>
+		</Fade>,
+		document.body,
 	);
 };
 
