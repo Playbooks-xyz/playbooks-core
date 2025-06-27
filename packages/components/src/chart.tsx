@@ -1,6 +1,6 @@
 import { Bar, Doughnut, Line, Pie } from 'react-chartjs-2';
 
-import { computeTailwind } from '@playbooks/utils';
+import { computeTailwind } from '@ehubbell/html';
 import {
 	BarElement,
 	CategoryScale,

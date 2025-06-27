@@ -1,6 +1,6 @@
 {
 	"name": "@playbooks/utils",
-	"version": "0.9.1",
+	"version": "0.9.4",
 	"description": "A collection of utilities used for Playbooks.",
 	"author": "Eric Hubbell<eric@erichubbell.com>",
 	"license": "ISC",
@@ -35,9 +35,13 @@
 	"dependencies": {
 		"@ehubbell/html": "^0.1.10",
 		"accounting": "^0.4.1",
+		"binary-extensions": "^3.1.0",
 		"bytes": "^3.1.2",
+		"country-list": "^2.3.0",
 		"dayjs": "^1.11.13",
+		"file-extension": "^4.0.5",
 		"js-abbreviation-number": "^1.4.0",
+		"js-base64": "^3.7.7",
 		"pluralize": "^8.0.0",
 		"uniqid": "^5.4.0"
 	},
@@ -61,6 +65,11 @@
 			"import": "./dist/bytes.es.js",
 			"require": "./dist/bytes.cjs.js"
 		},
+		"./countries": {
+			"types": "./dist/countries.d.ts",
+			"import": "./dist/countries.es.js",
+			"require": "./dist/countries.cjs.js"
+		},
 		"./dates": {
 			"types": "./dist/dates.d.ts",
 			"import": "./dist/dates.es.js",
@@ -80,6 +89,11 @@
 			"types": "./dist/errors.d.ts",
 			"import": "./dist/errors.es.js",
 			"require": "./dist/errors.cjs.js"
+		},
+		"./extensions": {
+			"types": "./dist/extensions.d.ts",
+			"import": "./dist/extensions.es.js",
+			"require": "./dist/extensions.cjs.js"
 		},
 		"./helpers": {
 			"types": "./dist/helpers.d.ts",
@@ -110,6 +124,11 @@
 			"types": "./dist/regex.d.ts",
 			"import": "./dist/regex.es.js",
 			"require": "./dist/regex.cjs.js"
+		},
+		"./strings": {
+			"types": "./dist/strings.d.ts",
+			"import": "./dist/strings.es.js",
+			"require": "./dist/strings.cjs.js"
 		},
 		"./tests": {
 			"types": "./dist/tests.d.ts",

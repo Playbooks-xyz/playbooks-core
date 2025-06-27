@@ -19,7 +19,7 @@ export const useElementObserver = (element, listeners) => {
 
 	useEffect(() => {
 		const observer = new ResizeObserver(entries => setItem(entries[0]));
-		observer.observe(element);
+		if (element) observer.observe(element);
 		return () => observer.disconnect();
 	}, [...listeners]);
 
@@ -32,7 +32,7 @@ export const useElementHeight = (element, method, listeners) => {
 			const item = entries[0];
 			method(item.contentRect.height);
 		});
-		observer.observe(element);
+		if (element) observer.observe(element);
 		return () => observer.disconnect();
 	}, [...listeners]);
 };
@@ -43,7 +43,7 @@ export const useElementWidth = (element, method, listeners) => {
 			const item = entries[0];
 			method(item.contentRect.width);
 		});
-		observer.observe(element);
+		if (element) observer.observe(element);
 		return () => observer.disconnect();
 	}, [...listeners]);
 };

@@ -1,5 +1,6 @@
-import { useEffect, useMemo, useRef, useState } from 'react';
+import { useMemo, useRef, useState } from 'react';
 
+import { useElementHeight } from '@playbooks/hooks';
 import {
 	AccordionBodyProps,
 	AccordionProps,
@@ -81,14 +82,12 @@ export const AccordionBody = ({
 	}, [height, open, ref?.current]);
 
 	// Hooks
-	useEffect(() => {
-		const observer = new ResizeObserver(entries => {
-			const element = entries[0];
-			setHeight(element.contentRect.height);
-		});
-		if (ref.current) observer.observe(ref.current);
-		return () => observer.disconnect();
-	}, [children]);
+	useElementHeight(ref?.current, onHeight, [children]);
+
+	// Methods
+	function onHeight(height) {
+		setHeight(height);
+	}
 
 	// Render
 	return (

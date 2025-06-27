@@ -15,7 +15,7 @@ export type UIProviderProps = {
 export const UIContext = React.createContext(null);
 
 export const UIProvider = ({ components, contexts, fonts, seo, theme, children }: UIProviderProps) => {
-	const router = contexts?.useRouter();
+	const router = contexts.useRouter();
 	const computedTheme = theme || defaultTheme;
 
 	// Computed

@@ -42,7 +42,7 @@ export default defineConfig(({ mode }) => ({
 			fileName: (format, entryName) => `${entryName}.${format}.js`,
 		},
 		rollupOptions: {
-			external: ['react', 'react-dom', 'react/jsx-runtime', 'next/router'],
+			external: ['react', 'react-dom', 'react/jsx-runtime'],
 			plugins: [peerDepsExternal()],
 		},
 	},

@@ -6,7 +6,7 @@ import { CurrencyInput } from '@playbooks/components/currency-input';
 import { GoogleAutocomplete } from '@playbooks/components/google-autocomplete';
 import { MaskedInput } from '@playbooks/components/masked-input';
 import { PhoneInput } from '@playbooks/components/phone-input';
-import { useElementKeyPress } from '@playbooks/hooks';
+import { useElementKeyDown } from '@playbooks/hooks';
 import * as types from '@playbooks/types';
 import { useUI } from 'src/context';
 import { Div, Span } from 'src/html';
@@ -250,7 +250,7 @@ export const FormLocationInput = ({
 	const ref = useRef(null);
 
 	// Hooks
-	useElementKeyPress(ref.current, onKeyPress, []);
+	useElementKeyDown(ref.current, onKeyPress, []);
 
 	// Methods
 	function onKeyPress(e) {

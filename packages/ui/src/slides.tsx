@@ -2,7 +2,7 @@ import { useEffect, useRef, useState } from 'react';
 import { createPortal } from 'react-dom';
 
 import { Fade } from '@playbooks/components/fade';
-import { useKeyPress } from '@playbooks/hooks';
+import { useKeyDown } from '@playbooks/hooks';
 import * as types from '@playbooks/types';
 import { AccentBtn } from 'src/buttons';
 import { useUI } from 'src/context';
@@ -67,7 +67,7 @@ export const Slide = ({
 		open ? el.classList?.add('overflow-hidden') : el.classList?.remove('overflow-hidden');
 	}, [open]);
 
-	useKeyPress(onKeyDown, [open]);
+	useKeyDown(onKeyDown, [open]);
 
 	// Function
 	function onKeyDown(e) {

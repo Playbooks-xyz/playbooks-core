@@ -3,9 +3,19 @@ import { useDrag, useDrop } from 'react-dnd';
 import { DndProvider } from 'react-dnd';
 import { HTML5Backend } from 'react-dnd-html5-backend';
 
-import { Div } from '@playbooks/ui/html';
+import { Div } from '@ehubbell/html';
 
-const DragDrop = ({ index, model, disabled = false, onMove, onDrop, children, tailwind }) => {
+export type DragDropProps = {
+	index: number;
+	model: any;
+	disabled?: boolean;
+	onMove: any;
+	onDrop: any;
+	tailwind?: any;
+	children: any;
+};
+
+const DragDrop = ({ index, model, disabled = false, onMove, onDrop, tailwind, children }: DragDropProps) => {
 	const ref = useRef(null);
 
 	// Hooks
@@ -25,7 +35,7 @@ const DragDrop = ({ index, model, disabled = false, onMove, onDrop, children, ta
 		drop(item: any, monitor) {
 			// console.log('drop: ', item, monitor);
 			const dropIndex = item.index;
-			onDrop(dropIndex, monitor);
+			if (onDrop) onDrop(dropIndex, monitor);
 		},
 		hover(item: any, monitor) {
 			// console.log('hover: ', item, monitor);
@@ -38,15 +48,11 @@ const DragDrop = ({ index, model, disabled = false, onMove, onDrop, children, ta
 			const hoverClientY = clientOffset.y - hoverBoundingRect.top;
 			if (dragIndex < hoverIndex && hoverClientY < hoverMiddleY) return;
 			if (dragIndex > hoverIndex && hoverClientY > hoverMiddleY) return;
-			onMove(dragIndex, hoverIndex);
+			if (onMove) onMove(dragIndex, hoverIndex);
 			item.index = hoverIndex;
 		},
 	});
 
-	const classes = {
-		opacity: isDragging ? 'opacity-[30%]' : '',
-		shadow: isDragging ? 'shadow-md' : '',
-	};
 	drag(drop(ref));
 
 	// Render
@@ -55,7 +61,15 @@ const DragDrop = ({ index, model, disabled = false, onMove, onDrop, children, ta
 			{disabled ? (
 				<Div {...tailwind}>{children}</Div>
 			) : (
-				<Div ref={ref} data-handler-id={handlerId} {...classes} {...tailwind}>
+				<Div
+					ref={ref}
+					data-handler-id={handlerId}
+					tailwind={{
+						cursor: 'cursor-grab',
+						opacity: isDragging ? 'opacity-[30%]' : '',
+						shadow: isDragging ? 'shadow-md' : '',
+						...tailwind,
+					}}>
 					{children}
 				</Div>
 			)}

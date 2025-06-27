@@ -1,6 +1,6 @@
 {
 	"name": "@playbooks/components",
-	"version": "0.9.1",
+	"version": "0.9.5",
 	"description": "A collection of React components for Playbooks.",
 	"author": "Eric Hubbell<eric@erichubbell.com>",
 	"license": "ISC",
@@ -36,10 +36,12 @@
 		"@ehubbell/scrollspy": "^0.0.2",
 		"@fortawesome/react-fontawesome": "^0.2.2",
 		"@playbooks/configs": "^0.0.5",
-		"@playbooks/ui": "^0.8.36",
 		"@react-google-maps/api": "^2.20.7",
 		"@react-spring/web": "^10.0.1",
+		"date-fns": "^4.1.0",
+		"emoji-picker-react": "^4.12.2",
 		"react-chartjs-2": "^5.3.0",
+		"react-countup": "^6.5.3",
 		"react-currency-input-field": "^3.10.0",
 		"react-day-picker": "^9.7.0",
 		"react-dnd": "^16.0.1",
@@ -76,6 +78,16 @@
 			"import": "./dist/context.es.js",
 			"require": "./dist/context.cjs.js"
 		},
+		"./count-up": {
+			"types": "./dist/count-up.d.ts",
+			"import": "./dist/count-up.es.js",
+			"require": "./dist/count-up.cjs.js"
+		},
+		"./currency-input": {
+			"types": "./dist/currency-input.d.ts",
+			"import": "./dist/currency-input.es.js",
+			"require": "./dist/currency-input.cjs.js"
+		},
 		"./date-picker": {
 			"types": "./dist/date-picker.d.ts",
 			"import": "./dist/date-picker.es.js",
@@ -86,10 +98,10 @@
 			"import": "./dist/date-range-picker.es.js",
 			"require": "./dist/date-range-picker.cjs.js"
 		},
-		"./currency-input": {
-			"types": "./dist/currency-input.d.ts",
-			"import": "./dist/currency-input.es.js",
-			"require": "./dist/currency-input.cjs.js"
+		"./drag-drop": {
+			"types": "./dist/drag-drop.d.ts",
+			"import": "./dist/drag-drop.es.js",
+			"require": "./dist/drag-drop.cjs.js"
 		},
 		"./fade": {
 			"types": "./dist/fade.d.ts",
@@ -105,6 +117,11 @@
 			"types": "./dist/google-autocomplete.d.ts",
 			"import": "./dist/google-autocomplete.es.js",
 			"require": "./dist/google-autocomplete.cjs.js"
+		},
+		"./google-map": {
+			"types": "./dist/google-map.d.ts",
+			"import": "./dist/google-map.es.js",
+			"require": "./dist/google-map.cjs.js"
 		},
 		"./masked-input": {
 			"types": "./dist/masked-input.d.ts",
@@ -125,6 +142,16 @@
 			"types": "./dist/skeleton.d.ts",
 			"import": "./dist/skeleton.es.js",
 			"require": "./dist/skeleton.cjs.js"
+		},
+		"./star-rating": {
+			"types": "./dist/star-rating.d.ts",
+			"import": "./dist/star-rating.es.js",
+			"require": "./dist/star-rating.cjs.js"
+		},
+		"./text-editor": {
+			"types": "./dist/text-editor.d.ts",
+			"import": "./dist/text-editor.es.js",
+			"require": "./dist/text-editor.cjs.js"
 		},
 		"./waypoint": {
 			"types": "./dist/waypoint.d.ts",

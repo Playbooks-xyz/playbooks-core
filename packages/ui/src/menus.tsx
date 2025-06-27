@@ -1,7 +1,7 @@
 import { useRef, useState } from 'react';
 
 import { Fade } from '@playbooks/components/fade';
-import { useKeyPress, useMouseUp } from '@playbooks/hooks';
+import { useKeyDown, useMouseUp } from '@playbooks/hooks';
 import * as types from '@playbooks/types';
 import { AccentBtn } from 'src/buttons';
 import { useUI } from 'src/context';
@@ -16,7 +16,7 @@ export const Menu = ({ name = 'Menu', open, onClose, tailwind, className, childr
 	const ref = useRef(null);
 
 	// Hooks
-	useKeyPress(onKeyDown, [open]);
+	useKeyDown(onKeyDown, [open]);
 	useMouseUp(onMouseUp, [open]);
 
 	// Functions

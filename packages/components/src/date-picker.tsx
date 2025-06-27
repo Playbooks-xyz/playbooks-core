@@ -1,10 +1,9 @@
 import { DayPicker } from 'react-day-picker';
 import styles from 'react-day-picker/dist/style.module.css';
 
-import { FarIcon } from '@playbooks/ui/icons';
 import { dayjs, toDate } from '@playbooks/utils/dates';
 
-const DatePicker = ({ value, disabledDays, onChange, tailwind }) => {
+const DatePicker = ({ value, disabledDays, components, onChange }) => {
 	// Methods
 	const onSelect = date => {
 		const currentHour = value ? dayjs(value).hour() : 8;
@@ -43,15 +42,12 @@ const DatePicker = ({ value, disabledDays, onChange, tailwind }) => {
 		weekdays: 'DayPicker-Weekdays',
 	};
 
-	// Components
-	const Chevron = ({ orientation }) => <FarIcon icon={`chevron-${orientation}`} />;
-
 	// Render
 	return (
 		<DayPicker
 			mode='single'
 			disabled={disabledDays}
-			components={{ Chevron }}
+			components={components}
 			selected={value ? toDate(value) : null}
 			onSelect={onSelect}
 			modifiersClassNames={modifierClassNames}

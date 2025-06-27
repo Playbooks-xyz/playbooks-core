@@ -2,7 +2,7 @@ import { useRef, useState } from 'react';
 import { usePopper } from 'react-popper';
 
 import { Fade } from '@playbooks/components/fade';
-import { useKeyPress, useMouseUp } from '@playbooks/hooks';
+import { useKeyDown, useMouseUp } from '@playbooks/hooks';
 import * as types from '@playbooks/types';
 import { AccentBtn, Btn } from 'src/buttons';
 import { useUI } from 'src/context';
@@ -25,7 +25,7 @@ export const Drop = ({
 	const computed = { ...base, ...props, tailwind, className, name };
 
 	// Hooks
-	useKeyPress(onKeyDown, [open]);
+	useKeyDown(onKeyDown, [open]);
 	useMouseUp(onMouseUp, [open]);
 
 	// Functions
@@ -85,7 +85,7 @@ export const DropMenu = ({
 	const computed = { ...base, ...props, tailwind, className, name };
 	const nodeRef = useRef(null);
 	const { styles: popperStyles, attributes } = usePopper(ref?.current, dropRef, {
-		placement: placement,
+		placement,
 		strategy: 'fixed',
 		...options,
 	});

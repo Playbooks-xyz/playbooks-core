@@ -37,7 +37,7 @@ export const formLabel = () => ({
 	tracking: 'tracking-wide',
 });
 
-export const formInput = ({ size, variant = '' }) => ({
+export const formInput = ({ size = 'sm', variant = '' }) => ({
 	align: 'text-left',
 	animation: 'transition',
 	bgColor: 'bg-white dark:bg-gray-900',

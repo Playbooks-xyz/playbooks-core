@@ -66,16 +66,7 @@ export default defineConfig(({ mode }) => ({
 			fileName: (format, entryName) => `${entryName}.${format}.js`,
 		},
 		rollupOptions: {
-			external: [
-				'react',
-				'react-dom',
-				'react/jsx-runtime',
-				'next',
-				'next/head',
-				'next/link',
-				'next/router',
-				'@fortawesome/fontawesome-svg-core',
-			],
+			external: ['react', 'react-dom', 'react/jsx-runtime', '@fortawesome/fontawesome-svg-core'],
 			plugins: [peerDepsExternal()],
 		},
 	},

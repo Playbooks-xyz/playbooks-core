@@ -1,10 +1,10 @@
 import { Rating } from 'react-simple-star-rating';
 
-import { FasIcon } from '@playbooks/ui/icons';
-
 const StarRating = ({
 	value,
 	iconsCount = 5,
+	fillIcon,
+	emptyIcon,
 	transition = false,
 	onChange = null,
 	readOnly = false,
@@ -17,8 +17,8 @@ const StarRating = ({
 			initialValue={value}
 			onClick={onChange}
 			iconsCount={iconsCount}
-			fillIcon={<FasIcon icon='star' fontSize='text-xl' {...tailwind?.icon} {...tailwind?.fillIcon} />}
-			emptyIcon={<FasIcon icon='star' fontSize='text-xl' {...tailwind?.icon} {...tailwind?.emptyIcon} />}
+			fillIcon={fillIcon}
+			emptyIcon={emptyIcon}
 			transition={transition}
 			readonly={readOnly}
 			style={tailwind?.style}

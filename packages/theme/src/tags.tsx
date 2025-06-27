@@ -2,7 +2,7 @@ import { computeTagImgSize, computeTagSize } from 'src/utils';
 
 export const tags = () => ({
 	display: 'flex-start',
-	spacing: '',
+	spacing: 'space-x-4',
 	flex: 'flex-wrap',
 });
 

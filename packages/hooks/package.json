@@ -1,6 +1,6 @@
 {
 	"name": "@playbooks/hooks",
-	"version": "0.9.1",
+	"version": "0.9.3",
 	"description": "A collection of React hooks for Playbooks.",
 	"author": "Eric Hubbell<eric@erichubbell.com>",
 	"license": "ISC",
@@ -41,7 +41,8 @@
 	},
 	"dependencies": {
 		"@playbooks/configs": "^0.0.5",
-		"@playbooks/utils": "^0.0.2"
+		"@playbooks/utils": "^0.0.2",
+		"react-countup": "^6.5.3"
 	},
 	"devDependencies": {
 		"@playbooks/types": "^0.0.1"
