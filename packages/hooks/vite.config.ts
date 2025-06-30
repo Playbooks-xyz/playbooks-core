@@ -16,6 +16,7 @@ export default defineConfig(({ mode }) => ({
 				path.resolve(__dirname, 'src/context.tsx'),
 				path.resolve(__dirname, 'src/keyboard.tsx'),
 				path.resolve(__dirname, 'src/mouse.tsx'),
+				path.resolve(__dirname, 'src/navigation.tsx'),
 				path.resolve(__dirname, 'src/store.tsx'),
 				path.resolve(__dirname, 'src/utils.tsx'),
 				path.resolve(__dirname, 'src/window.tsx'),

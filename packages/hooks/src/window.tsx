@@ -7,6 +7,22 @@ export const useLocalStorage = (method, listeners) => {
 	}, [...listeners]);
 };
 
+export const useOffline = (method, listeners) => {
+	useEffect(() => {
+		method();
+		window.addEventListener('offline', method);
+		return () => window.removeEventListener('online', method);
+	}, [...listeners]);
+};
+
+export const useOnline = (method, listeners) => {
+	useEffect(() => {
+		method();
+		window.addEventListener('online', method);
+		return () => window.removeEventListener('online', method);
+	}, [...listeners]);
+};
+
 export const useResize = (method, listeners) => {
 	useEffect(() => {
 		method();

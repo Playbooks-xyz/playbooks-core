@@ -6,7 +6,7 @@
   "license": "ISC",
   "scripts": {
     "start": "npm start --workspaces --if-present",
-    "build": "npm run build --workspaces --if-present",
+    "build": "npm run build -w packages/types && npm run build --workspaces --if-present",
     "build:ts": "npm run build:ts --workspaces --if-present",
     "build:dev": "npm run build -w packages/utils -w packages/types -w packages/theme -w packages/ui -w packages/contexts -w packages/hooks -w packages/components -w packages/molecules -w packages/configs",
     "clean": "npm run clean --workspaces --if-present",

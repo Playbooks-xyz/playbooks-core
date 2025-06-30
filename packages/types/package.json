@@ -37,6 +37,7 @@
 		"prepare": "husky"
 	},
 	"dependencies": {
+		"@ehubbell/html": "^0.1.12",
 		"@playbooks/configs": "^0.0.5"
 	},
 	"exports": {

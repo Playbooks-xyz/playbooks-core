@@ -1,5 +1,5 @@
 export const testHTTPS = data => {
-	return !/(http(s?)):\/\//i.test(data);
+	return /(http(s?)):\/\//i.test(data);
 };
 
 export const testNumber = data => {

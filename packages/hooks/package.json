@@ -68,6 +68,11 @@
 			"import": "./dist/mouse.es.js",
 			"require": "./dist/mouse.cjs.js"
 		},
+		"./navigation": {
+			"types": "./dist/navigation.d.ts",
+			"import": "./dist/navigation.es.js",
+			"require": "./dist/navigation.cjs.js"
+		},
 		"./store": {
 			"types": "./dist/store.d.ts",
 			"import": "./dist/store.es.js",

@@ -1,4 +1,6 @@
-export const drop = () => ({});
+export const drop = () => ({
+	position: 'relative',
+});
 
 export const dropToggle = () => ({
 	display: 'flex-between',

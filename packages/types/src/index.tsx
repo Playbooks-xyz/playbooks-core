@@ -1,5 +1,5 @@
 // Shared exports
-export * from 'src/types';
+export * from 'src/base';
 
 export * from 'src/accordions';
 export * from 'src/alerts';

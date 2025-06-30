@@ -104,19 +104,19 @@ export const DropMenu = ({
 	if (typeof window === 'undefined') return null;
 	return createPortal(
 		<Fade ref={nodeRef} show={open} timeout={200} onEnter={onEnter} onExit={onExit}>
-			<Div
+			<div
 				ref={setDropRef}
 				role='menu'
 				aria-orientation='vertical'
 				aria-labelledby='menu-button'
 				tabIndex={-1}
-				className='w-auto z-50'
+				className='w-auto z-20'
 				style={popperStyles.popper}
 				{...attributes.popper}>
 				<Div ref={nodeRef} {...computed}>
 					{children}
 				</Div>
-			</Div>
+			</div>
 		</Fade>,
 		document.body,
 	);
