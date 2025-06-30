@@ -61,7 +61,8 @@
     "packages/theme",
     "packages/types",
     "packages/ui",
-    "packages/utils"
+    "packages/utils",
+    "packages/wrappers"
   ],
   "dependencies": {
     "quill-mention": "^6.1.1",
