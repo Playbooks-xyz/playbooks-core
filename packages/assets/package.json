@@ -1,6 +1,6 @@
 {
 	"name": "@playbooks/assets",
-	"version": "0.9.3",
+	"version": "0.10.1",
 	"description": "A collection of React components for Playbooks.",
 	"author": "Eric Hubbell<eric@erichubbell.com>",
 	"license": "ISC",
@@ -17,6 +17,7 @@
 		"start": "vite build --mode production --minify false --watch",
 		"build": "vite build --mode production --minify true",
 		"build:ts": "tsc --project tsconfig.json --noEmit false && tsc-alias",
+		"build:dts": "dts-bundle-generator --config dts.config.ts",
 		"clean": "npm run lint:fix",
 		"lint": "eslint src",
 		"lint:fix": "eslint src --fix",

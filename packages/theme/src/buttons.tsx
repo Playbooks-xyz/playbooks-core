@@ -40,6 +40,7 @@ export const accentBtn = ({ active, size }) => ({
 	...btn(
 		active && {
 			bgColor: 'bg-gray-200 dark:bg-gray-800',
+			hover: '',
 			...active,
 		},
 	),
@@ -58,6 +59,7 @@ export const borderBtn = ({ active, size }) => ({
 		active && {
 			borderColor: 'border-secondary dark:border-secondary',
 			color: 'text-secondary',
+			hover: '',
 			stroke: 'stroke-secondary',
 			...active,
 		},
@@ -77,6 +79,7 @@ export const tabBtn = ({ active, size }) => ({
 		active && {
 			borderColor: 'border-b-primary dark:border-b-secondary',
 			color: 'text-gray-600 dark:text-gray-200',
+			hover: '',
 			...active,
 		},
 	),

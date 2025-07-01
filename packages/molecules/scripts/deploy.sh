@@ -18,6 +18,10 @@ npm run build & build_id=$!
 wait $build_id
 if [ $? -eq 1 ]; then exit; fi
 
+npm run build:dts & dts_id=$!
+wait $dts_id
+if [ $? -eq 1 ]; then exit; fi
+
 npm publish --access public & publish_id=$!
 wait $publish_id
 if [ $? -eq 1 ]; then exit; fi

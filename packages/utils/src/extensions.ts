@@ -1,5 +1,7 @@
-export { default as binaryExtensions } from 'binary-extensions';
-export { default as fileExtension } from 'file-extension';
+import binaryExtensions from 'binary-extensions';
+import fileExtension from 'file-extension';
+
+export { binaryExtensions, fileExtension };
 
 // Docs
 // https://www.npmjs.com/package/binary-extensions

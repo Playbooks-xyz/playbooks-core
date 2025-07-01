@@ -1,6 +1,6 @@
 {
 	"name": "@playbooks/adapters",
-	"version": "0.9.1",
+	"version": "0.10.2",
 	"description": "A collection of adapters for various projects.",
 	"author": "Eric Hubbell<eric@erichubbell.com>",
 	"license": "ISC",
@@ -25,6 +25,7 @@
 		"start": "vite build --mode production --minify false --watch",
 		"build": "vite build --mode production --minify true",
 		"build:ts": "tsc --project tsconfig.json --noEmit false && tsc-alias",
+		"build:dts": "dts-bundle-generator --config dts.config.ts",
 		"clean": "npm run lint:fix",
 		"lint": "eslint src",
 		"lint:fix": "eslint src --fix",
@@ -43,8 +44,15 @@
 		"dayjs": "^1.11.13"
 	},
 	"exports": {
-		"types": "./dist/index.d.ts",
-		"import": "./dist/index.es.js",
-		"require": "./dist/index.cjs.js"
+		".": {
+			"types": "./dist/index.d.ts",
+			"import": "./dist/index.es.js",
+			"require": "./dist/index.cjs.js"
+		},
+		"./base": {
+			"types": "./dist/base.d.ts",
+			"import": "./dist/base.es.js",
+			"require": "./dist/base.cjs.js"
+		}
 	}
 }

@@ -1,6 +1,6 @@
 {
 	"name": "@playbooks/ui",
-	"version": "0.9.3",
+	"version": "0.10.1",
 	"description": "An interface library for Playbooks.",
 	"private": false,
 	"license": "ISC",
@@ -24,6 +24,7 @@
 		"start": "vite build --mode production --minify false --watch",
 		"build": "vite build --mode production --minify true",
 		"build:ts": "tsc --project tsconfig.json --noEmit false && tsc-alias",
+		"build:dts": "dts-bundle-generator --config dts.config.ts",
 		"clean": "npm run lint:fix",
 		"lint": "eslint src",
 		"lint:fix": "eslint src --fix",

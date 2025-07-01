@@ -1,6 +1,6 @@
 {
 	"name": "@playbooks/components",
-	"version": "0.9.11",
+	"version": "0.10.1",
 	"description": "A collection of React components for Playbooks.",
 	"author": "Eric Hubbell<eric@erichubbell.com>",
 	"license": "ISC",
@@ -17,6 +17,7 @@
 		"start": "vite build --mode production --minify false --watch",
 		"build": "vite build --mode production --minify true",
 		"build:ts": "tsc --project tsconfig.json --noEmit false && tsc-alias",
+		"build:dts": "dts-bundle-generator --config dts.config.ts",
 		"clean": "npm run lint:fix",
 		"lint": "eslint src",
 		"lint:fix": "eslint src --fix",
@@ -44,6 +45,7 @@
 		"react-day-picker": "^9.7.0",
 		"react-dnd": "^16.0.1",
 		"react-dnd-html5-backend": "^16.0.1",
+		"react-emoji-render": "^2.0.1",
 		"react-input-mask": "^2.0.4",
 		"react-intersection-observer": "^9.16.0",
 		"react-loading-skeleton": "^3.5.0",
