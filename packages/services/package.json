@@ -41,5 +41,8 @@
 		"types": "./dist/index.d.ts",
 		"import": "./dist/index.es.js",
 		"require": "./dist/index.cjs.js"
+	},
+	"devDependencies": {
+		"@playbooks/configs": "^0.10.1"
 	}
 }

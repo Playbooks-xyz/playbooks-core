@@ -3,6 +3,7 @@ export const listGroup = () => ({
 	divide: 'divide-y-2',
 	divideColor: 'divide-gray-200',
 	divideStyle: 'divide-dashed',
+	spacing: '',
 });
 
 export const listItem = () => ({});

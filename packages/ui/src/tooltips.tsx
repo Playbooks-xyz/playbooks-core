@@ -57,7 +57,7 @@ export const Tooltip = ({
 
 	// Render
 	if (typeof window === 'undefined') return null;
-	return createPortal(
+	return (
 		<Span
 			id={id}
 			ref={setRefElement}
@@ -66,20 +66,22 @@ export const Tooltip = ({
 			onMouseEnter={onMouseEnter}
 			onMouseLeave={onMouseLeave}>
 			{children}
-			<Fade ref={nodeRef} show={open} timeout={200} onEnter={onEnter} onExit={onExit}>
-				<Div ref={setPopElement} zIndex='z-10' style={popperStyles.popper} {...attributes.popper}>
-					<Div ref={nodeRef} {...computed}>
-						<TooltipArrow
-							setArrowElement={setArrowElement}
-							style={{ ...popperStyles.popper, ...popperStyles.arrow }}
-							tailwind={tailwind?.arrow}
-						/>
-						<TooltipInner tailwind={tailwind?.inner}>{html}</TooltipInner>
+			{createPortal(
+				<Fade ref={nodeRef} show={open} timeout={200} onEnter={onEnter} onExit={onExit}>
+					<Div ref={setPopElement} zIndex='z-10' style={popperStyles.popper} {...attributes.popper}>
+						<Div ref={nodeRef} {...computed}>
+							<TooltipArrow
+								setArrowElement={setArrowElement}
+								style={{ ...popperStyles.popper, ...popperStyles.arrow }}
+								tailwind={tailwind?.arrow}
+							/>
+							<TooltipInner tailwind={tailwind?.inner}>{html}</TooltipInner>
+						</Div>
 					</Div>
-				</Div>
-			</Fade>
-		</Span>,
-		document.body,
+				</Fade>,
+				document.body,
+			)}
+		</Span>
 	);
 };
 
