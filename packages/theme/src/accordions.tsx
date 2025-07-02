@@ -25,14 +25,14 @@ export const accordionTitle = () => ({
 
 export const accordionBodyWrapper = () => ({
 	animation: 'transition-all',
-	fade: 'ease',
 	duration: 'duration-200',
+	fade: 'ease',
 	overflow: 'overflow-hidden',
 });
 
 export const accordionBody = () => ({
-	borderColor: 'border-gray-300/50 dark:border-gray-600/50',
 	border: 'border-t',
+	borderColor: 'border-gray-300/50 dark:border-gray-600/50',
 	spacing: 'p-4',
 	width: 'w-full',
 });

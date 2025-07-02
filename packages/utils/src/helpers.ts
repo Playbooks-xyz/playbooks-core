@@ -73,10 +73,6 @@ export const listBuilder = (count = 1) => {
 	return [...new Array(count)].map((v, i) => i);
 };
 
-export const stripHtmlEntities = (data = '') => {
-	return data.replace(/(<([^>]+)>)/gi, '');
-};
-
 export const isArray = data => {
 	return Array.isArray(data);
 };

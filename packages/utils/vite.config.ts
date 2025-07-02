@@ -19,6 +19,7 @@ export default defineConfig(({ mode }) => ({
 				path.resolve(__dirname, 'src/errors.ts'),
 				path.resolve(__dirname, 'src/extensions.ts'),
 				path.resolve(__dirname, 'src/helpers.ts'),
+				path.resolve(__dirname, 'src/html.ts'),
 				path.resolve(__dirname, 'src/inputs.ts'),
 				path.resolve(__dirname, 'src/logger.ts'),
 				path.resolve(__dirname, 'src/math.ts'),

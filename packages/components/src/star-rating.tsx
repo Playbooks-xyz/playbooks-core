@@ -1,5 +1,7 @@
 import { Rating } from 'react-simple-star-rating';
 
+import { computeTailwind } from '@ehubbell/html';
+
 const StarRating = ({
 	value,
 	iconsCount = 5,
@@ -11,6 +13,7 @@ const StarRating = ({
 	tailwind,
 	...props
 }) => {
+	const classes = computeTailwind(tailwind);
 	// Render
 	return (
 		<Rating
@@ -21,6 +24,7 @@ const StarRating = ({
 			emptyIcon={emptyIcon}
 			transition={transition}
 			readonly={readOnly}
+			className={classes}
 			style={tailwind?.style}
 			{...props}
 		/>
