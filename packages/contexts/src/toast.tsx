@@ -1,7 +1,7 @@
 import React, { Fragment, useEffect, useMemo, useState } from 'react';
 
 import { ToastWrapper } from '@playbooks/ui/toasts';
-import { formatError } from '@playbooks/utils/errors';
+import { normalizeError } from '@playbooks/utils/errors';
 import { getUUID, isEmpty } from '@playbooks/utils/helpers';
 import { logger } from '@playbooks/utils/logger';
 import { ErrorToast, InfoToast, SuccessToast } from 'src/molecules/toasts';
@@ -37,7 +37,7 @@ export const ToastProvider = ({ contexts, children }) => {
 	};
 
 	const showError = (error: { type?: string; status?: string; title?: string; message?: string }) => {
-		setToasts(toasts => toasts.concat({ id: getUUID(), type: 'error', ...formatError(error) }));
+		setToasts(toasts => toasts.concat({ id: getUUID(), type: 'error', ...normalizeError(error) }));
 	};
 
 	const onRemove = toast => {

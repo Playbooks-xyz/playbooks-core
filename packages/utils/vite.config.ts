@@ -16,7 +16,6 @@ export default defineConfig(({ mode }) => ({
 				path.resolve(__dirname, 'src/countries.ts'),
 				path.resolve(__dirname, 'src/dates.ts'),
 				path.resolve(__dirname, 'src/downloads.ts'),
-				path.resolve(__dirname, 'src/env.ts'),
 				path.resolve(__dirname, 'src/errors.ts'),
 				path.resolve(__dirname, 'src/extensions.ts'),
 				path.resolve(__dirname, 'src/helpers.ts'),

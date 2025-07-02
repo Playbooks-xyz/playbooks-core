@@ -1,6 +1,6 @@
 {
 	"name": "@playbooks/utils",
-	"version": "0.9.7",
+	"version": "0.9.11",
 	"description": "A collection of utilities used for Playbooks.",
 	"author": "Eric Hubbell<eric@erichubbell.com>",
 	"license": "ISC",
@@ -41,6 +41,7 @@
 		"country-list": "^2.3.0",
 		"dayjs": "^1.11.13",
 		"file-extension": "^4.0.5",
+		"http-errors": "^2.0.0",
 		"js-abbreviation-number": "^1.4.0",
 		"js-base64": "^3.7.7",
 		"pluralize": "^8.0.0",
@@ -80,11 +81,6 @@
 			"types": "./dist/downloads.d.ts",
 			"import": "./dist/downloads.es.js",
 			"require": "./dist/downloads.cjs.js"
-		},
-		"./env": {
-			"types": "./dist/env.d.ts",
-			"import": "./dist/env.es.js",
-			"require": "./dist/env.cjs.js"
 		},
 		"./errors": {
 			"types": "./dist/errors.d.ts",

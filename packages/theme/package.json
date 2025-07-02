@@ -33,9 +33,6 @@
 		"test": "jest",
 		"prepare": "husky"
 	},
-	"devDependencies": {
-		"@playbooks/configs": "^0.0.2"
-	},
 	"exports": {
 		".": {
 			"types": "./dist/index.d.ts",

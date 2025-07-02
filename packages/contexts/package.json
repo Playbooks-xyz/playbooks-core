@@ -34,11 +34,10 @@
 		"@ehubbell/html": "^0.1.10",
 		"@intercom/messenger-js-sdk": "^0.0.14",
 		"@playbooks/adapters": "^0.0.3",
-		"@playbooks/configs": "^0.0.5",
 		"@playbooks/hooks": "^0.0.10",
 		"@playbooks/normalizers": "^0.0.3",
 		"@playbooks/serializers": "^0.0.3",
-		"@playbooks/ui": "^0.8.39",
+		"@playbooks/ui": "^0.8.44",
 		"@playbooks/utils": "^0.0.2",
 		"@stripe/react-stripe-js": "^3.7.0",
 		"@stripe/stripe-js": "^7.4.0",
@@ -105,5 +104,8 @@
 			"require": "./dist/toast.cjs.js"
 		},
 		"./styles.css": "./dist/styles.css"
+	},
+	"devDependencies": {
+		"@playbooks/configs": "^0.0.5"
 	}
 }

@@ -1,6 +1,8 @@
 import pluralize from 'pluralize';
 import uniqid from 'uniqid';
 
+export const env = process.env.NEXT_PUBLIC_NODE_ENV || process.env.NODE_ENV;
+
 export const sleep = ms => {
 	return new Promise(resolve => setTimeout(resolve, ms));
 };
@@ -23,6 +25,12 @@ export const getPlural = value => {
 
 export const getSingular = value => {
 	return pluralize.singular(value);
+};
+
+export const formatUUID = (url, index = 2) => {
+	const paths = url.split('?')[0].split('#')[0].split('/');
+	const name = paths[index];
+	return name?.toLowerCase();
 };
 
 export const mapChildren = (data, key) => {
