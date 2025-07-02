@@ -53,8 +53,5 @@
 			"import": "./dist/patterns.es.js",
 			"require": "./dist/patterns.cjs.js"
 		}
-	},
-	"dependencies": {
-		"@playbooks/configs": "^0.0.5"
 	}
 }

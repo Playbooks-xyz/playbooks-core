@@ -37,6 +37,7 @@
 		"format:fix": "prettier --write src",
 		"commit": "scripts/commit.sh",
 		"deploy": "scripts/deploy.sh",
+"packages": "scripts/packages.sh",
 		"yalc": "npx yalc push"
 	},
 	"peerDependencies": {
