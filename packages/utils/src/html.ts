@@ -8,3 +8,6 @@ export const htmlToText = (data, options?) => {
 export const stripHtmlEntities = (data = '') => {
 	return data.replace(/(<([^>]+)>)/gi, '');
 };
+
+// Docs
+// https://www.npmjs.com/package/html-to-text
