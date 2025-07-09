@@ -1,7 +1,7 @@
 import * as HTML from '@ehubbell/html';
 import { computeTailwind } from '@ehubbell/html';
 import * as types from '@playbooks/types';
-import { isObject } from '@playbooks/utils';
+import { isObject } from '@playbooks/utils/helpers';
 import { BtnWrapper } from 'src/buttons';
 import { useUI } from 'src/context';
 import { Div } from 'src/html';
