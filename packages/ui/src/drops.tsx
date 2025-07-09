@@ -1,7 +1,6 @@
-import { useRef, useState } from 'react';
-import { createPortal } from 'react-dom';
-import { usePopper } from 'react-popper';
+import { useEffect, useRef, useState } from 'react';
 
+import { computePosition, flip, limitShift, shift } from '@floating-ui/dom';
 import { Fade } from '@playbooks/components/fade';
 import { useKeyDown, useMouseUp } from '@playbooks/hooks';
 import * as types from '@playbooks/types';
@@ -80,45 +79,41 @@ export const DropMenu = ({
 	...props
 }: types.DropMenuProps) => {
 	const [show, setShow] = useState(false);
-	const [dropRef, setDropRef] = useState(null);
 	const context = useUI();
 	const base = context?.theme?.dropMenu({ open: show });
 	const computed = { ...base, ...props, tailwind, className, name };
-	const nodeRef = useRef(null);
-	const { styles: popperStyles, attributes } = usePopper(ref?.current, dropRef, {
-		placement,
-		strategy: 'fixed',
-		...options,
-	});
+	const dropRef = useRef(null);
 
 	// Hooks
-	// useEffect(() => {
-	// 	update();
-	// }, [open]);
+	useEffect(() => {
+		if (ref?.current && dropRef?.current) {
+			const middleware = [flip(), shift({ limiter: limitShift() })];
+			const formattedOptions = { placement, middleware, strategy: 'fixed', ...options };
+			computePosition(ref?.current, dropRef?.current, formattedOptions).then(({ x, y }) => {
+				Object.assign(dropRef?.current.style, { left: `${x}px`, top: `${y}px` });
+			});
+		}
+	}, [ref?.current, dropRef?.current, open]);
 
 	// Methods
 	const onEnter = () => setShow(true);
 	const onExit = () => setShow(false);
 
 	// Render
-	if (typeof window === 'undefined') return null;
-	return createPortal(
-		<Fade ref={nodeRef} show={open} timeout={200} onEnter={onEnter} onExit={onExit}>
+	return (
+		<Fade ref={dropRef} show={open} timeout={200} onEnter={onEnter} onExit={onExit}>
 			<div
-				ref={setDropRef}
+				ref={dropRef}
 				role='menu'
 				aria-orientation='vertical'
 				aria-labelledby='menu-button'
 				tabIndex={-1}
-				className='w-auto z-20'
-				style={popperStyles.popper}
-				{...attributes.popper}>
-				<Div ref={nodeRef} {...computed}>
+				className='absolute w-auto z-20'>
+				<Div ref={dropRef} {...computed}>
 					{children}
 				</Div>
 			</div>
-		</Fade>,
-		document.body,
+		</Fade>
 	);
 };
 

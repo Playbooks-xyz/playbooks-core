@@ -22,7 +22,7 @@ export const fromUnix = (value?: number) => {
 };
 
 export const formatDate = (value?: any, format?: string) => {
-	return Dayjs(value).format(format || 'MMM Do, YYYY @ hhover:mmA');
+	return Dayjs(value).format(format || 'MMM Do, YYYY @ hh:mmA');
 };
 
 export const formatTimestamp = (value?: any) => {

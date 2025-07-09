@@ -45,17 +45,16 @@
 		"tailwindcss": "^4"
 	},
 	"dependencies": {
-		"@ehubbell/html": "^0.1.10",
+		"@ehubbell/html": "^0.1.14",
+		"@floating-ui/dom": "^1.7.2",
 		"@fortawesome/react-fontawesome": "^0.2.2",
 		"@playbooks/assets": "^0.9.3",
 		"@playbooks/components": "^0.9",
 		"@playbooks/hooks": "^0.9.3",
 		"@playbooks/utils": "^0.9",
-		"@popperjs/core": "^2.11.8",
 		"@react-google-maps/api": "^2.20.5",
 		"@react-spring/web": "^10.0.1",
 		"@tailwindcss/forms": "^0.5.10",
-		"react-popper": "^2.3.0",
 		"react-range": "^1.8.14"
 	},
 	"devDependencies": {
