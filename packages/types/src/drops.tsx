@@ -13,7 +13,7 @@ export type DropToggleProps = BtnProps & {
 
 export type DropMenuProps = HtmlProps & {
 	open: boolean;
-	placement?: string;
+	placement?: any;
 	options?: any;
 };
 

@@ -10,6 +10,4 @@ export type TooltipProps = HtmlProps & {
 
 export type TooltipInnerProps = HtmlProps;
 
-export type TooltipArrowProps = HtmlProps & {
-	setArrowElement: any;
-};
+export type TooltipArrowProps = HtmlProps;

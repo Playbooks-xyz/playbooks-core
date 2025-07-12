@@ -70,7 +70,7 @@ export const shuffleArray = array => {
 };
 
 export const listBuilder = (count = 1) => {
-	return [...new Array(count)].map((v, i) => i);
+	return Array.from(Array(count).keys());
 };
 
 export const isArray = data => {

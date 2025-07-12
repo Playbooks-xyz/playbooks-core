@@ -12,7 +12,6 @@ export const Tooltip = ({
 	open,
 	placement = 'right',
 	html,
-	options,
 	onClick,
 	onHover,
 	className,
@@ -32,7 +31,7 @@ export const Tooltip = ({
 	useEffect(() => {
 		if (ref?.current && arrowRef?.current && popRef?.current) {
 			const middleware = [arrow({ element: arrowRef?.current }), flip(), shift({ limiter: limitShift() })];
-			const formattedOptions = { placement, middleware, strategy: 'fixed', ...options };
+			const formattedOptions = { placement, middleware, strategy: 'fixed' as any };
 			computePosition(ref?.current, popRef?.current, formattedOptions).then(({ x, y, middlewareData }) => {
 				Object.assign(popRef?.current.style, { left: `${x}px`, top: `${y}px` });
 				Object.assign(arrowRef?.current.style, {
@@ -46,18 +45,12 @@ export const Tooltip = ({
 	// Methods
 	const onEnter = () => setShow(true);
 	const onExit = () => setShow(false);
+	const onMouseEnter = () => (!open && onHover ? onHover() : null);
+	const onMouseLeave = () => (open && onHover ? onHover() : null);
 
 	const onShow = e => {
 		if (!onClick) e.preventDefault();
 		return onClick ? onClick() : null;
-	};
-
-	const onMouseEnter = () => {
-		return !open && onHover ? onHover() : null;
-	};
-
-	const onMouseLeave = () => {
-		return open && onHover ? onHover() : null;
 	};
 
 	// Render
@@ -90,7 +83,7 @@ export const TooltipInner = ({
 
 export const TooltipArrow = ({
 	name = 'TooltipArrow',
-	setArrowElement,
+	ref,
 	tailwind,
 	className,
 	style,
@@ -101,7 +94,7 @@ export const TooltipArrow = ({
 	const computed = { ...base, ...props, tailwind, className, name };
 
 	return (
-		<Div ref={setArrowElement} style={style}>
+		<Div ref={ref} style={style}>
 			<Div {...computed} />
 		</Div>
 	);

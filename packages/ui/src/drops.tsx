@@ -72,7 +72,6 @@ export const DropMenu = ({
 	name = 'DropMenu',
 	open,
 	placement = 'bottom-start',
-	options,
 	tailwind,
 	className,
 	children,
@@ -88,7 +87,7 @@ export const DropMenu = ({
 	useEffect(() => {
 		if (ref?.current && dropRef?.current) {
 			const middleware = [flip(), shift({ limiter: limitShift() })];
-			const formattedOptions = { placement, middleware, strategy: 'fixed', ...options };
+			const formattedOptions = { placement, middleware, strategy: 'fixed' as any };
 			computePosition(ref?.current, dropRef?.current, formattedOptions).then(({ x, y }) => {
 				Object.assign(dropRef?.current.style, { left: `${x}px`, top: `${y}px` });
 			});

@@ -1,6 +1,6 @@
 {
 	"name": "@playbooks/theme",
-	"version": "0.10.2",
+	"version": "0.10.3",
 	"description": "The default theme for Playbooks.",
 	"author": "Eric Hubbell<eric@erichubbell.com>",
 	"license": "ISC",
@@ -49,6 +49,11 @@
 			"types": "./dist/alerts.d.ts",
 			"import": "./dist/alerts.es.js",
 			"require": "./dist/alerts.cjs.js"
+		},
+		"./animations": {
+			"types": "./dist/animations.d.ts",
+			"import": "./dist/animations.es.js",
+			"require": "./dist/animations.cjs.js"
 		},
 		"./avatars": {
 			"types": "./dist/avatars.d.ts",
