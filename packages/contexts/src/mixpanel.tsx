@@ -1,6 +1,6 @@
 import React, { useEffect } from 'react';
 
-import { env } from '@playbooks/utils/env';
+import { env } from '@playbooks/utils/helpers';
 import { logger } from '@playbooks/utils/logger';
 import Mixpanel from 'mixpanel-browser';
 

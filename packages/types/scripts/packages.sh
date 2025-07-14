@@ -1,4 +1,3 @@
-npm install \
-@ehubbell/html \
+npm install @ehubbell/html
 
 

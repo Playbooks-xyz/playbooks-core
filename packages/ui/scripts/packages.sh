@@ -1,8 +1,6 @@
-npm install \
-@playbooks/components@latest \
-@playbooks/hooks@latest \
-@playbooks/utils@latest
-
+npm install @playbooks/components@latest
+npm install @playbooks/hooks@latest
+npm install @playbooks/utils@latest
 npm install @playbooks/types@latest --save-dev
 
 
