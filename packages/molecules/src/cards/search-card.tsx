@@ -3,7 +3,7 @@ import { BtnWrapper } from '@playbooks/ui/buttons';
 import { Card, CardBody, CardHeader, CardIcon, CardImg, CardText, CardTitle } from '@playbooks/ui/cards';
 import { Span } from '@playbooks/ui/html';
 import { capitalize, truncate } from '@playbooks/utils';
-import { LinkWrapper } from 'src/components';
+import { LinkWrapper } from '@playbooks/ui/links';
 
 export const SearchCard = ({ modelName, photo, icon = 'magnifying-glass', title, text, tailwind }) => {
 	// Render

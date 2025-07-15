@@ -1,5 +1,5 @@
 import { Avatar, AvatarBody, AvatarImg, AvatarText } from '@playbooks/ui/avatars';
-import { LinkWrapper } from 'src/components';
+import { LinkWrapper } from '@playbooks/ui/links';
 
 export const HeroAvatar = ({ thumbnail, title, subtitle, href }) => (
 	<LinkWrapper group='group' href={href} display='inline-block'>

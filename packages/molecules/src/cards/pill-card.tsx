@@ -10,7 +10,7 @@ import {
 	CardTitle,
 } from '@playbooks/ui/cards';
 import { Span } from '@playbooks/ui/html';
-import { LinkWrapper } from 'src/components';
+import { LinkWrapper } from '@playbooks/ui/links';
 import { Skeleton } from 'src/skeletons';
 
 const PillCard = ({ icon, photo, title, subtitle, text, href, loading, children, tailwind }) => {

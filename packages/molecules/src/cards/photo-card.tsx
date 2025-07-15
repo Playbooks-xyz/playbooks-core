@@ -8,7 +8,7 @@ import {
 	CardSubtitle,
 	CardTitle,
 } from '@playbooks/ui/cards';
-import { LinkWrapper } from 'src/components';
+import { LinkWrapper } from '@playbooks/ui/links';
 import { Skeleton } from 'src/skeletons';
 
 const PhotoCard = ({ icon, badge, photo, title, subtitle, text, href, loading, tailwind, children }) => {

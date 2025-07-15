@@ -8,7 +8,7 @@ import {
 	CardSubtitle,
 	CardTitle,
 } from '@playbooks/ui/cards';
-import { Link, LinkWrapper } from 'src/components';
+import { Link, LinkWrapper } from '@playbooks/ui/links';
 import { Skeleton } from 'src/skeletons';
 
 const SubmitCard = ({ photo, icon, pretitle, title, subtitle, taskRunning, href, loading, tailwind }) => {

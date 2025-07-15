@@ -38,16 +38,16 @@
 		"react-dom": "^18 || ^19"
 	},
 	"dependencies": {
-		"@playbooks/components": "^0.0.5",
-		"@playbooks/configs": "^0.0.5",
-		"@playbooks/icons": "^0.0.5",
-		"@playbooks/serializers": "^0.0.3",
-		"@playbooks/theme": "^0.1.17",
-		"@playbooks/ui": "^0.8.40",
-		"@playbooks/utils": "^0.0.2",
+		"@playbooks/components": "^0.11.0",
+		"@playbooks/icons": "^0.10.1",
+		"@playbooks/serializers": "^0.11.0",
+		"@playbooks/theme": "^0.11.3",
+		"@playbooks/ui": "^0.11.0",
+		"@playbooks/utils": "^0.10.0",
 		"react-children-utilities": "^2.10.0"
 	},
 	"devDependencies": {
+		"@playbooks/configs": "^0.11.0",
 		"@playbooks/types": "^0.0.3"
 	},
 	"exports": {

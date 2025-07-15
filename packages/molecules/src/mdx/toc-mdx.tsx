@@ -1,6 +1,6 @@
 import { useEffect, useMemo, useState } from 'react';
 
-import { TextLink } from 'src/components';
+import { TextLink } from '@playbooks/ui/links';
 
 export const TocElement = ({ size, ...props }) => {
 	const [show, setShow] = useState(false);
