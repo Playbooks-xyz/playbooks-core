@@ -11,12 +11,12 @@ export const prefooterBody = () => ({
 export const prefooterPretitle = () => ({});
 
 export const prefooterTitle = () => ({
-	color: 'text-white',
+	color: 'text-gray-700 dark:text-white',
 	fontWeight: 'font-bold',
 });
 
 export const prefooterSubtitle = () => ({
-	color: 'text-white',
+	color: 'text-gray-700 dark:text-white',
 	fontFamily: 'font-secondary',
 	fontSize: 'font-base',
 	fontWeight: 'font-light',
