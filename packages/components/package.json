@@ -34,10 +34,11 @@
 		"react-dom": "^18 || ^19"
 	},
 	"dependencies": {
-		"@ehubbell/html": "^0.1.10",
+		"@ehubbell/html": "^0.1.14",
 		"@ehubbell/scrollspy": "^0.0.2",
 		"@fortawesome/react-fontawesome": "^0.2.2",
 		"@playbooks/configs": "^0.0.5",
+		"@playbooks/utils": "^0.9.14",
 		"@react-google-maps/api": "^2.20.7",
 		"@react-spring/web": "^10.0.1",
 		"date-fns": "^4.1.0",

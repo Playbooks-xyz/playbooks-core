@@ -38,7 +38,7 @@
 	},
 	"devDependencies": {
 		"@playbooks/configs": "^0.0.5",
-		"@playbooks/utils": "^0.0.2"
+		"@playbooks/utils": "^0.9.14"
 	},
 	"exports": {
 		".": {

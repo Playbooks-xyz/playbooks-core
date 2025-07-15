@@ -1,11 +1,10 @@
-import React, { useMemo } from 'react';
+import React from 'react';
 
 import { jsonApiNormalize, jsonApiNormalizeArray } from '@playbooks/normalizers';
 import { jsonApiSerialize, jsonApiSerializeArray } from '@playbooks/serializers';
 import { isArray } from '@playbooks/utils/helpers';
 
 type StoreContextProps = {
-	computedHeaders: any;
 	query?: any;
 	queryRecord?: any;
 	createRecord?: any;
@@ -32,17 +31,18 @@ const StoreProvider = ({ client, contexts, children }) => {
 	const storage = contexts.useStorage();
 
 	// Computed
-	const computedHeaders = useMemo(() => {
-		if (!storage.storage.token?.id) return {};
-		const account = storage.storage.account.uuid;
-		const token = storage.storage.token?.token;
-		const tempAccount = storage.storage.tempAccount.uuid;
-		const tempToken = storage.storage.tempToken.token;
+	const computeHeaders = headers => {
+		if (!storage.storage.token) return { ...headers };
+		const account = storage.storage.account.uuid || '';
+		const token = storage.storage.token;
+		const tempAccount = storage.storage.tempAccount.uuid || '';
+		const tempToken = storage.storage.tempToken;
 		return {
 			Account: tempAccount && !router.asPath.includes('/admin') ? tempAccount : account,
 			Authorization: tempToken && !router.asPath.includes('/admin') ? tempToken : token,
+			...headers,
 		};
-	}, [router.asPath, JSON.stringify(storage)]);
+	};
 
 	const computeParams = params => {
 		const context = params?.context || [];
@@ -53,14 +53,14 @@ const StoreProvider = ({ client, contexts, children }) => {
 
 	// Methods
 	const query = async ({ method = 'GET', url, headers, params }: StoreProps) => {
-		const formattedHeaders = { ...computedHeaders, ...headers };
+		const formattedHeaders = computeHeaders(headers);
 		const formattedParams = computeParams(params);
 		const response = await client.storeRequest({ method, url, headers: formattedHeaders, params: formattedParams });
 		return jsonApiNormalizeArray(response.data, response.included, response.meta);
 	};
 
 	const queryRecord = async ({ method = 'GET', url, headers, params }: StoreProps) => {
-		const formattedHeaders = { ...computedHeaders, ...headers };
+		const formattedHeaders = computeHeaders(headers);
 		const formattedParams = computeParams(params);
 		const response = await client.storeRequest({ method, url, headers: formattedHeaders, params: formattedParams });
 		return jsonApiNormalize(response.data, response.included);
@@ -73,7 +73,7 @@ const StoreProvider = ({ client, contexts, children }) => {
 	};
 
 	const saveRecords = async ({ method = 'PUT', url, headers, params, data }: StoreProps) => {
-		const formattedHeaders = { ...computedHeaders, ...headers };
+		const formattedHeaders = computeHeaders(headers);
 		const formattedParams = computeParams(params);
 		const formattedData = jsonApiSerializeArray(data);
 		const response = await client.storeRequest({
@@ -87,7 +87,7 @@ const StoreProvider = ({ client, contexts, children }) => {
 	};
 
 	const createRecord = async ({ method = 'POST', url, headers, params, data }: StoreProps) => {
-		const formattedHeaders = { ...computedHeaders, ...headers };
+		const formattedHeaders = computeHeaders(headers);
 		const formattedParams = computeParams(params);
 		const formattedData = isArray(data) ? jsonApiSerializeArray(data) : jsonApiSerialize(data);
 		const response = await client.storeRequest({
@@ -101,7 +101,7 @@ const StoreProvider = ({ client, contexts, children }) => {
 	};
 
 	const updateRecord = async ({ method = 'PUT', url, headers, params, data }: StoreProps) => {
-		const formattedHeaders = { ...computedHeaders, ...headers };
+		const formattedHeaders = computeHeaders(headers);
 		const formattedParams = computeParams(params);
 		const formattedData = isArray(data) ? jsonApiSerializeArray(data) : jsonApiSerialize(data);
 		const response = await client.storeRequest({
@@ -115,7 +115,7 @@ const StoreProvider = ({ client, contexts, children }) => {
 	};
 
 	const deleteRecord = async ({ method = 'DELETE', url, headers, params, data }: StoreProps) => {
-		const formattedHeaders = { ...computedHeaders, ...headers };
+		const formattedHeaders = computeHeaders(headers);
 		const formattedParams = computeParams(params);
 		const formattedData = isArray(data) ? jsonApiSerializeArray(data) : jsonApiSerialize(data);
 		const response = await client.storeRequest({
@@ -129,13 +129,13 @@ const StoreProvider = ({ client, contexts, children }) => {
 	};
 
 	const request = async ({ method = 'GET', url, headers, params, data }: StoreProps) => {
-		const formattedHeaders = { ...computedHeaders, ...headers };
+		const formattedHeaders = computeHeaders(headers);
 		const formattedParams = computeParams(params);
 		return await client.apiRequest({ method, url, headers: formattedHeaders, params: formattedParams, data });
 	};
 
 	const download = async ({ method = 'GET', url, headers, params, data }: StoreProps) => {
-		const formattedHeaders = { ...computedHeaders, ...headers };
+		const formattedHeaders = computeHeaders(headers);
 		const formattedParams = computeParams(params);
 		const formattedData = isArray(data) ? jsonApiSerializeArray(data) : jsonApiSerialize(data);
 		return await client.downloadRequest({
@@ -151,7 +151,6 @@ const StoreProvider = ({ client, contexts, children }) => {
 	return (
 		<StoreContext.Provider
 			value={{
-				computedHeaders,
 				query,
 				queryRecord,
 				saveRecord,

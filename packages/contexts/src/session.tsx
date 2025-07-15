@@ -41,7 +41,7 @@ const SessionProvider = ({ contexts, children }) => {
 	// Hooks
 	useEffect(() => {
 		const token = storage.getValue('token');
-		token?.id ? fetchData() : onClear();
+		token ? fetchData() : onClear();
 	}, []);
 
 	useEffect(() => {
@@ -59,7 +59,7 @@ const SessionProvider = ({ contexts, children }) => {
 			const token = storage.getValue('token');
 			const response = await store.queryRecord({ url: `/session`, params });
 			storage.storeValues({ session: response.data });
-			storage.storeCookie('token', token.token);
+			storage.storeCookie('token', token);
 			setUser(response.data);
 		} catch (e) {
 			onLogout();
@@ -79,8 +79,8 @@ const SessionProvider = ({ contexts, children }) => {
 	const onAuth = async user => {
 		const headers = { Authorization: user.token?.token };
 		const response = await store.queryRecord({ url: `/session`, headers, params });
-		storage.storeValues({ type: 'User', session: response.data, token: user.token });
-		storage.storeCookie('token', user.token?.token);
+		storage.storeValues({ type: 'User', session: response.data, token: user.token.token });
+		storage.storeCookie('token', user.token.token);
 		setUser(response.data);
 	};
 
@@ -91,8 +91,7 @@ const SessionProvider = ({ contexts, children }) => {
 	const onRefresh = () => fetchData();
 
 	const onClear = () => {
-		storage.storeValues({ account: {}, session: {}, token: {} });
-		storage.removeCookies(['type', 'account', 'token']);
+		storage.onClear();
 		setLoaded(true);
 	};
 
@@ -102,11 +101,11 @@ const SessionProvider = ({ contexts, children }) => {
 			logger.debug('sessionContext: ', {});
 			return storage.onClear();
 		}
-		router.push('/');
 		setUser({});
+		storage.onClear();
 		toast.showSuccess(200, `You've been logged out.`);
 		logger.debug('sessionContext: ', {});
-		return storage.onClear();
+		router.push('/');
 	};
 
 	// Render

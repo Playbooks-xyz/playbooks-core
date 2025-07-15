@@ -1,4 +1,5 @@
-npm install @playbooks/ui@latest
-npm install @playbooks/utils@latest
+npm install \
+@playbooks/ui@latest \
+@playbooks/utils@latest
 
 

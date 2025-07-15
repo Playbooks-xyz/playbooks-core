@@ -1,4 +1,5 @@
-npm install @ehubbell/html
-npm install @playbooks/utils@latest
+npm install \
+@ehubbell/html \
+@playbooks/utils@latest
 
 

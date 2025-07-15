@@ -39,24 +39,25 @@ const storageKey = process.env.NEXT_PUBLIC_STORAGE_KEY;
 const StorageContext = React.createContext<StorageContextProps>(null);
 
 const StorageProvider = ({ contexts, children }) => {
+	const cookies = new Cookies();
 	const [storage, setStorage] = useState<StorageProps>({
 		type: LocalStorage.get(`${storageKey}.type`) || 'User',
 		session: LocalStorage.get(`${storageKey}.session`) || {},
 		account: LocalStorage.get(`${storageKey}.account`) || {},
-		preference: LocalStorage.get(`${storageKey}.preference`) || 'system',
-		theme: LocalStorage.get(`${storageKey}.theme`) || 'dark',
+		preference: LocalStorage.get(`${storageKey}.preference`) || cookies.get('preference') || 'system',
+		theme: LocalStorage.get(`${storageKey}.theme`) || cookies.get('theme') || 'dark',
 		redirect: LocalStorage.get(`${storageKey}.redirect`) || '',
 		search: LocalStorage.get(`${storageKey}.search`) || [],
-		token: LocalStorage.get(`${storageKey}.token`) || {},
+		token: LocalStorage.get(`${storageKey}.token`) || cookies.get('token') || '',
 		tempAccount: LocalStorage.get(`${storageKey}.tempAccount`) || {},
-		tempToken: LocalStorage.get(`${storageKey}.tempToken`) || {},
+		tempToken: LocalStorage.get(`${storageKey}.tempToken`) || '',
 	});
 	const [loaded, setLoaded] = useState(false);
 	const router = contexts.useRouter();
-	const cookies = new Cookies();
 
 	// Hooks
 	useEffect(() => {
+		storeValues(storage);
 		setLoaded(true);
 	}, []);
 
@@ -66,12 +67,12 @@ const StorageProvider = ({ contexts, children }) => {
 	}, [router.pathname]);
 
 	useEffect(() => {
-		if (loaded) logger.debug('storageContext: ', storage);
+		logger.debug('storageContext: ', storage);
 	}, [storage]);
 
 	// Methods
 	const getValue = key => {
-		return storage[key] ? LocalStorage.get(`${storageKey}.${key}`) : storage[key];
+		return storage[key] ? storage[key] : LocalStorage.get(`${storageKey}.${key}`);
 	};
 
 	const storeValue = (key, value) => {
@@ -99,7 +100,11 @@ const StorageProvider = ({ contexts, children }) => {
 	};
 
 	const storeCookie = (key, value) => {
-		return cookies.set(key, value, { path: '/', secure: true });
+		return cookies.set(key, value, {
+			domain: process.env.NEXT_PUBLIC_DOMAIN,
+			path: '/',
+			secure: true,
+		});
 	};
 
 	const storeCookies = data => {
@@ -107,7 +112,7 @@ const StorageProvider = ({ contexts, children }) => {
 	};
 
 	const removeCookie = key => {
-		return cookies.remove(key);
+		return cookies.remove(key, { domain: process.env.NEXT_PUBLIC_DOMAIN, path: '/', secure: true });
 	};
 
 	const removeCookies = keys => {
@@ -116,7 +121,8 @@ const StorageProvider = ({ contexts, children }) => {
 
 	// Other
 	const onClear = () => {
-		removeCookies(['type', 'account', 'preference', 'token']);
+		LocalStorage.clear();
+		removeCookies(['type', 'account', 'token']);
 		storeValues({
 			type: '',
 			account: {},
@@ -125,11 +131,10 @@ const StorageProvider = ({ contexts, children }) => {
 			redirect: '',
 			search: [],
 			session: {},
-			token: {},
+			token: '',
 			tempAccount: {},
-			tempToken: {},
+			tempToken: '',
 		});
-		LocalStorage.clear();
 	};
 
 	// Render
