@@ -1,10 +1,8 @@
 import React, { Fragment, useEffect, useMemo, useState } from 'react';
 
-import { ToastWrapper } from '@playbooks/ui/toasts';
 import { normalizeError } from '@playbooks/utils/errors';
 import { getUUID, isEmpty } from '@playbooks/utils/helpers';
 import { logger } from '@playbooks/utils/logger';
-import { ErrorToast, InfoToast, SuccessToast } from 'src/molecules/toasts';
 
 export type ToastContextProps = {
 	showSuccess: (title, message) => any;
@@ -14,9 +12,10 @@ export type ToastContextProps = {
 
 export const ToastContext = React.createContext<ToastContextProps>(null);
 
-export const ToastProvider = ({ contexts, children }) => {
+export const ToastProvider = ({ contexts, components, children }) => {
 	const [toasts, setToasts] = useState([]);
 	const router = contexts.useRouter();
+	const { ToastWrapper, SuccessToast, InfoToast, ErrorToast } = components;
 
 	// Hooks
 	useEffect(() => {

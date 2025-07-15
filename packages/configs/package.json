@@ -1,6 +1,6 @@
 {
 	"name": "@playbooks/configs",
-	"version": "0.10.1",
+	"version": "0.11.0",
 	"description": "A collection of configs used for Playbooks.",
 	"author": "Eric Hubbell<eric@erichubbell.com>",
 	"license": "ISC",
@@ -37,7 +37,7 @@
 		"format:fix": "prettier --write src",
 		"commit": "scripts/commit.sh",
 		"deploy": "scripts/deploy.sh",
-"packages": "scripts/packages.sh",
+		"packages": "scripts/packages.sh",
 		"yalc": "npx yalc push"
 	},
 	"peerDependencies": {

@@ -1,6 +1,5 @@
 import React, { useEffect, useState } from 'react';
 
-import { useQuery } from '@playbooks/hooks/store';
 import { logger } from '@playbooks/utils/logger';
 import * as LocalStorage from 'local-storage';
 
@@ -27,6 +26,7 @@ const SessionContext = React.createContext<SessionContextProps>(null);
 
 const SessionProvider = ({ contexts, children }) => {
 	const [user, setUser] = useState<any>({});
+	const [loading, setLoading] = useState(false);
 	const [loaded, setLoaded] = useState(false);
 	const router = contexts.useRouter();
 	const storage = contexts.useStorage();
@@ -54,8 +54,9 @@ const SessionProvider = ({ contexts, children }) => {
 	}, [user]);
 
 	// Actions
-	const [fetchData, loading, error] = useQuery(async () => {
+	const fetchData = async () => {
 		try {
+			setLoading(true);
 			const token = storage.getValue('token');
 			const response = await store.queryRecord({ url: `/session`, params });
 			storage.storeValues({ session: response.data });
@@ -64,9 +65,10 @@ const SessionProvider = ({ contexts, children }) => {
 		} catch (e) {
 			onLogout();
 		} finally {
+			setLoading(false);
 			setLoaded(true);
 		}
-	});
+	};
 
 	// Methods
 	const onApply = e => {

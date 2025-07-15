@@ -1,6 +1,6 @@
 {
 	"name": "@playbooks/contexts",
-	"version": "0.10.7",
+	"version": "0.11.2",
 	"description": "A collection of React contexts for Playbooks.",
 	"author": "Eric Hubbell<eric@erichubbell.com>",
 	"license": "ISC",
@@ -34,10 +34,8 @@
 		"@ehubbell/html": "^0.1.10",
 		"@intercom/messenger-js-sdk": "^0.0.14",
 		"@playbooks/adapters": "^0.10.2",
-		"@playbooks/hooks": "^0.10.1",
 		"@playbooks/normalizers": "^0.10.2",
 		"@playbooks/serializers": "^0.10.2",
-		"@playbooks/ui": "^0.10.7",
 		"@playbooks/utils": "^0.9.14",
 		"@stripe/react-stripe-js": "^3.7.0",
 		"@stripe/stripe-js": "^7.4.0",

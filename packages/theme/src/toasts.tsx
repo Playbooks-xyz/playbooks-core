@@ -32,10 +32,9 @@ export const toastHeader = () => ({
 });
 
 export const toastIcon = () => ({
-	bgColor: 'bg-gray-200 dark:bg-gray-700',
 	color: 'text-gray-700 dark:text-gray-300',
 	borderRadius: 'rounded-md',
-	spacing: 'px-2 py-1',
+	spacing: 'px-2 p-1',
 });
 
 export const toastBody = () => ({
