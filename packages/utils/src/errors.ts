@@ -28,7 +28,7 @@ export const normalizeError = error => {
 
 export const serializeError = error => {
 	// logger.warn('formatError: ', error);
-	const code = error.statusCode || error.code || 500;
+	const code = error.status || error.statusCode || error.code || 500;
 	const data = error.data;
 	const message = error.message;
 	const stack = error.stack || error.framework || 'Stack unavailable';

@@ -48,6 +48,8 @@ export const jsonApiSerializeAttrs = (data: any = {}) => {
 	const formatter = formatLookup('camel');
 	const serializedAttrs = {};
 	Object.keys(data).map(key => {
+		if (checkAttrs(key).serialize === false) return;
+
 		if (isArray(data[key]) && isObject(data[key][0])) {
 			return (serializedAttrs[formatter(key)] = data[key].map(jsonApiSerializeAttrs));
 		}
