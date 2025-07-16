@@ -33,21 +33,27 @@ const StoreProvider = ({ client, contexts, children }) => {
 	// Computed
 	const computeHeaders = headers => {
 		if (!storage.storage.token) return { ...headers };
+		const isAdmin = window.location.href?.includes(process.env.NEXT_PUBLIC_ADMIN_DOMAIN);
+
 		const account = storage.storage.account.uuid || '';
 		const token = storage.storage.token;
 		const tempAccount = storage.storage.tempAccount.uuid || '';
 		const tempToken = storage.storage.tempToken;
 		return {
-			Account: tempAccount && !router.asPath.includes('/admin') ? tempAccount : account,
-			Authorization: tempToken && !router.asPath.includes('/admin') ? tempToken : token,
+			Account: tempAccount && !isAdmin ? tempAccount : account,
+			Authorization: tempToken && !isAdmin ? tempToken : token,
 			...headers,
 		};
 	};
 
 	const computeParams = params => {
 		const context = params?.context || [];
-		if (router.pathname.includes('/admin')) context.push(`admin`);
-		if (router.pathname.includes('/admin')) return context.length > 0 ? { ...params, context } : { ...params };
+		const isAdmin = window.location.href?.includes(process.env.NEXT_PUBLIC_ADMIN_DOMAIN);
+
+		if (isAdmin) {
+			context.push(`admin`);
+			return context.length > 0 ? { ...params, context } : { ...params };
+		}
 		return context.length > 0 ? { ...params, context } : { ...params };
 	};
 
