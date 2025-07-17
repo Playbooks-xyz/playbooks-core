@@ -1,6 +1,6 @@
 import { computeTailwind } from '@ehubbell/html';
 import * as Loaders from '@playbooks/assets/loaders';
-import * as types from '@playbooks/types';
+import * as types from 'types';
 import { useUI } from 'src/context';
 
 export const Oval = ({ name = 'Oval', tailwind, className, ...props }: types.SpinnerProps) => {

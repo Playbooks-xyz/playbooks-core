@@ -1,4 +1,4 @@
-import * as types from '@playbooks/types';
+import * as types from 'types';
 import { useUI } from 'src/context';
 
 export const Head = (props: types.HeadProps) => {

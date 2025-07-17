@@ -2,7 +2,7 @@ import { Fragment } from 'react';
 
 import * as HTML from '@ehubbell/html';
 import { computeProps, computeTailwind } from '@ehubbell/html';
-import * as types from '@playbooks/types';
+import * as types from 'types';
 import { useUI } from 'src/context';
 import { Img, Span } from 'src/html';
 import { Icon } from 'src/icons';

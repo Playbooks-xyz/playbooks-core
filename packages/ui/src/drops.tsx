@@ -3,7 +3,7 @@ import { useEffect, useRef, useState } from 'react';
 import { computePosition, flip, limitShift, shift } from '@floating-ui/dom';
 import { Fade } from '@playbooks/components/fade';
 import { useKeyDown, useMouseUp } from '@playbooks/hooks';
-import * as types from '@playbooks/types';
+import * as types from 'types';
 import { AccentBtn, Btn } from 'src/buttons';
 import { useUI } from 'src/context';
 import { H6, P } from 'src/fonts';

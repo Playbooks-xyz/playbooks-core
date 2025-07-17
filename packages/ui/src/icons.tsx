@@ -1,5 +1,5 @@
 import { FontAwesome } from '@playbooks/components/font-awesome';
-import * as types from '@playbooks/types';
+import * as types from 'types';
 import { useUI } from 'src/context';
 import { Div } from 'src/html';
 

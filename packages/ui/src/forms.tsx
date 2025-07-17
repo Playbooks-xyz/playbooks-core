@@ -7,7 +7,7 @@ import { GoogleAutocomplete } from '@playbooks/components/google-autocomplete';
 import { MaskedInput } from '@playbooks/components/masked-input';
 import { PhoneInput } from '@playbooks/components/phone-input';
 import { useElementKeyDown } from '@playbooks/hooks';
-import * as types from '@playbooks/types';
+import * as types from 'types';
 import { useUI } from 'src/context';
 import { Div, Span } from 'src/html';
 

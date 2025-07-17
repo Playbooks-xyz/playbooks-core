@@ -1,4 +1,4 @@
-import * as types from '@playbooks/types';
+import * as types from 'types';
 import { TextBtn } from 'src/buttons';
 import { useUI } from 'src/context';
 import { Li } from 'src/html';

@@ -1,4 +1,4 @@
-import * as types from '@playbooks/types';
+import * as types from 'types';
 import { useUI } from 'src/context';
 import { Font, H6, P } from 'src/fonts';
 import { Div } from 'src/html';

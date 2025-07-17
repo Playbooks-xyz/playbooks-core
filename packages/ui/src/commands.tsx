@@ -1,6 +1,6 @@
 import { useMemo } from 'react';
 
-import * as types from '@playbooks/types';
+import * as types from 'types';
 import { useUI } from 'src/context';
 import { Span } from 'src/html';
 

@@ -2,9 +2,9 @@ import { useEffect, useRef, useState } from 'react';
 
 import { arrow, computePosition, flip, limitShift, shift } from '@floating-ui/dom';
 import { Fade } from '@playbooks/components/fade';
-import * as types from '@playbooks/types';
 import { useUI } from 'src/context';
 import { Div, Span } from 'src/html';
+import * as types from 'types';
 
 export const Tooltip = ({
 	id,

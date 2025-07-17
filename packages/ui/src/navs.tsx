@@ -1,6 +1,6 @@
 import * as HTML from '@ehubbell/html';
 import { computeProps } from '@ehubbell/html';
-import * as types from '@playbooks/types';
+import * as types from 'types';
 import { AccentBtn } from 'src/buttons';
 import { useUI } from 'src/context';
 import { Font } from 'src/fonts';

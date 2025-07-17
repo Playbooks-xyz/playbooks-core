@@ -1,4 +1,4 @@
-import * as types from '@playbooks/types';
+import * as types from 'types';
 import { Btn } from 'src/buttons';
 import { useUI } from 'src/context';
 import { FormSelect } from 'src/forms';

@@ -1,7 +1,7 @@
 import { useRef, useState } from 'react';
 
 import { Fade } from '@playbooks/components/fade';
-import * as types from '@playbooks/types';
+import * as types from 'types';
 import { AccentBtn } from 'src/buttons';
 import { useUI } from 'src/context';
 import { H6, P } from 'src/fonts';

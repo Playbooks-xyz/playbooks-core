@@ -1,4 +1,4 @@
-import * as types from '@playbooks/types';
+import * as types from 'types';
 import { BtnWrapper } from 'src/buttons';
 import { useUI } from 'src/context';
 import { FarIcon } from 'src/icons';
