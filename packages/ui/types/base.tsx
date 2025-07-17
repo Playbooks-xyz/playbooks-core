@@ -7,7 +7,7 @@ export type BaseProps = TailwindProps & {
 	name?: string;
 	html?: any;
 	size?: string;
-	tailwind?: TailwindProps & any;
+	tailwind?: any;
 };
 
 export type HtmlProps = RHP.HtmlProps & BaseProps;

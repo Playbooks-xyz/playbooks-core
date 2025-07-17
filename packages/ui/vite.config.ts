@@ -4,7 +4,7 @@ import path from 'path';
 import peerDepsExternal from 'rollup-plugin-peer-deps-external';
 import { defineConfig } from 'vite';
 import { runSize } from 'vite-plugin-size';
-import { runCommand } from 'vite-plugin-yalc';
+import { runCommand, runYalc } from 'vite-plugin-yalc';
 
 export default defineConfig(({ mode }) => ({
 	base: './',
@@ -15,7 +15,6 @@ export default defineConfig(({ mode }) => ({
 			entry: [
 				path.resolve(__dirname, 'src/index.tsx'),
 				path.resolve(__dirname, 'src/accordions.tsx'),
-				path.resolve(__dirname, 'types/accordions.d.ts'),
 				path.resolve(__dirname, 'src/alerts.tsx'),
 				path.resolve(__dirname, 'src/animations.tsx'),
 				path.resolve(__dirname, 'src/avatars.tsx'),
@@ -73,7 +72,7 @@ export default defineConfig(({ mode }) => ({
 			plugins: [peerDepsExternal()],
 		},
 	},
-	plugins: [react(), runCommand('npm run build:dts'), runSize()],
+	plugins: [react(), runYalc(), runCommand('npm run build:dts'), runSize()],
 	resolve: {
 		alias: {
 			src: path.resolve(__dirname, '/src'),
