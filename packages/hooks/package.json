@@ -45,9 +45,6 @@
 		"@playbooks/utils": "^0.9.14",
 		"react-countup": "^6.5.3"
 	},
-	"devDependencies": {
-		"@playbooks/types": "^0.0.1"
-	},
 	"exports": {
 		".": {
 			"types": "./dist/index.d.ts",

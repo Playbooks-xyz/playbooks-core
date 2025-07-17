@@ -82,6 +82,11 @@
 			"import": "./dist/alerts.es.js",
 			"require": "./dist/alerts.cjs.js"
 		},
+		"./animations": {
+			"types": "./dist/animations.d.ts",
+			"import": "./dist/animations.es.js",
+			"require": "./dist/animations.cjs.js"
+		},
 		"./avatars": {
 			"types": "./dist/avatars.d.ts",
 			"import": "./dist/avatars.es.js",

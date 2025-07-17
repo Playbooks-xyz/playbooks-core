@@ -41,9 +41,6 @@
 		"@fortawesome/react-fontawesome": "^0.2.2",
 		"@playbooks/configs": "^0.0.5"
 	},
-	"devDependencies": {
-		"@playbooks/types": "^0.0.1"
-	},
 	"exports": {
 		".": {
 			"types": "./dist/index.d.ts",

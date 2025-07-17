@@ -33,6 +33,7 @@ export * from 'src/modals';
 export * from 'src/navbars';
 export * from 'src/navs';
 export * from 'src/paginations';
+export * from 'src/popovers';
 export * from 'src/prefooters';
 export * from 'src/progress-bars';
 export * from 'src/radios';

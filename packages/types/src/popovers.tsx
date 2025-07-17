@@ -1,0 +1,13 @@
+import { HtmlProps } from 'src';
+
+export type PopoverProps = HtmlProps & {
+	open?: boolean;
+	html?: string;
+	placement?: any;
+	onBlur?: () => any;
+	onHover?: () => any;
+};
+
+export type PopoverInnerProps = HtmlProps;
+
+export type PopoverArrowProps = HtmlProps;

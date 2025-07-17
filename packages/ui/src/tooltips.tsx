@@ -58,8 +58,8 @@ export const Tooltip = ({
 		<Span id={id} ref={ref} name={name} onClick={onShow} onMouseEnter={onMouseEnter} onMouseLeave={onMouseLeave}>
 			{children}
 			<Fade ref={popRef} show={open} timeout={200} onEnter={onEnter} onExit={onExit}>
-				<Div ref={popRef} position='fixed' zIndex='z-10' {...computed}>
-					<TooltipArrow ref={arrowRef} position='fixed' tailwind={tailwind?.arrow} />
+				<Div ref={popRef} position='absolute' zIndex='z-10' {...computed}>
+					<TooltipArrow ref={arrowRef} tailwind={tailwind?.arrow} />
 					<TooltipInner tailwind={tailwind?.inner}>{html}</TooltipInner>
 				</Div>
 			</Fade>
@@ -86,7 +86,6 @@ export const TooltipArrow = ({
 	ref,
 	tailwind,
 	className,
-	style,
 	...props
 }: types.TooltipArrowProps) => {
 	const context = useUI();
@@ -94,7 +93,7 @@ export const TooltipArrow = ({
 	const computed = { ...base, ...props, tailwind, className, name };
 
 	return (
-		<Div ref={ref} style={style}>
+		<Div ref={ref} position='absolute'>
 			<Div {...computed} />
 		</Div>
 	);
