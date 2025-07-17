@@ -2,7 +2,7 @@ import path from 'path';
 import peerDepsExternal from 'rollup-plugin-peer-deps-external';
 import { defineConfig } from 'vite';
 import { runSize } from 'vite-plugin-size';
-import { runCommand } from 'vite-plugin-yalc';
+import { runCommand, runYalc } from 'vite-plugin-yalc';
 
 export default defineConfig(({ mode }) => ({
 	base: './',
@@ -41,7 +41,7 @@ export default defineConfig(({ mode }) => ({
 			plugins: [peerDepsExternal()],
 		},
 	},
-	plugins: [runCommand('npm run build:dts'), runSize()],
+	plugins: [runYalc(), runCommand('npm run build:dts'), runSize()],
 	resolve: {
 		alias: {
 			src: path.resolve(__dirname, '/src'),
