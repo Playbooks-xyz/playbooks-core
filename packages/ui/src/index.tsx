@@ -1,5 +1,6 @@
 export * from 'src/accordions';
 export * from 'src/alerts';
+export * from 'src/animations';
 export * from 'src/avatars';
 export * from 'src/badges';
 export * from 'src/banners';
