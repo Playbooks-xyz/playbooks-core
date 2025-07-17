@@ -47,8 +47,7 @@
 		"react-children-utilities": "^2.10.0"
 	},
 	"devDependencies": {
-		"@playbooks/configs": "^0.11.0",
-		"@playbooks/types": "^0.0.3"
+		"@playbooks/configs": "^0.11.0"
 	},
 	"exports": {
 		".": {
