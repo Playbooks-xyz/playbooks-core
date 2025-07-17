@@ -13,7 +13,7 @@ export const Tooltip = ({
 	open,
 	placement = 'right',
 	html,
-	onClick,
+	onClick = () => null,
 	onHover,
 	className,
 	children,
@@ -49,11 +49,6 @@ export const Tooltip = ({
 	const onMouseEnter = () => (!open && onHover ? onHover() : null);
 	const onMouseLeave = () => (open && onHover ? onHover() : null);
 
-	const onShow = e => {
-		if (!onClick) e.preventDefault();
-		return onClick ? onClick() : null;
-	};
-
 	// Render
 	if (ref?.current) {
 		return (
@@ -66,7 +61,7 @@ export const Tooltip = ({
 		);
 	}
 	return (
-		<Span id={id} ref={baseRef} name={name} onClick={onShow} onMouseEnter={onMouseEnter} onMouseLeave={onMouseLeave}>
+		<Span id={id} ref={baseRef} name={name} onClick={onClick} onMouseEnter={onMouseEnter} onMouseLeave={onMouseLeave}>
 			{children}
 			<Fade ref={popRef} show={open} timeout={200} onEnter={onEnter} onExit={onExit}>
 				<Div ref={popRef} position='absolute' zIndex='z-10' {...computed}>

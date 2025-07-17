@@ -1,5 +1,4 @@
-export * as RHP from 'react-html-props';
-import { HtmlProps } from 'types';
+import { HtmlProps, InputProps, LabelProps, SelectProps, TextAreaProps } from 'types';
 
 export type FormProps = HtmlProps & {
 	onSubmit?: (v) => any;
@@ -7,7 +6,7 @@ export type FormProps = HtmlProps & {
 
 export type FormGroupProps = HtmlProps;
 
-export type FormLabelProps = HtmlProps & {
+export type FormLabelProps = LabelProps & {
 	htmlFor?: string;
 };
 
@@ -17,12 +16,9 @@ export type FormCheckboxProps = FormInputProps & {
 
 export type FormFileProps = FormInputProps;
 
-export type FormInputProps = RHP.InputProps & {
-	id?: string;
-	type?: string;
+export type FormInputProps = Omit<InputProps, 'size'> & {
 	size?: string;
 	variant?: string;
-	disabled?: boolean;
 };
 
 export type FormInputCurrencyProps = FormInputProps & {
@@ -46,12 +42,17 @@ export type FormInputPhoneProps = FormInputProps & {
 	variant?: string;
 };
 
-export type FormSelectProps = FormInputProps & {
+export type FormSelectProps = Omit<SelectProps, 'size'> & {
+	size?: string;
+	placeholder?: string;
+	variant?: string;
 	options?: string[];
 };
 
 export type FormTextProps = HtmlProps;
 
-export type FormTextAreaProps = FormInputProps & {
+export type FormTextAreaProps = Omit<TextAreaProps, 'rows' | 'size'> & {
+	size?: string;
+	variant?: string;
 	rows: any;
 };

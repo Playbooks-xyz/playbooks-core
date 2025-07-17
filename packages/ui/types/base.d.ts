@@ -1,11 +1,21 @@
-export * as RHP from 'react-html-props';
+import * as RHP from 'react-html-props';
+
 import { TailwindProps } from '@ehubbell/html';
 
-export type HtmlProps = RHP.HtmlProps &
-	TailwindProps & {
-		ref?: any;
-		name?: string;
-		html?: any;
-		size?: string;
-		tailwind?: TailwindProps & any;
-	};
+export type BaseProps = TailwindProps & {
+	ref?: any;
+	name?: string;
+	html?: any;
+	size?: string;
+	tailwind?: TailwindProps & any;
+};
+
+export type HtmlProps = RHP.HtmlProps & BaseProps;
+
+export type InputProps = RHP.InputProps & BaseProps;
+
+export type LabelProps = RHP.LabelProps & BaseProps;
+
+export type SelectProps = RHP.SelectProps & BaseProps;
+
+export type TextAreaProps = RHP.TextAreaProps & BaseProps;

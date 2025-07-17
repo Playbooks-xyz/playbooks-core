@@ -15,6 +15,7 @@ export default defineConfig(({ mode }) => ({
 			entry: [
 				path.resolve(__dirname, 'src/index.tsx'),
 				path.resolve(__dirname, 'src/accordions.tsx'),
+				path.resolve(__dirname, 'types/accordions.d.ts'),
 				path.resolve(__dirname, 'src/alerts.tsx'),
 				path.resolve(__dirname, 'src/animations.tsx'),
 				path.resolve(__dirname, 'src/avatars.tsx'),
@@ -72,7 +73,7 @@ export default defineConfig(({ mode }) => ({
 			plugins: [peerDepsExternal()],
 		},
 	},
-	plugins: [react(), runCommand('npm run build:ts'), runSize()],
+	plugins: [react(), runCommand('npm run build:dts'), runSize()],
 	resolve: {
 		alias: {
 			src: path.resolve(__dirname, '/src'),

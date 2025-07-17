@@ -17,7 +17,7 @@ export type TableBodyProps = HtmlProps;
 
 export type TableRowProps = HtmlProps;
 
-export type TableDataProps = HtmlProps & {
+export type TableDataProps = Omit<HtmlProps, 'title'> & {
 	title?: boolean;
 	value?: string | number;
 };
