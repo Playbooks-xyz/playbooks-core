@@ -1,7 +1,7 @@
 import { animated, useSpring } from '@react-spring/web';
 
 import { computeTailwind } from '@ehubbell/html';
-import { HtmlProps } from '@playbooks/types';
+import { HtmlProps } from 'types';
 
 export const useAnimation = useSpring;
 

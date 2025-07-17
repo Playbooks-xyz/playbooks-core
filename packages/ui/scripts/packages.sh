@@ -3,6 +3,4 @@ npm install \
 @playbooks/hooks@latest \
 @playbooks/utils@latest
 
-npm install @playbooks/types@latest --save-dev
-
 

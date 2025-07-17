@@ -1,4 +1,5 @@
-import { HtmlProps, InputProps } from 'types';
+export * as RHP from 'react-html-props';
+import { HtmlProps } from 'types';
 
 export type FormProps = HtmlProps & {
 	onSubmit?: (v) => any;
@@ -16,7 +17,7 @@ export type FormCheckboxProps = FormInputProps & {
 
 export type FormFileProps = FormInputProps;
 
-export type FormInputProps = InputProps & {
+export type FormInputProps = RHP.InputProps & {
 	id?: string;
 	type?: string;
 	size?: string;

@@ -11,6 +11,7 @@ export type CardIconProps = HtmlProps & {
 
 export type CardImgProps = HtmlProps & {
 	alt?: string;
+	size?: string;
 	src: string;
 };
 

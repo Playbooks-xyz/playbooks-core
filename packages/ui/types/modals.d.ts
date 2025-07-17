@@ -23,6 +23,8 @@ export type ModalTitleProps = HtmlProps;
 
 export type ModalSubtitleProps = HtmlProps;
 
-export type ModalBodyProps = HtmlProps;
+export type ModalBodyProps = HtmlProps & {
+	size?: string;
+};
 
 export type ModalFooterProps = HtmlProps;

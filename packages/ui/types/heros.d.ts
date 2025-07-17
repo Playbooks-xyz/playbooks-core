@@ -8,6 +8,7 @@ export type HeroBgProps = HtmlProps;
 
 export type HeroImgProps = HtmlProps & {
 	alt?: string;
+	size?: string;
 	src: string;
 };
 

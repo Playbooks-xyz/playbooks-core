@@ -1,7 +1,7 @@
 import ReactSkeleton, { SkeletonTheme } from 'react-loading-skeleton';
 
 import { computeTailwind } from '@ehubbell/html';
-import { HtmlProps } from '@playbooks/types';
+import { HtmlProps } from 'types';
 
 export type SkeletonProps = HtmlProps;
 

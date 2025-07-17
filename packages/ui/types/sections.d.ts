@@ -16,7 +16,9 @@ export type SectionTextProps = HtmlProps;
 
 export type SectionActionsProps = HtmlProps;
 
-export type SectionBodyProps = HtmlProps;
+export type SectionBodyProps = HtmlProps & {
+	size?: string;
+};
 
 export type SectionHrProps = HtmlProps;
 
