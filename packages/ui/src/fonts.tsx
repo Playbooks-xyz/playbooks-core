@@ -1,7 +1,7 @@
 import * as HTML from '@ehubbell/html';
 import { computeProps } from '@ehubbell/html';
-import * as types from 'types';
 import { useUI } from 'src/context';
+import * as types from 'types';
 
 export const Font = props => {
 	switch (props?.size) {

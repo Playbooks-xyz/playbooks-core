@@ -1,6 +1,6 @@
-import * as types from 'types';
 import { useUI } from 'src/context';
 import { Div, Img } from 'src/html';
+import * as types from 'types';
 
 export const Tags = ({ name = 'Tags', tailwind, className, children, ...props }: types.TagsProps) => {
 	const context = useUI();

@@ -1,8 +1,8 @@
-import * as types from 'types';
 import { useUI } from 'src/context';
 import { Font, P } from 'src/fonts';
 import { Div, Img } from 'src/html';
 import { Icon } from 'src/icons';
+import * as types from 'types';
 
 export const Card = ({ name = 'Card', tailwind, className, children, ...props }: types.CardProps) => {
 	const context = useUI();

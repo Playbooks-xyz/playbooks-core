@@ -1,7 +1,7 @@
-import * as types from 'types';
 import { useUI } from 'src/context';
 import { Head } from 'src/head';
 import { Div } from 'src/html';
+import * as types from 'types';
 
 export const Route = ({ name = 'Route', seo, tailwind, className, children, ...props }: types.RouteProps) => {
 	const context = useUI();

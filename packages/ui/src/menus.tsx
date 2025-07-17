@@ -2,12 +2,12 @@ import { useRef, useState } from 'react';
 
 import { Fade } from '@playbooks/components/fade';
 import { useKeyDown, useMouseUp } from '@playbooks/hooks';
-import * as types from 'types';
 import { AccentBtn } from 'src/buttons';
 import { useUI } from 'src/context';
 import { H6, P } from 'src/fonts';
 import { Div, Li, Ul } from 'src/html';
 import { AccentLink } from 'src/links';
+import * as types from 'types';
 
 export const Menu = ({ name = 'Menu', open, onClose, tailwind, className, children, ...props }: types.MenuProps) => {
 	const context = useUI();

@@ -1,8 +1,8 @@
-import * as types from 'types';
 import { useUI } from 'src/context';
 import { Font, H6, P } from 'src/fonts';
 import { Div } from 'src/html';
 import { Section } from 'src/sections';
+import * as types from 'types';
 
 export const Prefooter = ({ name = 'Prefooter', tailwind, className, children, ...props }: types.PrefooterProps) => {
 	const context = useUI();

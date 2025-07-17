@@ -1,10 +1,10 @@
 import * as HTML from '@ehubbell/html';
 import { computeProps } from '@ehubbell/html';
-import * as types from 'types';
 import { useUI } from 'src/context';
 import { Font, P, Small } from 'src/fonts';
 import { Div, Img } from 'src/html';
 import { FadIcon } from 'src/icons';
+import * as types from 'types';
 
 export const Hero = ({ name = 'Hero', size = '', tailwind, className, children, ...props }: types.HeroProps) => {
 	const context = useUI();

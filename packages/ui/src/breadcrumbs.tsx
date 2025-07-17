@@ -1,10 +1,10 @@
-import * as types from 'types';
 import { TextBtn } from 'src/buttons';
 import { useUI } from 'src/context';
 import { Li } from 'src/html';
 import { FarIcon } from 'src/icons';
 import { TextLink } from 'src/links';
 import { Nav, NavList } from 'src/navs';
+import * as types from 'types';
 
 export const Breadcrumbs = ({
 	name = 'Breadcrumbs',

@@ -2,11 +2,11 @@ import { Fragment } from 'react';
 
 import * as HTML from '@ehubbell/html';
 import { computeProps, computeTailwind } from '@ehubbell/html';
-import * as types from 'types';
 import { useUI } from 'src/context';
 import { Img, Span } from 'src/html';
 import { Icon } from 'src/icons';
 import { Oval } from 'src/spinners';
+import * as types from 'types';
 
 export const Link = props => {
 	switch (props?.variant) {

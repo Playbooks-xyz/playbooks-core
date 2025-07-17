@@ -1,6 +1,6 @@
-import * as types from 'types';
 import { useUI } from 'src/context';
 import { Div } from 'src/html';
+import * as types from 'types';
 
 export const BtnGroup = ({ name = 'BtnGroup', tailwind, className, children, ...props }: types.ButtonGroupProps) => {
 	const context = useUI();

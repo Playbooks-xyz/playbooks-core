@@ -1,7 +1,7 @@
-import * as types from 'types';
 import { useUI } from 'src/context';
 import { Font, P } from 'src/fonts';
 import { Div, Img } from 'src/html';
+import * as types from 'types';
 
 export const Avatar = ({ name = 'Avatar', tailwind, className, children, ...props }: types.AvatarProps) => {
 	const context = useUI();

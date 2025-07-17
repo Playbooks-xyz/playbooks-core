@@ -1,8 +1,8 @@
 import { useMemo } from 'react';
 
-import * as types from 'types';
 import { useUI } from 'src/context';
 import { Span } from 'src/html';
+import * as types from 'types';
 
 export const Command = ({ name = 'CMD', keys = [], tailwind, className, children, ...props }: types.CommandProps) => {
 	const context = useUI();

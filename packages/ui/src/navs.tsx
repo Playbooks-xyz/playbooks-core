@@ -1,11 +1,11 @@
 import * as HTML from '@ehubbell/html';
 import { computeProps } from '@ehubbell/html';
-import * as types from 'types';
 import { AccentBtn } from 'src/buttons';
 import { useUI } from 'src/context';
 import { Font } from 'src/fonts';
 import { Div, Li, Ul } from 'src/html';
 import { AccentLink } from 'src/links';
+import * as types from 'types';
 
 export const Nav = ({ name = 'Nav', tailwind, className, children, ...props }: types.NavProps) => {
 	const context = useUI();

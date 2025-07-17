@@ -1,5 +1,5 @@
-import * as types from 'types';
 import { useUI } from 'src/context';
+import * as types from 'types';
 
 export const Head = (props: types.HeadProps) => {
 	const context = useUI();

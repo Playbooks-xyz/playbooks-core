@@ -1,6 +1,6 @@
-import * as types from 'types';
 import { useUI } from 'src/context';
 import { Span } from 'src/html';
+import * as types from 'types';
 
 export const Badge = ({
 	name = 'Badge',

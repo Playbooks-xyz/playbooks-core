@@ -1,7 +1,7 @@
-import * as types from 'types';
 import { useUI } from 'src/context';
 import { Font, P } from 'src/fonts';
 import { Div } from 'src/html';
+import * as types from 'types';
 
 export const Header = ({ name = 'Header', tailwind, className, children, ...props }: types.HeaderProps) => {
 	const context = useUI();

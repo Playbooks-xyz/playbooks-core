@@ -1,7 +1,7 @@
-import * as types from 'types';
 import { useUI } from 'src/context';
 import { Div } from 'src/html';
 import { Icon } from 'src/icons';
+import * as types from 'types';
 
 export const InputGroup = ({
 	name = 'InputGroup',

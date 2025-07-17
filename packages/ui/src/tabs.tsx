@@ -1,8 +1,8 @@
-import * as types from 'types';
 import { Btn } from 'src/buttons';
 import { useUI } from 'src/context';
 import { FormSelect } from 'src/forms';
 import { Div } from 'src/html';
+import * as types from 'types';
 
 export const TabWrapper = ({ name = 'TabWrapper', tailwind, className, children, ...props }: types.TabWrapperProps) => {
 	const context = useUI();

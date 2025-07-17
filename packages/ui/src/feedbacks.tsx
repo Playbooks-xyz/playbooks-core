@@ -1,8 +1,8 @@
-import * as types from 'types';
 import { useUI } from 'src/context';
 import { Font, P, Small } from 'src/fonts';
 import { Div } from 'src/html';
 import { Icon } from 'src/icons';
+import * as types from 'types';
 
 export const Feedback = ({ name = 'Feedback', tailwind, className, children, ...props }: types.FeedbackProps) => {
 	const context = useUI();

@@ -1,8 +1,8 @@
-import * as types from 'types';
 import { useUI } from 'src/context';
 import { Font, P } from 'src/fonts';
 import { Div } from 'src/html';
 import { Icon } from 'src/icons';
+import * as types from 'types';
 
 export const Alert = ({ type = 'info', name = 'Alert', tailwind, className, children, ...props }: types.AlertProps) => {
 	const context = useUI();

@@ -1,12 +1,12 @@
 import { useRef, useState } from 'react';
 
 import { Fade } from '@playbooks/components/fade';
-import * as types from 'types';
 import { AccentBtn } from 'src/buttons';
 import { useUI } from 'src/context';
 import { H6, P } from 'src/fonts';
 import { Div, Span } from 'src/html';
 import { FadIcon } from 'src/icons';
+import * as types from 'types';
 
 export const ToastWrapper = ({
 	name = 'ToastWrapper',

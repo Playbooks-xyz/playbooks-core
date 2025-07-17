@@ -1,8 +1,8 @@
-import * as types from 'types';
 import { useUI } from 'src/context';
 import { H5, P, Small } from 'src/fonts';
 import { Div, Span } from 'src/html';
 import { Oval } from 'src/spinners';
+import * as types from 'types';
 
 export const ModalLoader = ({
 	name = 'ModalLoader',

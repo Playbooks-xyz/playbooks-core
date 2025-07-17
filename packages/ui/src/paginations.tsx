@@ -1,8 +1,8 @@
-import * as types from 'types';
 import { BtnWrapper } from 'src/buttons';
 import { useUI } from 'src/context';
 import { FarIcon } from 'src/icons';
 import { Nav } from 'src/navs';
+import * as types from 'types';
 
 export const Pagination = ({ name = 'Pagination', tailwind, className, children, ...props }: types.PaginationProps) => {
 	const context = useUI();

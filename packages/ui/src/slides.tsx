@@ -3,11 +3,11 @@ import { createPortal } from 'react-dom';
 
 import { Fade } from '@playbooks/components/fade';
 import { useKeyDown } from '@playbooks/hooks';
-import * as types from 'types';
 import { AccentBtn } from 'src/buttons';
 import { useUI } from 'src/context';
 import { H4 } from 'src/fonts';
 import { Div } from 'src/html';
+import * as types from 'types';
 
 export const SlideWrapper = ({
 	name = 'SlideWrapper',

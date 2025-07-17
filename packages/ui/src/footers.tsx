@@ -1,11 +1,11 @@
 import * as HTML from '@ehubbell/html';
 import { computeProps } from '@ehubbell/html';
-import * as types from 'types';
 import { Btn } from 'src/buttons';
 import { useUI } from 'src/context';
 import { Font, P } from 'src/fonts';
 import { Div, Li, Ul } from 'src/html';
 import { Link } from 'src/links';
+import * as types from 'types';
 
 export const Footer = ({ name = 'Footer', tailwind, className, children, ...props }: types.FooterProps) => {
 	const context = useUI();

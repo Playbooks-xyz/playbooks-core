@@ -1,6 +1,6 @@
-import * as types from 'types';
 import { useUI } from 'src/context';
 import { Li, Ul } from 'src/html';
+import * as types from 'types';
 
 export const ListGroup = ({ name = 'ListGroup', tailwind, className, children, ...props }: types.LiPropsstGroup) => {
 	const context = useUI();

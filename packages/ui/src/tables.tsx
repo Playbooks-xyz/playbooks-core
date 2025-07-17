@@ -1,11 +1,11 @@
 import * as HTML from '@ehubbell/html';
 import { computeTailwind } from '@ehubbell/html';
-import * as types from 'types';
 import { isObject } from '@playbooks/utils/helpers';
 import { BtnWrapper } from 'src/buttons';
 import { useUI } from 'src/context';
 import { Div } from 'src/html';
 import { FarIcon } from 'src/icons';
+import * as types from 'types';
 
 export const Table = ({ name = 'Table', tailwind, className, children, ...props }: types.TableProps) => {
 	const context = useUI();

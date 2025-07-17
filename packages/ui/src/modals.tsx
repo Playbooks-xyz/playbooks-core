@@ -3,11 +3,11 @@ import { createPortal } from 'react-dom';
 
 import { Fade } from '@playbooks/components/fade';
 import { useKeyDown } from '@playbooks/hooks';
-import * as types from 'types';
 import { AccentBtn } from 'src/buttons';
 import { useUI } from 'src/context';
 import { Font } from 'src/fonts';
 import { Div, Span } from 'src/html';
+import * as types from 'types';
 
 export const ModalWrapper = ({
 	name = 'ModalWrapper',
