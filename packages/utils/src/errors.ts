@@ -31,30 +31,30 @@ export const serializeError = error => {
 	const code = error.status || error.statusCode || error.code || 500;
 	const data = error.data;
 	const message = error.message;
-	const stack = error.stack || error.framework || 'Stack unavailable';
+	const source = error.stack || error.framework || 'Stack unavailable';
 	switch (code) {
 		case 400:
 			return error.data
-				? objectionError({ code, data, message, stack })
-				: jsonApiError(error.code, 'Unprocessable entity', message, stack);
+				? objectionError({ code, data, message, source })
+				: jsonApiError(error.code, 'Unprocessable entity', message, source);
 
 		case 401:
-			return jsonApiError(code, 'Not authorized', message, stack);
+			return jsonApiError(code, 'Not authorized', message, source);
 
 		case 403:
-			return jsonApiError(code, 'Not authorized', message, stack);
+			return jsonApiError(code, 'Not authorized', message, source);
 
 		case 404:
-			return jsonApiError(code, 'Not found', message, stack);
+			return jsonApiError(code, 'Not found', message, source);
 
 		case 422:
-			return jsonApiError(code, 'Unprocessable entity', message, stack);
+			return jsonApiError(code, 'Unprocessable entity', message, source);
 
 		case 429:
-			return jsonApiError(code, 'Too many requests', message, stack);
+			return jsonApiError(code, 'Too many requests', message, source);
 
 		default:
-			return jsonApiError(code, 'Server error', message, stack);
+			return jsonApiError(code, 'Server error', message, source);
 	}
 };
 
@@ -67,11 +67,11 @@ export const objectionError = e => {
 	} else {
 		messages.push(e.message);
 	}
-	return jsonApiError(e.code, 'Validation Failed', messages[0], e.framework);
+	return jsonApiError(e.code, 'Validation Failed', messages[0], e.source);
 };
 
-export const jsonApiError = (status, title, detail, framework) => {
-	return { status, title, detail, framework };
+export const jsonApiError = (status, title, detail, source) => {
+	return { status, title, detail, source };
 };
 
 export const httpError = HttpError;

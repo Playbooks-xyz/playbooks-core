@@ -73,8 +73,8 @@ export const SectionLoader = ({
 
 	return (
 		<Div {...computed}>
-			<Oval size='w-12 h-12' className='stroke-gray-600 dark:stroke-gray-300 mb-4' />
-			<Div spacing='space-y-1' className='text-center'>
+			<Oval size='w-12 h-12' className='stroke-gray-600 dark:stroke-gray-300' />
+			<Div className='text-left'>
 				{title && <H5 tailwind={{ fontWeight: 'font-bold' }}>{title}</H5>}
 				{message && <Small>{message}</Small>}
 				{children}

@@ -31,7 +31,7 @@ const StoreProvider = ({ client, contexts, children }) => {
 	const storage = contexts.useStorage();
 
 	// Computed
-	const computeHeaders = headers => {
+	const computeHeaders = (headers?) => {
 		if (!storage.storage.token) return { ...headers };
 		const isAdmin = window.location.href?.includes(process.env.NEXT_PUBLIC_ADMIN_DOMAIN);
 
@@ -46,7 +46,7 @@ const StoreProvider = ({ client, contexts, children }) => {
 		};
 	};
 
-	const computeParams = params => {
+	const computeParams = (params?) => {
 		const context = params?.context || [];
 		const isAdmin = window.location.href?.includes(process.env.NEXT_PUBLIC_ADMIN_DOMAIN);
 

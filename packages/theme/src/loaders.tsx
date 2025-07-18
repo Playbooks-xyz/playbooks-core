@@ -15,5 +15,8 @@ export const pageLoader = () => ({
 
 export const sectionLoader = () => ({
 	align: 'text-center',
+	display: 'flex-middle',
+	space: 'space-x-4',
 	spacing: 'mx-auto',
+	width: 'w-fit',
 });
