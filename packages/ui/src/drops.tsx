@@ -2,7 +2,7 @@ import { useEffect, useRef, useState } from 'react';
 
 import { computePosition, flip, limitShift, shift } from '@floating-ui/dom';
 import { Fade } from '@playbooks/components/fade';
-import { useKeyDown, useMouseUp } from '@playbooks/hooks';
+import { useKeyDown, useMouseDown } from '@playbooks/hooks';
 import { AccentBtn, Btn } from 'src/buttons';
 import { useUI } from 'src/context';
 import { H6, P } from 'src/fonts';
@@ -26,7 +26,7 @@ export const Drop = ({
 
 	// Hooks
 	useKeyDown(onKeyDown, [open]);
-	useMouseUp(onMouseUp, [open]);
+	useMouseDown(onMouseDown, [open]);
 
 	// Functions
 	function onKeyDown(e) {
@@ -35,7 +35,7 @@ export const Drop = ({
 		if (e.keyCode === 27) onClose();
 	}
 
-	function onMouseUp(e) {
+	function onMouseDown(e) {
 		if (!open) return;
 		if (ref?.current?.contains(e.target)) return;
 		onClose();

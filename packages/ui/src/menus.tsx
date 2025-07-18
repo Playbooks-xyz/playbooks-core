@@ -1,7 +1,7 @@
 import { useRef, useState } from 'react';
 
 import { Fade } from '@playbooks/components/fade';
-import { useKeyDown, useMouseUp } from '@playbooks/hooks';
+import { useKeyDown, useMouseDown } from '@playbooks/hooks';
 import { AccentBtn } from 'src/buttons';
 import { useUI } from 'src/context';
 import { H6, P } from 'src/fonts';
@@ -17,7 +17,7 @@ export const Menu = ({ name = 'Menu', open, onClose, tailwind, className, childr
 
 	// Hooks
 	useKeyDown(onKeyDown, [open]);
-	useMouseUp(onMouseUp, [open]);
+	useMouseDown(onMouseDown, [open]);
 
 	// Functions
 	function onKeyDown(e) {
@@ -26,7 +26,7 @@ export const Menu = ({ name = 'Menu', open, onClose, tailwind, className, childr
 		if (e.keyCode === 27) onClose();
 	}
 
-	function onMouseUp(e) {
+	function onMouseDown(e) {
 		if (!open) return;
 		if (ref?.current?.contains(e.target)) return;
 		onClose();

@@ -48,8 +48,8 @@
     "typescript": "^5.8.3",
     "vite": "^7.0.0",
     "vite-plugin-dts": "^4.5.4",
-    "vite-plugin-size": "^0.1.2",
-    "vite-plugin-yalc": "^0.0.14"
+    "vite-plugin-size": "^0.1.4",
+    "vite-plugin-yalc": "^0.0.18"
   },
   "workspaces": [
     "packages/adapters",
