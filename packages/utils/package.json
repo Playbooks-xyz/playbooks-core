@@ -1,10 +1,11 @@
 {
 	"name": "@playbooks/utils",
-	"version": "0.10.2",
+	"version": "0.11.0",
 	"description": "A collection of utilities used for Playbooks.",
 	"author": "Eric Hubbell<eric@erichubbell.com>",
 	"license": "ISC",
 	"type": "module",
+	"main": "dist/index.js",
 	"repository": {
 		"type": "git",
 		"url": "https://github.com/playbooks-xyz/playbooks-core/packages/utils.git"
@@ -56,88 +57,83 @@
 	"exports": {
 		".": {
 			"types": "./dist/index.d.ts",
-			"import": "./dist/index.es.js",
-			"require": "./dist/index.cjs.js"
+			"import": "./dist/index.js",
+			"require": "./dist/index.cjs"
 		},
 		"./arrays": {
 			"types": "./dist/arrays.d.ts",
-			"import": "./dist/arrays.es.js",
-			"require": "./dist/arrays.cjs.js"
-		},
-		"./bytes": {
-			"types": "./dist/bytes.d.ts",
-			"import": "./dist/bytes.es.js",
-			"require": "./dist/bytes.cjs.js"
+			"import": "./dist/arrays.js",
+			"require": "./dist/arrays.cjs"
 		},
 		"./countries": {
 			"types": "./dist/countries.d.ts",
-			"import": "./dist/countries.es.js",
-			"require": "./dist/countries.cjs.js"
+			"import": "./dist/countries.js",
+			"require": "./dist/countries.cjs"
 		},
 		"./dates": {
 			"types": "./dist/dates.d.ts",
-			"import": "./dist/dates.es.js",
-			"require": "./dist/dates.cjs.js"
+			"import": "./dist/dates.js",
+			"require": "./dist/dates.cjs"
 		},
 		"./downloads": {
 			"types": "./dist/downloads.d.ts",
-			"import": "./dist/downloads.es.js",
-			"require": "./dist/downloads.cjs.js"
+			"import": "./dist/downloads.js",
+			"require": "./dist/downloads.cjs"
 		},
 		"./errors": {
 			"types": "./dist/errors.d.ts",
-			"import": "./dist/errors.es.js",
-			"require": "./dist/errors.cjs.js"
+			"import": "./dist/errors.js",
+			"require": "./dist/errors.cjs"
 		},
 		"./extensions": {
 			"types": "./dist/extensions.d.ts",
-			"import": "./dist/extensions.es.js",
-			"require": "./dist/extensions.cjs.js"
+			"import": "./dist/extensions.js",
+			"require": "./dist/extensions.cjs"
 		},
 		"./helpers": {
 			"types": "./dist/helpers.d.ts",
-			"import": "./dist/helpers.es.js",
-			"require": "./dist/helpers.cjs.js"
+			"import": "./dist/helpers.js",
+			"require": "./dist/helpers.cjs"
 		},
 		"./html": {
 			"types": "./dist/html.d.ts",
-			"import": "./dist/html.es.js",
-			"require": "./dist/html.cjs.js"
+			"import": "./dist/html.js",
+			"require": "./dist/html.cjs"
 		},
 		"./inputs": {
 			"types": "./dist/inputs.d.ts",
-			"import": "./dist/inputs.es.js",
-			"require": "./dist/inputs.cjs.js"
+			"import": "./dist/inputs.js",
+			"require": "./dist/inputs.cjs"
 		},
 		"./logger": {
 			"types": "./dist/logger.d.ts",
-			"import": "./dist/logger.es.js",
-			"require": "./dist/logger.cjs.js"
+			"import": "./dist/logger.js",
+			"require": "./dist/logger.cjs"
 		},
 		"./math": {
 			"types": "./dist/math.d.ts",
-			"import": "./dist/math.es.js",
-			"require": "./dist/math.cjs.js"
+			"import": "./dist/math.js",
+			"require": "./dist/math.cjs"
 		},
 		"./regex": {
 			"types": "./dist/regex.d.ts",
-			"import": "./dist/regex.es.js",
-			"require": "./dist/regex.cjs.js"
+			"import": "./dist/regex.js",
+			"require": "./dist/regex.cjs"
 		},
 		"./strings": {
 			"types": "./dist/strings.d.ts",
-			"import": "./dist/strings.es.js",
-			"require": "./dist/strings.cjs.js"
+			"import": "./dist/strings.js",
+			"require": "./dist/strings.cjs"
 		},
 		"./tests": {
 			"types": "./dist/tests.d.ts",
-			"import": "./dist/tests.es.js",
-			"require": "./dist/tests.cjs.js"
+			"import": "./dist/tests.js",
+			"require": "./dist/tests.cjs"
 		},
 		"./transforms": {
 			"types": "./dist/transforms.d.ts",
-			"import": "./dist/transforms.es.js",
-			"require": "./dist/transforms.cjs.js"
+			"import": "./dist/transforms.js",
+			"require": "./dist/transforms.cjs"
 		}
 	}
 }

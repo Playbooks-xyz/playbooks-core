@@ -5,6 +5,7 @@ import { runCommand } from 'vite-plugin-yalc';
 export default defineConfig(({ mode }) => ({
 	base: './',
 	build: {
+		ssr: true,
 		sourcemap: mode === 'development',
 		lib: {
 			entry: [
@@ -14,7 +15,6 @@ export default defineConfig(({ mode }) => ({
 			],
 			name: 'Normalizers',
 			formats: ['es', 'cjs'],
-			fileName: (format, entryName) => `${entryName}.${format}.js`,
 		},
 		rollupOptions: {
 			external: ['os'],

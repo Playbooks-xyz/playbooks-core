@@ -1,4 +1,22 @@
-export const menu = () => ({});
+export const menu = () => ({
+	align: 'text-left',
+	animation: 'transition-all',
+	bgColor: 'bg-white dark:bg-gray-900',
+	border: 'border-y',
+	borderColor: 'border-gray-300/50 dark:border-gray-600/50',
+	duration: 'duration-200',
+	fade: open ? 'ease-out' : 'ease-in',
+	height: 'max-h-[100vh]',
+	inset: 'right-0 left-0',
+	opacity: open ? 'opacity-100' : 'opacity-0',
+	position: 'fixed',
+	shadow: 'shadow-lg',
+	shadowColor: 'dark:shadow-gray-800/25',
+	translate: open ? 'translate-y-0' : '-translate-y-4',
+	width: 'min-w-full w-auto',
+	overflow: 'overflow-hidden overflow-y-scroll',
+	zIndex: 'z-10',
+});
 
 export const menuWrapper = () => ({
 	zIndex: 'z-20',

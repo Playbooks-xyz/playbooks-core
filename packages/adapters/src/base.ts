@@ -1,8 +1,8 @@
-import 'cross-fetch/polyfill';
 import { timeElapsed } from '@playbooks/utils/dates';
 import { env } from '@playbooks/utils/helpers';
 import { isArray, isEmpty, isObject, sleep } from '@playbooks/utils/helpers';
 import { logger } from '@playbooks/utils/logger';
+import fetch from 'cross-fetch';
 import Https from 'https';
 
 export type AdapterProps = {

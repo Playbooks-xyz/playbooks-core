@@ -7,12 +7,12 @@ import { runCommand } from 'vite-plugin-yalc';
 export default defineConfig(({ mode }) => ({
 	base: './',
 	build: {
+		ssr: true,
 		sourcemap: mode === 'development',
 		lib: {
 			entry: [path.resolve(__dirname, 'src/index.ts'), path.resolve(__dirname, 'src/base.ts')],
 			name: 'Adapters',
 			formats: ['es', 'cjs'],
-			fileName: (format, entryName) => `${entryName}.${format}.js`,
 		},
 		rollupOptions: {
 			external: ['https'],

@@ -1,11 +1,11 @@
 {
 	"name": "@playbooks/adapters",
-	"version": "0.11.0",
+	"version": "0.11.2",
 	"description": "A collection of adapters for various projects.",
 	"author": "Eric Hubbell<eric@erichubbell.com>",
 	"license": "ISC",
 	"type": "module",
-	"main": "dist/index.cjs.js",
+	"main": "dist/index.js",
 	"repository": {
 		"type": "git",
 		"url": "git+https://github.com/playbooks-xyz/playbooks-core/packages/adapters.git"
@@ -47,13 +47,13 @@
 	"exports": {
 		".": {
 			"types": "./dist/index.d.ts",
-			"import": "./dist/index.es.js",
-			"require": "./dist/index.cjs.js"
+			"import": "./dist/index.js",
+			"require": "./dist/index.cjs"
 		},
 		"./base": {
 			"types": "./dist/base.d.ts",
-			"import": "./dist/base.es.js",
-			"require": "./dist/base.cjs.js"
+			"import": "./dist/base.js",
+			"require": "./dist/base.cjs"
 		}
 	}
 }

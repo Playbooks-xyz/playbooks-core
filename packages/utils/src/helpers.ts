@@ -1,3 +1,4 @@
+import bytes from 'bytes';
 import pluralize from 'pluralize';
 import uniqid from 'uniqid';
 
@@ -71,6 +72,10 @@ export const shuffleArray = array => {
 
 export const listBuilder = (count = 1) => {
 	return Array.from(Array(count).keys());
+};
+
+export const computeBytes = (data, unit = 'kb') => {
+	return bytes.format(data, { unit });
 };
 
 export const isArray = data => {
