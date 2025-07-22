@@ -76,7 +76,8 @@ export const useConfirm = (model, message, method): [method: any, task: any, err
 		try {
 			setTask({ ...task, id: record?.id || model?.id, running: true });
 			const confirmed = window.confirm(message);
-			if (confirmed) await method(record);
+			if (!confirmed) return;
+			await method(record);
 		} catch (e) {
 			setError(e);
 			toast.showError(e);
@@ -120,7 +121,8 @@ export const useDelete = (model, modelName, method): [method: any, task: any, er
 		try {
 			setTask({ ...task, id: record?.id || model?.id, running: true });
 			const confirmed = window.confirm(`Are you sure you want to delete this ${modelName}?`);
-			if (confirmed) await method(record);
+			if (!confirmed) return;
+			await method(record);
 			toast.showSuccess(200, `${capitalize(modelName)} deleted!`);
 		} catch (e) {
 			setError(e);
@@ -143,7 +145,8 @@ export const useDeletes = (model, modelName, method): [method: any, task: any, e
 		try {
 			setTask({ ...task, id: record?.id || model?.id, running: true });
 			const confirmed = window.confirm(`Are you sure you want to delete ${model.length} ${modelName}?`);
-			if (confirmed) await method(record);
+			if (!confirmed) return;
+			await method(record);
 			toast.showSuccess(200, `${capitalize(modelName)} deleted!`);
 		} catch (e) {
 			setError(e);

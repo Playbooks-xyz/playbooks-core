@@ -61,7 +61,7 @@ export const HeroIcon = ({
 
 	return (
 		<Div {...computed}>
-			<FadIcon icon={icon} tailwind={{ fontSize: 'text-3xl' }} />
+			<FadIcon icon={icon} />
 		</Div>
 	);
 };

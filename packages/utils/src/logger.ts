@@ -7,7 +7,6 @@ const mode = import.meta.env.MODE;
 
 class logger {
 	static log = (title, ...data) => {
-		if (mode !== 'development') return;
 		return console.log(title, ...data);
 	};
 
