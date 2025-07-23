@@ -1,5 +1,21 @@
 import { computeSectionSize } from 'src/utils';
 
+export const modal = ({ open }) => ({
+	animation: 'transition-all',
+	align: 'text-left',
+	bgColor: 'bg-white dark:bg-gray-900',
+	border: 'border',
+	borderColor: 'border-gray-300/50 dark:border-gray-600/50',
+	borderRadius: 'rounded-lg',
+	duration: 'duration-200',
+	fade: 'ease-in',
+	opacity: open ? 'opacity-100' : 'opacity-0',
+	scale: open ? 'scale-100' : 'scale-90',
+	spacing: 'mx-auto my-8',
+	width: 'w-sm max-w-full',
+	zIndex: 'z-30',
+});
+
 export const modalWrapper = () => ({
 	inset: 'inset-0',
 	overflow: 'overflow-y-auto',
@@ -15,22 +31,6 @@ export const modalBackdrop = ({ open }) => ({
 	height: 'h-full',
 	inset: 'inset-0',
 	position: 'fixed',
-});
-
-export const modal = ({ open }) => ({
-	animation: 'transition-all',
-	align: 'text-left',
-	bgColor: 'bg-white dark:bg-gray-900',
-	border: 'border',
-	borderColor: 'border-gray-300/50 dark:border-gray-600/50',
-	borderRadius: 'rounded-lg',
-	duration: 'duration-200',
-	fade: 'ease-in',
-	opacity: open ? 'opacity-100' : 'opacity-0',
-	scale: open ? 'scale-100' : 'scale-90',
-	spacing: 'mx-auto my-8',
-	width: 'w-sm max-w-full',
-	zIndex: 'z-30',
 });
 
 export const modalHeader = () => ({

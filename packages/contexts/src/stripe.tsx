@@ -16,7 +16,7 @@ const StripeProvider = ({ children }) => {
 	}, []);
 
 	useEffect(() => {
-		logger.debug('stripeContext: ', { loaded: true });
+		if (stripe) logger.debug('stripeContext: ', { loaded: true });
 	}, [stripe]);
 
 	// Methods
