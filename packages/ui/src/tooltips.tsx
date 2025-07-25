@@ -24,16 +24,17 @@ export const Tooltip = ({
 	const context = useUI();
 	const base = context?.theme?.tooltip({ open: show, placement });
 	const computed = { ...base, ...props, tailwind, className, name };
-	const baseRef = ref || useRef(null);
+	const baseRef = useRef(null);
 	const popRef = useRef(null);
 	const arrowRef = useRef(null);
 
 	// Hooks
 	useEffect(() => {
-		if (baseRef?.current && arrowRef?.current && popRef?.current) {
+		const computedRef = ref || baseRef;
+		if (computedRef?.current && arrowRef?.current && popRef?.current) {
 			const middleware = [arrow({ element: arrowRef?.current }), flip(), shift({ limiter: limitShift() })];
 			const formattedOptions = { placement, middleware, strategy: 'fixed' as any };
-			computePosition(baseRef?.current, popRef?.current, formattedOptions).then(({ x, y, middlewareData }) => {
+			computePosition(computedRef?.current, popRef?.current, formattedOptions).then(({ x, y, middlewareData }) => {
 				Object.assign(popRef?.current.style, { left: `${x}px`, top: `${y}px` });
 				Object.assign(arrowRef?.current.style, {
 					left: `${middlewareData.arrow?.x}px`,
@@ -41,7 +42,7 @@ export const Tooltip = ({
 				});
 			});
 		}
-	}, [baseRef?.current, arrowRef?.current, popRef?.current, open]);
+	}, [ref?.current, baseRef?.current, arrowRef?.current, popRef?.current, open]);
 
 	// Methods
 	const onEnter = () => setShow(true);
