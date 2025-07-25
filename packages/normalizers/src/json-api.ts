@@ -46,6 +46,7 @@ export const jsonApiNormalize = (data: any = {}, included: any[] = []): { data: 
 };
 
 export const jsonApiNormalizeCompound = (data: any = {}, included: any[] = []) => {
+	const formatter = formatLookup('camel');
 	const normalizedAttrs = {};
 	Object.keys(data).map(key => {
 		switch (key) {
@@ -56,7 +57,7 @@ export const jsonApiNormalizeCompound = (data: any = {}, included: any[] = []) =
 				return Object.assign(normalizedAttrs, jsonApiNormalizeRelationships(data[key], included));
 
 			default:
-				return (normalizedAttrs[dashToCamel(key)] = data[key]);
+				return (normalizedAttrs[formatter(key)] = data[key]);
 		}
 	});
 	return normalizedAttrs;
@@ -83,16 +84,16 @@ export const jsonApiNormalizeAttrs = (data: any = {}) => {
 };
 
 export const jsonApiNormalizeRelationships = (data: any[] = [], included) => {
+	const formatter = formatLookup('camel');
 	const normalizedAttrs = {};
-
 	Object.keys(data).map(key => {
 		const relationship = data[key].data;
 
 		if (isArray(relationship)) {
-			return (normalizedAttrs[dashToCamel(key)] = relationship.map(v => jsonApiNormalizeRelationship(v, included)));
+			return (normalizedAttrs[formatter(key)] = relationship.map(v => jsonApiNormalizeRelationship(v, included)));
 		}
 		if (isObject(relationship)) {
-			return (normalizedAttrs[dashToCamel(key)] = jsonApiNormalizeRelationship(relationship, included));
+			return (normalizedAttrs[formatter(key)] = jsonApiNormalizeRelationship(relationship, included));
 		}
 	});
 	return normalizedAttrs;
@@ -100,12 +101,13 @@ export const jsonApiNormalizeRelationships = (data: any[] = [], included) => {
 
 export const jsonApiNormalizeRelationship = (data, included = []) => {
 	const relationship = included.find(v => v.type === data.type && v.id === data.id);
-	return jsonApiNormalizeAttrs(relationship);
+	return jsonApiNormalizeCompound(relationship);
 };
 
 export const jsonApiNormalizeMeta = (meta = {}) => {
+	const formatter = formatLookup('camel');
 	const normalizedMeta = {};
-	Object.keys(meta).map(key => (normalizedMeta[dashToCamel(key)] = parseInt(meta[key])));
+	Object.keys(meta).map(key => (normalizedMeta[formatter(key)] = parseInt(meta[key])));
 	return normalizedMeta;
 };
 
