@@ -1,5 +1,5 @@
 import { isArray, isObject } from '@playbooks/utils/helpers';
-import { dashToCamel } from '@playbooks/utils/transforms';
+import { dashToCamel, dashToUnderscore } from '@playbooks/utils/transforms';
 
 // Helpers
 const attrs = {
@@ -9,6 +9,16 @@ const attrs = {
 };
 
 const relationships = {};
+
+// Helpers
+const formatLookup = type => {
+	switch (type) {
+		case 'camel':
+			return dashToCamel;
+		case 'underscore':
+			return dashToUnderscore;
+	}
+};
 
 // Methods
 const checkAttrs = key => {
@@ -24,24 +34,23 @@ const checkRelationships = key => {
 // normalize
 export const jsonApiNormalizeArray = (data = [], included = [], meta = {}): { data: any[]; meta: any } => {
 	const normalizedArray = { data: [], meta: {} };
-	data.map(v => normalizedArray.data.push(jsonApiNormalizeAttrs(v, included)));
+	data.map(v => normalizedArray.data.push(jsonApiNormalizeCompound(v, included)));
 	normalizedArray.meta = jsonApiNormalizeMeta(meta);
 	return normalizedArray;
 };
 
 export const jsonApiNormalize = (data: any = {}, included: any[] = []): { data: any } => {
 	const normalizedData = { data: {} };
-	normalizedData.data = jsonApiNormalizeAttrs(data, included);
+	normalizedData.data = jsonApiNormalizeCompound(data, included);
 	return normalizedData;
 };
 
-export const jsonApiNormalizeAttrs = (data: any = {}, included: any[] = []) => {
+export const jsonApiNormalizeCompound = (data: any = {}, included: any[] = []) => {
 	const normalizedAttrs = {};
 	Object.keys(data).map(key => {
-		if (checkAttrs(key).normalize === false) return;
 		switch (key) {
 			case 'attributes':
-				return Object.assign(normalizedAttrs, jsonApiNormalizeAttrs(data[key], included));
+				return Object.assign(normalizedAttrs, jsonApiNormalizeAttrs(data[key]));
 
 			case 'relationships':
 				return Object.assign(normalizedAttrs, jsonApiNormalizeRelationships(data[key], included));
@@ -49,6 +58,26 @@ export const jsonApiNormalizeAttrs = (data: any = {}, included: any[] = []) => {
 			default:
 				return (normalizedAttrs[dashToCamel(key)] = data[key]);
 		}
+	});
+	return normalizedAttrs;
+};
+
+export const jsonApiNormalizeAttrs = (data: any = {}) => {
+	const formatter = formatLookup('camel');
+	const normalizedAttrs = {};
+	Object.keys(data).map(key => {
+		if (checkAttrs(key).normalize === false) return;
+
+		if (isArray(data[key]) && isObject(data[key][0])) {
+			return (normalizedAttrs[formatter(key)] = data[key].map(jsonApiNormalizeAttrs));
+		}
+		if (isArray(data[key])) {
+			return (normalizedAttrs[formatter(key)] = data[key]);
+		}
+		if (isObject(data[key])) {
+			return (normalizedAttrs[formatter(key)] = jsonApiNormalizeAttrs(data[key]));
+		}
+		return (normalizedAttrs[formatter(key)] = data[key]);
 	});
 	return normalizedAttrs;
 };

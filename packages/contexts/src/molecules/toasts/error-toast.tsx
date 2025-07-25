@@ -14,7 +14,7 @@ const ErrorToast = ({ toast, onRemove }) => {
 	return (
 		<Toast open={open} setOpen={setOpen} onRemove={() => onRemove(toast)}>
 			<ToastHeader onRemove={() => onRemove(toast)}>
-				<ToastIcon icon='circle-xmark' color='red-500 dark:red-500' />
+				<ToastIcon icon='circle-xmark' color='text-red-500 dark:text-red-500' />
 				<ToastTitle>{toast.title}</ToastTitle>
 			</ToastHeader>
 			{toast.message && (
