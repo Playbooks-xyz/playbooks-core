@@ -1,17 +1,17 @@
 import { HtmlProps } from 'types';
 
-export type RadioProps = HtmlProps & {
+export type CheckboxProps = HtmlProps & {
 	title: string;
 	value: any;
 	text?: string;
 	onClick: () => any;
 };
 
-export type RadioInputProps = HtmlProps & {
+export type CheckboxInputProps = HtmlProps & {
 	value: boolean;
 };
 
-export type RadioLabelProps = HtmlProps & {
+export type CheckboxLabelProps = HtmlProps & {
 	active?: boolean;
 	htmlFor?: string;
 };

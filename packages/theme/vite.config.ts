@@ -19,6 +19,7 @@ export default defineConfig(({ mode }) => ({
 				path.resolve(__dirname, 'src/button-groups.tsx'),
 				path.resolve(__dirname, 'src/buttons.tsx'),
 				path.resolve(__dirname, 'src/cards.tsx'),
+				path.resolve(__dirname, 'src/checkboxes.tsx'),
 				path.resolve(__dirname, 'src/commands.tsx'),
 				path.resolve(__dirname, 'src/drops.tsx'),
 				path.resolve(__dirname, 'src/feedbacks.tsx'),

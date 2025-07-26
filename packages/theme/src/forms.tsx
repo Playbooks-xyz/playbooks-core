@@ -4,19 +4,16 @@ export const form = () => ({});
 
 export const formCheckbox = () => ({
 	animation: 'transition-all',
-	bgColor:
-		'bg-transparent dark:bg-transparent checked:bg-primary checked:hover:bg-primary checked:focus:bg-primary dark:checked:bg-secondary dark:checked:hover:bg-secondary dark:checked:focus:bg-secondary',
-	border: 'border-2',
+	bgColor: 'bg-transparent dark:bg-transparent checked:bg-primary dark:checked:bg-secondary',
+	border: 'border',
 	borderColor: 'border-gray-300/50 dark:border-gray-600/50',
 	borderRadius: 'rounded-md',
 	cursor: 'cursor-pointer',
 	fade: 'ease',
 	ring: 'ring-none',
-	ringColor:
-		'ring-transparent checked:ring-transparent dark:checked:ring-transparent focus:ring-transparent dark:focus:ring-transparent',
-	ringOffset: 'ring-offset-4 checked:ring-offset-4 focus:ring-offset-4',
-	ringOffsetColor:
-		'checked:ring-offset-primary/50 dark:checked:ring-offset-secondary/50 focus:ring-offset-primary/50 dark:focus:ring-offset-secondary/50',
+	ringColor: 'ring-transparent checked:ring-transparent dark:checked:ring-transparent focus:ring-transparent',
+	ringOffset: 'ring-offset-4 checked:ring-offset-4 focus:ring-offset-none',
+	ringOffsetColor: 'checked:ring-offset-primary/50 dark:checked:ring-offset-secondary/50',
 	size: 'h-6 w-6',
 });
 

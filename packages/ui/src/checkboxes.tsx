@@ -5,9 +5,9 @@ import { P, Small } from 'src/fonts';
 import { Div } from 'src/html';
 import * as types from 'types';
 
-export const Radio = ({
+export const Checkbox = ({
 	id,
-	name = 'Radio',
+	name = 'Checkbox',
 	title,
 	text,
 	value,
@@ -16,57 +16,57 @@ export const Radio = ({
 	className,
 	children,
 	...props
-}: types.RadioProps) => {
+}: types.CheckboxProps) => {
 	const context = useUI();
-	const base = context?.theme?.radio({ active: value });
+	const base = context?.theme?.checkbox({ active: value });
 	const classes = computeTailwind({ ...base, ...props, ...tailwind, className });
 
 	return (
 		<HTML.Label id={id} onClick={onClick} className={classes}>
-			<RadioInput value={value} />
+			<CheckboxInput id={id} value={value} />
 			<Div space='space-y-1' tailwind={tailwind?.div}>
-				{title && <RadioTitle tailwind={tailwind?.title}>{title}</RadioTitle>}
-				{text && <RadioText tailwind={tailwind?.text}>{text}</RadioText>}
+				{title && <CheckboxTitle tailwind={tailwind?.title}>{title}</CheckboxTitle>}
+				{text && <CheckboxText tailwind={tailwind?.text}>{text}</CheckboxText>}
 			</Div>
 		</HTML.Label>
 	);
 };
 
-export const RadioInput = ({
+export const CheckboxInput = ({
 	id,
-	name = 'RadioInput',
+	name = 'CheckboxInput',
 	value,
 	tailwind,
 	className,
 	children,
 	...props
-}: types.RadioInputProps) => {
+}: types.CheckboxInputProps) => {
 	const context = useUI();
-	const base = context?.theme?.radioInput();
+	const base = context?.theme?.checkboxInput();
 	const classes = computeTailwind({ ...base, ...props, ...tailwind, className });
 
 	return (
-		<HTML.Input id={id} type='radio' name={name} checked={value} className={classes} readOnly>
+		<HTML.Input id={id} type='checkbox' name={name} checked={value} className={classes} readOnly>
 			{children}
 		</HTML.Input>
 	);
 };
 
-export const RadioTitle = ({ name = 'RadioLabel', tailwind, className, children, ...props }: types.FontProps) => {
+export const CheckboxTitle = ({ name = 'CheckboxLabel', tailwind, className, children, ...props }: types.FontProps) => {
 	const context = useUI();
-	const base = context?.theme?.radioTitle();
+	const base = context?.theme?.checkboxTitle();
 	const computed = { ...base, ...props, tailwind, className, name };
 
 	return <P {...computed}>{children}</P>;
 };
 
-export const RadioText = ({ name = 'RadioLabel', tailwind, className, children, ...props }: types.FontProps) => {
+export const CheckboxText = ({ name = 'CheckboxLabel', tailwind, className, children, ...props }: types.FontProps) => {
 	const context = useUI();
-	const base = context?.theme?.radioText();
+	const base = context?.theme?.checkboxText();
 	const computed = { ...base, ...props, tailwind, className, name };
 
 	return <Small {...computed}>{children}</Small>;
 };
 
 // Docs:
-// https://tailwindui.com/src/application-ui/forms/radio-groups
+// https://tailwindui.com/src/application-ui/forms/checkbox-groups

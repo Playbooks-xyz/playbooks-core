@@ -1,6 +1,6 @@
 {
 	"name": "@playbooks/theme",
-	"version": "0.11.7",
+	"version": "0.11.8",
 	"description": "The default theme for Playbooks.",
 	"author": "Eric Hubbell<eric@erichubbell.com>",
 	"license": "ISC",
@@ -89,6 +89,11 @@
 			"types": "./dist/cards.d.ts",
 			"import": "./dist/cards.es.js",
 			"require": "./dist/cards.cjs.js"
+		},
+		"./checkboxes": {
+			"types": "./dist/checkboxes.d.ts",
+			"import": "./dist/checkboxes.es.js",
+			"require": "./dist/checkboxes.cjs.js"
 		},
 		"./commands": {
 			"types": "./dist/commands.d.ts",

@@ -1,6 +1,6 @@
 {
 	"name": "@playbooks/ui",
-	"version": "0.11.10",
+	"version": "0.11.11",
 	"description": "An interface library for Playbooks.",
 	"private": false,
 	"license": "ISC",
@@ -123,6 +123,11 @@
 			"types": "./dist/index.d.ts",
 			"import": "./dist/cards.es.js",
 			"require": "./dist/cards.cjs.js"
+		},
+		"./checkboxes": {
+			"types": "./dist/index.d.ts",
+			"import": "./dist/checkboxes.es.js",
+			"require": "./dist/checkboxes.cjs.js"
 		},
 		"./commands": {
 			"types": "./dist/index.d.ts",

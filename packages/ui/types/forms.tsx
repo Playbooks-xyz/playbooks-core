@@ -54,5 +54,5 @@ export type FormTextProps = HtmlProps;
 export type FormTextAreaProps = Omit<TextAreaProps, 'rows' | 'size'> & {
 	size?: string;
 	variant?: string;
-	rows: any;
+	rows?: any;
 };

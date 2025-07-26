@@ -11,6 +11,7 @@ export * from 'types/breadcrumbs';
 export * from 'types/button-groups';
 export * from 'types/buttons';
 export * from 'types/cards';
+export * from 'types/checkboxes';
 export * from 'types/commands';
 export * from 'types/drops';
 export * from 'types/feedbacks';
