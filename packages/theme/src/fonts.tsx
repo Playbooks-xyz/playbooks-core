@@ -49,7 +49,7 @@ export const p = () => ({
 });
 
 export const small = () => ({
-	color: 'text-gray-500 dark:text-gray-500',
+	color: 'text-gray-500 dark:text-gray-300',
 	display: 'block',
 	fontSize: 'text-sm',
 });
