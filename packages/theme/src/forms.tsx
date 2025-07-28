@@ -75,6 +75,16 @@ export const formDivInput = ({ size, variant }) => ({
 
 export const formFileInput = () => ({});
 
+export const formOtp = () => ({
+	display: 'flex-between',
+	space: 'space-x-2',
+});
+
+export const formOtpInput = ({ index, length }) => ({
+	align: 'text-center',
+	bordrRadius: index === 0 ? 'rounded-tl-md rounded-bl-md' : length === index + 1 ? 'rounded-tr-md rounded-br-md' : '',
+});
+
 export const formSelect = ({ size, variant }) => ({
 	...formInput({ size, variant }),
 	cursor: 'cursor-pointer',

@@ -46,6 +46,7 @@ export default defineConfig(({ mode }) => ({
 				path.resolve(__dirname, 'src/modals.tsx'),
 				path.resolve(__dirname, 'src/navbars.tsx'),
 				path.resolve(__dirname, 'src/navs.tsx'),
+				path.resolve(__dirname, 'src/otp.tsx'),
 				path.resolve(__dirname, 'src/paginations.tsx'),
 				path.resolve(__dirname, 'src/popovers.tsx'),
 				path.resolve(__dirname, 'src/prefooters.tsx'),

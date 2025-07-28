@@ -30,6 +30,7 @@ export * from 'src/menus';
 export * from 'src/modals';
 export * from 'src/navbars';
 export * from 'src/navs';
+export * from 'src/otp';
 export * from 'src/paginations';
 export * from 'src/prefooters';
 export * from 'src/progress-bars';

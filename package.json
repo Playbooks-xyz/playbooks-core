@@ -16,11 +16,8 @@
     "format": "npm run format --workspaces --if-present",
     "format:fix": "npm run format:fix --workspaces --if-present",
     "commit": "scripts/commit.sh",
-    "deploy": "npm run deploy --workspaces",
-    "deploy:core": "npm run deploy -w packages/adapters -w packages/configs -w packages/normalizers -w packages/serializers",
-    "deploy:web": "npm run deploy -w packages/assets -w packages/components -w packages/contexts -w packages/hooks -w packages/icons -w packages/molecules-w packages/theme -w packages/ui",
-    "deploy:server": "npm run deploy -w packages/services",
-    "deploy:utils": "-w packages/configs -w packages/types -w packages/utils",
+    "deploy": "npm run deploy --workspaces --if-present",
+    "packages": "npm run packages --workspaces --if-present",
     "test": "npm run jest --workspaces",
     "prepare": "husky"
   },

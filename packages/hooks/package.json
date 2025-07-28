@@ -41,7 +41,6 @@
 		"react-dom": "^18 || ^19"
 	},
 	"dependencies": {
-		"@playbooks/configs": "^0.0.5",
 		"@playbooks/utils": "^0.9.14",
 		"react-countup": "^6.5.3"
 	},
@@ -96,5 +95,8 @@
 			"import": "./dist/wrappers.es.js",
 			"require": "./dist/wrappers.cjs.js"
 		}
+	},
+	"devDependencies": {
+		"@playbooks/configs": "^0.0.5"
 	}
 }

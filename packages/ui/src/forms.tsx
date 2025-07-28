@@ -83,7 +83,7 @@ export const FormInput = ({
 	id,
 	ref,
 	name = 'FormInput',
-	type,
+	type = 'text',
 	size = 'sm',
 	value,
 	variant,
@@ -106,7 +106,7 @@ export const FormInput = ({
 			id={id}
 			ref={ref}
 			name={name}
-			type={type || 'text'}
+			type={type}
 			value={value}
 			placeholder={placeholder}
 			onChange={onChange}
@@ -115,39 +115,6 @@ export const FormInput = ({
 			onClick={onClick}
 			readOnly={readOnly}
 			autoComplete='off'
-			className={classes}
-		/>
-	);
-};
-
-export const FormMaskInput = ({
-	id,
-	name = 'FormMaskInput',
-	size = 'sm',
-	mask,
-	value,
-	variant,
-	placeholder,
-	onChange,
-	onBlur,
-	readOnly,
-	tailwind,
-	className,
-	...props
-}: types.FormInputMaskProps) => {
-	const context = useUI();
-	const base = context?.theme?.formInput({ size, variant });
-	const classes = computeTailwind({ ...base, ...props, ...tailwind, className });
-
-	return (
-		<MaskedInput
-			id={id}
-			mask={mask}
-			value={value}
-			placeholder={placeholder}
-			onChange={onChange}
-			onBlur={onBlur}
-			readOnly={readOnly}
 			className={classes}
 		/>
 	);
@@ -270,6 +237,39 @@ export const FormLocationInput = ({
 				className={classes}
 			/>
 		</GoogleAutocomplete>
+	);
+};
+
+export const FormMaskInput = ({
+	id,
+	name = 'FormMaskInput',
+	size = 'sm',
+	mask,
+	value,
+	variant,
+	placeholder,
+	onChange,
+	onBlur,
+	readOnly,
+	tailwind,
+	className,
+	...props
+}: types.FormInputMaskProps) => {
+	const context = useUI();
+	const base = context?.theme?.formInput({ size, variant });
+	const classes = computeTailwind({ ...base, ...props, ...tailwind, className });
+
+	return (
+		<MaskedInput
+			id={id}
+			mask={mask}
+			value={value}
+			placeholder={placeholder}
+			onChange={onChange}
+			onBlur={onBlur}
+			readOnly={readOnly}
+			className={classes}
+		/>
 	);
 };
 

@@ -35,6 +35,7 @@
 		"react-dom": "^18 || ^19"
 	},
 	"dependencies": {
+		"@playbooks/utils": "^0.11.1",
 		"algoliasearch": "^4.25.2"
 	},
 	"exports": {

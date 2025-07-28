@@ -47,6 +47,10 @@ export const mapChildren = (data, key) => {
 	return formattedData;
 };
 
+export const buildArray = (count = 1) => {
+	return Array.from(Array(count).keys());
+};
+
 export const chunkArray = (array, chunkSize) => {
 	let index = 0;
 	const chunks = [];
@@ -68,10 +72,6 @@ export const shuffleArray = array => {
 		[array[currentIndex], array[randomIndex]] = [array[randomIndex], array[currentIndex]];
 	}
 	return array;
-};
-
-export const listBuilder = (count = 1) => {
-	return Array.from(Array(count).keys());
 };
 
 export const computeBytes = (data, unit = 'kb') => {

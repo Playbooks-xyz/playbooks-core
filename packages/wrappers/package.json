@@ -30,7 +30,8 @@
     "react-dom": "^18 || ^19"
   },
   "dependencies": {
-    "@ehubbell/html": "^0.1.12",
+    "@ehubbell/html": "^0.1.16",
+    "@playbooks/utils": "^0.11.1",
     "accounting": "^0.4.1",
     "chart.js": "^4.5.0",
     "prism-react-renderer": "^2.4.1",

@@ -33,6 +33,7 @@ export * from 'types/menus';
 export * from 'types/modals';
 export * from 'types/navbars';
 export * from 'types/navs';
+export * from 'types/otp';
 export * from 'types/paginations';
 export * from 'types/popovers';
 export * from 'types/prefooters';

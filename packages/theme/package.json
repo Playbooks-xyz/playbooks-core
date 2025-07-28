@@ -1,6 +1,6 @@
 {
 	"name": "@playbooks/theme",
-	"version": "0.11.9",
+	"version": "0.11.10",
 	"description": "The default theme for Playbooks.",
 	"author": "Eric Hubbell<eric@erichubbell.com>",
 	"license": "ISC",
@@ -29,7 +29,6 @@
 		"format:fix": "prettier --write src",
 		"commit": "scripts/commit.sh",
 		"deploy": "scripts/deploy.sh",
-		"packages": "scripts/packages.sh",
 		"git": "git push --tags",
 		"test": "jest",
 		"prepare": "husky"
@@ -194,6 +193,11 @@
 			"types": "./dist/navs.d.ts",
 			"import": "./dist/navs.es.js",
 			"require": "./dist/navs.cjs.js"
+		},
+		"./otp": {
+			"types": "./dist/otp.d.ts",
+			"import": "./dist/otp.es.js",
+			"require": "./dist/otp.cjs.js"
 		},
 		"./paginations": {
 			"types": "./dist/paginations.d.ts",

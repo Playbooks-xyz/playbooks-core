@@ -33,9 +33,7 @@ export const UIProvider = ({ components, contexts, fonts, seo, theme, children }
 	}, [fonts]);
 
 	// Render
-	return (
-		<UIContext.Provider value={{ components, seo: computedSeo, theme: computedTheme }}>{children}</UIContext.Provider>
-	);
+	return <UIContext.Provider value={{ components, seo: computedSeo, theme }}>{children}</UIContext.Provider>;
 };
 
 export const useUI = () => {
