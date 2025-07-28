@@ -1,8 +1,8 @@
 import { HtmlProps } from 'types';
 
 export type RadioProps = HtmlProps & {
-	title: string;
 	value: any;
+	title?: string;
 	text?: string;
 	onClick: () => any;
 };

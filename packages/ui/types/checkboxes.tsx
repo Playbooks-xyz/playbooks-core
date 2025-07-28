@@ -1,14 +1,13 @@
-import { HtmlProps } from 'types';
+import { HtmlProps, InputProps } from 'types';
 
-export type CheckboxProps = HtmlProps & {
-	title: string;
-	value: any;
+export type CheckboxProps = InputProps & {
+	checked: any;
+	title?: string;
 	text?: string;
-	onClick: () => any;
 };
 
-export type CheckboxInputProps = HtmlProps & {
-	value: boolean;
+export type CheckboxInputProps = InputProps & {
+	checked: boolean;
 };
 
 export type CheckboxLabelProps = HtmlProps & {

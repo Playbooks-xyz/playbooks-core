@@ -1,7 +1,7 @@
 export const radio = ({ active }) => ({
 	animation: 'transition-all',
 	border: 'border',
-	borderColor: active ? 'border-primary dark:border-secondary' : 'border-gray-300/50 dark:border-gray-600/50',
+	borderColor: 'border-gray-300/50 dark:border-gray-600/50',
 	borderRadius: 'rounded-md',
 	cursor: 'cursor-pointer',
 	fade: 'ease',

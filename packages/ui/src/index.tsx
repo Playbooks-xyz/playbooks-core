@@ -8,6 +8,7 @@ export * from 'src/breadcrumbs';
 export * from 'src/button-groups';
 export * from 'src/buttons';
 export * from 'src/cards';
+export * from 'src/checkboxes';
 export * from 'src/commands';
 export * from 'src/context';
 export * from 'src/drops';

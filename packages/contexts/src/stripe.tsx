@@ -1,4 +1,3 @@
-import { Elements } from '@stripe/react-stripe-js';
 import React, { useEffect, useState } from 'react';
 
 import { logger } from '@playbooks/utils/logger';
@@ -6,7 +5,7 @@ import { loadStripe } from '@stripe/stripe-js';
 
 const StripeContext = React.createContext({});
 
-const StripeProvider = ({ children }) => {
+const StripeProvider = ({ Elements, children }) => {
 	const [stripe, setStripe] = useState(null);
 
 	// Hooks
@@ -23,7 +22,7 @@ const StripeProvider = ({ children }) => {
 
 	// Render
 	return (
-		<StripeContext.Provider value={{}}>
+		<StripeContext.Provider value={stripe}>
 			<Elements stripe={stripe}>{children}</Elements>
 		</StripeContext.Provider>
 	);

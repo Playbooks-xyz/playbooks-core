@@ -10,20 +10,20 @@ export const Checkbox = ({
 	name = 'Checkbox',
 	title,
 	text,
-	value,
-	onClick,
+	checked,
+	onChange,
 	tailwind,
 	className,
 	children,
 	...props
 }: types.CheckboxProps) => {
 	const context = useUI();
-	const base = context?.theme?.checkbox({ active: value });
+	const base = context?.theme?.checkbox({ active: checked });
 	const classes = computeTailwind({ ...base, ...props, ...tailwind, className });
 
 	return (
-		<HTML.Label id={id} onClick={onClick} className={classes}>
-			<CheckboxInput id={id} value={value} />
+		<HTML.Label id={id} className={classes}>
+			<CheckboxInput id={id} checked={checked} onChange={onChange} />
 			<Div space='space-y-1' tailwind={tailwind?.div}>
 				{title && <CheckboxTitle tailwind={tailwind?.title}>{title}</CheckboxTitle>}
 				{text && <CheckboxText tailwind={tailwind?.text}>{text}</CheckboxText>}
@@ -35,7 +35,8 @@ export const Checkbox = ({
 export const CheckboxInput = ({
 	id,
 	name = 'CheckboxInput',
-	value,
+	checked,
+	onChange,
 	tailwind,
 	className,
 	children,
@@ -46,7 +47,7 @@ export const CheckboxInput = ({
 	const classes = computeTailwind({ ...base, ...props, ...tailwind, className });
 
 	return (
-		<HTML.Input id={id} type='checkbox' name={name} checked={value} className={classes} readOnly>
+		<HTML.Input id={id} type='checkbox' name={name} checked={checked} onChange={onChange} className={classes}>
 			{children}
 		</HTML.Input>
 	);
