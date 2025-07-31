@@ -5,7 +5,7 @@ export type PopoverProps = HtmlProps & {
 	html?: string;
 	placement?: any;
 	onBlur?: () => any;
-	onHover?: () => any;
+	onHover?: (v: boolean) => any;
 };
 
 export type PopoverInnerProps = HtmlProps;

@@ -6,7 +6,6 @@ export type ProgressProps = HtmlProps & {
 	value: number;
 };
 
-export type FramePropsworkedProgress = HtmlProps & {
+export type RadialProgressBar = HtmlProps & {
 	value: number;
-	offset: number;
 };

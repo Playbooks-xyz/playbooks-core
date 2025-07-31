@@ -1,7 +1,9 @@
 import { useEffect, useRef, useState } from 'react';
+import { createPortal } from 'react-dom';
 
 import { arrow, computePosition, flip, limitShift, shift } from '@floating-ui/dom';
 import { Fade } from '@playbooks/components/fade';
+import { useElementMouseEnter, useElementMouseLeave, useMounted } from '@playbooks/hooks';
 import { useUI } from 'src/context';
 import { Div, Span } from 'src/html';
 import * as types from 'types';
@@ -44,32 +46,48 @@ export const Tooltip = ({
 		}
 	}, [ref?.current, baseRef?.current, arrowRef?.current, popRef?.current, open]);
 
+	useElementMouseEnter(ref?.current, onMouseEnter, [ref?.current]);
+	useElementMouseLeave(ref?.current, onMouseLeave, [ref?.current]);
+
+	const mounted = useMounted(null, []);
+
+	// Functions
+	function onMouseEnter() {
+		onHover(true);
+	}
+	function onMouseLeave() {
+		onHover(false);
+	}
+
 	// Methods
 	const onEnter = () => setShow(true);
 	const onExit = () => setShow(false);
-	const onMouseEnter = () => (!open && onHover ? onHover() : null);
-	const onMouseLeave = () => (open && onHover ? onHover() : null);
 
 	// Render
+	if (!mounted) return null;
 	if (ref?.current) {
-		return (
+		return createPortal(
 			<Fade ref={popRef} show={open} timeout={200} onEnter={onEnter} onExit={onExit}>
 				<Div ref={popRef} position='absolute' zIndex='z-10' {...computed}>
 					<TooltipArrow ref={arrowRef} tailwind={tailwind?.arrow} />
 					<TooltipInner tailwind={tailwind?.inner}>{html}</TooltipInner>
 				</Div>
-			</Fade>
+			</Fade>,
+			document.body,
 		);
 	}
 	return (
 		<Span id={id} ref={baseRef} name={name} onClick={onClick} onMouseEnter={onMouseEnter} onMouseLeave={onMouseLeave}>
 			{children}
-			<Fade ref={popRef} show={open} timeout={200} onEnter={onEnter} onExit={onExit}>
-				<Div ref={popRef} position='absolute' zIndex='z-10' {...computed}>
-					<TooltipArrow ref={arrowRef} tailwind={tailwind?.arrow} />
-					<TooltipInner tailwind={tailwind?.inner}>{html}</TooltipInner>
-				</Div>
-			</Fade>
+			{createPortal(
+				<Fade ref={popRef} show={open} timeout={200} onEnter={onEnter} onExit={onExit}>
+					<Div ref={popRef} position='absolute' zIndex='z-10' {...computed}>
+						<TooltipArrow ref={arrowRef} tailwind={tailwind?.arrow} />
+						<TooltipInner tailwind={tailwind?.inner}>{html}</TooltipInner>
+					</Div>
+				</Fade>,
+				document.body,
+			)}
 		</Span>
 	);
 };

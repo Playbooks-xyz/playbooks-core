@@ -1,12 +1,36 @@
 import { useEffect, useState } from 'react';
 
-export const useElementKeyDown = (element, onKeyPress, listeners) => {
+// Keyboard
+export const useElementKeyDown = (element, method, listeners) => {
 	useEffect(() => {
-		if (element) element.addEventListener('keydown', onKeyPress);
-		return () => element && element.removeEventListener('keydown', onKeyPress);
+		if (element) element.addEventListener('keydown', method);
+		return () => element && element.removeEventListener('keydown', method);
 	}, [...listeners]);
 };
 
+// Mouse
+export const useElementMouseMenu = (element, method, listeners) => {
+	useEffect(() => {
+		if (element) element.addEventListener('contextmenu', method);
+		return () => element && element.removeEventListener('contextmenu', method);
+	}, [...listeners]);
+};
+
+export const useElementMouseEnter = (element, method, listeners) => {
+	useEffect(() => {
+		if (element) element.addEventListener('mouseenter', method);
+		return () => element && element.removeEventListener('mouseenter', method);
+	}, [...listeners]);
+};
+
+export const useElementMouseLeave = (element, method, listeners) => {
+	useEffect(() => {
+		if (element) element.addEventListener('mouseleave', method);
+		return () => element && element.removeEventListener('mouseleave', method);
+	}, [...listeners]);
+};
+
+// Resize
 export const useElementResize = (element, method, listeners) => {
 	useEffect(() => {
 		if (element) element.addEventListener('resize', method);

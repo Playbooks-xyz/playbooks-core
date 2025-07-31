@@ -101,6 +101,7 @@ export const isString = data => {
 export const isEmpty = data => {
 	if (data === null || data === undefined || data === 'undefined') return true;
 	if (isArray(data)) return data.length === 0 ? true : false;
+	if (isDate(data)) return true;
 	if (isObject(data)) return Object.keys(data).length === 0 ? true : false;
 	return data.length === 0 ? true : false;
 };

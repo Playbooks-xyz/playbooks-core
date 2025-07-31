@@ -15,3 +15,5 @@ export const progress = () => ({
 	fade: 'ease-out',
 	height: 'h-full',
 });
+
+export const radialProgressBar = () => ({});

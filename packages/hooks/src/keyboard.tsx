@@ -1,17 +1,17 @@
 import { useEffect } from 'react';
 
-export const useKeyDown = (onKeyPress, listeners) => {
+export const useKeyDown = (method, listeners) => {
 	// Hooks
 	useEffect(() => {
-		window.addEventListener('keydown', onKeyPress);
-		return () => window.removeEventListener('keydown', onKeyPress);
+		window.addEventListener('keydown', method);
+		return () => window.removeEventListener('keydown', method);
 	}, [...listeners]);
 };
 
-export const useKeyUp = (onKeyPress, listeners) => {
+export const useKeyUp = (method, listeners) => {
 	// Hooks
 	useEffect(() => {
-		window.addEventListener('keyup', onKeyPress);
-		return () => window.removeEventListener('keyup', onKeyPress);
+		window.addEventListener('keyup', method);
+		return () => window.removeEventListener('keyup', method);
 	}, [...listeners]);
 };
