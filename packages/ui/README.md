@@ -17,23 +17,22 @@ npm install @playbooks/ui
 
 ## Usage
 
-Wrap your application with the <InterfaceProvider /> and make sure to pass in the `@playbooks/theme` or a separate theme of your choosing.
+Wrap your application with the <UIProvider /> and pass in the necessary props.
 
 ```tsx
 # _app.tsx
 
 import { AppProps } from 'next/app';
-import * as theme from '@playbooks/theme';
 import '@playbooks/ui/styles.css';
-import { InterfaceProvider } from '@playbooks/ui/context';
+import { UIProvider } from '@playbooks/ui/context';
 
 const App = ({ Component, pageProps }: AppProps) => {
 
 	// Render
 	return (
-		<InterfaceProvider meta={meta} theme={theme}>
+		<UIProvider meta={meta}>
       <Component ssr={pageProps} {...contexts} />
-		</InterfaceProvider>
+		</UIProvider>
 	);
 };
 
@@ -79,7 +78,7 @@ This project is designed for development using the [yalc](https://npmjs.com/pack
 
 - npm run dev
 - switch to project
-- npx yalc add @playbooks/theme
+- npx yalc add @playbooks/ui
 - You may need to restart your application server
 - After that, this library will hot reload into the consuming application
 

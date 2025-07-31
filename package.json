@@ -9,7 +9,7 @@
     "build": "npm run build -w packages/types && npm run build --workspaces --if-present",
     "build:ts": "npm run build:ts --workspaces --if-present",
     "build:dts": "npm run build:dts --worspaces --if-present",
-    "build:dev": "npm run build  -w packages/types -w packages/utils-w packages/theme -w packages/ui -w packages/contexts -w packages/hooks -w packages/components -w packages/configs",
+    "build:dev": "npm run build -w packages/utils -w packages/ui -w packages/contexts -w packages/hooks -w packages/components -w packages/configs",
     "clean": "npm run clean --workspaces --if-present",
     "lint": "npm run lint --workspaces --if-present",
     "lint:fix": "npm run lint:fix --workspaces --if-present",
@@ -60,8 +60,6 @@
     "packages/normalizers",
     "packages/serializers",
     "packages/services",
-    "packages/theme",
-    "packages/types",
     "packages/ui",
     "packages/utils",
     "packages/wrappers"
