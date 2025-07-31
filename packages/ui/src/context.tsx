@@ -1,7 +1,7 @@
 import React, { useEffect } from 'react';
 
-import * as defaultTheme from '@playbooks/theme';
 import { capitalize } from '@playbooks/utils/transforms';
+import * as defaultTheme from 'theme';
 
 export type UIProviderProps = {
 	components: any;
@@ -33,7 +33,9 @@ export const UIProvider = ({ components, contexts, fonts, seo, theme, children }
 	}, [fonts]);
 
 	// Render
-	return <UIContext.Provider value={{ components, seo: computedSeo, theme }}>{children}</UIContext.Provider>;
+	return (
+		<UIContext.Provider value={{ components, seo: computedSeo, theme: computedTheme }}>{children}</UIContext.Provider>
+	);
 };
 
 export const useUI = () => {

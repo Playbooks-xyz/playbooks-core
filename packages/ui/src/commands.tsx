@@ -1,7 +1,7 @@
 import { useMemo } from 'react';
 
+import { Kbd } from '@ehubbell/html';
 import { useUI } from 'src/context';
-import { Span } from 'src/html';
 import * as types from 'types';
 
 export const Command = ({ name = 'CMD', keys = [], tailwind, className, children, ...props }: types.CommandProps) => {
@@ -36,9 +36,9 @@ export const Command = ({ name = 'CMD', keys = [], tailwind, className, children
 
 	// Render
 	return (
-		<Span {...computed}>
+		<Kbd {...computed}>
 			{computedKeys.join('')}
 			{children}
-		</Span>
+		</Kbd>
 	);
 };

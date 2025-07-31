@@ -64,6 +64,7 @@ export default defineConfig(({ mode }) => ({
 				path.resolve(__dirname, 'src/toasts.tsx'),
 				path.resolve(__dirname, 'src/tooltips.tsx'),
 				path.resolve(__dirname, 'src/styles.css'),
+				path.resolve(__dirname, 'theme/theme.tsx'),
 			],
 			name: 'UI',
 			formats: ['es'],
@@ -78,6 +79,7 @@ export default defineConfig(({ mode }) => ({
 	resolve: {
 		alias: {
 			src: path.resolve(__dirname, '/src'),
+			theme: path.resolve(__dirname, '/theme'),
 			types: path.resolve(__dirname, '/types'),
 		},
 	},
