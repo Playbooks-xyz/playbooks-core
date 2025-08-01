@@ -1,6 +1,6 @@
 {
 	"name": "@playbooks/serializers",
-	"version": "0.11.2",
+	"version": "0.12.0",
 	"description": "A collection of serializers for Playbooks.",
 	"author": "Eric Hubbell<eric@erichubbell.com>",
 	"license": "ISC",

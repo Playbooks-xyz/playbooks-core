@@ -33,3 +33,6 @@ const useStripe = () => {
 };
 
 export { StripeProvider, useStripe };
+
+// Docs
+// https://www.npmjs.com/package/@stripe/react-stripe-js

@@ -1,6 +1,6 @@
 {
 	"name": "@playbooks/molecules",
-	"version": "0.0.24",
+	"version": "0.1.0",
 	"description": "A collection of React molecules for Playbooks.",
 	"author": "Eric Hubbell<eric@erichubbell.com>",
 	"license": "ISC",

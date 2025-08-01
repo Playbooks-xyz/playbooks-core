@@ -1,6 +1,6 @@
 {
 	"name": "@playbooks/services",
-	"version": "0.11.0",
+	"version": "0.12.0",
 	"description": "A collection of services for Playbooks.",
 	"author": "Eric Hubbell<eric@erichubbell.com>",
 	"license": "ISC",

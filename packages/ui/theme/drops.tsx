@@ -18,10 +18,9 @@ export const dropMenu = ({ open }) => ({
 	fade: 'ease',
 	opacity: open ? 'opacity-100' : 'opacity-0',
 	overflow: 'overflow-hidden overflow-y-scroll',
-	scale: open ? 'scale-100' : 'scale-90',
 	shadow: 'shadow-lg',
 	shadowColor: 'dark:shadow-gray-800/25',
-	translate: open ? 'translate-y-0' : 'translate-y-4',
+	translate: open ? 'translate-y-0' : 'translate-y-2',
 	width: 'w-auto',
 	zIndex: 'z-10',
 });

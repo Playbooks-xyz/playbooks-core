@@ -5,15 +5,17 @@ import { jsonApiSerialize, jsonApiSerializeArray } from '@playbooks/serializers'
 import { isArray } from '@playbooks/utils/helpers';
 
 type StoreContextProps = {
-	query?: any;
-	queryRecord?: any;
-	createRecord?: any;
-	updateRecord?: any;
-	saveRecord?: any;
-	saveRecords?: any;
-	deleteRecord?: any;
-	request?: any;
-	download?: any;
+	computeHeaders: (v?: any) => void;
+	computeParams: (v?: any) => void;
+	query: any;
+	queryRecord: any;
+	createRecord: any;
+	updateRecord: any;
+	saveRecord: any;
+	saveRecords: any;
+	deleteRecord: any;
+	request: any;
+	download: any;
 };
 
 type StoreProps = {
@@ -27,7 +29,6 @@ type StoreProps = {
 const StoreContext = React.createContext<StoreContextProps>(null);
 
 const StoreProvider = ({ client, contexts, children }) => {
-	const router = contexts.useRouter();
 	const storage = contexts.useStorage();
 
 	// Computed
@@ -157,6 +158,8 @@ const StoreProvider = ({ client, contexts, children }) => {
 	return (
 		<StoreContext.Provider
 			value={{
+				computeHeaders,
+				computeParams,
 				query,
 				queryRecord,
 				saveRecord,
