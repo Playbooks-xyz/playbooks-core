@@ -5,6 +5,9 @@ import { TailwindProps } from '@ehubbell/html';
 export type BaseProps = TailwindProps & {
 	ref?: any;
 	name?: string;
+	active?: boolean;
+	dataActive?: boolean;
+	dataFocus?: boolean;
 	html?: any;
 	size?: string;
 	tailwind?: any;

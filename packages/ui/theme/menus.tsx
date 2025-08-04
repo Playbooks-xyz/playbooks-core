@@ -1,4 +1,22 @@
-export const menu = ({ open }) => ({
+export const menu = () => ({});
+
+export const menuWrapper = () => ({
+	zIndex: 'z-20',
+});
+
+export const menuBackdrop = ({ open }) => ({
+	animation: 'transition-all',
+	bgColor: open ? 'bg-black/85 dark:bg-gray-700/85' : 'bg-transparent dark:bg-transparent',
+	delay: open ? 'delay-100' : '',
+	duration: 'duration-100',
+	fade: 'ease-in',
+	height: 'h-full',
+	inset: 'left-0 right-0 bottom-0',
+	position: 'fixed',
+	zIndex: 'z-1',
+});
+
+export const menuMenu = ({ open }) => ({
 	align: 'text-left',
 	animation: 'transition-all',
 	bgColor: 'bg-white dark:bg-gray-900',
@@ -16,22 +34,6 @@ export const menu = ({ open }) => ({
 	width: 'min-w-full w-auto',
 	overflow: 'overflow-hidden overflow-y-scroll',
 	zIndex: 'z-10',
-});
-
-export const menuWrapper = () => ({
-	zIndex: 'z-20',
-});
-
-export const menuBackdrop = ({ open }) => ({
-	animation: 'transition-all',
-	bgColor: open ? 'bg-black/85 dark:bg-gray-700/85' : 'bg-transparent dark:bg-transparent',
-	delay: open ? 'delay-100' : '',
-	duration: 'duration-100',
-	fade: 'ease-in',
-	height: 'h-full',
-	inset: 'left-0 right-0 bottom-0',
-	position: 'fixed',
-	zIndex: 'z-1',
 });
 
 export const menuBlock = () => ({

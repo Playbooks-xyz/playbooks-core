@@ -74,6 +74,10 @@ export const shuffleArray = array => {
 	return array;
 };
 
+export const parseBoolean = data => {
+	return data === 'true' ? true : false;
+};
+
 export const computeBytes = (data, unit = 'kb') => {
 	return bytes.format(data, { unit });
 };

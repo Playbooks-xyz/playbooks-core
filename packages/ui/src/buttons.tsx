@@ -135,6 +135,7 @@ export const BtnWrapper = ({
 	type = 'button',
 	name = 'BtnWrapper',
 	alt,
+	dataActive,
 	disabled,
 	taskRunning,
 	children,
@@ -151,6 +152,7 @@ export const BtnWrapper = ({
 		<HTML.Button
 			type={type}
 			aria-label={alt}
+			data-active={dataActive}
 			title={alt}
 			name={name}
 			disabled={disabled || taskRunning}

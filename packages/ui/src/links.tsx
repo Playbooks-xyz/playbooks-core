@@ -113,6 +113,7 @@ export const LinkShared = ({
 export const LinkWrapper = ({
 	name = 'LinkWrapper',
 	alt = '',
+	dataActive,
 	href,
 	target,
 	disabled,
@@ -130,11 +131,26 @@ export const LinkWrapper = ({
 	return (
 		<Fragment>
 			{target ? (
-				<HTML.A aria-label={alt} title={alt} name={name} href={href} target={target} className={classes} {...filtered}>
+				<HTML.A
+					aria-label={alt}
+					data-active={dataActive}
+					title={alt}
+					name={name}
+					href={href}
+					target={target}
+					className={classes}
+					{...filtered}>
 					{children}
 				</HTML.A>
 			) : (
-				<NextLink aria-label={alt} title={alt} data-name={name} href={href} className={classes} {...filtered}>
+				<NextLink
+					aria-label={alt}
+					data-active={dataActive}
+					title={alt}
+					data-name={name}
+					href={href}
+					className={classes}
+					{...filtered}>
 					{children}
 				</NextLink>
 			)}

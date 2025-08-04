@@ -55,6 +55,8 @@ export const borderBtn = ({ active, size }) => ({
 	hover: 'hover:border-gray-300 hover:dark:border-gray-600',
 	size: computeBtnSize(size),
 	stroke: 'stroke-gray-600 dark:stroke-gray-300',
+	active:
+		'data-[active=true]:text-gray-500 data-[active=true]:dark:text-gray-300 data-[active=true]:border-gray-300 data-[active=true]:dark:border-gray-600',
 	...btn(
 		active && {
 			borderColor: 'border-secondary dark:border-secondary',

@@ -11,10 +11,8 @@ import { AccentLink } from 'src/links';
 import * as types from 'types';
 
 export const Menu = ({ name = 'Menu', open, onClose, tailwind, className, children, ...props }: types.MenuProps) => {
-	const [show, setShow] = useState(false);
-
 	const context = useUI();
-	const base = context?.theme?.menu({ open: show });
+	const base = context?.theme?.menu();
 	const computed = { ...base, ...props, tailwind, className, name };
 	const ref = useRef(null);
 
@@ -35,21 +33,11 @@ export const Menu = ({ name = 'Menu', open, onClose, tailwind, className, childr
 		onClose();
 	}
 
-	// Methods
-	const onEnter = () => setShow(true);
-	const onExit = () => setShow(false);
-
 	// Render
-	if (typeof window === 'undefined') return null;
-	return createPortal(
-		<Fade ref={ref} show={open} timeout={200} onEnter={onEnter} onExit={onExit}>
-			<MenuWrapper open={show} onClose={onClose} tailwind={tailwind?.wrapper}>
-				<Div ref={ref} aria-orientation='vertical' aria-labelledby='menu-button' tabIndex={-1} {...computed}>
-					{children}
-				</Div>
-			</MenuWrapper>
-		</Fade>,
-		document.body,
+	return (
+		<Div ref={ref} {...computed}>
+			{children}
+		</Div>
 	);
 };
 
@@ -87,6 +75,39 @@ export const MenuBackdrop = ({
 	const computed = { ...base, ...props, tailwind, className, name };
 
 	return <Div onClick={onClose} {...computed} />;
+};
+
+export const MenuMenu = ({
+	name = 'MenuMenu',
+	open,
+	onClose,
+	tailwind,
+	className,
+	children,
+	...props
+}: types.MenuMenuProps) => {
+	const [show, setShow] = useState(false);
+	const context = useUI();
+	const base = context?.theme?.menuMenu({ open: show });
+	const computed = { ...base, ...props, tailwind, className, name };
+	const ref = useRef(null);
+
+	// Methods
+	const onEnter = () => setShow(true);
+	const onExit = () => setShow(false);
+
+	// Render
+	if (typeof window === 'undefined') return null;
+	return createPortal(
+		<Fade ref={ref} show={open} timeout={200} onEnter={onEnter} onExit={onExit}>
+			<MenuWrapper open={show} onClose={onClose} tailwind={tailwind?.wrapper}>
+				<Div ref={ref} aria-orientation='vertical' aria-labelledby='menu-button' tabIndex={-1} {...computed}>
+					{children}
+				</Div>
+			</MenuWrapper>
+		</Fade>,
+		document.body,
+	);
 };
 
 export const MenuBlock = ({ name = 'MenuBlock', tailwind, className, children, ...props }: types.MenuListProps) => {
