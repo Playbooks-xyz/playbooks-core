@@ -34,7 +34,7 @@ export const dropHeader = () => ({
 });
 
 export const dropTitle = () => ({
-	color: 'text-gray-800 dark:text-white',
+	color: 'text-gray-800 dark:text-gray-100',
 	whitespace: 'whitespace-nowrap',
 	fontWeight: 'font-semibold',
 	textTransform: 'capitalize',
@@ -42,10 +42,11 @@ export const dropTitle = () => ({
 });
 
 export const dropSubtitle = () => ({
-	color: 'text-gray-500 dark:text-gray-300',
+	color: 'text-gray-600 dark:text-gray-300',
+	fontFamily: 'font-accent',
 	whitespace: 'whitespace-nowrap',
 	fontWeight: 'font-normal',
-	fontSize: 'text-sm',
+	tracking: 'tracking-wide',
 });
 
 export const dropList = () => ({

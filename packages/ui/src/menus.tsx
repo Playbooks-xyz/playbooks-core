@@ -10,11 +10,20 @@ import { Div, Li, Ul } from 'src/html';
 import { AccentLink } from 'src/links';
 import * as types from 'types';
 
-export const Menu = ({ name = 'Menu', open, onClose, tailwind, className, children, ...props }: types.MenuProps) => {
+export const Menu = ({
+	ref,
+	name = 'Menu',
+	open,
+	onClose,
+	tailwind,
+	className,
+	children,
+	...props
+}: types.MenuProps) => {
 	const context = useUI();
 	const base = context?.theme?.menu();
 	const computed = { ...base, ...props, tailwind, className, name };
-	const ref = useRef(null);
+	const menuRef = useRef(null);
 
 	// Hooks
 	useKeyDown(onKeyDown, [open]);
@@ -30,12 +39,13 @@ export const Menu = ({ name = 'Menu', open, onClose, tailwind, className, childr
 	function onMouseDown(e) {
 		if (!open) return;
 		if (ref?.current?.contains(e.target)) return;
+		if (menuRef?.current?.contains(e.target)) return;
 		onClose();
 	}
 
 	// Render
 	return (
-		<Div ref={ref} {...computed}>
+		<Div ref={menuRef} {...computed}>
 			{children}
 		</Div>
 	);
@@ -78,6 +88,7 @@ export const MenuBackdrop = ({
 };
 
 export const MenuMenu = ({
+	ref,
 	name = 'MenuMenu',
 	open,
 	onClose,
@@ -90,7 +101,6 @@ export const MenuMenu = ({
 	const context = useUI();
 	const base = context?.theme?.menuMenu({ open: show });
 	const computed = { ...base, ...props, tailwind, className, name };
-	const ref = useRef(null);
 
 	// Methods
 	const onEnter = () => setShow(true);

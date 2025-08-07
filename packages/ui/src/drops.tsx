@@ -5,7 +5,7 @@ import { Fade } from '@playbooks/components/fade';
 import { useKeyDown, useMouseDown } from '@playbooks/hooks';
 import { AccentBtn, Btn } from 'src/buttons';
 import { useUI } from 'src/context';
-import { H6, P } from 'src/fonts';
+import { Font } from 'src/fonts';
 import { Div, Li, Ul } from 'src/html';
 import { AccentLink } from 'src/links';
 import * as types from 'types';
@@ -124,16 +124,28 @@ export const DropHeader = ({ name = 'DropHeader', tailwind, className, children,
 	return <Div {...computed}>{children}</Div>;
 };
 
-export const DropTitle = ({ name = 'DropTitle', tailwind, className, children, ...props }: types.DropTitleProps) => {
+export const DropTitle = ({
+	name = 'DropTitle',
+	size = 'h6',
+	tailwind,
+	className,
+	children,
+	...props
+}: types.DropTitleProps) => {
 	const context = useUI();
 	const base = context?.theme?.dropTitle();
 	const computed = { ...base, ...props, tailwind, className, name };
 
-	return <H6 {...computed}>{children}</H6>;
+	return (
+		<Font size={size} {...computed}>
+			{children}
+		</Font>
+	);
 };
 
 export const DropSubtitle = ({
 	name = 'DropSubtitle',
+	size = 'p',
 	tailwind,
 	className,
 	children,
@@ -143,7 +155,11 @@ export const DropSubtitle = ({
 	const base = context?.theme?.dropSubtitle();
 	const computed = { ...base, ...props, tailwind, className, name };
 
-	return <P {...computed}>{children}</P>;
+	return (
+		<Font size='p' {...computed}>
+			{children}
+		</Font>
+	);
 };
 
 export const DropList = ({ name = 'DropList', tailwind, className, children, ...props }: types.DropListProps) => {

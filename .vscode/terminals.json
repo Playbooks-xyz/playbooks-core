@@ -14,7 +14,7 @@
 			"execute": false
 		},
     {
-			"name": "misc",
+			"name": "zsh",
       "execute": false
 		}
 	]

@@ -24,18 +24,18 @@ export const useMouseLeave = (method, listeners) => {
 	}, [...listeners]);
 };
 
-export const useMouseUp = (method, listeners) => {
-	// Hooks
-	useEffect(() => {
-		window.addEventListener('mouseup', method);
-		return () => window.removeEventListener('mouseup', method);
-	}, [...listeners]);
-};
-
 export const useMouseMenu = (method, listeners) => {
 	// Hooks
 	useEffect(() => {
 		window.addEventListener('contextmenu', method);
 		return () => window.removeEventListener('contextmenu', method);
+	}, [...listeners]);
+};
+
+export const useMouseUp = (method, listeners) => {
+	// Hooks
+	useEffect(() => {
+		window.addEventListener('mouseup', method);
+		return () => window.removeEventListener('mouseup', method);
 	}, [...listeners]);
 };

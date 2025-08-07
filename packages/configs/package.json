@@ -46,7 +46,6 @@
 	},
 	"dependencies": {
 		"@next/eslint-plugin-next": "^15.3.3",
-		"@playbooks/configs": "^0.0.5",
 		"@typescript-eslint/eslint-plugin": "^8.0.0",
 		"@typescript-eslint/parser": "^8.0.0",
 		"eslint-config-next": "^15.3.3",

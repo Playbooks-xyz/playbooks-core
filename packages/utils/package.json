@@ -1,6 +1,6 @@
 {
 	"name": "@playbooks/utils",
-	"version": "0.12.1",
+	"version": "0.12.2",
 	"description": "A collection of utilities used for Playbooks.",
 	"author": "Eric Hubbell<eric@erichubbell.com>",
 	"license": "ISC",
@@ -30,12 +30,12 @@
 		"clean": "npm run lint:fix",
 		"commit": "scripts/commit.sh",
 		"deploy": "scripts/deploy.sh",
+		"packages": "scripts/packages.sh",
 		"git": "git push --tags",
-		"test": "jest",
-		"prepare": "husky"
+		"test": "jest"
 	},
 	"dependencies": {
-		"@ehubbell/html": "^0.1.10",
+		"@ehubbell/html": "^0.1.17",
 		"accounting": "^0.4.1",
 		"binary-extensions": "^3.1.0",
 		"bytes": "^3.1.2",
@@ -50,7 +50,7 @@
 		"uniqid": "^5.4.0"
 	},
 	"devDependencies": {
-		"@playbooks/configs": "^0.0.5",
+		"@playbooks/configs": "^0.12.1",
 		"@types/accounting": "^0.4.5"
 	},
 	"exports": {

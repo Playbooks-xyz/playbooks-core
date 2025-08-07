@@ -9,13 +9,6 @@ export const useElementKeyDown = (element, method, listeners) => {
 };
 
 // Mouse
-export const useElementMouseMenu = (element, method, listeners) => {
-	useEffect(() => {
-		if (element) element.addEventListener('contextmenu', method);
-		return () => element && element.removeEventListener('contextmenu', method);
-	}, [...listeners]);
-};
-
 export const useElementMouseEnter = (element, method, listeners) => {
 	useEffect(() => {
 		if (element) element.addEventListener('mouseenter', method);
@@ -27,6 +20,13 @@ export const useElementMouseLeave = (element, method, listeners) => {
 	useEffect(() => {
 		if (element) element.addEventListener('mouseleave', method);
 		return () => element && element.removeEventListener('mouseleave', method);
+	}, [...listeners]);
+};
+
+export const useElementMouseMenu = (element, method, listeners) => {
+	useEffect(() => {
+		if (element) element.addEventListener('contextmenu', method);
+		return () => element && element.removeEventListener('contextmenu', method);
 	}, [...listeners]);
 };
 
