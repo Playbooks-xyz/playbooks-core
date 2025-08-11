@@ -9,10 +9,6 @@
 			"name": "playbooks-core-alt",
 			"execute": false
 		},
-		{
-			"name": "playbooks-core-alt-ii",
-			"execute": false
-		},
     {
 			"name": "zsh",
       "execute": false

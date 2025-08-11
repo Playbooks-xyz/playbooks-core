@@ -85,7 +85,7 @@ export const DropMenu = ({
 
 	// Hooks
 	useEffect(() => {
-		if (ref?.current && dropRef?.current) {
+		if (ref?.current && dropRef?.current && open) {
 			const middleware = [flip(), shift({ limiter: limitShift() })];
 			const formattedOptions = { placement, middleware, strategy: 'fixed' as any };
 			computePosition(ref?.current, dropRef?.current, formattedOptions).then(({ x, y }) => {

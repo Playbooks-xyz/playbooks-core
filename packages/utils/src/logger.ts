@@ -3,8 +3,6 @@ const infoStyles = 'color: cadetblue';
 const warningStyles = 'color: amber';
 const successStyles = 'color: aquamarine';
 
-const mode = import.meta.env.MODE;
-
 class logger {
 	static log = (title, ...data) => {
 		return console.log(title, ...data);

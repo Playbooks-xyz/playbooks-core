@@ -1,6 +1,6 @@
 {
 	"name": "@playbooks/utils",
-	"version": "0.12.2",
+	"version": "0.13.0",
 	"description": "A collection of utilities used for Playbooks.",
 	"author": "Eric Hubbell<eric@erichubbell.com>",
 	"license": "ISC",

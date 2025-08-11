@@ -10,7 +10,6 @@ export const badge = ({ size }) => ({
 	fontSize: 'text-xs',
 	fontWeight: 'font-medium',
 	space: 'space-x-2',
-	textTransform: 'capitalize',
 	whitespace: 'whitespace-nowrap',
 });
 

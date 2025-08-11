@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from 'react';
 
+import { useLocalStorage } from '@playbooks/hooks/window';
 import { logger } from '@playbooks/utils/logger';
 import * as LocalStorage from 'local-storage';
 
@@ -24,8 +25,8 @@ const storageKey = process.env.NEXT_PUBLIC_STORAGE_KEY;
 
 const SessionContext = React.createContext<SessionContextProps>(null);
 
-const SessionProvider = ({ contexts, children }) => {
-	const [user, setUser] = useState<any>({});
+const SessionProvider = ({ ssr, contexts, children }) => {
+	const [user, setUser] = useState<any>(ssr?.session?.data || {});
 	const [loading, setLoading] = useState(false);
 	const [loaded, setLoaded] = useState(false);
 	const router = contexts.useRouter();
@@ -45,13 +46,10 @@ const SessionProvider = ({ contexts, children }) => {
 	}, []);
 
 	useEffect(() => {
-		window.addEventListener('storage', onApply);
-		return () => window.removeEventListener('storage', onApply);
-	}, [user.id]);
-
-	useEffect(() => {
 		if (user.id) logger.debug('sessionContext: ', user);
 	}, [user]);
+
+	useLocalStorage(onApply, [user.id]);
 
 	// Actions
 	const fetchData = async () => {
@@ -70,20 +68,22 @@ const SessionProvider = ({ contexts, children }) => {
 		}
 	};
 
-	// Methods
-	const onApply = e => {
+	// Functions
+	function onApply(e) {
 		if (!e.key?.includes(`${storageKey}.session`)) return;
 		const session = LocalStorage.get(`${storageKey}.session`) as any;
 		if (session?.id && session.id !== user.id) return setUser(session);
 		if (!session?.id && !user.id) return onLogout(true);
-	};
+	}
 
+	// Methods
 	const onAuth = async user => {
 		const headers = { Authorization: user.token?.token };
 		const response = await store.queryRecord({ url: `/session`, headers, params });
 		storage.storeValues({ type: 'User', session: response.data, token: user.token.token });
 		storage.storeCookie('token', user.token.token);
 		setUser(response.data);
+		return response.data;
 	};
 
 	const onUpdate = data => {

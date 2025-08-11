@@ -33,7 +33,6 @@ export const feedbackPretitle = () => ({
 export const feedbackTitle = () => ({
 	color: 'text-gray-800 dark:text-white',
 	fontWeight: 'font-semibold',
-	textTransform: 'capitalize',
 	tracking: 'tracking-wide',
 });
 

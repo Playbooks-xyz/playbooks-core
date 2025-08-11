@@ -1,6 +1,6 @@
 {
 	"name": "@playbooks/molecules",
-	"version": "0.1.1",
+	"version": "0.2.0",
 	"description": "A collection of React molecules for Playbooks.",
 	"author": "Eric Hubbell<eric@erichubbell.com>",
 	"license": "ISC",
@@ -38,11 +38,9 @@
 		"react-dom": "^18 || ^19"
 	},
 	"dependencies": {
-		"@playbooks/components": "^0.11.0",
-		"@playbooks/icons": "^0.10.1",
+		"@playbooks/components": "^0.12.0",
 		"@playbooks/serializers": "^0.11.2",
-		"@playbooks/theme": "^0.11.9",
-		"@playbooks/ui": "^0.11.14",
+		"@playbooks/ui": "^0.11.19",
 		"@playbooks/utils": "^0.10.3",
 		"react-children-utilities": "^2.10.0"
 	},

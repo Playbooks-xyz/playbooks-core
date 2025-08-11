@@ -11,7 +11,6 @@ export const header = () => ({
 export const headerTitle = () => ({
 	fontWeight: 'font-bold',
 	tracking: 'tracking-wide',
-	textTransform: 'capitalize',
 });
 
 export const headerSubtitle = () => ({

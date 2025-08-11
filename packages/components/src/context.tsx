@@ -1,14 +1,14 @@
 import React from 'react';
 
-export const WrapperContext = React.createContext(null);
+export const ComponentContext = React.createContext(null);
 
-export const WrapperProvider = ({ theme, children }) => {
+export const ComponentProvider = ({ theme, children }) => {
 	// Render
-	return <WrapperContext.Provider value={{ theme }}>{children}</WrapperContext.Provider>;
+	return <ComponentContext.Provider value={{ theme }}>{children}</ComponentContext.Provider>;
 };
 
 export const useComponents = () => {
-	return React.useContext(WrapperContext);
+	return React.useContext(ComponentContext);
 };
 
 // Docs

@@ -84,7 +84,7 @@ export const MenuBackdrop = ({
 	const base = context?.theme?.menuBackdrop({ open });
 	const computed = { ...base, ...props, tailwind, className, name };
 
-	return <Div onClick={onClose} {...computed} />;
+	return <Div onClick={onClose} onMouseEnter={onClose} {...computed} />;
 };
 
 export const MenuMenu = ({

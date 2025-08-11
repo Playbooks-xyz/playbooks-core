@@ -37,7 +37,6 @@ export const dropTitle = () => ({
 	color: 'text-gray-800 dark:text-gray-100',
 	whitespace: 'whitespace-nowrap',
 	fontWeight: 'font-semibold',
-	textTransform: 'capitalize',
 	tracking: 'tracking-wide',
 });
 

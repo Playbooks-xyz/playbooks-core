@@ -43,7 +43,6 @@ export const menuBlock = () => ({
 export const menuTitle = () => ({
 	fontWeight: 'font-bold',
 	spacing: 'px-3 mb-4',
-	textTransform: 'capitalize',
 	tracking: 'tracking-wide',
 });
 

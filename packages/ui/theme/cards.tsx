@@ -36,7 +36,7 @@ export const cardPretitle = () => ({
 	fontFamily: 'font-accent',
 	fontSize: 'text-sm',
 	fontWeight: 'font-book',
-	textTransform: 'capitalize',
+	textTransform: 'uppercase',
 	tracking: 'tracking-wider',
 });
 

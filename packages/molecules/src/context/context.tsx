@@ -3,10 +3,10 @@ import React from 'react';
 import { UIProvider } from '@playbooks/ui/context';
 export const MoleculesContext = React.createContext(null);
 
-export const MoleculesProvider = ({ components, contexts, fonts, theme, children }) => {
+export const MoleculesProvider = ({ components, contexts, fonts, seo, theme, children }) => {
 	// Render
 	return (
-		<UIProvider components={components} contexts={contexts} fonts={fonts} theme={theme}>
+		<UIProvider components={components} contexts={contexts} fonts={fonts} seo={seo} theme={theme}>
 			{children}
 		</UIProvider>
 	);
