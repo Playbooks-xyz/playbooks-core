@@ -50,7 +50,7 @@
 		"uniqid": "^5.4.0"
 	},
 	"devDependencies": {
-		"@playbooks/configs": "^0.12.1",
+		"@playbooks/configs": "^0.13.0",
 		"@types/accounting": "^0.4.5"
 	},
 	"exports": {

@@ -35,8 +35,7 @@
 		"deploy": "scripts/deploy.sh",
 		"packages": "scripts/packages.sh",
 		"git": "git push --tags",
-		"test": "jest",
-		"prepare": "husky"
+		"test": "jest"
 	},
 	"dependencies": {
 		"@playbooks/configs": "^0.0.5",

@@ -33,7 +33,7 @@ export const ToastProvider = ({ components, contexts, fonts, theme, children }: 
 	}, [router.pathname]);
 
 	useEffect(() => {
-		if (!isEmpty) logger.log('toasts: ', toasts);
+		if (!isEmpty) logger.debug('toasts: ', toasts);
 	}, [toasts]);
 
 	// Methods

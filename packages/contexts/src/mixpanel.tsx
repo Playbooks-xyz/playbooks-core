@@ -35,23 +35,23 @@ const MixpanelProvider = ({ contexts, platform, children }) => {
 
 	// Methods
 	const identify = userId => {
-		logger.log('identify: ', { userId });
+		logger.debug('identify: ', { userId });
 		Mixpanel.identify(userId);
 	};
 
 	const register = (user = {}) => {
-		logger.log('register: ', { user });
+		logger.debug('register: ', { user });
 		Mixpanel.register(user);
 	};
 
 	const trackEvent = (eventName, params) => {
 		const formattedParams = { ...params, ...computedParams };
-		logger.log('trackEvent: ', eventName, formattedParams);
+		logger.debug('trackEvent: ', eventName, formattedParams);
 		Mixpanel.track(eventName, formattedParams);
 	};
 
 	const trackUser = async user => {
-		logger.log('peopleSet: ', user);
+		logger.debug('peopleSet: ', user);
 		Mixpanel.people.set({
 			$name: user.name,
 			$email: user.email,

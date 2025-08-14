@@ -46,13 +46,12 @@ This project uses [yalc](https://npmjs.com/package/yalc) for local development.
 - eric@erichubbell.com
 
 ## Troubleshooting
-- run types first
-- may need to update types per repo before deploy
-- adding global for `contexts` would be great
 - packages/molecules breaks npm build due to circular dependencies or something. Check first.
+- if package cannot be found or is null, remove workspaces and re-install one at a time
+- I believe this happens when one of the workspaces notates the wrong version after a deploy gone bad
+- test adapters and / or utils before starting this
 
 ## Notes
-
 To see this library in action, checkout the following projects:
 
 - [playbooks](https://www.playbooks.xyz)

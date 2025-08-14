@@ -41,7 +41,7 @@ export const h6 = () => ({
 });
 
 export const p = () => ({
-	color: 'text-gray-600 dark:text-gray-200',
+	color: 'text-gray-700 dark:text-gray-200',
 	fontSize: 'text-base',
 	fontWeight: 'font-light',
 	fontFamily: 'font-secondary',
@@ -49,7 +49,7 @@ export const p = () => ({
 });
 
 export const small = () => ({
-	color: 'text-gray-500 dark:text-gray-300',
+	color: 'text-gray-600 dark:text-gray-300',
 	display: 'block',
 	fontSize: 'text-sm',
 });
