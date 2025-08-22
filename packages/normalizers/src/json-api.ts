@@ -3,9 +3,7 @@ import { dashToCamel, dashToUnderscore } from '@playbooks/utils/transforms';
 
 // Helpers
 const attrs = {
-	type: { normalize: false, serialize: false },
-	updatedAt: { serialize: false },
-	createdAt: { serialize: false },
+	type: { normalize: false },
 };
 
 const relationships = {};

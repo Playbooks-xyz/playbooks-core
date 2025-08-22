@@ -23,6 +23,7 @@
 		"lint:fix": "eslint src --fix",
 		"format": "prettier src",
 		"format:fix": "prettier --write src",
+		"reset": "rm -rf package-lock.json node_modules",
 		"commit": "scripts/commit.sh",
 		"deploy": "scripts/deploy.sh",
 		"test": "jest",

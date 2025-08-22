@@ -114,7 +114,6 @@ export const FormInput = ({
 			onBlur={onBlur}
 			onClick={onClick}
 			readOnly={readOnly}
-			autoComplete='off'
 			className={classes}
 		/>
 	);

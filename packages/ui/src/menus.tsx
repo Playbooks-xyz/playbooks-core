@@ -32,7 +32,7 @@ export const Menu = ({
 	// Functions
 	function onKeyDown(e) {
 		if (!open) return;
-		if (e.target.dataset.name === 'FormInput') return;
+		if (['DIV', 'INPUT', 'TEXTAREA'].includes(e.target.tagName)) return;
 		if (e.keyCode === 27) onClose();
 	}
 

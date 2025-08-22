@@ -1,6 +1,6 @@
 {
 	"name": "@playbooks/ui",
-	"version": "0.13.0",
+	"version": "0.13.1",
 	"description": "An interface library for Playbooks.",
 	"private": false,
 	"license": "ISC",
@@ -31,6 +31,7 @@
 		"lint:fix": "eslint src --fix",
 		"format": "prettier src",
 		"format:fix": "prettier --write src",
+		"reset": "rm -rf package-lock.json node_modules",
 		"commit": "scripts/commit.sh",
 		"deploy": "scripts/deploy.sh",
 		"packages": "scripts/packages.sh",

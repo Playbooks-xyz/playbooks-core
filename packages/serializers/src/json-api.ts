@@ -3,7 +3,7 @@ import { camelToDash, camelToUnderscore, dashToCamel } from '@playbooks/utils/tr
 
 // Helpers
 const attrs = {
-	type: { normalize: false, serialize: false },
+	type: { serialize: false },
 	updatedAt: { serialize: false },
 	createdAt: { serialize: false },
 };

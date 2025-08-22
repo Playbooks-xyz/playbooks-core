@@ -63,7 +63,7 @@ export const Modal = ({ name = 'Modal', open, onClose, tailwind, className, chil
 	// Function
 	function onKeyDown(e) {
 		if (!open) return;
-		if (e.target.dataset.name === 'FormInput') return;
+		if (['DIV', 'INPUT', 'TEXTAREA'].includes(e.target.tagName)) return;
 		if (e.keyCode === 27 && typeof onClose === 'function') onClose();
 	}
 
