@@ -43,7 +43,6 @@ export const modalHeader = () => ({
 
 export const modalTitle = () => ({
 	fontWeight: 'font-bold',
-	tracking: 'tracking-wide',
 });
 
 export const modalSubtitle = () => ({

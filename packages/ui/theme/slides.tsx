@@ -43,7 +43,6 @@ export const slideHeader = () => ({
 
 export const slideTitle = () => ({
 	fontWeight: 'font-bold',
-	tracking: 'tracking-wide',
 });
 
 export const slideBody = () => ({

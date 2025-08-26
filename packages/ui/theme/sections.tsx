@@ -30,8 +30,6 @@ export const sectionPretitle = () => ({
 
 export const sectionTitle = () => ({
 	fontWeight: 'font-bold',
-	leading: 'leading-normal',
-	tracking: 'tracking-wide',
 });
 
 export const sectionSubtitle = () => ({

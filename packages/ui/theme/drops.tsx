@@ -34,17 +34,12 @@ export const dropHeader = () => ({
 });
 
 export const dropTitle = () => ({
-	color: 'text-gray-800 dark:text-gray-100',
-	whitespace: 'whitespace-nowrap',
 	fontWeight: 'font-semibold',
-	tracking: 'tracking-wide',
 });
 
 export const dropSubtitle = () => ({
 	color: 'text-gray-600 dark:text-gray-300',
 	fontFamily: 'font-accent',
-	whitespace: 'whitespace-nowrap',
-	fontWeight: 'font-normal',
 	tracking: 'tracking-wide',
 });
 

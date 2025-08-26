@@ -59,7 +59,6 @@ export const heroPretitle = () => ({
 export const heroTitle = () => ({
 	fontWeight: 'font-extrabold',
 	leading: 'leading-tight',
-	tracking: 'tracking-wide',
 });
 
 export const heroSubtitle = () => ({

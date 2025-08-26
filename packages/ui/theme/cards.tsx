@@ -49,7 +49,6 @@ export const cardSubtitle = () => ({
 	fontWeight: 'font-light',
 	fontSize: 'text-base',
 	space: 'space-x-4',
-	tracking: 'tracking-normal',
 });
 
 export const cardText = () => ({
