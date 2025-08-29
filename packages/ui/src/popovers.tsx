@@ -16,7 +16,7 @@ export const Popover = ({
 	placement = 'top',
 	html,
 	onClick = () => null,
-	onHover,
+	onHover = () => null,
 	className,
 	children,
 	tailwind,
@@ -53,10 +53,10 @@ export const Popover = ({
 
 	// Functions
 	function onMouseEnter() {
-		onHover(true);
+		if (onHover) onHover(true);
 	}
 	function onMouseLeave() {
-		onHover(false);
+		if (onHover) onHover(false);
 	}
 
 	// Methods
