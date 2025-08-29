@@ -25,10 +25,7 @@ export const dashToCapital = (data = '') => {
 };
 
 export const dashToString = (data = '') => {
-	return data
-		.split('-')
-		.map(k => k.replace(k.charAt(0), k.charAt(0).toUpperCase()))
-		.join(' ');
+	return data.split('-').join(' ').toLowerCase();
 };
 
 export const dashToUnderscore = (data = '') => {

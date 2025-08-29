@@ -5,9 +5,11 @@ import { logger } from '@playbooks/utils/logger';
 import fetch from 'cross-fetch';
 import Https from 'https';
 
-export type AdapterProps = {
-	domain?: string;
-};
+interface BaseAdapter {
+	domain: string;
+	user?: string;
+	password?: string;
+}
 
 export type requestProps = {
 	method?: string;
@@ -17,10 +19,8 @@ export type requestProps = {
 	data?: any | any[];
 };
 
-class BaseAdapter implements AdapterProps {
-	domain: string;
-
-	constructor({ domain }: AdapterProps) {
+class BaseAdapter {
+	constructor({ domain }) {
 		this.domain = domain;
 	}
 
