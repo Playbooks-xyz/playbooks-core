@@ -41,9 +41,11 @@ const SessionProvider = ({ ssr, contexts, children }) => {
 
 	// Hooks
 	useEffect(() => {
-		const token = storage.getValue('token');
-		token ? fetchData() : onClear();
-	}, []);
+		if (storage.loaded) {
+			const token = storage.getCookie('token');
+			token ? fetchData() : onClear();
+		}
+	}, [storage.loaded]);
 
 	useEffect(() => {
 		if (user.id) logger.debug('sessionContext: ', user);
@@ -51,14 +53,21 @@ const SessionProvider = ({ ssr, contexts, children }) => {
 
 	useLocalStorage(onApply, [user.id]);
 
-	// Actions
+	// Functions
+	function onApply(e) {
+		if (e.key && e.key.includes(`${storageKey}.session`)) {
+			const session = LocalStorage.get(`${storageKey}.session`) as any;
+			if (session?.id && session.id !== user.id) return setUser(session);
+			if (!session?.id && user.id) return onLogout(true);
+		}
+	}
+
+	// Methods
 	const fetchData = async () => {
 		try {
 			setLoading(true);
-			const token = storage.getValue('token');
 			const response = await store.queryRecord({ url: `/session`, params });
 			storage.storeValues({ session: response.data });
-			storage.storeCookie('token', token);
 			setUser(response.data);
 		} catch (e) {
 			onLogout();
@@ -68,19 +77,10 @@ const SessionProvider = ({ ssr, contexts, children }) => {
 		}
 	};
 
-	// Functions
-	function onApply(e) {
-		if (!e.key?.includes(`${storageKey}.session`)) return;
-		const session = LocalStorage.get(`${storageKey}.session`) as any;
-		if (session?.id && session.id !== user.id) return setUser(session);
-		if (!session?.id && !user.id) return onLogout(true);
-	}
-
-	// Methods
 	const onAuth = async user => {
 		const headers = { Authorization: user.token?.token };
 		const response = await store.queryRecord({ url: `/session`, headers, params });
-		storage.storeValues({ type: 'User', session: response.data, token: user.token.token });
+		storage.storeValues({ type: 'User', session: response.data });
 		storage.storeCookie('token', user.token.token);
 		setUser(response.data);
 		return response.data;

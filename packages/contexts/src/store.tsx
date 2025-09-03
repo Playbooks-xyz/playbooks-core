@@ -33,15 +33,13 @@ const StoreProvider = ({ client, contexts, children }) => {
 
 	// Computed
 	const computeHeaders = (headers?) => {
-		if (!storage.storage.token) return { ...headers };
+		const token = storage.getCookie('token');
+		if (!token) return { ...headers };
 		const isAdmin = window.location.href?.includes(process.env.NEXT_PUBLIC_ADMIN_DOMAIN);
-
-		const account = storage.storage.account.uuid || '';
-		const token = storage.storage.token;
-		const tempAccount = storage.storage.tempAccount.uuid || '';
-		const tempToken = storage.storage.tempToken;
+		const account = storage.getCookie('account');
+		const tempToken = storage.getCookie('tempToken');
 		return {
-			Account: tempAccount && !isAdmin ? tempAccount : account,
+			Account: account,
 			Authorization: tempToken && !isAdmin ? tempToken : token,
 			...headers,
 		};

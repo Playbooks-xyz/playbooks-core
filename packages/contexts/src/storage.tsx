@@ -22,16 +22,13 @@ type StorageContextProps = {
 
 type StorageProps = {
 	type?: string;
-	session?: any;
 	account?: any;
+	session?: any;
 	theme?: 'light' | 'dark';
 	preference?: 'light' | 'dark' | 'system';
 	domain?: string;
 	redirect?: string;
 	search?: any[];
-	token?: any;
-	tempAccount?: any;
-	tempToken?: any;
 };
 
 const storageKey = process.env.NEXT_PUBLIC_STORAGE_KEY;
@@ -42,15 +39,12 @@ const StorageProvider = ({ contexts, children }) => {
 	const cookies = new Cookies();
 	const [storage, setStorage] = useState<StorageProps>({
 		type: LocalStorage.get(`${storageKey}.type`) || 'User',
-		session: LocalStorage.get(`${storageKey}.session`) || {},
 		account: LocalStorage.get(`${storageKey}.account`) || {},
+		session: LocalStorage.get(`${storageKey}.session`) || {},
 		preference: LocalStorage.get(`${storageKey}.preference`) || cookies.get('preference') || 'system',
 		theme: LocalStorage.get(`${storageKey}.theme`) || cookies.get('theme') || 'dark',
 		redirect: LocalStorage.get(`${storageKey}.redirect`) || '',
 		search: LocalStorage.get(`${storageKey}.search`) || [],
-		token: LocalStorage.get(`${storageKey}.token`) || cookies.get('token') || '',
-		tempAccount: LocalStorage.get(`${storageKey}.tempAccount`) || {},
-		tempToken: LocalStorage.get(`${storageKey}.tempToken`) || '',
 	});
 	const [loaded, setLoaded] = useState(false);
 	const router = contexts.useRouter();
@@ -126,14 +120,11 @@ const StorageProvider = ({ contexts, children }) => {
 		storeValues({
 			type: '',
 			account: {},
+			session: {},
 			preference: 'system',
 			theme: 'dark',
 			redirect: '',
 			search: [],
-			session: {},
-			token: '',
-			tempAccount: {},
-			tempToken: '',
 		});
 	};
 
