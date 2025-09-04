@@ -3,7 +3,6 @@ export const card = () => ({
 	border: 'border',
 	borderColor: 'border-gray-400/50 dark:border-gray-600/50',
 	borderRadius: 'rounded-md',
-	color: 'text-gray-400',
 	fade: 'ease',
 	width: 'w-full',
 });

@@ -83,9 +83,10 @@ export const tabLink = ({ active, size }) => ({
 });
 
 export const textLink = ({ active, size }) => ({
-	color: 'text-gray-500 dark:text-gray-300',
+	color: 'text-gray-600 dark:text-gray-300',
+	stroke: 'stroke-gray-600 dark:stroke-gray-300',
 	fontSize: 'text-inherit',
-	hover: 'hover:text-gray-700 hover:dark:text-gray-100 hover:underline',
+	hover: 'hover:underline hover:text-gray-700 hover:dark:text-gray-100',
 	size: computeBtnSize(size),
 	...link(active),
 });
