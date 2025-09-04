@@ -3,9 +3,9 @@ import { computeSectionSize } from 'theme/utils';
 export const modal = ({ open }) => ({
 	animation: 'transition-all',
 	align: 'text-left',
-	bgColor: 'bg-white dark:bg-gray-900',
+	bgColor: 'bg-white dark:bg-gray-950',
 	border: 'border',
-	borderColor: 'border-gray-300/50 dark:border-gray-600/50',
+	borderColor: 'border-gray-400/50 dark:border-gray-600/50',
 	borderRadius: 'rounded-lg',
 	duration: 'duration-200',
 	fade: 'ease-in',
@@ -36,7 +36,7 @@ export const modalBackdrop = ({ open }) => ({
 export const modalHeader = () => ({
 	display: 'flex-between',
 	border: 'border-b',
-	borderColor: 'border-gray-300/50 dark:border-gray-600/50',
+	borderColor: 'border-gray-400/50 dark:border-gray-600/50',
 	space: 'space-x-4',
 	spacing: 'p-4',
 });
@@ -54,14 +54,14 @@ export const modalSubtitle = () => ({
 
 export const modalBody = ({ size }) => ({
 	align: 'text-left',
-	borderColor: 'border-gray-300/50 dark:border-gray-600/50',
+	borderColor: 'border-gray-400/50 dark:border-gray-600/50',
 	spacing: 'p-4',
 	size: computeSectionSize(size),
 });
 
 export const modalFooter = () => ({
 	border: 'border-t',
-	borderColor: 'border-gray-300/50 dark:border-gray-600/50',
+	borderColor: 'border-gray-400/50 dark:border-gray-600/50',
 	color: 'text-gray-500',
 	fontSize: 'text-sm',
 	display: 'flex-end',

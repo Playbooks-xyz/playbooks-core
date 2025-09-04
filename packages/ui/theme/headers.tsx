@@ -1,6 +1,6 @@
 export const header = () => ({
 	border: 'border-b',
-	borderColor: 'border-gray-300/50 dark:border-gray-600/50',
+	borderColor: 'border-gray-400/50 dark:border-gray-600/50',
 	display: 'flex-between',
 	position: 'relative',
 	space: 'space-x-4',

@@ -1,5 +1,5 @@
 export const accordion = () => ({
-	borderColor: 'border-gray-300/50 dark:border-gray-600/50',
+	borderColor: 'border-gray-400/50 dark:border-gray-600/50',
 	overflow: 'overflow-hidden',
 	width: 'w-full',
 });
@@ -18,8 +18,7 @@ export const accordionToggle = ({ open }) => ({
 });
 
 export const accordionTitle = () => ({
-	color: 'text-gray-700 dark:text-gray-100',
-	fontWeight: 'font-semibold',
+	fontWeight: 'font-medium',
 	tracking: 'tracking-wide',
 });
 
@@ -32,7 +31,7 @@ export const accordionBodyWrapper = () => ({
 
 export const accordionBody = () => ({
 	border: 'border-t',
-	borderColor: 'border-gray-300/50 dark:border-gray-600/50',
+	borderColor: 'border-gray-400/50 dark:border-gray-600/50',
 	spacing: 'p-4',
 	width: 'w-full',
 });

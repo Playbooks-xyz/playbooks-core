@@ -18,7 +18,7 @@ export const slideBackdrop = ({ open }) => ({
 
 export const slide = ({ open, placement }) => ({
 	animation: 'transition-all',
-	bgColor: 'bg-white dark:bg-gray-900',
+	bgColor: 'bg-white dark:bg-gray-950',
 	display: 'flex-column',
 	duration: 'duration-200',
 	fade: 'ease-out',
@@ -36,7 +36,7 @@ export const slide = ({ open, placement }) => ({
 export const slideHeader = () => ({
 	display: 'flex-between',
 	border: 'border-b',
-	borderColor: 'border-gray-300/50 dark:border-gray-600/50',
+	borderColor: 'border-gray-400/50 dark:border-gray-600/50',
 	spacing: 'p-4',
 	width: 'w-full',
 });
@@ -53,7 +53,7 @@ export const slideBody = () => ({
 
 export const slideFooter = () => ({
 	border: 'border-t',
-	borderColor: 'border-gray-300/50 dark:border-gray-600/50',
+	borderColor: 'border-gray-400/50 dark:border-gray-600/50',
 	display: 'flex-between',
 	space: 'space-x-4',
 	spacing: 'p-4',

@@ -45,7 +45,7 @@ export const computeBadgeSize = size => {
 export const computeBtnSize = size => {
 	switch (size) {
 		case 'icon':
-			return 'w-10 h-10';
+			return 'w-9 h-9';
 
 		case 'xxs':
 			return 'px-2 py-1.5';

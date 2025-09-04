@@ -1,9 +1,9 @@
 import { computeSectionSize } from 'theme/utils';
 
 export const section = () => ({
-	bgColor: 'bg-white dark:bg-gray-900',
+	bgColor: 'bg-white dark:bg-gray-950',
 	border: 'border',
-	borderColor: 'border-gray-300/50 dark:border-gray-600/50',
+	borderColor: 'border-gray-400/50 dark:border-gray-600/50',
 	borderRadius: 'rounded-md',
 	position: 'relative',
 	spacing: 'mb-4',
@@ -13,7 +13,7 @@ export const section = () => ({
 export const sectionHeader = () => ({
 	spacing: 'p-4',
 	border: 'border-b',
-	borderColor: 'border-gray-300/50 dark:border-gray-600/50',
+	borderColor: 'border-gray-400/50 dark:border-gray-600/50',
 	display: 'flex-between',
 	space: 'space-x-4',
 	width: 'w-full',
@@ -49,7 +49,7 @@ export const sectionActions = () => ({
 
 export const sectionBody = ({ size }) => ({
 	spacing: 'p-4',
-	borderColor: 'border-gray-300/50 dark:border-gray-600/50',
+	borderColor: 'border-gray-400/50 dark:border-gray-600/50',
 	size: computeSectionSize(size),
 	width: 'w-full',
 });
@@ -59,7 +59,7 @@ export const sectionHr = () => ({});
 export const sectionFooter = () => ({
 	display: 'flex-between',
 	border: 'border-t',
-	borderColor: 'border-gray-300/50 dark:border-gray-600/50',
+	borderColor: 'border-gray-400/50 dark:border-gray-600/50',
 	space: 'space-x-4',
 	spacing: 'p-4',
 	width: 'w-full',

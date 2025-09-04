@@ -10,9 +10,9 @@ export const dropToggle = () => ({
 export const dropMenu = ({ open }) => ({
 	align: 'text-left',
 	animation: 'transition-all',
-	bgColor: 'bg-white dark:bg-gray-900',
+	bgColor: 'bg-white dark:bg-gray-950',
 	border: 'border',
-	borderColor: 'border-gray-300/50 dark:border-gray-600/50',
+	borderColor: 'border-gray-400/50 dark:border-gray-600/50',
 	borderRadius: 'rounded-md',
 	duration: 'duration-200',
 	fade: 'ease',
@@ -28,7 +28,7 @@ export const dropMenu = ({ open }) => ({
 export const dropHeader = () => ({
 	align: 'text-left',
 	border: 'border-b',
-	borderColor: 'border-gray-300/50 dark:border-gray-600/50',
+	borderColor: 'border-gray-400/50 dark:border-gray-600/50',
 	space: 'space-y-1',
 	spacing: 'px-6 py-4',
 });
@@ -45,7 +45,7 @@ export const dropSubtitle = () => ({
 
 export const dropList = () => ({
 	border: '',
-	borderColor: 'border-gray-300/50 dark:border-gray-600/50',
+	borderColor: 'border-gray-400/50 dark:border-gray-600/50',
 	space: 'space-y-1',
 	spacing: 'p-2',
 });

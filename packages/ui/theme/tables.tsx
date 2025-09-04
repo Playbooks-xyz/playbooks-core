@@ -6,7 +6,7 @@ export const table = () => ({
 
 export const tableHeader = () => ({
 	border: 'border-b',
-	borderColor: 'border-gray-300/50 dark:border-gray-600/50',
+	borderColor: 'border-gray-400/50 dark:border-gray-600/50',
 });
 
 export const tableHeaderRow = () => ({});
@@ -29,7 +29,7 @@ export const tableBody = () => ({});
 export const tableRow = () => ({
 	bgColor: '',
 	border: 'border-b',
-	borderColor: 'border-gray-300/50 dark:border-gray-600/50',
+	borderColor: 'border-gray-400/50 dark:border-gray-600/50',
 });
 
 export const tableData = ({ title }) => ({

@@ -9,7 +9,7 @@ export const avatar = () => ({
 export const avatarBadge = ({ size }) => ({
 	bgColor: 'bg-primary dark:bg-secondary',
 	border: 'border-2',
-	borderColor: 'border-white dark:border-gray-900',
+	borderColor: 'border-white dark:border-gray-950',
 	borderRadius: 'rounded-full',
 	color: 'text-white',
 	fontSize: 'text-sm',
@@ -20,7 +20,7 @@ export const avatarBadge = ({ size }) => ({
 
 export const avatarImg = ({ size }) => ({
 	aspect: 'aspect-[1/1]',
-	borderColor: 'border-gray-100 dark:border-gray-900',
+	borderColor: 'border-gray-100 dark:border-gray-950',
 	borderRadius: 'rounded-full',
 	flex: 'shrink-0',
 	size: computeAvatarSize(size),

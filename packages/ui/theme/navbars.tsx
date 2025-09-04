@@ -1,6 +1,6 @@
 export const navbar = () => ({
-	bgColor: 'bg-white dark:bg-gray-900',
-	borderColor: 'border-gray-300/50 dark:border-gray-600/50',
+	bgColor: 'bg-white dark:bg-gray-950',
+	borderColor: 'border-gray-400/50 dark:border-gray-600/50',
 	border: 'border-b',
 	display: 'flex-between',
 	space: 'space-x-4',

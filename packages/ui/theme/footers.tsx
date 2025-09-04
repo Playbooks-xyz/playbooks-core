@@ -1,14 +1,14 @@
 export const footer = () => ({
-	bgColor: 'bg-white dark:bg-gray-900',
+	bgColor: 'bg-white dark:bg-gray-950',
 	border: 'border-t',
-	borderColor: 'border-gray-300/50 dark:border-gray-600/50',
+	borderColor: 'border-gray-400/50 dark:border-gray-600/50',
 	position: 'relative',
 	spacing: 'py-6',
 });
 
 export const footerHeader = () => ({
 	border: 'border',
-	borderColor: 'border-gray-300/50 dark:border-gray-600/50',
+	borderColor: 'border-gray-400/50 dark:border-gray-600/50',
 	spacing: 'py-8',
 });
 
@@ -44,6 +44,6 @@ export const footerLink = () => ({});
 
 export const footerFooter = () => ({
 	border: 'border-t',
-	borderColor: 'border-gray-300/50 dark:border-gray-600/50',
+	borderColor: 'border-gray-400/50 dark:border-gray-600/50',
 	spacing: 'pt-6',
 });

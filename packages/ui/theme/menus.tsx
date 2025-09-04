@@ -19,9 +19,9 @@ export const menuBackdrop = ({ open }) => ({
 export const menuMenu = ({ open }) => ({
 	align: 'text-left',
 	animation: 'transition-all',
-	bgColor: 'bg-white dark:bg-gray-900',
+	bgColor: 'bg-white dark:bg-gray-950',
 	border: 'border-y',
-	borderColor: 'border-gray-300/50 dark:border-gray-600/50',
+	borderColor: 'border-gray-400/50 dark:border-gray-600/50',
 	duration: 'duration-200',
 	fade: open ? 'ease-out' : 'ease-in',
 	height: 'max-h-[100vh]',

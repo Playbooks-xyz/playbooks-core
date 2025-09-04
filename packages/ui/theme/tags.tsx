@@ -8,7 +8,7 @@ export const tags = () => ({
 
 export const tag = ({ size }) => ({
 	bgColor: 'bg-gray-200/50 dark:bg-gray-700/50',
-	borderColor: 'border-gray-300/50 dark:border-gray-600/50',
+	borderColor: 'border-gray-400/50 dark:border-gray-600/50',
 	borderRadius: 'rounded-md',
 	color: 'text-gray-500 dark:text-gray-300',
 	display: 'flex-between-inline',
@@ -23,7 +23,7 @@ export const tagImg = ({ size }) => ({
 });
 
 export const tagBody = () => ({
-	borderColor: 'border-gray-300/50 dark:border-gray-600/50',
+	borderColor: 'border-gray-400/50 dark:border-gray-600/50',
 	fontSize: 'text-sm',
 	space: 'space-x-2',
 	spacing: 'px-2',

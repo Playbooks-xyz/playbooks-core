@@ -6,7 +6,7 @@ export const formCheckbox = () => ({
 	animation: 'transition-all',
 	bgColor: 'bg-transparent dark:bg-transparent checked:bg-primary dark:checked:bg-secondary',
 	border: 'border',
-	borderColor: 'border-gray-300/50 dark:border-gray-600/50',
+	borderColor: 'border-gray-400/50 dark:border-gray-600/50',
 	borderRadius: 'rounded-md',
 	cursor: 'cursor-pointer',
 	fade: 'ease',
@@ -37,11 +37,11 @@ export const formLabel = () => ({
 export const formInput = ({ size = 'sm', variant = '' }) => ({
 	align: 'text-left',
 	animation: 'transition',
-	bgColor: 'bg-white dark:bg-gray-900',
+	bgColor: 'bg-white dark:bg-gray-950',
 	border: 'border',
-	borderColor: 'border-gray-300/50 dark:border-gray-600/50',
+	borderColor: 'border-gray-400/50 dark:border-gray-600/50',
 	borderRadius: 'rounded-md',
-	color: 'text-gray-600 dark:text-gray-200',
+	color: 'text-gray-700 dark:text-gray-200',
 	cursor: 'cursor-auto',
 	display: 'block',
 	fade: 'ease',
@@ -68,7 +68,7 @@ export const formInput = ({ size = 'sm', variant = '' }) => ({
 
 export const formDivInput = ({ size, variant }) => ({
 	...formInput({ size, variant }),
-	color: 'text-gray-600 dark:text-gray-200',
+	color: 'text-gray-700 dark:text-gray-200',
 	display: 'flex-center',
 	overflow: 'overflow-x-scroll',
 });

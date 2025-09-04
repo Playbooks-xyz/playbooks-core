@@ -32,9 +32,8 @@ export const primaryLink = ({ active, size }) => ({
 
 export const accentLink = ({ active, size }) => ({
 	bgColor: 'bg-transparent dark:bg-transparent',
-	borderColor: 'border-gray-300/50 dark:border-gray-600/50',
 	borderRadius: 'rounded-md',
-	color: 'text-gray-600 dark:text-gray-200',
+	color: 'text-gray-700 dark:text-gray-200',
 	hover: 'hover:bg-gray-200 hover:dark:bg-gray-800',
 	size: computeBtnSize(size),
 	stroke: 'stroke-gray-500 dark:stroke-gray-300',
@@ -49,10 +48,10 @@ export const accentLink = ({ active, size }) => ({
 export const borderLink = ({ active, size }) => ({
 	bgColor: 'bg-transparent',
 	border: 'border',
-	borderColor: 'border-gray-300/50 dark:border-gray-600/50',
+	borderColor: 'border-gray-400/50 dark:border-gray-600/50',
 	borderRadius: 'rounded-md',
 	color: 'text-gray-600 dark:text-gray-300',
-	hover: 'hover:border-gray-300 hover:dark:border-gray-600',
+	hover: 'hover:border-gray-400 hover:dark:border-gray-600',
 	size: computeBtnSize(size),
 	stroke: 'stroke-gray-600 dark:stroke-gray-300',
 	...link(
@@ -70,14 +69,14 @@ export const tabLink = ({ active, size }) => ({
 	border: 'border-b-2',
 	borderColor: 'border-b-transparent hover:border-b-gray-300',
 	borderRadius: '',
-	color: 'text-gray-600 dark:text-gray-200',
+	color: 'text-gray-700 dark:text-gray-200',
 	hover: 'border-b-primary dark:hover:border-b-secondary',
 	size: computeBtnSize(size),
 	stroke: 'stroke-gray-500 dark:stroke-gray-300',
 	...link(
 		active && {
 			borderColor: 'border-b-primary dark:border-b-secondary',
-			color: 'text-gray-600 dark:text-gray-200',
+			color: 'text-gray-700 dark:text-gray-200',
 			...active,
 		},
 	),

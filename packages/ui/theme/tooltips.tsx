@@ -11,7 +11,7 @@ export const tooltip = ({ open, placement }) => ({
 });
 
 export const tooltipInner = () => ({
-	bgColor: 'bg-gray-900 dark:bg-gray-100',
+	bgColor: 'bg-gray-950 dark:bg-gray-100',
 	borderRadius: 'rounded-sm',
 	color: 'text-gray-100 dark:text-gray-700',
 	fontSize: 'text-sm',
@@ -20,7 +20,7 @@ export const tooltipInner = () => ({
 });
 
 export const tooltipArrow = () => ({
-	bgColor: 'bg-gray-900 dark:bg-gray-100',
+	bgColor: 'bg-gray-950 dark:bg-gray-100',
 	borderRadius: 'rounded-sm',
 	rotate: 'rotate-45',
 	size: 'h-4 w-4',

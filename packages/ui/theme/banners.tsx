@@ -1,6 +1,6 @@
 export const banner = () => ({
 	border: 'border-b',
-	borderColor: 'border-gray-300/50 dark:border-gray-600/50',
+	borderColor: 'border-gray-400/50 dark:border-gray-600/50',
 	color: 'text-white',
 	display: 'flex-between',
 	space: 'space-x-4',
@@ -27,7 +27,7 @@ export const bannerTitle = () => ({
 });
 
 export const bannerText = () => ({
-	color: 'text-gray-600 dark:text-gray-200',
+	color: 'text-gray-700 dark:text-gray-200',
 	fontSize: 'text-sm',
 });
 

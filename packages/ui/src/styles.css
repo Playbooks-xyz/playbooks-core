@@ -26,8 +26,6 @@
 	--color-primary: var(--color-blue-500);
 	--color-secondary: var(--color-cyan-500);
 	--color-accent: var(--color-indigo-500);
-
-	/* --color-gray-900: var(--color-slate-900); */
 }
 
 @layer base {
@@ -44,7 +42,7 @@
 	body {
 		@apply w-full;
 		@apply text-gray-700 dark:text-gray-200;
-		@apply bg-white dark:bg-gray-900;
+		@apply bg-white dark:bg-gray-950;
 	}
 	h1,
 	h2,

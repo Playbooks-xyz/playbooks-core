@@ -41,7 +41,7 @@ export const h6 = () => ({
 });
 
 export const p = () => ({
-	color: 'text-gray-700 dark:text-gray-200',
+	color: 'text-gray-700 dark:text-gray-300',
 	fontSize: 'text-base',
 	fontWeight: 'font-light',
 	fontFamily: 'font-secondary',

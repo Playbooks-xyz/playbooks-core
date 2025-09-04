@@ -1,8 +1,8 @@
 import { computeHeroSize, computeThumbnailSize } from 'theme/utils';
 
 export const hero = ({ size }) => ({
-	bgColor: 'bg-white dark:bg-gray-900',
-	borderColor: 'border-gray-300/50 dark:border-gray-600/50',
+	bgColor: 'bg-white dark:bg-gray-950',
+	borderColor: 'border-gray-400/50 dark:border-gray-600/50',
 	display: 'block',
 	position: 'relative',
 	size: computeHeroSize(size),
@@ -19,7 +19,7 @@ export const heroImg = ({ size }) => ({
 	aspect: 'aspect-[1/1]',
 	bgColor: 'bg-gray-100 dark:bg-gray-800',
 	border: '',
-	borderColor: 'border-gray-300/50 dark:border-gray-600/50',
+	borderColor: 'border-gray-400/50 dark:border-gray-600/50',
 	borderRadius: 'rounded-md',
 	color: 'text-gray-500',
 	display: 'flex-middle',
@@ -32,7 +32,7 @@ export const heroIcon = ({ size }) => ({
 	aspect: 'aspect-[1/1]',
 	bgColor: 'bg-gray-100 dark:bg-gray-800',
 	border: '',
-	borderColor: 'border-gray-300/50 dark:border-gray-600/50',
+	borderColor: 'border-gray-400/50 dark:border-gray-600/50',
 	borderRadius: 'rounded-md',
 	color: 'text-gray-500',
 	display: 'flex-middle',
@@ -70,7 +70,6 @@ export const heroSubtitle = () => ({
 });
 
 export const heroText = () => ({
-	fontFamily: 'font-secondary',
 	fontWeight: 'font-light',
 	tracking: 'tracking-wide',
 });

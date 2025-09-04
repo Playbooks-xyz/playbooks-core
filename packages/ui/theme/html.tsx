@@ -7,11 +7,11 @@ export const main = () => ({
 });
 
 export const aside = () => ({
-	borderColor: 'border-gray-300/50 dark:border-gray-600/50',
+	borderColor: 'border-gray-400/50 dark:border-gray-600/50',
 });
 
 export const div = () => ({
-	borderColor: 'border-gray-300/50 dark:border-gray-600/50',
+	borderColor: 'border-gray-400/50 dark:border-gray-600/50',
 	position: 'relative',
 });
 
@@ -20,12 +20,12 @@ export const span = () => ({
 });
 
 export const ul = () => ({
-	borderColor: 'border-gray-300/50 dark:border-gray-600/50',
+	borderColor: 'border-gray-400/50 dark:border-gray-600/50',
 	spacing: 'pl-4',
 });
 
 export const li = () => ({
-	borderColor: 'border-gray-300/50 dark:border-gray-600/50',
+	borderColor: 'border-gray-400/50 dark:border-gray-600/50',
 });
 
 export const iFrame = () => ({});
@@ -35,7 +35,7 @@ export const img = () => ({
 });
 
 export const hr = () => ({
-	borderColor: 'border-gray-300/50 dark:border-gray-600/50',
+	borderColor: 'border-gray-400/50 dark:border-gray-600/50',
 	border: 'border-t',
 	borderRadius: 'rounded-md',
 });

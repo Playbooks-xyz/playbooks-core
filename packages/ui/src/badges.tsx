@@ -18,19 +18,16 @@ export const Badge = ({
 	// Render
 	switch (type) {
 		case 'draft':
-		case 'free':
 			return <DraftBadge {...computed}>{children}</DraftBadge>;
 
 		case 'info':
-		case 'warning':
-		case 'scheduled':
-			return <WarningBadge {...computed}>{children}</WarningBadge>;
+			return <InfoBadge {...computed}>{children}</InfoBadge>;
 
 		case 'pending':
-		case 'running':
-		case 'seed':
-		case 'testing':
 			return <PendingBadge {...computed}>{children}</PendingBadge>;
+
+		case 'warning':
+			return <WarningBadge {...computed}>{children}</WarningBadge>;
 
 		case 'active':
 		case 'complete':
@@ -61,6 +58,14 @@ export const Badge = ({
 export const DraftBadge = ({ tailwind, className, children, ...props }: types.BadgeProps) => {
 	const context = useUI();
 	const base = context?.theme?.draftBadge();
+	const computed = { ...base, ...props, tailwind, className };
+
+	return <Span {...computed}>{children}</Span>;
+};
+
+export const InfoBadge = ({ tailwind, className, children, ...props }: types.BadgeProps) => {
+	const context = useUI();
+	const base = context?.theme?.infoBadge();
 	const computed = { ...base, ...props, tailwind, className };
 
 	return <Span {...computed}>{children}</Span>;
@@ -108,7 +113,7 @@ export const ErrorBadge = ({ tailwind, className, children, ...props }: types.Ba
 
 export const DefaultBadge = ({ tailwind, className, children, ...props }: types.BadgeProps) => {
 	const context = useUI();
-	const base = context?.theme?.outlineBadge();
+	const base = context?.theme?.defaultBadge();
 	const computed = { ...base, ...props, tailwind, className };
 
 	return <Span {...computed}>{children}</Span>;

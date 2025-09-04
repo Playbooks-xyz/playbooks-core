@@ -4,7 +4,7 @@ export const modalLoader = () => ({
 });
 
 export const pageLoader = () => ({
-	bgColor: 'bg-white dark:bg-gray-900',
+	bgColor: 'bg-white dark:bg-gray-950',
 	color: 'text-gray-700 dark:text-gray-300',
 	display: 'flex-middle',
 	position: 'absolute',

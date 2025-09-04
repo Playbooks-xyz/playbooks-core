@@ -10,7 +10,7 @@ export const alert = ({ type }) => ({
 					? 'border-red-500/50 dark:border-red-500/50'
 					: type === 'info'
 						? 'border-blue-300/50 dark:border-cyan-600/50'
-						: 'border-gray-300/50 dark:border-gray-600/50',
+						: 'border-gray-400/50 dark:border-gray-600/50',
 	borderRadius: 'rounded-md',
 	display: 'flex-start-top',
 	overflow: 'overflow-hidden',

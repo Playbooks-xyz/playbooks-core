@@ -1,15 +1,15 @@
 import { computeSectionSize } from 'theme/utils';
 
 export const nav = () => ({
-	bgColor: 'bg-white dark:bg-gray-900',
-	borderColor: 'border-gray-300/50 dark:border-gray-600/50',
+	bgColor: 'bg-white dark:bg-gray-950',
+	borderColor: 'border-gray-400/50 dark:border-gray-600/50',
 	borderRadius: 'rounded-md',
 	display: 'block',
 	position: 'relative',
 });
 
 export const navHeader = () => ({
-	borderColor: 'border-gray-300/50 dark:border-gray-600/50',
+	borderColor: 'border-gray-400/50 dark:border-gray-600/50',
 	spacing: 'p-4',
 });
 
