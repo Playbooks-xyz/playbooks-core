@@ -80,9 +80,9 @@ export const toPercent = (value = 0) => {
 };
 
 export const toCents = (value = 0) => {
-	return value ? value * 100 : 0;
+	return value ? parseFloat((value * 100).toFixed(0)) : 0;
 };
 
 export const fromCents = (value = 0) => {
-	return value ? value / 100 : 0;
+	return value ? parseFloat((value / 100).toFixed(2)) : 0;
 };
