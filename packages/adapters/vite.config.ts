@@ -10,7 +10,7 @@ export default defineConfig(({ mode }) => ({
 		ssr: true,
 		sourcemap: mode === 'development',
 		lib: {
-			entry: [path.resolve(__dirname, 'src/index.ts'), path.resolve(__dirname, 'src/base.ts')],
+			entry: [path.resolve(__dirname, 'src/index.ts'), path.resolve(__dirname, 'src/base-adapter.ts')],
 			name: 'Adapters',
 			formats: ['es', 'cjs'],
 		},
