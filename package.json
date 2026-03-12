@@ -51,17 +51,9 @@
   },
   "workspaces": [
     "packages/adapters",
-    "packages/assets",
-    "packages/components",
     "packages/configs",
-    "packages/contexts",
-    "packages/hooks",
-    "packages/icons",
     "packages/normalizers",
     "packages/serializers",
-    "packages/services",
-    "packages/ui",
-    "packages/utils",
-    "packages/wrappers"
+    "packages/utils"
   ]
 }
