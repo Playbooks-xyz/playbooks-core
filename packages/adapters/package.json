@@ -39,10 +39,10 @@
 		"test": "jest"
 	},
 	"dependencies": {
-		"@playbooks/configs": "^0.0.5",
-		"@playbooks/utils": "^0.9.14",
+		"@playbooks/configs": "^0.13.0",
+		"@playbooks/utils": "^0.13.4",
 		"cross-fetch": "^4.1.0",
-		"dayjs": "^1.11.13"
+		"dayjs": "^1.11.20"
 	},
 	"exports": {
 		".": {
@@ -50,10 +50,10 @@
 			"import": "./dist/index.js",
 			"require": "./dist/index.cjs"
 		},
-		"./base": {
-			"types": "./dist/base.d.ts",
-			"import": "./dist/base.js",
-			"require": "./dist/base.cjs"
+		"./base-adapter": {
+			"types": "./dist/base-adapter.d.ts",
+			"import": "./dist/base-adapter.js",
+			"require": "./dist/base-adapter.cjs"
 		}
 	}
 }

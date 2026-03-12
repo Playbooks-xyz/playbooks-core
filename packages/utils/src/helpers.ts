@@ -1,4 +1,5 @@
 import bytes from 'bytes';
+import { humanId } from 'human-id';
 import pluralize from 'pluralize';
 import uniqid from 'uniqid';
 
@@ -16,8 +17,12 @@ export const getRandomInt = (max = 1000000) => {
 	return Math.floor(Math.random() * max);
 };
 
-export const getUUID = (v = 36) => {
-	return uniqid();
+export const getUUID = (data = '') => {
+	return uniqid(data);
+};
+
+export const getHumanUUID = () => {
+	return humanId({ separator: '-', capitalize: false });
 };
 
 export const getPlural = value => {

@@ -10,8 +10,8 @@ export default defineConfig(({ mode }) => ({
 		lib: {
 			entry: [
 				path.resolve(__dirname, 'src/index.ts'),
-				path.resolve(__dirname, 'src/base.ts'),
-				path.resolve(__dirname, 'src/json-api.ts'),
+				path.resolve(__dirname, 'src/base-normalizer.ts'),
+				path.resolve(__dirname, 'src/json-api-normalizer.ts'),
 			],
 			name: 'Normalizers',
 			formats: ['es', 'cjs'],

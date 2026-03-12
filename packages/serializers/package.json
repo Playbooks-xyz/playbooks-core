@@ -1,6 +1,6 @@
 {
 	"name": "@playbooks/serializers",
-	"version": "0.13.0",
+	"version": "0.13.1",
 	"description": "A collection of serializers for Playbooks.",
 	"author": "Eric Hubbell<eric@erichubbell.com>",
 	"license": "ISC",
@@ -38,8 +38,8 @@
 		"prepare": "husky"
 	},
 	"dependencies": {
-		"@playbooks/configs": "^0.0.5",
-		"@playbooks/utils": "^0.9.14"
+		"@playbooks/configs": "^0.13.0",
+		"@playbooks/utils": "^0.13.4"
 	},
 	"exports": {
 		".": {
@@ -47,15 +47,15 @@
 			"import": "./dist/index.js",
 			"require": "./dist/index.cjs"
 		},
-		"./base": {
-			"types": "./dist/base.d.ts",
-			"import": "./dist/base.js",
-			"require": "./dist/base.cjs"
+		"./base-serializer": {
+			"types": "./dist/base-serializer.d.ts",
+			"import": "./dist/base-serializer.js",
+			"require": "./dist/base-serializer.cjs"
 		},
-		"./json-api": {
-			"types": "./dist/json-api.d.ts",
-			"import": "./dist/json-api.js",
-			"require": "./dist/json-api.cjs"
+		"./json-api-serializer": {
+			"types": "./dist/json-api-serializer.d.ts",
+			"import": "./dist/json-api-serializer.js",
+			"require": "./dist/json-api-serializer.cjs"
 		}
 	}
 }

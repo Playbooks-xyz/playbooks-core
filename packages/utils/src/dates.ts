@@ -25,8 +25,8 @@ export const formatDate = (value?: any, format?: string) => {
 	return Dayjs(value).format(format || 'MMM Do, YYYY @ hh:mmA');
 };
 
-export const formatTimestamp = (value?: any) => {
-	return Dayjs(value).fromNow(true);
+export const formatTimestamp = (value?: any, format?: boolean) => {
+	return Dayjs(value).fromNow(format);
 };
 
 export const toDate = (value?: any) => {

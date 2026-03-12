@@ -9,7 +9,11 @@ export default defineConfig(({ mode }) => ({
 		ssr: true,
 		sourcemap: mode === 'development',
 		lib: {
-			entry: path.resolve(__dirname, 'src/index.ts'),
+			entry: [
+				path.resolve(__dirname, 'src/index.ts'),
+				path.resolve(__dirname, 'src/base-serializer.ts'),
+				path.resolve(__dirname, 'src/json-api-serializer.ts'),
+			],
 			name: 'Serializers',
 			formats: ['es', 'cjs'],
 		},
