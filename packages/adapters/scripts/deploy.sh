@@ -1,19 +1,15 @@
 #!/bin/bash
 if [ -z "$1" ]; then
-  echo -e " \nplease include a version.\n"
+  echo -e " \n please include a version. \n"
   exit
 fi
 
-echo -e "\ndeploying updates...\n"
+echo -e "\n deploying updates... \n"
 
-npm run clean & clean_id=$!
-wait $clean_id
-if [ $? -eq 1 ]; then exit; fi
+echo -e "\n npm version \n"
+npm version $1
 
-npm version $1 & version_id=$!
-wait $version_id
-if [ $? -eq 1 ]; then exit; fi
-
+echo -e "\n npm build \n"
 npm run build & build_id=$!
 wait $build_id
 if [ $? -eq 1 ]; then exit; fi
@@ -22,8 +18,8 @@ npm run build:dts & dts_id=$!
 wait $dts_id
 if [ $? -eq 1 ]; then exit; fi
 
-npm publish --access public & publish_id=$!
-wait $publish_id
-if [ $? -eq 1 ]; then exit; fi
+echo -e "\n npm publish \n"
+npm publish --access public
+if [ $? -ne 0 ]; then echo "Publish failed"; exit 1; fi
 
-echo -e "\ndeploy finished.\n"
+echo -e "\n deploy finished. \n"
