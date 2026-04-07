@@ -26,7 +26,7 @@
 		"build:dts": "dts-bundle-generator --config dts.config.ts",
 		"lint": "eslint src",
 		"lint:fix": "eslint src --fix",
-		"format": "prettier src",
+		"format": "prettier --check src",
 		"format:fix": "prettier --write src",
 		"reset": "rm -rf package-lock.json node_modules",
 		"clean": "npm run lint:fix",
@@ -38,7 +38,6 @@
 		"prepare": "husky"
 	},
 	"devDependencies": {
-		"@playbooks/configs": "^0.13.0",
 		"@playbooks/utils": "^0.13.4"
 	},
 	"exports": {

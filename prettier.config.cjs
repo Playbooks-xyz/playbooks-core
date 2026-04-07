@@ -11,6 +11,3 @@ module.exports = {
 	tabWidth: 2,
 	useTabs: true,
 };
-
-// Docs
-// https://prettier.io/docs/sharing-configurations

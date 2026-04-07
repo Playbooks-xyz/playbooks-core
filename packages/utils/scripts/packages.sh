@@ -1,5 +1,3 @@
 npm install \
-@ehubbell/html@latest \
-@playbooks/configs@latest
-
+@ehubbell/html@latest
 

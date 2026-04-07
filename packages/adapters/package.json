@@ -29,7 +29,7 @@
 		"clean": "npm run lint:fix",
 		"lint": "eslint src",
 		"lint:fix": "eslint src --fix",
-		"format": "prettier src",
+		"format": "prettier --check src",
 		"format:fix": "prettier --write src",
 		"reset": "rm -rf package-lock.json node_modules",
 		"commit": "scripts/commit.sh",
@@ -39,7 +39,6 @@
 		"test": "jest"
 	},
 	"dependencies": {
-		"@playbooks/configs": "^0.13.0",
 		"@playbooks/utils": "^0.13.4",
 		"cross-fetch": "^4.1.0",
 		"dayjs": "^1.11.20"

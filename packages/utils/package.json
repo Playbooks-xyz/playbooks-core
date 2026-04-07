@@ -25,7 +25,7 @@
 		"build:dts": "dts-bundle-generator --config dts.config.ts",
 		"lint": "eslint src",
 		"lint:fix": "eslint src --fix",
-		"format": "prettier src",
+		"format": "prettier --check src",
 		"format:fix": "prettier --write src",
 		"reset": "rm -rf package-lock.json node_modules",
 		"clean": "npm run lint:fix",
@@ -52,7 +52,6 @@
 		"uniqid": "^5.4.0"
 	},
 	"devDependencies": {
-		"@playbooks/configs": "^0.13.0",
 		"@types/accounting": "^0.4.5"
 	},
 	"exports": {
