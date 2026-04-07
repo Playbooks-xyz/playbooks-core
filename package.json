@@ -1,6 +1,6 @@
 {
   "name": "@playbooks/core",
-  "version": "0.14.0",
+  "version": "0.15.0",
   "description": "A collection of resources for Playbooks.",
   "author": "Eric Hubbell<eric@erichubbell.com>",
   "license": "ISC",
@@ -17,7 +17,8 @@
     "reset": "npm run reset --workspaces --if-present",
     "postreset": "rm -rf package-lock.json node_modules",
     "commit": "scripts/commit.sh",
-    "deploy": "scripts/deploy.sh",
+    "deploy": "npm run deploy --workspaces --if-present",
+    "postdeploy": "scripts/deploy.sh",
     "packages": "npm run packages --workspaces --if-present",
     "test": "npm run test --workspaces --if-present",
     "prepare": "husky"
